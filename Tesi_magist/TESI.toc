@@ -1,0 +1,13 @@
+\contentsline {section}{\tocsection {}{1}{Ouverture}}{3}{section.1}
+\contentsline {section}{\tocsection {}{2}{Abstract homological algebra}}{7}{section.2}
+\contentsline {subsection}{\tocsubsection {}{2.1}{Triangulated categories}}{7}{subsection.2.1}
+\contentsline {subsection}{\tocsubsection {}{2.2}{Hearts and towers}}{19}{subsection.2.2}
+\contentsline {subsection}{\tocsubsection {}{2.3}{The Grothendieck group}}{26}{subsection.2.3}
+\contentsline {section}{\tocsection {}{3}{Slicing triangulated categories}}{28}{section.3}
+\contentsline {subsection}{\tocsubsection {}{3.1}{$J$ maps to $\mathbb {Z}$: abelian slicings}}{37}{subsection.3.1}
+\contentsline {subsection}{\tocsubsection {}{3.2}{$\mathbb {Z}$ acts trivially: semiorthogonal decompositions}}{46}{subsection.3.2}
+\contentsline {subsection}{\tocsubsection {}{3.3}{The (he)art of gluing}}{49}{subsection.3.3}
+\contentsline {section}{\tocsection {}{4}{Some applications}}{56}{section.4}
+\contentsline {subsection}{\tocsubsection {}{4.1}{Calabi-Yau categories}}{56}{subsection.4.1}
+\contentsline {subsection}{\tocsubsection {}{4.2}{Exceptional collections}}{62}{subsection.4.2}
+\contentsline {section}{\tocsection {}{}{References}}{66}{section*.2}

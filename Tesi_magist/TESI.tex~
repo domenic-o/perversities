@@ -1,0 +1,98 @@
+\documentclass[12pt]{amsart}
+
+\usepackage{amssymb,amsfonts,amsmath,amsthm}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{enumerate,enumitem,tikz-cd,tikz,mathrsfs,graphicx,marvosym,wasysym,epigraph,afterpage}
+%mathrsfs is for \mathscr, marvosym for \Coffeecup, graphicx for \heartsuit, wasysym is for \twonotes
+\usepackage[colorlinks=true, urlcolor=purple, linkcolor=RoyalBlue, citecolor=magenta, pdfborder={0 0 0}]{hyperref}
+\usetikzlibrary{backgrounds}
+
+\setlength\epigraphwidth{.8\textwidth}
+%\setlength\epigraphrule{0pt}
+\setlength{\parindent}{0pt}
+
+\newcommand\blankpage{
+    \null
+    \thispagestyle{empty}
+    \addtocounter{page}{-1}
+    \newpage}
+
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{defn}[thm]{Definition}
+\theoremstyle{definition} 
+\newtheorem{exmp}[thm]{Example}
+\newtheorem{rem}[thm]{Remark}
+
+
+\begin{document}
+
+\begin{titlepage} 
+\begin{center}
+{\small{ FACOLT\`A DI SCIENZE MATEMATICHE FISICHE E NATURALI\\
+Corso di Laurea Magistrale in Matematica}}
+\end{center}
+\vspace{20 mm}
+
+\begin{center}
+{\huge \texttt{FUNCTORIAL FLAVOURS}}  \\
+\vspace{5 mm}
+{\huge \texttt{OF BRIDGELAND'S SLICINGS}}
+\vspace{70mm}
+\end{center}
+
+\begin{tikzpicture}[overlay]
+\node[opacity=0.13] at (6,0) {\includegraphics[width=12cm]{LOGO}};  
+\end{tikzpicture}
+\par
+\noindent
+\begin{minipage}[t]{0.49\textwidth}
+{\large{ Advisor:\\
+Prof.\\
+Domenico Fiorenza}}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.49\textwidth}\raggedleft
+{\large{ Candidate:\\
+Giovanni Marchetti\\
+serial 1574632}}
+\end{minipage}
+\vspace{18mm}
+\begin{center}
+{\large{ Sessione Estiva \\Anno Accademico 2016-2017}\\
+Dipartimento di Matematica `Guido Castelnuovo'}
+\end{center}
+\end{titlepage}
+
+\epigraph{\textit{The garboard strake leaks, the seams need caulking. \\
+This form, this face, this life \\
+Living to live in a world of time beyond me; let me \\
+Resign my life for this life, my speech for that unspoken,}}{T. S. Eliot}
+\vspace{40 mm}
+
+\begin{tikzpicture}[overlay]
+\node[opacity=0.1] at (6.3,-1) {\includegraphics[width=30cm]{Libra}};  
+\end{tikzpicture}
+{
+\hypersetup{linkcolor=black} 
+\tableofcontents 
+}
+
+\afterpage{\blankpage}
+\include{INTRO}
+\afterpage{\blankpage}
+\include{TRIA}
+\afterpage{\blankpage}
+\include{SLICE}
+\afterpage{\blankpage}
+\include{APPLI}
+\afterpage{\blankpage}
+%\include{FOLLIA}
+%\afterpage{\blankpage}
+%\include{SPH}
+
+\bibliographystyle{alpha}
+\bibliography{tesi}
+\end{document}

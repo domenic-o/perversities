@@ -1,0 +1,146 @@
+\newpage 
+
+\section{$J=\mathbb{R}$: Bridgeland stability} 
+Let $\mathscr{A}$ be an abelian category. We denote $$\mathbb{H}=\mathbb{R}_{>0}e^{\sqrt{-1}]0,\pi]} \subseteq \mathbb{C}$$ the semi-closed upper half-plane. \\
+
+\begin{defn}
+A \textbf{stability function} on $\mathscr{A}$ is a group homomorphism $K_0(\mathscr{A}) \overset{z}{\longrightarrow} \mathbb{C}$ so that for each $0 \not = X \in \mathscr{A}$ we have  $$z(X) \in \mathbb{H}$$ The \textbf{phase} with respect to $z$ of an object $0 \not = X \in \mathscr{A}$ is $$\phi_z(X)=\frac{1}{\pi}\textnormal{arg}(z(X)) \in ]0,1]$$ An object $0 \not = X \in \mathscr{A}$ is called $z$-\textbf{semistable} if for all nonzero subobjects $Y \subseteq X$ we have $\phi_z(Y) \le \phi_z(X)$.\\
+We say that $z$ satisfies the \textbf{Harder-Narasimhan property} if $$\mathscr{P}^z_{\phi}= \{ 0 \not = X \in \mathscr{A} \ | \ X \textnormal{ is $z$-semistable of phase } \phi \} \cup \{ 0 \}$$
+defines an abelian $]0,1]$-slicing on $\mathscr{A}$. \\
+Moreover, for each $0 \not = X \in \mathscr{A}$, we define $\textnormal{HN}_z(X)$ as the convex hull of $z(Y)$ with $Y \subseteq X$ and $\phi_z(Y) \ge \phi_z(X)$. 
+\end{defn}
+
+The following is a very easy result which we prove using a picture. \\
+
+\begin{prop} 
+\textnormal{(See-saw property)} Let $z$ be a stability function on $\mathscr{A}$. If $0 \longrightarrow X \longrightarrow Y \longrightarrow Z \longrightarrow 0$ is a short exact sequence of nonzero objects in $\mathscr{A}$, then either $X,Y,Z$ have the same phase or $$\min \{ \phi_z(X), \phi_z(Z) \} < \phi_z(Y) < \max \{ \phi_z(X), \phi_z(Z) \}$$
+\end{prop}
+
+\begin{proof}
+We have $z(Y)=z(X)+z(Z)$, and the result follows from Euclidean properties of $\mathbb{H}$. 
+\begin{figure}[h!]
+\begin{tikzpicture}
+\shade[top color=white, bottom color=lightgray] (-3,0) rectangle (3,4);
+\node [anchor=north] at (0,0) {$0$};
+\draw (0,0) -- (-3,0);
+\draw [dashed] (0,0) -- (3,0); 
+\draw [->, >=stealth] (0,0) -- (-1,1.5) node [anchor=south] {$z(X)$};
+\draw [->, >=stealth] (0,0) -- (2,2) node [anchor=south] {$z(Z)$};
+\draw [->, >=stealth] (0,0) -- (1,3.5) node [anchor=south] {$z(Y)$};
+\end{tikzpicture}
+\end{figure}
+\end{proof}
+
+The following lemma shows that in order to check the Harder-Narasimhan property we only care about the existence of Harder-Narasimhan filtrations. \\
+
+\begin{prop}
+Let $z$ be a stability function on $\mathscr{A}$, $\phi, \psi \in ]0,1]$. If $\phi > \psi$, then $$\mathscr{P}^z_{\psi} \subseteq (\mathscr{P}^z_{\phi})^{\perp}$$
+\end{prop}
+
+\begin{proof}
+Let $X \overset{f}{\longrightarrow} Y$ be a nonzero morphism in $\mathscr{A}$ with $X$ $z$-semistable of phase $\phi$ and $Y$ $z$-semistable of phase $\psi$. Since $\textnormal{im}(f)$ is a subobject of $Y$ and a quotient of $X$, by semistability and see-saw property we get: $$\phi \le \phi_z(\textnormal{im}(f)) \le \psi$$ which is absurd by hypothesis. 
+\end{proof}
+
+Since $\mathbb{Z} \times ]0,1] = \mathbb{R}$ as a $\mathbb{Z}$-poset, if we have a bounded t-structure $\mathfrak{t}$ on $\mathscr{D}$ and a stability function on $\heartsuit_{\mathfrak{t}}$ with the Harder-Narasimhan property we get an $\mathbb{R}$-slicing on $\mathscr{D}$ by \hyperref[v]{\textbf{Proposition \ref*{v}}}. \\
+
+\begin{prop}
+Let $z$ be a stability function on $\mathscr{A}$ with the Harder-Narasimhan property. For each $\phi \in ]0,1]$, $\mathscr{P}^z_{\phi}$ is an Abelian subcategory of $\mathscr{A}$. 
+\end{prop}
+
+\begin{proof}
+Let $X \overset{f}{\longrightarrow} Y$ be a nonzero morphism in $\mathscr{P}^z_{\phi}$. 
+\end{proof}
+
+If $0 \not = Y\subseteq X$ is a subobject, since $X=Y+X/Y$ in $K_0(\mathscr{A})$ and $z(X/Y), z(X), z(Y) \in \mathbb{H}$, we have $\mathfrak{I}(z(X)) \ge \mathfrak{I}(z(Y))$. In particular, this means that $\textnormal{HN}_z(X)$ is contained below the horizontal line through $z(X)$. Moreover, if $z(Y)=z(X)$, then $z(X/Y)=0$ and thus $X/Y=0$, which means $X=Y$.
+
+\begin{prop}
+Let $z$ be a stability function on $\mathscr{A}$, $0 \not = X \in \mathscr{A}$, $Y,Z \subseteq X$. If $z(Y)$ and $z(Z)$ are extremal points of $\textnormal{HN}_z(X)$ and $\phi_z(Z) > \phi_z(Y)$, then $Z \subseteq Y$. 
+\end{prop}
+
+\begin{proof}
+Consider the intersection $A=Y \cap Z$ and the span $B=Y + Z \subseteq X$ (there is a clash of notation: here the sum doesn't denote the operation of the Grothendieck group). Since there is an exact sequence $$0 \longrightarrow A \longrightarrow Y \oplus Z\longrightarrow B \longrightarrow 0$$ 
+we have $z(Y) + z(Z) = z(A) + z(B)$. But by convexity and the above observation ($A \subseteq Z$ and $Y \subseteq B$), $z(A)$ and $z(B)$ must lie on the right of the line through $z(Y)$ and $z(Z)$, so we have that $z(A)$, $z(B)$, $z(X)$, $z(Y)$ must be aligned and $\mathfrak{I}(z(B)) \ge \mathfrak{I}(z(Y)) \ge \mathfrak{I}(z(Z)) \ge \mathfrak{I}(z(A))$. By extremality, we get that $z(A)=z(Z)$ and $z(B)=z(Y)$. Since again $A \subseteq Z$, we have $A=Z$. 
+\end{proof}
+
+\begin{figure}[h!]
+\begin{tikzpicture}
+\shade[top color=white, bottom color=lightgray] (-3,0) rectangle (3,4);
+\draw (0,0) -- (-3,0);
+\draw [dashed] (0,0) -- (3,0); 
+\path [fill=gray] (0,0) -- (-0.5,0.3) -- (-0.7,1) -- (-0.6,1.7) -- (0.2,2) -- (1.3,2.1) -- (0,0);
+\node [circle, inner sep=1pt, fill, label=below: $0$] at (0,0) {};
+\node [circle, inner sep=1pt, fill, label=right: $z(X)$] at (1.3,2.1) {};
+\node [circle, inner sep=1pt, fill, label=left: $v_1$] at (-0.5,0.3) {};
+\node [circle, inner sep=1pt, fill, label=left: $v_2$] at (-0.7,1) {};
+\node [circle, inner sep=1pt, fill, label=left: $v_3$] at (-0.6,1.7) {};
+\node [circle, inner sep=1pt, fill, label=above: $v_4$] at (0.2,2) {};
+\end{tikzpicture}
+\caption{A depiction in the complex plane of $\textnormal{HN}_z(X)$ when the Harder-Narasimhan property holds.}
+\end{figure}
+
+\begin{prop}
+Let $z$ be a stability function on $\mathscr{A}$. Then $z$ has the Harder-Narasimhan property if and only if for each $0 \not = X \in \mathscr{A}$, $\textnormal{HN}_z(X)$ is a polygon. 
+\end{prop}
+
+\begin{proof}
+Suppose that $\textnormal{HN}_z(X)$ is a polygon. Then it has a finite number of extremal points (vertices) $v_0=0, \cdots, v_n=z(X)$ (ordered by decreasing argument), and for each $1 \le i < n$ there is a subobject $X_i \subseteq X$ so that $z(X_i)=v_i$. Now we claim that these subobjects form the filtration of the Harder-Narasimhan property. First of all, by Proposition ??????, $X_i \subseteq X_{i+1}$ for all $i$. Now we show that $X_{i+1}/X_i$ is semistable. If not, there is a subobject $Y \subseteq X_{i+1}$ containing $X_i$ so that $\phi_z(Y/X_i) > \phi_z(X_{i+1} / X_i)$. This tells us that $z(Y)$ lies in the open half plane on the left of the line through $v_i$ and $v_{i+1}$, which is absurd by convexity. Now, $\phi_z(X_i / X_{i-1}) > \phi_z(X_{i+1}/ X_i)$ again by convexity, so we have the first implication of the statement. \\
+Conversely, suppose that $z$ has the Harder-Narasimhan property. For each $0 \not = X \in \mathscr{D}$, we have a filtration by subobjects $0=X_0 \subseteq \cdots \subseteq X_n=X$ as in the definition. Take a subobject $Y \subseteq X$. We show, by induction on $n$, that $z(Y)$ lies on the right of the line through $z(X_i)$ and $z(X_{i+1})$ for all $i$. By induction hypothesis, $z(Y \cap X_{n-1})$ lies on the right  of the line through $z(X_i)$ and $z(X_{i+1})$ for $i<n$. Since $Y/(Y \cap X_{n-1})$ is a subobject of the semistable $X/X_{n-1}$ and $$z(Y)=z(Y \cap X_{n-1}) + z(Y/(Y \cap X_{n-1}))$$ we get what we wanted. 
+\end{proof}
+
+By polygon we also mean a degenerate one (a segment). This happens if and only if $X$ is semistable. 
+
+\begin{prop}
+If $\mathscr{A}$ is a finite length (both Artinian and Noetherian) category, then every stability function on $\mathscr{A}$ has the Harder-Narasimhan property.
+\end{prop}
+
+\begin{proof}
+Take a stability function $z$ on $\mathscr{A}$. Suppose that for some object $0 \not = X \in \mathscr{A}$, $\textnormal{HN}_z(X)$ is not a polygon. Then it has an infinite set of extremal point. Then we can extract a sequence of increasing or decreasing phase, which by Proposition ???? corresponds to a strict sequence of subobjects, which is absurd by hypothesis.
+\end{proof}
+
+\newpage
+
+\subsection{The space of real slicings}
+
+\begin{defn}
+If $\mathscr{P}$, $\mathscr{Q}$ are $\mathbb{R}$-slicings on $\mathscr{D}$, we define their (possibly infinite) distance as $$d(\mathscr{P},\mathscr{Q})=\sup_{0 \not = X \in \mathscr{D}} \{ | \phi_{\mathscr{P}}^{\pm}(X) - \phi_{\mathscr{Q}}^{\pm}(X)| \} $$
+\end{defn}
+
+\begin{prop}
+$d$ defines a (possibly infinite) metric on $\textnormal{\Libra}_{\mathbb{R}}(\mathscr{D})$. 
+\end{prop}
+
+\begin{proof}
+Simmetry and triangle inequality are obvious. If $d(\mathscr{P},\mathscr{Q})=0$, then $\textnormal{supp}_{\mathscr{P}}(X)=\{ \phi \}$ for some $\phi \in \mathbb{R}$ if and only if $\textnormal{supp}_{\mathscr{Q}}(X)=\{ \phi \}$, which means $\mathscr{P}=\mathscr{Q}$. 
+\end{proof}
+
+The metric $d$ induces thus a topology on $\textnormal{\Libra}_{\mathbb{R}}(\mathscr{D})$ so that each connected component is a metric space. Now, tilting gives a way to characterize the bounded t-structures obtained from real slicings in the same connected component. \\
+
+\begin{prop}
+Suppose $d(\mathscr{P},\mathscr{Q}) < \frac{1}{2}$. Then $\mathscr{P}_{]\frac{1}{2}, + \infty[}$ is a tilting of both $\mathscr{P}_{]0,+\infty[}$ and $\mathscr{Q}_{]0,+\infty[}$.
+\end{prop}
+
+\begin{proof}
+By hypothesis, we have a diagram of inclusions of bounded t-structures: 
+$$\begin{array}{ccc}
+  &  \mathscr{P}_{]1,+\infty[}  & \\
+ & \rotatebox[origin=c]{270}{$\subseteq$} & \\
+\mathscr{Q}_{]1,+\infty[} &  \subseteq \mathscr{P}_{]\frac{1}{2}, + \infty[}  \subseteq & \mathscr{Q}_{]0,+\infty[} \\
+& \rotatebox[origin=c]{270}{$\subseteq$}  & \\
+& \mathscr{P}_{]0,+\infty[} & 
+\end{array}$$
+and we conclude using \hyperref[qqa]{\textbf{Proposition \ref*{qqa}}}.
+\end{proof}
+
+This topology behaves well with respect to the operations we constructed on slicings. First of all, $\textnormal{Aut}(\mathscr{D})$ acts clearly by isometries on $\textnormal{\Libra}_{\mathbb{R}}(\mathscr{D})$. Moreover, since $\textnormal{supp}_{f_{\textnormal{\Libra}}(\mathscr{P})}(X)=f(\textnormal{supp}_{\mathscr{P}}(X))$ for $f \in \textnormal{Aut}_{\textnormal{Pos}_{\mathbb{Z}}}$ and $\mathscr{P} \in \textnormal{\Libra}_{\mathbb{R}}(\mathscr{D})$, the subgroup of continuous automorphisms of $\mathbb{R}$ as a $\mathbb{Z}$-poset acts by homeomorphisms on the real slicings. \\
+Now, consider a semiorthogonal decomposition $\mathscr{P}=\{ \mathscr{P}_0, \cdots, \mathscr{P}_n \}$ on $\mathscr{D}$. Denote by $$S(\mathscr{P}) \subseteq \prod_{0 \le i \le n}\textnormal{\Libra}_{\mathbb{R}}(\mathscr{P}_i)$$
+the set of elements so that the obtained $[n] \times \mathbb{R}$-slicing is gluable. By composing gluing with the projection to the left factor $\mathbb{R} \times [n] \longrightarrow \mathbb{R}$ and applying the slice functor we obtain a map $S(\mathscr{P}) \overset{\gamma}{\longrightarrow} \textnormal{\Libra}_{\mathbb{R}}(\mathscr{D})$. \\
+
+\begin{prop}
+The map $$S(\mathscr{P}) \overset{\gamma}{\longrightarrow} \textnormal{\Libra}_{\mathbb{R}}(\mathscr{D})$$
+is continuous, where $S(\mathscr{P})$ has the product topology. 
+\end{prop}
+
+\begin{proof}
+Pick $(\mathscr{Q}_i)_i \in S(\mathscr{P})$, and denote $\mathscr{Q}$ its image by $\gamma$. For $0 \not = X \in \mathscr{D}$ we easily see that $$\phi_{\mathscr{Q}}^+(X)= \max_{i \in \textnormal{supp}_{\mathscr{P}}(X)} \phi^+_{\mathscr{Q}_i}(X) \qquad \phi_{\mathscr{Q}}^-(X)= \min_{i \in \textnormal{supp}_{\mathscr{P}}(X)} \phi^-_{\mathscr{Q}_i}(X)$$
+which gives the desired continuity. 
+\end{proof}

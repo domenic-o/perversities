@@ -1,0 +1,1 @@
+# File della tesi. Il file da compilare e' TESI.tex. Il capitolo sulle perversita' e' 'the (he)art of gluing', il cui codice si trova alla fine di SLICE.tex (dopo il secondo commento lungo). Domani cerco di isolare le parti rilevanti. Un esempio importante e' il 4.18 (alla fine della tesi), che riguarda la costruzione dei motivi perversi.
