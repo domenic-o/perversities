@@ -1,10 +1,11 @@
-\documentclass[12pt]{amsart}
+\documentclass{article}
 
+\usepackage{hyperref}
 \usepackage{amssymb,amsfonts,amsmath,amsthm}
 \usepackage[dvipsnames]{xcolor}
 \usepackage{enumerate,enumitem,tikz-cd,tikz,mathrsfs,graphicx,marvosym,wasysym,epigraph,afterpage}
 %mathrsfs is for \mathscr, marvosym for \Coffeecup, graphicx for \heartsuit, wasysym is for \twonotes
-\usepackage[colorlinks=true, urlcolor=purple, linkcolor=RoyalBlue, citecolor=magenta, pdfborder={0 0 0}]{hyperref}
+%\usepackage[colorlinks=true, urlcolor=purple, linkcolor=RoyalBlue, citecolor=magenta, pdfborder={0 0 0}]{hyperref}
 %\usepackage[document]{ragged2e}
 \usetikzlibrary{backgrounds}
 
@@ -27,6 +28,12 @@
 \newtheorem{exmp}[thm]{Example}
 \newtheorem{rem}[thm]{Remark}
 
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Oo}{\mathcal{O}}
+\newcommand{\ts}{\mathrm{ts}}
+\newcommand{\tee}{\mathfrak{t}}
+
+
 
 \begin{document}
 \begin{titlepage}
@@ -36,6 +43,19 @@
 
 
 \subsection{The (he)art of gluing} The slice functor hides greater potential. Indeed, even if we don't have a morphism of $\mathbb{Z}$-posets (but just a $\mathbb{Z}$-equivariant map), then the slice functor can still be applied, obtaining a partially defined map. \\
+
+Let $J$ be a $\Z$-poset, i.e., a partially ordered set together with a monotone action of $\Z$, that we will denote by $(n,x)\mapsto x+n$. Recall that a $J$-slicing on a stable $\infty$-category $\mathscr{D}$ is a morphism of $\Z$-posests $\tee\colon \Oo(J)\to \ts(\mathscr{D})$, where $\Oo(J)$ is the $\Z$-poset of the upper sets of $J$ and $\ts(\mathscr{D})$ is the $\Z$-poset of $t$-structures on $\mathscr{D}$.
+
+Clearly, if $f\colon J\to J'$ is a morphism of $\Z$-posets, then $f^{-1}\colon \{\text{subsets of $J'$}\}\to \{\text{subsets of $J$}\}$ induces a $\Z$-equivariant morphism of $\Z$-posets $f^{-1}\colon \Oo(J')\to \Oo(J)$, and so composition with $f^{-1}$ gives a morphism
+\begin{align*}
+f_*\colon J\text{-slicings on $\mathscr{D}$}&\to J'\text{-slicings on $\mathscr{D}$}\\
+\tee&\mapsto \tee\circ f^{-1}.
+\end{align*}
+But actually there is no need for $f$ to be a morphism of posets in order to define a morphism $\Oo(J')\to \Oo(J)$: in the general case, just consider the map $\overline{f^{-1}}$ defined by
+\[
+\overline{f^{-1}}(U)=\overline{f^{-1}(U)},
+\]
+where $\overline{S}$ denotes the upperset closure of the subset $S$ of $J$, i.e., the smallest upperset of $J$ containing $S$ (in other words  $\overline{S}$ is the intersection of all the uppersets of $J$ containing $S$).
 
 \begin{prop}\label{pipp}
 Let $J \overset{f}{\longrightarrow} J'$ be a a $\mathbb{Z}$-equivariant map (not necessarily increasing) between $\mathbb{Z}$-posets, $\mathscr{P}$ a $J$-slicing on $\mathscr{D}$. Suppose that $\mathscr{P}_{\psi} \subseteq \mathscr{P}_{\phi}^{\perp}$ whenever one of the following conditions holds: 
