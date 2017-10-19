@@ -66,6 +66,18 @@ Let $U_1$ and $U_2$ two posets in $J'$ with $U_1\leq U_2$, i.e., with $U_2\subse
 \]
 by the $\Z$-equivariancy of $f$.
 \end{proof}
+\begin{cor}
+Let $J$ and $J'$ be $\Z$-posets. Any $\Z$-equivariant morphism of sets $f\colon J\to J'$ induces a morphism 
+\begin{align*}
+f_*\colon J\text{-slicings on $\mathscr{D}$}&\to J'\text{-slicings on $\mathscr{D}$}\\
+\tee&\mapsto \tee\circ \overline{f^{-1}}.
+\end{align*}
+If $f$ is a morphism of $\Z$-posets, this reduces the the morphism $\tee\mapsto \tee\circ f^{-1}$ mentioned above.
+\end{cor}
+\begin{proof}
+The only thing we need to prove is that if $f$ is order preserving then $\overline{f^{-1}}=f^{-1}$. This is immediate, as for an order preserving map the preimage of an upper set is an upper set (and so it is automatically closed). 
+\end{proof}
+Although $f_*$ maps $J$-slicing to $J'$-slicings, it does not necessarily map Bridgeland $J$-slicings to Bridgeland $J'$-slicings. In order to do so, we need make a few more assumptions on $f$.
 
 \begin{prop}\label{pipp}
 Let $J \overset{f}{\longrightarrow} J'$ be a a $\mathbb{Z}$-equivariant map (not necessarily increasing) between $\mathbb{Z}$-posets, $\mathscr{P}$ a $J$-slicing on $\mathscr{D}$. Suppose that $\mathscr{P}_{\psi} \subseteq \mathscr{P}_{\phi}^{\perp}$ whenever one of the following conditions holds: 
