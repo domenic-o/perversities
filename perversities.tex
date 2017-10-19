@@ -56,6 +56,16 @@ But actually there is no need for $f$ to be a morphism of posets in order to def
 \overline{f^{-1}}(U)=\overline{f^{-1}(U)},
 \]
 where $\overline{S}$ denotes the upperset closure of the subset $S$ of $J$, i.e., the smallest upperset of $J$ containing $S$ (in other words  $\overline{S}$ is the intersection of all the uppersets of $J$ containing $S$).
+\begin{lem}
+Let $J$ and $J'$ be $\Z$-posets, and let $f\colon J\to J'$ a map of $\Z$-sets (i.e., a $\Z$-equivariant map, not necessarily nondecreasing). The map $\overline{f^{-1}}\colon \Oo(J')\to \Oo(J)$ is a morphism of $\Z$-posets.
+\end{lem}
+\begin{proof}
+Let $U_1$ and $U_2$ two posets in $J'$ with $U_1\leq U_2$, i.e., with $U_2\subseteq U_1$. Then, $f^{-1}(U_2)\subseteq f^{-1}(U_1)$ and so, by definition of closure, $\overline{f^{-1}(U_2)}\subseteq \overline{f^{-1}(U_1)}$, i.e.,  $\overline{f^{-1}}(U_1)\leq \overline{f^{-1}}(U_2)$. To see that $\overline{f^{-1}}$ is $\Z$-equivariant, notice that for any subset $S$ of $J$ one has $S+1\subseteq \overline{S}+1$ and so $\overline{S+1}\subseteq \overline{S}+1$, as $\overline{S}+1$ is an upperset and therefore closed. On the other hand, $S+1\subseteq \overline{S+1}$ and so $S\subseteq \overline{S+1}-1$ which implies $\overline{S}\subseteq \overline{S+1}-1$, i.e., $\overline{S}+1\subseteq \overline{S+1}$. Therefore, for any upperset $U$ in $J'$ one has 
+\[
+\overline{f^{-1}}(U+1)=\overline{f^{-1}(U+1)}=\overline{f^{-1}(U)+1}=\overline{f^{-1}(U)}+1=\overline{f^{-1}}(U)+1,
+\]
+by the $\Z$-equivariancy of $f$.
+\end{proof}
 
 \begin{prop}\label{pipp}
 Let $J \overset{f}{\longrightarrow} J'$ be a a $\mathbb{Z}$-equivariant map (not necessarily increasing) between $\mathbb{Z}$-posets, $\mathscr{P}$ a $J$-slicing on $\mathscr{D}$. Suppose that $\mathscr{P}_{\psi} \subseteq \mathscr{P}_{\phi}^{\perp}$ whenever one of the following conditions holds: 
