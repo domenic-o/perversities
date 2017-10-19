@@ -77,7 +77,16 @@ If $f$ is a morphism of $\Z$-posets, this reduces the the morphism $\tee\mapsto 
 \begin{proof}
 The only thing we need to prove is that if $f$ is order preserving then $\overline{f^{-1}}=f^{-1}$. This is immediate, as for an order preserving map the preimage of an upper set is an upper set (and so it is automatically closed). 
 \end{proof}
-Although $f_*$ maps $J$-slicing to $J'$-slicings, it does not necessarily map Bridgeland $J$-slicings to Bridgeland $J'$-slicings. In order to do so, we need make a few more assumptions on $f$.
+Although $f_*$ maps $J$-slicing to $J'$-slicings, it does not necessarily map Bridgeland $J$-slicings to Bridgeland $J'$-slicings. However, if a Bridgeland slicing $\tee$ is particularly well behaved  with respect to a given mapof $\Z$-sets $f$, then $f_*\tee$ will again be a Bridgeland slicing. We make this precise in the following definition and proposition.
+\begin{defn}
+Let $J,J'$ be $\Z$-tosets, and let $J \overset{f}{\longrightarrow} J'$ be a map of $\Z$-sets (not necessarily a map of $\mathbb{Z}$-posets), and let $\tee$ be a $J$-slicing on $\mathscr{D}$. We say that $f$ is $\tee$-monotone if $\phi\leq \psi$ and $\tee([\phi,+\infty))\leq \tee((\psi+1,+\infty))$ together imply $f(\phi)\leq f(\psi)$.
+\end{defn}
+
+The condition of being $\tee$-monotone is clearly weaker than the condition of being monotone: a monotone map $f\colon J\to J'$ is $\tee$-monotone with respect to every $J$-slicing $\tee$.
+
+\begin{prop}\label{pipp0}
+Let $J,J'$ be $\Z$-tosets and $\tee$ be a Bridgeland $J$-slicing of $\mathscr{D}$. If a morphism of $\Z$-sets $J \overset{f}{\longrightarrow} J'$ is $\tee$-monotone, then $f_*\tee$ is a Bridgeland $J'$-slicing of $\mathscr{D}$. Moreover, for every $j\in J'$ we have $\mathscr{D}_{f_*\tee;j}=\mathscr{D}_{\tee;f^{-1}(j)}$.
+\end{prop}
 
 \begin{prop}\label{pipp}
 Let $J \overset{f}{\longrightarrow} J'$ be a a $\mathbb{Z}$-equivariant map (not necessarily increasing) between $\mathbb{Z}$-posets, $\mathscr{P}$ a $J$-slicing on $\mathscr{D}$. Suppose that $\mathscr{P}_{\psi} \subseteq \mathscr{P}_{\phi}^{\perp}$ whenever one of the following conditions holds: 
