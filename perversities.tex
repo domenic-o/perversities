@@ -1,13 +1,33 @@
 \documentclass{article}
 
 \usepackage{hyperref}
-\usepackage{amssymb,amsfonts,amsmath,amsthm}
-\usepackage[dvipsnames]{xcolor}
-\usepackage{enumerate,enumitem,tikz-cd,tikz,mathrsfs,graphicx,marvosym,wasysym,epigraph,afterpage}
+\usepackage{amssymb,amsfonts,amsmath,amsthm,pigpen,
+,enumitem
+,stmaryrd
+,pifont
+,hyphenat
+,epigraph
+,tikz
+,etoolbox
+,mparhack
+,mathtools
+,microtype
+,lmodern
+,datetime
+,cite
+,CJKutf8
+,marvosym
+,chessfss,
+marvosym,wasysym,mathrsfs,afterpage,
+tikz-cd,tikz}
+%\usepackage[dvipsnames]{xcolor}
+%\usepackage{enumerate,enumitem,tikz-cd,tikz,mathrsfs,graphicx,marvosym,wasysym,epigraph,afterpage}
 %mathrsfs is for \mathscr, marvosym for \Coffeecup, graphicx for \heartsuit, wasysym is for \twonotes
 %\usepackage[colorlinks=true, urlcolor=purple, linkcolor=RoyalBlue, citecolor=magenta, pdfborder={0 0 0}]{hyperref}
 %\usepackage[document]{ragged2e}
-\usetikzlibrary{backgrounds}
+%\usetikzlibrary{backgrounds}
+
+\usepackage[all]{xypic}
 
 \setlength\epigraphwidth{.6\textwidth}
 %\setlength\epigraphrule{0pt}
@@ -32,7 +52,7 @@
 \newcommand{\Oo}{\mathcal{O}}
 \newcommand{\ts}{\mathrm{ts}}
 \newcommand{\tee}{\mathfrak{t}}
-
+\newcommand{\orth}{\boxslash}
 
 
 \begin{document}
@@ -44,49 +64,74 @@
 
 \subsection{The (he)art of gluing} The slice functor hides greater potential. Indeed, even if we don't have a morphism of $\mathbb{Z}$-posets (but just a $\mathbb{Z}$-equivariant map), then the slice functor can still be applied, obtaining a partially defined map. \\
 
-Let $J$ be a $\Z$-poset, i.e., a partially ordered set together with a monotone action of $\Z$, that we will denote by $(n,x)\mapsto x+n$. Recall that a $J$-slicing on a stable $\infty$-category $\mathscr{D}$ is a morphism of $\Z$-posests $\tee\colon \Oo(J)\to \ts(\mathscr{D})$, where $\Oo(J)$ is the $\Z$-poset of the upper sets of $J$ and $\ts(\mathscr{D})$ is the $\Z$-poset of $t$-structures on $\mathscr{D}$.
+Let $J$ be a $\Z$-toset, i.e., a totally ordered set together with a monotone action of $\Z$, that we will denote by $(n,x)\mapsto x+n$. Recall that a $J$-slicing on a stable $\infty$-category $\mathscr{D}$ is a morphism of $\Z$-posests $\tee\colon \Oo(J)\to \ts(\mathscr{D})$, where $\Oo(J)$ is the $\Z$-poset of the slicings of $J$ (i.e., the decompositions of $J$ into a disjoint union of a lower set $L$ and of an upper set $U$), and $\ts(\mathscr{D})$ is the $\Z$-poset of $t$-structures on $\mathscr{D}$.
 
-Clearly, if $f\colon J\to J'$ is a morphism of $\Z$-posets, then $f^{-1}\colon \{\text{subsets of $J'$}\}\to \{\text{subsets of $J$}\}$ induces a $\Z$-equivariant morphism of $\Z$-posets $f^{-1}\colon \Oo(J')\to \Oo(J)$, and so composition with $f^{-1}$ gives a morphism
+Clearly, if $f\colon J\to J'$ is a morphism of $\Z$-tosets, then $f^{-1}\colon \{\text{subsets of $J'$}\}\to \{\text{subsets of $J$}\}$ induces a $\Z$-equivariant morphism of $\Z$-posets $f^{-1}\colon \Oo(J')\to \Oo(J)$, and so composition with $f^{-1}$ gives a morphism
 \begin{align*}
 f_*\colon J\text{-slicings on $\mathscr{D}$}&\to J'\text{-slicings on $\mathscr{D}$}\\
 \tee&\mapsto \tee\circ f^{-1}.
 \end{align*}
-But actually there is no need for $f$ to be a morphism of posets in order to define a morphism $\Oo(J')\to \Oo(J)$: in the general case, just consider the map $\overline{f^{-1}}$ defined by
-\[
-\overline{f^{-1}}(U)=\overline{f^{-1}(U)},
-\]
-where $\overline{S}$ denotes the upperset closure of the subset $S$ of $J$, i.e., the smallest upperset of $J$ containing $S$ (in other words  $\overline{S}$ is the intersection of all the uppersets of $J$ containing $S$).
-\begin{lem}
-Let $J$ and $J'$ be $\Z$-posets, and let $f\colon J\to J'$ a map of $\Z$-sets (i.e., a $\Z$-equivariant map, not necessarily nondecreasing). The map $\overline{f^{-1}}\colon \Oo(J')\to \Oo(J)$ is a morphism of $\Z$-posets.
-\end{lem}
-\begin{proof}
-Let $U_1$ and $U_2$ two posets in $J'$ with $U_1\leq U_2$, i.e., with $U_2\subseteq U_1$. Then, $f^{-1}(U_2)\subseteq f^{-1}(U_1)$ and so, by definition of closure, $\overline{f^{-1}(U_2)}\subseteq \overline{f^{-1}(U_1)}$, i.e.,  $\overline{f^{-1}}(U_1)\leq \overline{f^{-1}}(U_2)$. To see that $\overline{f^{-1}}$ is $\Z$-equivariant, notice that for any subset $S$ of $J$ one has $S+1\subseteq \overline{S}+1$ and so $\overline{S+1}\subseteq \overline{S}+1$, as $\overline{S}+1$ is an upperset and therefore closed. On the other hand, $S+1\subseteq \overline{S+1}$ and so $S\subseteq \overline{S+1}-1$ which implies $\overline{S}\subseteq \overline{S+1}-1$, i.e., $\overline{S}+1\subseteq \overline{S+1}$. Therefore, for any upperset $U$ in $J'$ one has 
-\[
-\overline{f^{-1}}(U+1)=\overline{f^{-1}(U+1)}=\overline{f^{-1}(U)+1}=\overline{f^{-1}(U)}+1=\overline{f^{-1}}(U)+1,
-\]
-by the $\Z$-equivariancy of $f$.
-\end{proof}
-\begin{cor}
-Let $J$ and $J'$ be $\Z$-posets. Any $\Z$-equivariant morphism of sets $f\colon J\to J'$ induces a morphism 
+The slices of $f_*\tee$ are clearly given by $\mathscr{D}_{f_*\tee;\phi}=\mathscr{D}_{\tee;f^{-1}(\{\phi\})}$. Notice that, as $f$ is monotone, the subset $f^{-1}(\{\phi\})$ is an interval in $J$. It is immediate to see that $f_*$ restricts to a map
 \begin{align*}
-f_*\colon J\text{-slicings on $\mathscr{D}$}&\to J'\text{-slicings on $\mathscr{D}$}\\
-\tee&\mapsto \tee\circ \overline{f^{-1}}.
+f_*\colon \text{Bridgeland $J$-slicings on $\mathscr{D}$}&\to \text{Bridgeland $J'$-slicings on $\mathscr{D}$}
 \end{align*}
-If $f$ is a morphism of $\Z$-posets, this reduces the the morphism $\tee\mapsto \tee\circ f^{-1}$ mentioned above.
-\end{cor}
-\begin{proof}
-The only thing we need to prove is that if $f$ is order preserving then $\overline{f^{-1}}=f^{-1}$. This is immediate, as for an order preserving map the preimage of an upper set is an upper set (and so it is automatically closed). 
-\end{proof}
-Although $f_*$ maps $J$-slicing to $J'$-slicings, it does not necessarily map Bridgeland $J$-slicings to Bridgeland $J'$-slicings. However, if a Bridgeland slicing $\tee$ is particularly well behaved  with respect to a given mapof $\Z$-sets $f$, then $f_*\tee$ will again be a Bridgeland slicing. We make this precise in the following definition and proposition.
+Namely, if $\mathcal{H}^\phi_{f_*\tee}(X)=0$ for every $\phi\in J'$ then $\mathcal{H}^{f^{-1}(\{\phi\})}_{\tee}(X)=0$ for every $\phi$ in $J'$. As we are assuming the $J$-slicing $\tee$ is a Bridgeland slicing, this implies that $\mathcal{H}^{\psi}_{\tee}(X)=0$ for every $\psi$ in $f^{-1}(\{\phi\})$, for every $\phi$. Therefore $\mathcal{H}^{\psi}_{\tee}(X)=0$ for every $\psi$ in $J$ and so, again by definition of Bridgeland slicing, $X=0$. Also, if $\mathcal{H}^\phi_{f_*\tee}(X)\neq 0$ then $\mathcal{H}^{f^{-1}(\{\phi\})}_{\tee}(X)\neq 0$ and so (again by the Bridgeland slicing condition) there exists at least an element $\psi$ in $f^{-1}(\{\phi\})$ such that $\mathcal{H}^{\psi}_{\tee}(X)\neq 0$. As the $J$-slicing $\tee$ is Bridgeland, the total of these $\psi$'s must be finite, so only for finitely many $\phi$ we can have such a $\psi$. In other words, the number of indices $\phi$ in $J'$ such that $\mathcal{H}^\phi_{f_*\tee}(X)\neq 0$ is finite.
+
+Notice that, if $\tee$ is a Bridgeland slicing of $\mathscr{D}$, and $f\colon J\to J'$ is a morphism of $\Z$-tosets, then for any slicing $(L,U)$ of $J'$, the lower and the upper categories
+$\mathscr{D}_{f_*\tee(L)}$ and $\mathscr{D}_{f_*\tee(U)}$ can be equivalently defined as
+\begin{align*}
+\mathscr{D}_{f_*\tee(L)}&=\langle \mathscr{D}_{\tee;\phi}\rangle_{f(\phi)\in L}\\
+\mathscr{D}_{f_*\tee(U)}&=\langle \mathscr{D}_{\tee;\phi}\rangle_{f(\phi)\in U}
+\end{align*}
+where $\langle \mathscr{S}\rangle$ denotes the extension-closed subcategory of $\mathscr{D}$ generated by the subcategory $\mathscr{S}$.\footnote{
+At some point it will be useful to recall Lemma 4.21 from ??:
+Let $\mathscr{S}_1,\mathscr{S}_2$ be two subcategories of $\mathscr{D}$ with $\mathscr{S}_1\orth \mathscr{S}_2$, i.e., such that $\mathscr{D}(X_2,X_1)$ is contractible for any $X_1\in \mathscr{S}_1$ and any $X_2\in\mathscr{S}_2$. Then $\mathscr{S}_1\orth \langle\mathscr{S}_2\rangle$ and $\langle\mathscr{S}_1\rangle\orth \mathscr{S}_2$, and so $\langle\mathscr{S}_1\rangle\orth \langle\mathscr{S}_2\rangle$.}
+
+The right hand sides of the above two expressions can clearly be defined for every morphism $f$ from $J$ to $J'$ (i.e., not necessarily monotone nor $\Z$-equivariant), and as soon as $f$ is $\Z$-equivariant, the assignment
+\[
+(L,U_\mapsto (\langle \mathscr{D}_{\tee;\phi}\rangle_{f(\phi)\in L},\langle \mathscr{D}_{\tee;\phi}\rangle_{f(\phi)\in U})
+\]
+is an equivariant morphism from $\mathcal{O}(J)$ to pairs of subcategories of $\mathscr{D}$. Clearly, when $f$ is not monotone there is no reason to expect that the pair $(\langle \mathscr{D}_{\tee;\phi}\rangle_{f(\phi)\in L},\langle \mathscr{D}_{\tee;\phi}\rangle_{f(\phi)\in U})$ forms a $t$-structure on $\mathscr{D}$. Yet, it interesting to notice that the condition that $f$ be monotone is only only sufficient in order to have this, and can indeed be relaxed.
+
 \begin{defn}
-Let $J,J'$ be $\Z$-tosets, and let $J \overset{f}{\longrightarrow} J'$ be a map of $\Z$-sets (not necessarily a map of $\mathbb{Z}$-posets), and let $\tee$ be a $J$-slicing on $\mathscr{D}$. We say that $f$ is $\tee$-monotone if $\phi\leq \psi$ and $\tee([\phi,+\infty))\leq \tee((\psi+1,+\infty))$ together imply $f(\phi)\leq f(\psi)$.
+Let $J$ and $J'$ be $\Z$-posets, and let $f\colon J\to J'$ a map of $\Z$-sets (i.e., a $\Z$-equivariant map, not necessarily nondecreasing). A Bridgeland $J$-slicing $\tee$ of $\mathscr{D}$ is \emph{$f$-compatible} if $f(\phi)>f(\psi)$ with $\phi\leq \psi$ implies $\mathscr{D}_{\tee;\psi}\orth \mathscr{D}_{\tee;\geq\phi}$. The $J$-slicing $\tee$ is \emph{strongly $f$-compatible} if $f(\phi)>f(\psi)$ with $\phi\leq \psi$ implies $\mathscr{D}_{\tee;\psi}\orth \mathscr{D}_{\tee;\geq \phi-1}$.
 \end{defn}
 
-The condition of being $\tee$-monotone is clearly weaker than the condition of being monotone: a monotone map $f\colon J\to J'$ is $\tee$-monotone with respect to every $J$-slicing $\tee$.
+\begin{rem}
+Clearly, if $f$ is monotone, then every $J$-slicing $\tee$ is order restoring as the condition `$f(\phi)>f(\psi)$ with $\phi\leq \psi$' is empty.
+\end{rem}
 
-\begin{prop}\label{pipp0}
-Let $J,J'$ be $\Z$-tosets and $\tee$ be a Bridgeland $J$-slicing of $\mathscr{D}$. If a morphism of $\Z$-sets $J \overset{f}{\longrightarrow} J'$ is $\tee$-monotone, then $f_*\tee$ is a Bridgeland $J'$-slicing of $\mathscr{D}$. Moreover, for every $j\in J'$ we have $\mathscr{D}_{f_*\tee;j}=\mathscr{D}_{\tee;f^{-1}(j)}$.
-\end{prop}
+\begin{lem}
+Let $f\colon J\to J'$ be a $\Z$-equivariant morphism of $\Z$-sets (i.e., not necessarily a monotone map) and let $\tee$ be a Bridgeland slicing of $\mathscr{D}$ which is order restoring with respect to $f$. Then
+$(\langle \mathscr{D}_{\tee;\phi}\rangle_{f(\phi)\in L},\langle \mathscr{D}_{\tee;\phi}\rangle_{f(\phi)\in U})$ is a $t$-structure on $\mathscr{D}$.
+\end{lem}
+\begin{proof}
+As $f$ is $\Z$-equivariant and $U+1\subseteq U$, we have
+\begin{align*}
+\langle \mathscr{D}_{\tee;\phi}\rangle_{f(\phi)\in U}[1]&=\langle \mathscr{D}_{\tee;\phi}[1]\rangle_{f(\phi)\in U}\\
+&=\langle \mathscr{D}_{\tee;\phi+1}\rangle_{f(\phi)\in U}\\
+&=\langle \mathscr{D}_{\tee;\phi+1}\rangle_{f(\phi+1)\in U+1}\\
+&=\langle \mathscr{D}_{\tee;\phi}\rangle_{f(\phi)\in U+1}\\
+&\subseteq \langle \mathscr{D}_{\tee;\phi}\rangle_{f(\phi)\in U}\\
+&=\mathscr{D}_{\tee;\phi}\rangle_{f(\phi)\in U}
+\end{align*}
+and similarly for the lower subcategory $\langle \mathscr{D}_{\tee;\phi}\rangle_{f(\phi)\in L}$. To show that 
+\[
+\langle \mathscr{D}_{\tee;\phi}\rangle_{f(\phi)\in L}\orth \langle \mathscr{D}_{\tee;\phi}\rangle_{f(\phi)\in U}
+\]
+it suffices to show that, if $f(\phi)\in L$ and $f(\psi)\in U$ then $\mathscr{D}_{\tee;\phi}\orth \mathscr{D}_{\tee;\psi}$. As $L\cap U=\emptyset$ we cannot have $\phi=\psi$, so either $\phi<\psi$ or vice versa. In the first case, $\mathscr{D}_{\tee;\phi}\orth \mathscr{D}_{\tee;\psi}$ by definition of Bridgeland $J$-slicing. In the second case, we have $\psi<\phi$ and $f(\psi)>f(\phi)$ as $f(\psi)\in U$ and  $f(\phi)\in L$. Therefore, since $\tee$ is $f$-compatible, $\mathscr{D}_{\tee;\phi}\orth \mathscr{D}_{\tee;\geq \psi}$ and so in particular $\mathscr{D}_{\tee;\phi}\orth \mathscr{D}_{\tee;\psi}$. Finally, we have to show that every object $X$ in $\mathscr{D}$ fits into a fiber sequence
+\[
+\xymatrix{
+X_U\ar[r]\ar[d] & X\ar[d]\\
+0\ar[r] & X_L
+}
+\]
+with $X_L\in \langle \mathscr{D}_{\tee;\phi}\rangle_{f(\phi)\in L}$ and $X_U\in \langle \mathscr{D}_{\tee;\phi}\rangle_{f(\phi)\in U}$.
+{\it (to be continued\dots)}
+\end{proof}
+
+
+
 
 \begin{prop}\label{pipp}
 Let $J \overset{f}{\longrightarrow} J'$ be a a $\mathbb{Z}$-equivariant map (not necessarily increasing) between $\mathbb{Z}$-posets, $\mathscr{P}$ a $J$-slicing on $\mathscr{D}$. Suppose that $\mathscr{P}_{\psi} \subseteq \mathscr{P}_{\phi}^{\perp}$ whenever one of the following conditions holds: 
@@ -101,6 +146,7 @@ defines a $J'$-slicing on $\mathscr{D}$.
 \begin{proof}
 Part \textit{(1)} of definition of slicing follows from $\mathbb{Z}$-equivariance of $f$, while part \textit{(2)} follows from condition \textit{(a)} above. Pick $0 \not = X \in \mathscr{D}$ and consider its Postnikov tower with respect to $\mathscr{P}$: $$0=Y_0 \overset{\beta_1}{\longrightarrow} \cdots \overset{\beta_n}{\longrightarrow} Y_n=X$$
 with $\textnormal{cone}(\beta_i)=H_{\mathscr{P}}^{\phi_i}(X)$. Going from left to right, if we encounter an $i$ so that $f(\phi_{i+1}) > f(\phi_i)$ then by condition \textit{(b)} $$\textnormal{Hom}_{\mathscr{D}}(H_{\mathscr{P}}^{\phi_{i+1}}(X),H_{\mathscr{P}}^{\phi_i}(X)[1])=0$$
+As $\phi_{i+1}<\phi_i$ and $f(\phi_{i+1}) > f(\phi_i)$ then we have $\mathscr{D}_{\geq \phi_{i+1}}\subseteq \mathscr{D}_{> \phi_{i}+1}$. As $H_{\mathscr{P}}^{\phi_{i+1}}(X)\in \mathscr{D}_{\geq \phi_{i+1}}\subseteq \mathscr{D}_{> \phi_{i}+1}$ and $H_{\mathscr{P}}^{\phi_i}(X)[1]\in \mathscr{D}_{\leq \phi_{i}}[1]=\mathscr{D}_{\leq \phi_{i}+1}$ we get $$\textnormal{Hom}_{\mathscr{D}}(H_{\mathscr{P}}^{\phi_{i+1}}(X),H_{\mathscr{P}}^{\phi_i}(X)[1])=0.$$
 Using \hyperref[g]{\textbf{Proposition \ref*{g}}} and the \hyperref[s]{\textbf{$3 \times 3$ Lemma}}, we can complete the identity of $Y_i$ to get a diagram: 
 \begin{center}
 \begin{tikzcd}[ampersand replacement=\&]
