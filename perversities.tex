@@ -54,6 +54,8 @@ tikz-cd,tikz}
 \newcommand{\tee}{\mathfrak{t}}
 \newcommand{\orth}{\boxslash}
 
+\DeclareMathOperator{\fib}{fib}
+\DeclareMathOperator{\cofib}{cofib}
 
 \begin{document}
 \begin{titlepage}
@@ -94,7 +96,9 @@ The right hand sides of the above two expressions can clearly be defined for eve
 is an equivariant morphism from $\mathcal{O}(J)$ to pairs of subcategories of $\mathscr{D}$. Clearly, when $f$ is not monotone there is no reason to expect that the pair $(\langle \mathscr{D}_{\tee;\phi}\rangle_{f(\phi)\in L},\langle \mathscr{D}_{\tee;\phi}\rangle_{f(\phi)\in U})$ forms a $t$-structure on $\mathscr{D}$. Yet, it interesting to notice that the condition that $f$ be monotone is only only sufficient in order to have this, and can indeed be relaxed.
 
 \begin{defn}
-Let $J$ and $J'$ be $\Z$-posets, and let $f\colon J\to J'$ a map of $\Z$-sets (i.e., a $\Z$-equivariant map, not necessarily nondecreasing). A Bridgeland $J$-slicing $\tee$ of $\mathscr{D}$ is \emph{$f$-compatible} if $f(\phi)>f(\psi)$ with $\phi\leq \psi$ implies $\mathscr{D}_{\tee;\psi}\orth \mathscr{D}_{\tee;\geq\phi}$. The $J$-slicing $\tee$ is \emph{strongly $f$-compatible} if $f(\phi)>f(\psi)$ with $\phi\leq \psi$ implies $\mathscr{D}_{\tee;\psi}\orth \mathscr{D}_{\tee;\geq \phi-1}$.
+Let $J$ and $J'$ be $\Z$-posets, and let $f\colon J\to J'$ a map of $\Z$-sets (i.e., a $\Z$-equivariant map, not necessarily nondecreasing). A Bridgeland $J$-slicing $\tee$ of $\mathscr{D}$ is \emph{$f$-compatible}
+% if $f(\phi)>f(\psi)$ with $\phi\leq \psi$ implies $\mathscr{D}_{\tee;\psi}\orth \mathscr{D}_{\tee;\geq\phi}$. The $J$-slicing $\tee$ is \emph{strongly $f$-compatible} 
+ if $f(\phi)>f(\psi)$ with $\phi\leq \psi$ implies $\mathscr{D}_{\tee;\psi}\orth \mathscr{D}_{\tee;\geq \phi-1}$.
 \end{defn}
 
 \begin{rem}
@@ -102,7 +106,7 @@ Clearly, if $f$ is monotone, then every $J$-slicing $\tee$ is order restoring as
 \end{rem}
 
 \begin{lem}
-Let $f\colon J\to J'$ be a $\Z$-equivariant morphism of $\Z$-sets (i.e., not necessarily a monotone map) and let $\tee$ be a Bridgeland slicing of $\mathscr{D}$ which is order restoring with respect to $f$. Then
+Let $f\colon J\to J'$ be a $\Z$-equivariant morphism of $\Z$-sets (i.e., not necessarily a monotone map) and let $\tee$ be a Bridgeland slicing of $\mathscr{D}$ which is $f$-compatible. Then
 $(\langle \mathscr{D}_{\tee;\phi}\rangle_{f(\phi)\in L},\langle \mathscr{D}_{\tee;\phi}\rangle_{f(\phi)\in U})$ is a $t$-structure on $\mathscr{D}$.
 \end{lem}
 \begin{proof}
@@ -119,15 +123,76 @@ and similarly for the lower subcategory $\langle \mathscr{D}_{\tee;\phi}\rangle_
 \[
 \langle \mathscr{D}_{\tee;\phi}\rangle_{f(\phi)\in L}\orth \langle \mathscr{D}_{\tee;\phi}\rangle_{f(\phi)\in U}
 \]
-it suffices to show that, if $f(\phi)\in L$ and $f(\psi)\in U$ then $\mathscr{D}_{\tee;\phi}\orth \mathscr{D}_{\tee;\psi}$. As $L\cap U=\emptyset$ we cannot have $\phi=\psi$, so either $\phi<\psi$ or vice versa. In the first case, $\mathscr{D}_{\tee;\phi}\orth \mathscr{D}_{\tee;\psi}$ by definition of Bridgeland $J$-slicing. In the second case, we have $\psi<\phi$ and $f(\psi)>f(\phi)$ as $f(\psi)\in U$ and  $f(\phi)\in L$. Therefore, since $\tee$ is $f$-compatible, $\mathscr{D}_{\tee;\phi}\orth \mathscr{D}_{\tee;\geq \psi}$ and so in particular $\mathscr{D}_{\tee;\phi}\orth \mathscr{D}_{\tee;\psi}$. Finally, we have to show that every object $X$ in $\mathscr{D}$ fits into a fiber sequence
+it suffices to show that, if $f(\psi)\in L$ and $f(\phi)\in U$ then $\mathscr{D}_{\tee;\psi}\orth \mathscr{D}_{\tee;\phi}$. As $L\cap U=\emptyset$ we cannot have $\psi=\phi$, so either $\psi<\phi$ or vice versa. In the first case, $\mathscr{D}_{\tee;\psi}\orth \mathscr{D}_{\tee;\phi}$ by definition of Bridgeland $J$-slicing. In the second case, we have $\phi<\psi$ and $f(\phi)>f(\psi)$ as $f(\phi)\in U$ and  $f(\psi)\in L$. Therefore, since $\tee$ is $f$-compatible, $\mathscr{D}_{\tee;\psi}\orth \mathscr{D}_{\tee;\geq \phi-1}$ and so in particular $\mathscr{D}_{\tee;\psi}\orth \mathscr{D}_{\tee;\phi}$. Finally, we have to show that every object $X$ in $\mathscr{D}$ fits into a fiber sequence
 \[
 \xymatrix{
 X_U\ar[r]\ar[d] & X\ar[d]\\
 0\ar[r] & X_L
 }
 \]
-with $X_L\in \langle \mathscr{D}_{\tee;\phi}\rangle_{f(\phi)\in L}$ and $X_U\in \langle \mathscr{D}_{\tee;\phi}\rangle_{f(\phi)\in U}$.
-{\it (to be continued\dots)}
+with $X_L\in \langle \mathscr{D}_{\tee;\phi}\rangle_{f(\phi)\in L}$ and $X_U\in \langle \mathscr{D}_{\tee;\phi}\rangle_{f(\phi)\in U}$. As $\tee$ is a Bridgeland slicing, we have a factorization of the initial morphism $\mathbf{0} \to X$ of the form
+\[
+\mathbf{0}=X_0 \xrightarrow{\alpha_1} X_1\cdots \xrightarrow{\alpha_{{\bar\imath}}}X_{{\bar\imath}}\xrightarrow{\alpha_{{\bar\imath}+1}}X_{{\bar\imath}+1}\xrightarrow{}\cdots \xrightarrow{\alpha_n} X_n=X
+\]
+with $\mathbf{0} \neq \cofib(\alpha_i)=\mathcal{H}_{\tee}^{\phi_i}(X) \in \mathscr{D}_{\phi_i}$ for all $i = 1, \cdots, n$, with $\phi_i>\phi_{i+1}$. Let us now consider the sequence of symbols $L$ and $U$ obtained putting in the $i$-th place $L$ if $f(\phi_i)\in L$ and $U$ if $f(\phi_i)\in U$. If this sequence is of the form $(U,U,\dots,U,L,L,\dots,L)$, then there exists an index $\bar{\imath}$ such that
+ $f(\phi_{i})\in U$ for $i\leq \bar{\imath}$ and $f(\phi_{i})\in L$ for $i>\bar{\imath}$ (with ${\bar\imath}=-1$ or $n$ when all of the $f(\phi_i)$ are in $L$ or in $U$, respectively). Then we can
+consider the pullout diagram
+\[
+\xymatrix{
+X_{{\bar\imath}}\ar[r]\ar[d]_{f_{L}}&0\ar[d]\\
+X\ar[r]&\mathrm{cofib}(f_{L})
+}\]
+together with the factorizations
+\[
+\mathbf{0}=X_0 \xrightarrow{\alpha_1} X_1\cdots \xrightarrow{\alpha_{{\bar\imath}}}X_{{\bar\imath}} 
+\]
+and
+\[
+X_{{\bar\imath}}\xrightarrow{\alpha_{{\bar\imath}+1}}X_{{\bar\imath}+1}\xrightarrow{}\cdots \xrightarrow{\alpha_n} X_n=X.
+\]
+The first factorization shows that $X_{{\bar\imath}}\in \langle\cup_{i=0}^{{\bar\imath}}\mathscr{D}_{\phi_i}\rangle\subseteq \langle \mathscr{D}_{\tee;\phi}\rangle_{f(\phi)\in U}$ while the second factorization shows that $\mathrm{cofib}(f_{L})\in  \langle\cup_{i={\bar\imath}+1}^n\mathscr{D}_{\phi_i}\rangle\subseteq \langle \mathscr{D}_{\tee;\phi}\rangle_{f(\phi)\in L}$. So we are done in this case. Therefore, we are reduced to showing that we can always avoid a $(\dots,L,U,\dots)$ situation in our sequence of $L$'s and $U$'s. Assume we have such a situation. Then we have an index $i_0$ with $f(\phi_{i_0})\in L$ and $f(\phi_{{i_0}+1})\in U$. This in particular implies $f(\phi_{{i_0}+1})>f(\phi_{i_0})$ with $\phi_{{i_0}+1}<\phi_{i_0}$. As $\tee$ is $f$-compatible, this gives $\mathscr{D}_{\tee;\phi_{i_0}}\orth \mathscr{D}_{\tee;\geq (\phi_{i_0+1})-1}$, i.e. $(\mathscr{D}_{\tee;\phi_{i_0}}[1])\orth \mathscr{D}_{\tee;\geq \phi_{i_0+1}}$. In particular, $\mathscr{D}(\mathcal{H}^{\phi_{i_0+1}}_{\tee}(X),\mathcal{H}^{\phi_{i_0}}_{\tee}(X)[1])$ is contractible. Now consider the pasting of pullout diagrams
+\[
+\xymatrix{X_{i_0-1}\ar[r]^{\alpha_{i_0}}\ar[d] & X_{i_0}\ar[r]^{\alpha_{i_0+1}}\ar[d] & X_{i_0+1}\ar[d]^{\gamma}\\
+0\ar[r]&\mathcal{H}^{\phi_{i_0}}_{\tee}(X)\ar[d]\ar[r]&Y\ar[d]\ar[r] &0\ar[d]\\
+&0\ar[r]&\mathcal{H}^{\phi_{i_0+1}}_{\tee}(X)\ar[r]&\mathcal{H}^{\phi_{i_0}}_{\tee}(X)[1].
+}
+\]
+As the arrow $\mathcal{H}^{\phi_{i_0+1}}_{\tee}(X)\to \mathcal{H}^{\phi_{i_0}}_{\tee}(X)[1]$ factors through $0$, we have $Y=\mathcal{H}^{\phi_{i_0+1}}_{\tee}(X)\oplus \mathcal{H}^{\phi_{i_0}}_{\tee}(X)$ and the above diagram becomes
+\[
+\xymatrix{X_{i_0-1}\ar[r]^{\alpha_{i_0}}\ar[d] & X_{i_0}\ar[r]^{\alpha_{i_0+1}}\ar[d] & X_{i_0+1}\ar[d]^{\gamma}\\
+0\ar[r]&\mathcal{H}^{\phi_{i_0}}_{\tee}(X)\ar[d]\ar[r]^-{\iota_2}&\mathcal{H}^{\phi_{i_0+1}}_{\tee}(X)\oplus \mathcal{H}^{\phi_{i_0}}_{\tee}(X)\ar[d]^{\pi_1}\ar[r] &0\ar[d]\\
+&0\ar[r]&\mathcal{H}^{\phi_{i_0+1}}_{\tee}(X)\ar[r]&\mathcal{H}^{\phi_{i_0}}_{\tee}(X)[1],
+}
+\]
+where $\iota_2$ and $\pi_1$ are the canonical inclusion and projection. Let $\beta\colon X_{i_0+1}\to \mathcal{H}^{\phi_{i_0}}_{\tee}(X)$ be the composition
+\[
+\beta\colon X_{i_0+1}\xrightarrow{\gamma} \mathcal{H}^{\phi_{i_0+1}}_{\tee}(X)\oplus \mathcal{H}^{\phi_{i_0}}_{\tee}(X)\xrightarrow{\pi_2} 
+\mathcal{H}^{\phi_{i_0}}_{\tee}(X).
+\]
+Then we have a homotopy commutative diagram
+\[
+\xymatrix{
+X_{i_0-1}\ar[r]^{\alpha_{i_0}}\ar[d]&X_{i_0}\ar[r]^{\alpha_{i_0+1}}\ar[d] & X_{i_0+1}\ar[d]^{\beta}\\
+0\ar[r]&\mathcal{H}^{\phi_{i_0}}_{\tee}(X)\ar[r]^-{\mathrm{id}}&\mathcal{H}^{\phi_{i_0}}_{\tee}(X)
+}
+\]
+(where only the left square is a pullout), and so the composition $\alpha_{i_0+1}\circ \alpha_{i_0}$ factors through the homotopy fiber of $\beta$. In other words, we have a homotopy commutative diagram
+\[
+\xymatrix{
+X_{i_0-1}\ar[r]^{\alpha_{i_0}}\ar[d]_{\tilde{\alpha}_{i_0}}&X_{i_0}\ar[d]^{\alpha_{i_0+1}}\\
+\fib(\beta)\ar[r]^{\tilde{\alpha}_{i_0+1}}&X_{i_0+1}\
+}
+\]
+Writing $\tilde{X}_{i_0}=\fib(\beta)$, we get the pasting of pullout diagrams
+\[
+\xymatrix{X_{i_0-1}\ar[r]^{\tilde{\alpha}_{i_0}}\ar[d] & \tilde{X}_{i_0}\ar[r]^{\tilde{\alpha}_{i_0+1}}\ar[d] & X_{i_0+1}\ar[d]^{\gamma}\\
+0\ar[r]&\mathcal{H}^{\phi_{i_0+1}}_{\tee}(X)\ar[d]\ar[r]^-{\iota_1}&\mathcal{H}^{\phi_{i_0+1}}_{\tee}(X)\oplus \mathcal{H}^{\phi_{i_0}}_{\tee}(X)\ar[d]_{\pi_2}\\
+&0\ar[r]&\mathcal{H}^{\phi_{i_0}}_{\tee}(X).
+}
+\]
+That is, by considering the factorization $X_{i_0-1}\xrightarrow{\tilde{\alpha}_{i_0}} \tilde{X}_{i_0}\xrightarrow{\tilde{\alpha}_{i_0+1}} X_{i_0+1}$ we have switched the cofibers with respect to the original factorization $X_{i_0-1}\xrightarrow{{\alpha}_{i_0}} {X}_{i_0}\xrightarrow{{\alpha}_{i_0+1}} X_{i_0+1}$. Therefore, writing $\tilde{\phi}_{i_0}=\phi_{i_0+1}$ and $\tilde{\phi}_{i_0+1}=\phi_{i_0}$, 
+we now have  $f(\tilde{\phi}_{i_0}\in U$ and $f(\tilde{\phi}_{i_0+1}\in L$. That is, we have removed the $(\dots,L,U,\dots)$ situation from the position $i_0$, replacing it with a $(\dots,U,L,\dots)$ situation, while keeping all the labels $L,U$ before this positions unchanged. Repeating the procedure the needed number of times, we eventually get rid of all the $(\dots,L,U,\dots)$ situations.\footnote{This is somehow reminiscent of the `bubble sort' algorithm.}
+
 \end{proof}
 
 
@@ -146,7 +211,7 @@ defines a $J'$-slicing on $\mathscr{D}$.
 \begin{proof}
 Part \textit{(1)} of definition of slicing follows from $\mathbb{Z}$-equivariance of $f$, while part \textit{(2)} follows from condition \textit{(a)} above. Pick $0 \not = X \in \mathscr{D}$ and consider its Postnikov tower with respect to $\mathscr{P}$: $$0=Y_0 \overset{\beta_1}{\longrightarrow} \cdots \overset{\beta_n}{\longrightarrow} Y_n=X$$
 with $\textnormal{cone}(\beta_i)=H_{\mathscr{P}}^{\phi_i}(X)$. Going from left to right, if we encounter an $i$ so that $f(\phi_{i+1}) > f(\phi_i)$ then by condition \textit{(b)} $$\textnormal{Hom}_{\mathscr{D}}(H_{\mathscr{P}}^{\phi_{i+1}}(X),H_{\mathscr{P}}^{\phi_i}(X)[1])=0$$
-As $\phi_{i+1}<\phi_i$ and $f(\phi_{i+1}) > f(\phi_i)$ then we have $\mathscr{D}_{\geq \phi_{i+1}}\subseteq \mathscr{D}_{> \phi_{i}+1}$. As $H_{\mathscr{P}}^{\phi_{i+1}}(X)\in \mathscr{D}_{\geq \phi_{i+1}}\subseteq \mathscr{D}_{> \phi_{i}+1}$ and $H_{\mathscr{P}}^{\phi_i}(X)[1]\in \mathscr{D}_{\leq \phi_{i}}[1]=\mathscr{D}_{\leq \phi_{i}+1}$ we get $$\textnormal{Hom}_{\mathscr{D}}(H_{\mathscr{P}}^{\phi_{i+1}}(X),H_{\mathscr{P}}^{\phi_i}(X)[1])=0.$$
+
 Using \hyperref[g]{\textbf{Proposition \ref*{g}}} and the \hyperref[s]{\textbf{$3 \times 3$ Lemma}}, we can complete the identity of $Y_i$ to get a diagram: 
 \begin{center}
 \begin{tikzcd}[ampersand replacement=\&]
