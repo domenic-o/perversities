@@ -97,16 +97,15 @@ is an equivariant morphism from $\mathcal{O}(J)$ to pairs of subcategories of $\
 
 \begin{defn}
 Let $J$ and $J'$ be $\Z$-posets, and let $f\colon J\to J'$ a map of $\Z$-sets (i.e., a $\Z$-equivariant map, not necessarily nondecreasing). A Bridgeland $J$-slicing $\tee$ of $\mathscr{D}$ is \emph{$f$-compatible}
-% if $f(\phi)>f(\psi)$ with $\phi\leq \psi$ implies $\mathscr{D}_{\tee;\psi}\orth \mathscr{D}_{\tee;\geq\phi}$. The $J$-slicing $\tee$ is \emph{strongly $f$-compatible} 
- if $f(\phi)>f(\psi)$ with $\phi\leq \psi$ implies $\mathscr{D}_{\tee;\psi}\orth \mathscr{D}_{\tee;\geq \phi-1}$.
+if $f(\phi)>f(\psi)$ with $\phi\leq \psi$ implies $\mathscr{D}_{\tee;\psi}\orth \mathscr{D}_{\tee;\geq \phi-1}$.
 \end{defn}
 
 \begin{rem}
 Clearly, if $f$ is monotone, then every $J$-slicing $\tee$ is order restoring as the condition `$f(\phi)>f(\psi)$ with $\phi\leq \psi$' is empty.
 \end{rem}
 
-\begin{lem}
-Let $f\colon J\to J'$ be a $\Z$-equivariant morphism of $\Z$-sets (i.e., not necessarily a monotone map) and let $\tee$ be a Bridgeland slicing of $\mathscr{D}$ which is $f$-compatible. Then
+\begin{lem}\label{is-t-structure}
+Let $f\colon J\to J'$ be a $\Z$-equivariant morphism of $\Z$-sets (i.e., not necessarily a monotone map) and let $\tee$ be a Bridgeland slicing of $\mathscr{D}$ which is $f$-compatible. Then, for any slicing $(L,U)$ of $J'$, the pair of subcategories
 $(\langle \mathscr{D}_{\tee;\phi}\rangle_{f(\phi)\in L},\langle \mathscr{D}_{\tee;\phi}\rangle_{f(\phi)\in U})$ is a $t$-structure on $\mathscr{D}$.
 \end{lem}
 \begin{proof}
@@ -192,10 +191,84 @@ Writing $\tilde{X}_{i_0}=\fib(\beta)$, we get the pasting of pullout diagrams
 \]
 That is, by considering the factorization $X_{i_0-1}\xrightarrow{\tilde{\alpha}_{i_0}} \tilde{X}_{i_0}\xrightarrow{\tilde{\alpha}_{i_0+1}} X_{i_0+1}$ we have switched the cofibers with respect to the original factorization $X_{i_0-1}\xrightarrow{{\alpha}_{i_0}} {X}_{i_0}\xrightarrow{{\alpha}_{i_0+1}} X_{i_0+1}$. Therefore, writing $\tilde{\phi}_{i_0}=\phi_{i_0+1}$ and $\tilde{\phi}_{i_0+1}=\phi_{i_0}$, 
 we now have  $f(\tilde{\phi}_{i_0}\in U$ and $f(\tilde{\phi}_{i_0+1}\in L$. That is, we have removed the $(\dots,L,U,\dots)$ situation from the position $i_0$, replacing it with a $(\dots,U,L,\dots)$ situation, while keeping all the labels $L,U$ before this positions unchanged. Repeating the procedure the needed number of times, we eventually get rid of all the $(\dots,L,U,\dots)$ situations.\footnote{This is somehow reminiscent of the `bubble sort' algorithm.}
-
 \end{proof}
 
+\begin{rem}\label{a-closer-look}
+It follows from the proof of Lemma \ref{is-t-structure} that the objects $X_L$ and $X_U$ in the fiber sequence $X_U\to X\to X_L$ associated with the $t$-struture $(\langle \mathscr{D}_{\tee;\phi}\rangle_{f(\phi)\in L},\langle \mathscr{D}_{\tee;\phi}\rangle_{f(\phi)\in U})$ on $\mathscr{D}$ satisfy
+\begin{align*}
+X_L&\in \langle \mathscr{D}_{\tee;\phi};\quad f(\phi)\in L \text{ and }\mathcal{H}^\phi_\tee(X)\neq 0\rangle\\
+X_U&\in \langle \mathscr{D}_{\tee;\phi};\quad f(\phi)\in U \text{ and }\mathcal{H}^\phi_\tee(X)\neq 0\rangle
+\end{align*}
+\end{rem}
 
+\begin{lem}\label{slices}
+For any $j\in J'$ we have
+\[
+\langle \mathscr{D}_{\tee;\phi}\rangle_{f(\phi)=j}=\langle \mathscr{D}_{\tee;\phi}\rangle_{f(\phi)\leq j}\cap \langle \mathscr{D}_{\tee;\phi}\rangle_{f(\phi)\geq j}.
+\]
+\end{lem}
+\begin{proof}
+Clearly, $\langle \mathscr{D}_{\tee;\phi}\rangle_{f(\phi)=j}\subseteq \langle \mathscr{D}_{\tee;\phi}\rangle_{f(\phi)\leq j}\cap \langle \mathscr{D}_{\tee;\phi}\rangle_{f(\phi)\geq j}$, therefore we only need to prove the converse inclusion. Let $\in \langle \mathscr{D}_{\tee;\phi}\rangle_{f(\phi)\leq j}\cap \langle \mathscr{D}_{\tee;\phi}\rangle_{f(\phi)\geq j}$. Then in particular 
+$X\in \langle \mathscr{D}_{\tee;\phi}\rangle_{f(\phi)\geq j}$
+and so there exists a factorization of the initial morphism $\mathbf{0} \to X$ of the form
+\[
+\mathbf{0}=X_0 \xrightarrow{\alpha_1} X_1\xrightarrow{\alpha_2}\cdots \xrightarrow{\alpha_{n-1}}X_{n-1}\xrightarrow{\alpha_n} X_n=X
+\]
+with $\mathbf{0} \neq \cofib(\alpha_i) \in \mathscr{D}_{\phi_i}$ with $f(\phi_i)\geq i$ for all $i = 1, \cdots, n$. As $((-\infty,j],(j,+\infty)$ is a slicing of $J'$, reasoning as in the proof of Lemma \ref{is-t-structure} we can arrange this factorization is such a way that $f(\phi_i)>j$ for $i\leq \bar{\imath}$ and $f(\phi_i)= j$ for $i>\bar{\imath}$. Therefore, again by reasoning as in the proof of Lemma \ref{is-t-structure} we get a fiber sequence of the form
+\[
+\xymatrix{
+X_{>j}\ar[r]\ar[d] & X\ar[d]\\
+0\ar[r]&X_{j}
+}
+\]
+with $X_{>j}$ in $\langle \mathscr{D}_{\tee;\phi}\rangle_{f(\phi)>j}$ and $X_j$ in $\langle \mathscr{D}_{\tee;\phi}\rangle_{f(\phi)=j}$. This is in particular a fiber sequence of the form $X_{>j}\to X\to X_{\leq j}$, with $X_{\leq j}\in \langle \mathscr{D}_{\tee;\phi}\rangle_{f(\phi)\leq j}$. 
+As $(\langle \mathscr{D}_{\tee;\phi}\rangle_{f(\phi)\leq j},\langle \mathscr{D}_{\tee;\phi}\rangle_{f(\phi)> j})$ is a $t$-structure on $\mathscr{D}$ by Lemma \ref{is-t-structure}, there is (up to equivalence) only one such a fiber sequence. And since $X\in \langle \mathscr{D}_{\tee;\phi}\rangle_{f(\phi)\leq j}$, this is the sequence $0\to X\xrightarrow{\mathrm{id}} X$. Therefore $X=X_j$.
+\end{proof}
+
+\begin{prop}
+Let $f\colon J\to J'$ be a $\Z$-equivariant morphism of $\Z$-sets (i.e., not necessarily a monotone map) and let $\tee$ be a Bridgeland slicing of $\mathscr{D}$ which is $f$-compatible.  The map
+\begin{align*}
+f_!\tee\colon \Oo(J')&\to\ts(\mathscr{D})\\
+(L,U)&\mapsto (\langle \mathscr{D}_{\tee;\phi}\rangle_{f(\phi)\in L},\langle \mathscr{D}_{\tee;\phi}\rangle_{f(\phi)\in U})
+\end{align*}
+defined by Lemma \ref{is-t-structure} is a Bridgeland $J'$-slicing of $\mathscr{D}$, with slices given by
+\[
+\mathscr{D}_{f_!\tee;j}=\langle \mathscr{D}_{\tee;\phi}\rangle_{f(\phi)=j}.
+\]
+\end{prop}
+\begin{proof}
+The map $f_!\tee$ is manifestly monotone and $\Z$-equivariant (see the first part of the proof of Lemma \ref{is-t-structure}), so it is a $J'$ slicing of $\mathscr{D}$, and its slices are given by $\mathscr{D}_{f_!\tee;j}=
+%\mathscr{D}_{f_!\tee;\geq j}\cap \mathscr{D}_{f_!\tee;\leq j},
+%\]
+%and so by the subcategories $
+\langle \mathscr{D}_{\tee;\phi}\rangle_{f(\phi)=j}$ by Lemma \ref{slices}. We are therefore left with showing that it is finite and discrete. Given an object $X$ in $\mathscr{D}$, let now $\{\phi_1,\dots,\phi_n\}$ be the indices in $J$ such that $\mathcal{H}^{\phi_i}_\tee(X)\neq 0$ and let $\{j_1,\dots,j_k\}$ the image of the set $\{\phi_1,\dots,\phi_n\}$ via $f$. Up to renaming, we can assume $j_1>j_{2}>\cdots>j_k$. Consider now the factorization
+\[
+\mathbf{0}=X_0 \xrightarrow{\alpha_1} X_1\xrightarrow{\alpha_2}\cdots \xrightarrow{\alpha_{k-1}}X_{k-1}\xrightarrow{\alpha_k} X_k=X
+\]
+of the initial morphism of $X$ associated to the decreasing sequence $j_1>j_2>\cdots>j_k$ by the $J'$-slicing $f_!\tee$. The cofibers of the morphisms $\alpha_{i}$ are the cohomologies
+$\mathcal{H}^{(j_{i+1},j_{i}]}_{f_!\tee}(X)$ and, by Remark \ref{a-closer-look}, we have
+\begin{align*}
+\mathcal{H}^{(j_{i+1},j_{i}]}_{f_!\tee}(X)\in& \langle \mathscr{D}_{\tee;\phi};\quad f(\phi)\in (j_{i+1},j_{i}] \text{ and }\mathcal{H}^\phi_\tee(X)\neq 0\rangle\\
+&=\langle \mathscr{D}_{\tee;\phi};\quad \phi\in\{\phi_1,\dots,\phi_n\}\text{ and } f(\phi)\in(j_{i+1},j_{i}]\rangle\\
+&=\langle \mathscr{D}_{\tee;\phi};\quad \phi\in\{\phi_1,\dots,\phi_n\}\text{ and } f(\phi)=j_{i}\rangle\\
+&\subseteq \langle \mathscr{D}_{\tee;\phi};\quad  f(\phi)=j_{i}\rangle=\mathscr{D}_{f_!\tee;j_{i}}.
+\end{align*}
+Therefore
+\[
+\mathcal{H}^{(j_i,j_{i-1}]}_{f_!\tee}(X)=\mathcal{H}^{j_i}_{f_!\tee}\mathcal{H}^{(j_i,j_{i-1}]}_{f_!\tee}(X)=\mathcal{H}^{j_i}_{f_!\tee}(X).
+\]
+This tells us that, if all the cohomologies $\mathcal{H}^{j}_{f_!\tee}(X)$ vanish, then also all the $\mathcal{H}^{(j_i,j_{i-1}]}_{f_!\tee}(X)$ vanish, and so $X=0$. Finally, if $\tilde{j}\notin\{j_1,\dots,j_k\}$, then there exists an index $i$ such that $j_{i+1}<\tilde{j}<j_{i}$ and so $(j_{i+1},\tilde{j}]\cap \{j_1,\dots,j_k\}=\emptyset$. The above argument then shows that
+\[
+\mathcal{H}^{(j_{i+1},\tilde{j}]}_{f_!\tee}(X)\in\langle \mathscr{D}_{\tee;\phi};\quad \phi\in\{\phi_1,\dots,\phi_n\}\text{ and } f(\phi)\in(j_{i+1},\tilde{j}]\rangle=\{\mathbf{0}\}.
+\]
+It follows that 
+\[
+\mathcal{H}^{\tilde{j}}_{f_!\tee}(X)=\mathcal{H}^{\tilde{j}}_{f_!\tee}\mathcal{H}^{(j_{i+1},\tilde{j}]}_{f_!\tee}(X)=\mathcal{H}^{\tilde{j}}_{f_!\tee}(0)=0,
+\]
+for every $\tilde{j}\notin \{j_1,\dots,j_k\}$. So in particular, for any $X\in \mathscr{D}$, the cohomologies $\mathcal{H}^{j}_{f_!\tee}(X)$ are possibly nonzero only for finitely many indices $j$. 
+\end{proof}
+
+{\Huge -fino a qui-}
 
 
 \begin{prop}\label{pipp}
