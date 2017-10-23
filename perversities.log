@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.10.27)  23 OCT 2017 18:14
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.10.27)  23 OCT 2017 19:06
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -1494,7 +1494,7 @@ Overfull \hbox (9.3433pt too wide) in paragraph at lines 158--160
 m/n/10 (-20) (\OML/lmm/m/it/10 X\OT1/lmr/m/n/10 (-20) ) \OMS/lmsy/m/n/10 ^^H
  []
 
-<xymatrix 4x3 526> [3] <xymatrix 3x2 295> <xymatrix 2x2 182> <xymatrix 3x3
+[3] <xymatrix 4x3 526> <xymatrix 3x2 295> <xymatrix 2x2 182> <xymatrix 3x3
 416> [4] <xymatrix 2x2 154> [5]
 LaTeX Font Info:    Try loading font information for U+mvs on input line 280.
 
@@ -1537,111 +1537,111 @@ LaTeX Font Info:    Font shape `OMS/lmr/m/it' in size <10> not available
 (Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 307.
  [7]
 
-LaTeX Warning: Citation `ekh' on page 8 undefined on input line 315.
+LaTeX Warning: Citation `ekh' on page 8 undefined on input line 316.
 
 
-LaTeX Warning: Citation `kos' on page 8 undefined on input line 315.
+LaTeX Warning: Citation `kos' on page 8 undefined on input line 316.
 
 [8]
 
-LaTeX Warning: Citation `matti' on page 9 undefined on input line 346.
+LaTeX Warning: Citation `matti' on page 9 undefined on input line 348.
 
 [9]
-Underfull \hbox (badness 10000) in paragraph at lines 393--395
+Underfull \hbox (badness 10000) in paragraph at lines 395--397
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 396--398
+Underfull \hbox (badness 10000) in paragraph at lines 398--400
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 399--401
+Underfull \hbox (badness 10000) in paragraph at lines 401--403
 
  []
 
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <9> on input line 418.
+(Font)              <9> on input line 420.
 [10]
-Underfull \hbox (badness 10000) in paragraph at lines 441--443
+Underfull \hbox (badness 10000) in paragraph at lines 443--445
 
  []
 
 
-LaTeX Warning: Hyper reference `tilt1' on page 11 undefined on input line 450.
+LaTeX Warning: Hyper reference `tilt1' on page 11 undefined on input line 452.
 
 
-LaTeX Warning: Reference `tilt1' on page 11 undefined on input line 450.
+LaTeX Warning: Reference `tilt1' on page 11 undefined on input line 452.
 
 
-LaTeX Warning: Hyper reference `split' on page 11 undefined on input line 452.
+LaTeX Warning: Hyper reference `split' on page 11 undefined on input line 454.
 
 
-LaTeX Warning: Reference `split' on page 11 undefined on input line 452.
+LaTeX Warning: Reference `split' on page 11 undefined on input line 454.
 
 
-LaTeX Warning: Citation `kos' on page 11 undefined on input line 457.
+LaTeX Warning: Citation `kos' on page 11 undefined on input line 459.
 
 [11]
 
-LaTeX Warning: Hyper reference `cohh' on page 12 undefined on input line 462.
+LaTeX Warning: Hyper reference `cohh' on page 12 undefined on input line 464.
 
 
-LaTeX Warning: Reference `cohh' on page 12 undefined on input line 462.
+LaTeX Warning: Reference `cohh' on page 12 undefined on input line 464.
 
 
-LaTeX Warning: Citation `bez' on page 12 undefined on input line 462.
+LaTeX Warning: Citation `bez' on page 12 undefined on input line 464.
 
 
-LaTeX Warning: Hyper reference `t' on page 12 undefined on input line 462.
+LaTeX Warning: Hyper reference `t' on page 12 undefined on input line 464.
 
 
-LaTeX Warning: Reference `t' on page 12 undefined on input line 462.
+LaTeX Warning: Reference `t' on page 12 undefined on input line 464.
 
 
-LaTeX Warning: Citation `perpol' on page 12 undefined on input line 462.
+LaTeX Warning: Citation `perpol' on page 12 undefined on input line 464.
 
 
-LaTeX Warning: Citation `del' on page 12 undefined on input line 465.
+LaTeX Warning: Citation `del' on page 12 undefined on input line 467.
 
 
-LaTeX Warning: Citation `glu' on page 12 undefined on input line 465.
+LaTeX Warning: Citation `glu' on page 12 undefined on input line 467.
 
 
-LaTeX Warning: Hyper reference `aab' on page 12 undefined on input line 471.
+LaTeX Warning: Hyper reference `aab' on page 12 undefined on input line 473.
 
 
-LaTeX Warning: Reference `aab' on page 12 undefined on input line 471.
+LaTeX Warning: Reference `aab' on page 12 undefined on input line 473.
 
 
-LaTeX Warning: Hyper reference `zet' on page 12 undefined on input line 482.
+LaTeX Warning: Hyper reference `zet' on page 12 undefined on input line 484.
 
 
-LaTeX Warning: Reference `zet' on page 12 undefined on input line 482.
+LaTeX Warning: Reference `zet' on page 12 undefined on input line 484.
 
 LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 487.
+(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 489.
 [12] [13]pdfTeX warning (ext4): destination with the same identifier (name{page
 .13}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.521 \clearpage
+l.523 \clearpage
                  [13
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 524.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 524.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 526.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 526.
  (./perversities.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 524.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 524.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 526.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 526.
 Package rerunfilecheck Info: File `perversities.out' has not changed.
 (rerunfilecheck)             Checksum: 9F4ED361C9E9350CD25D3A28142E2E90;63.
 
 
 LaTeX Warning: There were undefined references.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 524.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 526.
  ) 
 Here is how much of TeX's memory you used:
  26712 strings out of 493089
@@ -1684,7 +1684,7 @@ st/fonts/type1/public/stmaryrd/stmary8.pfb></usr/local/texlive/2015/texmf-dist/
 fonts/type1/public/wasy2-ps/wasy10.pfb></usr/local/texlive/2015/texmf-dist/font
 s/type1/public/xypic/xyatip10.pfb></usr/local/texlive/2015/texmf-dist/fonts/typ
 e1/public/xypic/xybtip10.pfb>
-Output written on perversities.pdf (14 pages, 398820 bytes).
+Output written on perversities.pdf (14 pages, 399782 bytes).
 PDF statistics:
  258 PDF objects out of 1000 (max. 8388607)
  207 compressed objects within 3 object streams
