@@ -312,7 +312,9 @@ Let $\mathfrak{t}$ be a bounded t-structure on $\mathscr{D}$. An abelian $\mathb
 
 The following implications hold: 
 $$\textnormal{mixed} \implies \textnormal{grading} \implies \textnormal{perverse} $$
-Clearly, a torsion pair on $\heartsuit_{\mathfrak{t}}$ (seen as an abelian $\mathbb{Z}$-slicing via the inclusion $[1] \subseteq \mathbb{Z}$) is always a grading filtration. Historically, grading filtrations first appeared in \cite{ekh} under the name of 'radical filtrations', while mixed filtrations are covered in the last section of \cite{kos}.
+{\color{red}proof that mixed implies grading: suppose $n< \phi - \psi$. By definition of slicing, the vanishing is automatic for $n \le 0$ and we can thus assume $n>0$. But then $n>0>-n>\psi-\phi$ and the required vanishing now follows from the definition of mixed filtration. The same argument also works for $2 \le n = \phi - \psi$}. \\
+Clearly, a torsion pair on $\heartsuit_{\mathfrak{t}}$ (seen as an abelian $\mathbb{Z}$-slicing via the inclusion $[1] \subseteq \mathbb{Z}$) is always a grading filtration {\color{red}(proof: it follows from the fact that $\mathscr{P}_{\phi}[n]=0$ for $\phi \not = 0,1$ and thus the only nontrivial case is $n=0, \phi=1, \psi=0$. The Hom-vanishing then follows from the definition of torsion pair)}. Historically, grading filtrations first appeared in \cite{ekh} under the name of 'radical filtrations', while mixed filtrations are covered in the last section of \cite{kos}.
+
 
 \begin{defn}
 A map $\mathbb{Z} \overset{p}{\longrightarrow} \mathbb{Z}$ is called \textbf{perversity} if it is a monotone contraction, i.e. if $$0 \le p(\phi) - p(\psi) \le \phi - \psi$$ 
