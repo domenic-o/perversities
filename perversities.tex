@@ -268,10 +268,6 @@ It follows that
 \]
 for every $\tilde{j}\notin \{j_1,\dots,j_k\}$. So in particular, for any $X\in \mathscr{D}$, the cohomologies $\mathcal{H}^{j}_{f_!\tee}(X)$ are possibly nonzero only for finitely many indices $j$. 
 \end{proof}
-
-{\Huge -fino a qui-}
-
-
 %\begin{prop}\label{pipp}
 %Let $J \overset{f}{\longrightarrow} J'$ be a a $\mathbb{Z}$-equivariant map (not necessarily increasing) between $\mathbb{Z}$-posets, $\mathscr{P}$ a $J$-slicing on $\mathscr{D}$. Suppose that $\mathscr{P}_{\psi} \subseteq \mathscr{P}_{\phi}^{\perp}$ whenever one of the following conditions holds: 
 %\begin{enumerate}[label=(\alph*)]
@@ -309,11 +305,43 @@ As $\tote(\mathscr{A})$ carries no natural $\mathbb{Z}$-action, in case $J$ is a
 \begin{defn}
 Let $\mathfrak{t}$ be a bounded t-structure on $\mathscr{D}$, and let $J$ be a $\mathbb{Z}$-toset. Let $(L_1,U_1)$ and $(L_2,U_2)$ be arbitrary slicings of $J$. An abelian $J$-slicing $\mathscr{T}$ on $\heartsuit_{\mathfrak{t}}$ is called:
 \begin{itemize}
-\item \textbf{perverse filtration} if $\mathscr{F}_{L_1}[n] \orth \mathscr{T}_{U_2}$ for any $n\in \mathbb{Z}$ such that $(L_1,U_1)+n\leq  (L_2,U_2)$.
-\item \textbf{grading filtration} if it is a perverse filtration and ??? 
-\item \textbf{mixed filtration} if ???
+\item \textbf{perverse filtration} if $\mathscr{F}_{L_1}[n] \orth \mathscr{T}_{U_2}$ for any $n\in \mathbb{Z}$ such that $(L_1,U_1)+n \leq  (L_2,U_2)$.
+%\item \textbf{grading filtration} if it is a perverse filtration and ??? 
+\item \textbf{mixed filtration} if $\mathscr{F}_{L_1}[n] \orth \mathscr{T}_{U_2}$ for any $n\in \mathbb{Z}$ such that $(L_1,U_1)-n \leq  (L_2,U_2)$.
 \end{itemize} 
 \end{defn}
+
+Despite the notions of perverse and mixed filtration may appear complementary, actually one is stronger than the other.
+\begin{lem}
+Let $\mathscr{T}\colon \mathcal{O}(J)\to \tote(\heartsuit_{\mathfrak{t}})$ be a mixed filtration. Then $\mathscr{T}$ is a perverse filtration.
+\end{lem}
+\begin{proof}
+Let $(L_1,U_1)$ and $(L_2,U_2)$ be two slicings of $J$ and let $n\in \mathbb{Z}$ be such that $(L_1,U_1)+n\leq  (L_2,U_2)$. If $n<0$ then we have $\mathscr{F}_{L_1}[n]\subseteq \heartsuit_{\mathfrak{t}}[n]=\mathscr{D}_{J^\heartsuit}[n]=\mathscr{D}_{J^\heartsuit+n}$ and  $\mathscr{T}_{U_2}\subseteq \mathscr{D}_{J^\heartsuit}$. If we write $J^\heartsuit=L^\heartsuit_1\cap U^\heartsuit_0$, then $L^\heartsuit_1+n\subseteq L_0^\heartsuit$ for any $n<0$ and so $\mathscr{F}_{L_1}[n]\subseteq \mathscr{D}_{L^\heartsuit_1+n}\subseteq \mathscr{D}_{L^\heartsuit_0}$, while $\mathscr{T}_{U_2}\subseteq\mathscr{D}_{U^\heartsuit_0}$. This implies $\mathscr{F}_{L_1}[n]\perp\mathscr{T}_{U_2}$. We are left with the $n\geq 0$ case. In this case we have $(L_1,U_1)-n\leq (L_1,U_1)+n\leq (L_2,U_2)$. As the filtration is mixed by hypothesis, this implies $\mathscr{F}_{L_1}[n]\orth \mathscr{T}_{U_2}$.
+\end{proof}
+
+
+{\bf{\color{red} qui di seguito una versione con i minori stretti; spero pero' si riesca a lavorare con quella con i $\leq$ che mi sembra pi\`u pulita}}
+
+\begin{defn}
+Let $\mathfrak{t}$ be a bounded t-structure on $\mathscr{D}$, and let $J$ be a $\mathbb{Z}$-toset. Let $(L_1,U_1)$ and $(L_2,U_2)$ be arbitrary slicings of $J$. An abelian $J$-slicing $\mathscr{T}$ on $\heartsuit_{\mathfrak{t}}$ is called:
+\begin{itemize}
+\item \textbf{perverse filtration} if $\mathscr{F}_{L_1}[n] \orth \mathscr{T}_{U_2}$ for any $n\in \mathbb{Z}$ such that $(L_1,U_1)+n <  (L_2,U_2)$.
+\item \textbf{grading filtration} if it is a perverse filtration and ??? 
+\item \textbf{mixed filtration} if $\mathscr{F}_{L_1}[n] \orth \mathscr{T}_{U_2}$ for any $n\in \mathbb{Z}$ such that $(L_1,U_1)-n <  (L_2,U_2)$.
+\end{itemize} 
+\end{defn}
+
+Despite the notions of perverse and mixed filtration may appear complementary, actually one is stronger than the other.
+\begin{lem}
+Let $\mathscr{T}\colon \mathcal{O}(J)\to \tote(\heartsuit_{\mathfrak{t}})$ be a mixed filtration. Then $\mathscr{T}$ is a perverse filtration.
+\end{lem}
+\begin{proof}
+Let $(L_1,U_1)$ and $(L_2,U_2)$ be two slicings of $J$ and let $n\in \mathbb{Z}$ be such that $(L_1,U_1)+n\leq  (L_2,U_2)$. If $n<0$ then we have $\mathscr{F}_{L_1}[n]\subseteq \heartsuit_{\mathfrak{t}}[n]=\mathscr{D}_{J^\heartsuit}[n]=\mathscr{D}_{J^\heartsuit+n}$ and  $\mathscr{T}_{U_2}\subseteq \mathscr{D}_{J^\heartsuit}$. If we write $J^\heartsuit=L^\heartsuit_1\cap U^\heartsuit_0$, then $L^\heartsuit_1+n\subseteq L_0^\heartsuit$ for any $n<0$ and so $\mathscr{F}_{L_1}[n]\subseteq \mathscr{D}_{L^\heartsuit_1+n}\subseteq \mathscr{D}_{L^\heartsuit_0}$, while $\mathscr{T}_{U_2}\subseteq\mathscr{D}_{U^\heartsuit_0}$. This implies $\mathscr{F}_{L_1}[n]\perp\mathscr{T}_{U_2}$. If $n=0$, then $\mathscr{F}_{L_1}\subseteq \mathscr{F}_{L_2}$ by definition of abelian slicing, and so $\mathscr{F}_{L_1}\orth \mathscr{T}_{U_2}$ by definition of torsion theory. We are left with the $n>0$ case. In this case we have $(L_1,U_1)-n\leq (L_1,U_1)+n\leq (L_2,U_2)$. As the filtration is mixed by hypothesis, this implies $\mathscr{F}_{L_1}[n]\orth \mathscr{T}_{U_2}$.
+\end{proof}
+
+
+{\color{red}{\Huge -fino a qui-}}
+
 
 
 
