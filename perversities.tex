@@ -54,6 +54,11 @@ tikz-cd,tikz}
 \newcommand{\tote}{\mathrm{tt}}
 \newcommand{\tee}{\mathfrak{t}}
 \newcommand{\orth}{\boxslash}
+\newcommand{\per}{\Theta}
+\newcommand{\pos}{\textnormal{Pos}}
+\newcommand{\op}{\textnormal{op}}
+\newcommand{\gr}{\Gamma}
+\newcommand{\lex}{\times_{\textnormal{lex}}}
 
 \DeclareMathOperator{\fib}{fib}
 \DeclareMathOperator{\cofib}{cofib}
@@ -62,7 +67,7 @@ tikz-cd,tikz}
 \begin{titlepage}
 \end{titlepage}
 
-Notation: we write $\mathscr{S}_1\orth \mathscr{S}_2$ to mean that $\mathscr{D}(X_2,X_1)$ is contractible for any $X_1\in \mathscr{S}_1$ and any $X_2\in\mathscr{S}_2$. An equivalent notation is $\mathscr{S}_1\subseteq \mathscr{S}_2^\perp$.
+
 
 
 \subsection{The (he)art of gluing} The slice functor hides greater potential. Indeed, even if we don't have a morphism of $\mathbb{Z}$-posets (but just a $\mathbb{Z}$-equivariant map), then the slice functor can still be applied, obtaining a partially defined map. \\
@@ -300,7 +305,83 @@ for every $\tilde{j}\notin \{j_1,\dots,j_k\}$. So in particular, for any $X\in \
 %
 Recall that a torsion theory on an abelian category $\mathscr{A}$ is a pair of subcategories $(\mathscr{F},\mathscr{T})$ such that\dots and that torsion theories on $\mathscr{A}$ are a poset by $(\mathscr{F}_1,\mathscr{T}_2)\leq (\mathscr{F}_2,\mathscr{T}_2)$ if $\mathscr{T}_2\subseteq \mathscr{T}_1$. Denote by $\tote(\mathscr{A})$ this poset. For $J$ a totally ordered set, an abelian $J$-slicing of $\mathscr{A}$ is a morphism of posets $\mathscr{T}\colon \mathcal{O}(J)\to \tote(\mathscr{A})$. To avoid cumbersome notion, 
 
+
+{\Huge -fino a qui-}
+
+{\color{red} Ho pensato di scambiare l'ordine degli argomenti: prima l'incollabilita', poi le perversita'. In questo modo si capisce da dove escono fuori.}.
+
+\begin{defn}
+Let $J$ and $J'$ be $\Z$-tosets. A Bridgeland $J \lex J'$-slicing $\tee$ of $\mathscr{D}$ is said to be \emph{gluable} if it is $e$-compatible, where $e \colon J \lex J' \to J' \lex J$ is the coordinate-exchanging map. 
+\end{defn}
+
+\begin{rem}
+  In {\color{red}ref: BBD} the authors consider a process consisting in gluing $t$-structures on a pair of triangulated categories to obtain a $t$-structure on a third one. In their setting, the three categories are linked by an abstraction of the Grothendieck's six-functors formalism. However, the latter is more or less equivalent to the datum of a semiorthogonal decomposition (i.e., a $\{0,1 \}$-slicing, where $\{0,1 \}$ is the toset with two elements and trivial $\Z$-action) on the third category so that the input of the two (bounded) $t$-structures gives rise to a gluable $\{0,1\} \lex \Z$-slicing $\tee$. Then the $\Z \lex \{0,1 \}$-slicing $e_! \tee$ is just the new glued $t$-structure together with the natural torsion pair on its heart. This explains our terminology and links the language of the present paper to the classical theory of $t$-structures. 
+\end{rem}
+
+To motivate the next section, consider the following isomorphism fo $\Z$-tosets:
+  \begin{align*}
+     \Z \lex \Z &\to \Z \lex \Z_{\textnormal{free}} \\
+   (n,m) & \mapsto (n,m-n)  
+  \end{align*}
+
+
+  ...continua ...
+  
+\begin{lem}
+  Let $p \colon J \to \Oo(J')^\op$ be a monotone map. Then $$\gr(p)=\{ (n,j) \in J \times J'; \quad j \in U_{p(n)} \}.$$
+  is an upper set of $J \times J'$ with the product order.
+\end{lem}
+
+\begin{proof}
+Pick $(n,j) \leq (m,k)$ in $J \times J'$ and suppose $(n,j) \in \gr(p)$. Then $j \in p(n) \in \Oo(J')$ and since $j \leq k$ we have that $k \in p(n)$. But  $n \leq m$ and $p$ is monotone, and thus $p(n) \subseteq p(m)$. This gives $k \in p(m)$, as desired. \\
+\end{proof}
+
+
+\begin{prop}
+  The map 
+  \begin{align*}
+ \gr \colon \pos(J,\Oo(J')^\op)&\to \Oo(J \times J')\\
+   p & \mapsto (J \times J' \setminus \gr(p), \gr(p))  
+  \end{align*}
+is an isomorphism of $\Z$-posets, where $J \times J'$ carries the product order. 
+\end{prop}
+
+\begin{proof}
+  Pick and upper set $U$ of $J \times J'$ and set, for $n \in J$ $$p_U(n)=\{ j \in J'; \quad  (n,j) \in U \}.$$
+ Then the map
+   \begin{align*}
+   \Oo(J \times J') &\to \pos(J,\Oo(J')^\op) \\
+  (L,U) & \mapsto p_U
+  \end{align*}
+  is inverse to $\gr(p)$ by a straightforward check. 
+\end{proof}
+
+\begin{defn}
+A \emph{perversity} on $J$ is a monotone map $p \colon \Z \to \Oo(J)^\op$ such that $$p(n)-n \leq p(m) -m$$
+whenever $m \leq n$ in $\Z$. The set of all perversities on $J$ will be denoted $\per(J)$. 
+\end{defn}
+
+\begin{rem}
+We can give $\per(J)$ the structure of a $\Z$-poset via the incluion $\per(J) \subseteq \pos(\Z,\Oo(J)^\op)$. In general, it will not be totally ordered. However, by taking joins and meets pointwise $\per(J)$ becomes a distributive lattice. 
+\end{rem}
+
+\begin{rem}
+Considering the obvious isomoprhism $\Z \simeq \Oo(\Z)^\op$ a perversity over $\mathbb{Z}$ is just a \textit{monotone and comonotope perversity} in the sense of {\color{red} referenza, tipo bezrukavnikov o BBD}. 
+\end{rem}
+
+
+
+
+
+
+
+
+
+
+{\Huge fino a qui 2}
+=======
 As $\tote(\mathscr{A})$ carries no natural $\mathbb{Z}$-action, in case $J$ is a $\mathbb{Z}$-toset it makes no sense to require that $\mathscr{T}\colon \mathcal{O}(J)\to \tote(\mathscr{A})$ is a morphism of $\mathbb{Z}$-posets. Yet some interesting definition can still be given in this case.
+
 
 \begin{defn}
 Let $\mathfrak{t}$ be a bounded t-structure on $\mathscr{D}$, and let $J$ be a $\mathbb{Z}$-toset. Let $(L_1,U_1)$ and $(L_2,U_2)$ be arbitrary slicings of $J$. An abelian $J$-slicing $\mathscr{T}$ on $\heartsuit_{\mathfrak{t}}$ is called:
@@ -358,7 +439,6 @@ The following implications hold:
 $$\textnormal{mixed} \implies \textnormal{grading} \implies \textnormal{perverse} $$
 {\color{red}proof that mixed implies grading: suppose $n< \phi - \psi$. By definition of slicing, the vanishing is automatic for $n \le 0$ and we can thus assume $n>0$. But then $n>0>-n>\psi-\phi$ and the required vanishing now follows from the definition of mixed filtration. The same argument also works for $2 \le n = \phi - \psi$}. \\
 Clearly, a torsion pair on $\heartsuit_{\mathfrak{t}}$ (seen as an abelian $\mathbb{Z}$-slicing via the inclusion $[1] \subseteq \mathbb{Z}$) is always a grading filtration {\color{red}(proof: it follows from the fact that $\mathscr{P}_{\phi}[n]=0$ for $\phi \not = 0,1$ and thus the only nontrivial case is $n=0, \phi=1, \psi=0$. The Hom-vanishing then follows from the definition of torsion pair)}. Historically, grading filtrations first appeared in \cite{ekh} under the name of 'radical filtrations', while mixed filtrations are covered in the last section of \cite{kos}.
-
 
 \begin{defn}
 A map $\mathbb{Z} \overset{p}{\longrightarrow} \mathbb{Z}$ is called \textbf{perversity} if it is a monotone contraction, i.e. if $$0 \le p(\phi) - p(\psi) \le \phi - \psi$$ 
@@ -566,5 +646,6 @@ $$\textnormal{mixed} \implies \textnormal{gluable} \implies \textnormal{grading}
 \afterpage{\blankpage}
 \clearpage 
 \bibliographystyle{alpha}
+
 
 \end{document}
