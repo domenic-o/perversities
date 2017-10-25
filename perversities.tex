@@ -51,6 +51,7 @@ tikz-cd,tikz}
 \newcommand{\Z}{\mathbb{Z}}
 \newcommand{\Oo}{\mathcal{O}}
 \newcommand{\ts}{\mathrm{ts}}
+\newcommand{\tote}{\mathrm{tt}}
 \newcommand{\tee}{\mathfrak{t}}
 \newcommand{\orth}{\boxslash}
 \newcommand{\per}{\Theta}
@@ -272,6 +273,38 @@ It follows that
 \]
 for every $\tilde{j}\notin \{j_1,\dots,j_k\}$. So in particular, for any $X\in \mathscr{D}$, the cohomologies $\mathcal{H}^{j}_{f_!\tee}(X)$ are possibly nonzero only for finitely many indices $j$. 
 \end{proof}
+%\begin{prop}\label{pipp}
+%Let $J \overset{f}{\longrightarrow} J'$ be a a $\mathbb{Z}$-equivariant map (not necessarily increasing) between $\mathbb{Z}$-posets, $\mathscr{P}$ a $J$-slicing on $\mathscr{D}$. Suppose that $\mathscr{P}_{\psi} \subseteq \mathscr{P}_{\phi}^{\perp}$ whenever one of the following conditions holds: 
+%\begin{enumerate}[label=(\alph*)]
+%\item $f(\phi) > f(\psi)$
+%\item $f(\phi) + 1 > f(\psi)$ and $\phi +1 < \psi$
+%\end{enumerate}
+%Then $$(f_{\textnormal{\Libra}}(\mathscr{P}))_{\phi}=\mathscr{P}_{f^{-1}(\phi)}$$
+%defines a $J'$-slicing on $\mathscr{D}$.
+%\end{prop}
+%
+%\begin{proof}
+%Part \textit{(1)} of definition of slicing follows from $\mathbb{Z}$-equivariance of $f$, while part \textit{(2)} follows from condition \textit{(a)} above. Pick $0 \not = X \in \mathscr{D}$ and consider its Postnikov tower with respect to $\mathscr{P}$: $$0=Y_0 \overset{\beta_1}{\longrightarrow} \cdots \overset{\beta_n}{\longrightarrow} Y_n=X$$
+%with $\textnormal{cone}(\beta_i)=H_{\mathscr{P}}^{\phi_i}(X)$. Going from left to right, if we encounter an $i$ so that $f(\phi_{i+1}) > f(\phi_i)$ then by condition \textit{(b)} $$\textnormal{Hom}_{\mathscr{D}}(H_{\mathscr{P}}^{\phi_{i+1}}(X),H_{\mathscr{P}}^{\phi_i}(X)[1])=0$$
+%
+%Using \hyperref[g]{\textbf{Proposition \ref*{g}}} and the \hyperref[s]{\textbf{$3 \times 3$ Lemma}}, we can complete the identity of $Y_i$ to get a diagram: 
+%\begin{center}
+%\begin{tikzcd}[ampersand replacement=\&]
+%H_{\mathscr{P}}^{\phi_{i+1}}(X)[-1] \arrow{r} \arrow{d} \& Y_i \arrow{r} \arrow{d}{1} \& Y_{i+1} \arrow{r} \arrow{d} \& H_{\mathscr{P}}^{\phi_{i+1}}(X)[1]\arrow{d} \\
+%Y_{i-1} \arrow{d} \arrow{r} \& Y_i \arrow{r} \arrow{d} \& H_{\mathscr{P}}^{\phi_i}(X) \arrow{r} \arrow{d} \& Y_{i-1}[1] \arrow{d} \\
+%A \arrow{r} \arrow{d} \& 0 \arrow{r} \arrow{d} \& A[1] \arrow{r} \arrow{d} \& A[1] \arrow{d}  \\
+%H_{\mathscr{P}}^{\phi_{i+1}}(X) \arrow{r}  \&  Y_i[1] \arrow{r} \& Y_{i+1}[1] \arrow{r} \&  H_{\mathscr{P}}^{\phi_{i+1}}(X)[1]
+%\end{tikzcd}
+%\end{center}
+%
+%We then replace $\beta_i$ with $Y_{i-1} \longrightarrow A$ and $\beta_{i+1}$ with $A \longrightarrow Y_{i+1}$. Iterating this process\footnote{This is somehow reminiscent of the 'bubble sort' algorithm.}, we get a factorization $$0=Z_0 \overset{\gamma_1}{\longrightarrow} \cdots \overset{\gamma_n}{\longrightarrow} Z_n=X$$
+%with $\textnormal{cone}(\gamma_i)=H_{\mathscr{P}}^{\phi_{k_i}}(X)$ for some $k_i$ and $f(\phi_i) \ge f(\phi_{i+1})$ for all $i$. To get a factorization with the strict latter inequality we use the same argument as in the proof of \hyperref[af]{\textbf{Proposition \ref*{af}}}.
+%\end{proof}
+%
+%The above proof also shows that, in the same hypotheses and notation, $(f_{\textnormal{\Libra}}(\mathscr{P}))_{\phi}$ consists of objects $X \in \mathscr{D}$ so that $H_{\mathscr{P}}^{\psi}(X)=0$ for $ f(\psi) \not = \phi$. Also, \hyperref[aae]{\textbf{Proposition \ref*{aae}}} holds when $f$ is bijective.\\
+%
+Recall that a torsion theory on an abelian category $\mathscr{A}$ is a pair of subcategories $(\mathscr{F},\mathscr{T})$ such that\dots and that torsion theories on $\mathscr{A}$ are a poset by $(\mathscr{F}_1,\mathscr{T}_2)\leq (\mathscr{F}_2,\mathscr{T}_2)$ if $\mathscr{T}_2\subseteq \mathscr{T}_1$. Denote by $\tote(\mathscr{A})$ this poset. For $J$ a totally ordered set, an abelian $J$-slicing of $\mathscr{A}$ is a morphism of posets $\mathscr{T}\colon \mathcal{O}(J)\to \tote(\mathscr{A})$. To avoid cumbersome notion, 
+
 
 {\Huge -fino a qui-}
 
@@ -346,36 +379,52 @@ Considering the obvious isomoprhism $\Z \simeq \Oo(\Z)^\op$ a perversity over $\
 
 
 {\Huge fino a qui 2}
+=======
+As $\tote(\mathscr{A})$ carries no natural $\mathbb{Z}$-action, in case $J$ is a $\mathbb{Z}$-toset it makes no sense to require that $\mathscr{T}\colon \mathcal{O}(J)\to \tote(\mathscr{A})$ is a morphism of $\mathbb{Z}$-posets. Yet some interesting definition can still be given in this case.
 
-\begin{prop}\label{pipp}
-Let $J \overset{f}{\longrightarrow} J'$ be a a $\mathbb{Z}$-equivariant map (not necessarily increasing) between $\mathbb{Z}$-posets, $\mathscr{P}$ a $J$-slicing on $\mathscr{D}$. Suppose that $\mathscr{P}_{\psi} \subseteq \mathscr{P}_{\phi}^{\perp}$ whenever one of the following conditions holds: 
-\begin{enumerate}[label=(\alph*)]
-\item $f(\phi) > f(\psi)$
-\item $f(\phi) + 1 > f(\psi)$ and $\phi +1 < \psi$
-\end{enumerate}
-Then $$(f_{\textnormal{\Libra}}(\mathscr{P}))_{\phi}=\mathscr{P}_{f^{-1}(\phi)}$$
-defines a $J'$-slicing on $\mathscr{D}$.
-\end{prop}
 
+\begin{defn}
+Let $\mathfrak{t}$ be a bounded t-structure on $\mathscr{D}$, and let $J$ be a $\mathbb{Z}$-toset. Let $(L_1,U_1)$ and $(L_2,U_2)$ be arbitrary slicings of $J$. An abelian $J$-slicing $\mathscr{T}$ on $\heartsuit_{\mathfrak{t}}$ is called:
+\begin{itemize}
+\item \textbf{perverse filtration} if $\mathscr{F}_{L_1}[n] \orth \mathscr{T}_{U_2}$ for any $n\in \mathbb{Z}$ such that $(L_1,U_1)+n \leq  (L_2,U_2)$.
+%\item \textbf{grading filtration} if it is a perverse filtration and ??? 
+\item \textbf{mixed filtration} if $\mathscr{F}_{L_1}[n] \orth \mathscr{T}_{U_2}$ for any $n\in \mathbb{Z}$ such that $(L_1,U_1)-n \leq  (L_2,U_2)$.
+\end{itemize} 
+\end{defn}
+
+Despite the notions of perverse and mixed filtration may appear complementary, actually one is stronger than the other.
+\begin{lem}
+Let $\mathscr{T}\colon \mathcal{O}(J)\to \tote(\heartsuit_{\mathfrak{t}})$ be a mixed filtration. Then $\mathscr{T}$ is a perverse filtration.
+\end{lem}
 \begin{proof}
-Part \textit{(1)} of definition of slicing follows from $\mathbb{Z}$-equivariance of $f$, while part \textit{(2)} follows from condition \textit{(a)} above. Pick $0 \not = X \in \mathscr{D}$ and consider its Postnikov tower with respect to $\mathscr{P}$: $$0=Y_0 \overset{\beta_1}{\longrightarrow} \cdots \overset{\beta_n}{\longrightarrow} Y_n=X$$
-with $\textnormal{cone}(\beta_i)=H_{\mathscr{P}}^{\phi_i}(X)$. Going from left to right, if we encounter an $i$ so that $f(\phi_{i+1}) > f(\phi_i)$ then by condition \textit{(b)} $$\textnormal{Hom}_{\mathscr{D}}(H_{\mathscr{P}}^{\phi_{i+1}}(X),H_{\mathscr{P}}^{\phi_i}(X)[1])=0$$
-
-Using \hyperref[g]{\textbf{Proposition \ref*{g}}} and the \hyperref[s]{\textbf{$3 \times 3$ Lemma}}, we can complete the identity of $Y_i$ to get a diagram: 
-\begin{center}
-\begin{tikzcd}[ampersand replacement=\&]
-H_{\mathscr{P}}^{\phi_{i+1}}(X)[-1] \arrow{r} \arrow{d} \& Y_i \arrow{r} \arrow{d}{1} \& Y_{i+1} \arrow{r} \arrow{d} \& H_{\mathscr{P}}^{\phi_{i+1}}(X)[1]\arrow{d} \\
-Y_{i-1} \arrow{d} \arrow{r} \& Y_i \arrow{r} \arrow{d} \& H_{\mathscr{P}}^{\phi_i}(X) \arrow{r} \arrow{d} \& Y_{i-1}[1] \arrow{d} \\
-A \arrow{r} \arrow{d} \& 0 \arrow{r} \arrow{d} \& A[1] \arrow{r} \arrow{d} \& A[1] \arrow{d}  \\
-H_{\mathscr{P}}^{\phi_{i+1}}(X) \arrow{r}  \&  Y_i[1] \arrow{r} \& Y_{i+1}[1] \arrow{r} \&  H_{\mathscr{P}}^{\phi_{i+1}}(X)[1]
-\end{tikzcd}
-\end{center}
-
-We then replace $\beta_i$ with $Y_{i-1} \longrightarrow A$ and $\beta_{i+1}$ with $A \longrightarrow Y_{i+1}$. Iterating this process\footnote{This is somehow reminiscent of the 'bubble sort' algorithm.}, we get a factorization $$0=Z_0 \overset{\gamma_1}{\longrightarrow} \cdots \overset{\gamma_n}{\longrightarrow} Z_n=X$$
-with $\textnormal{cone}(\gamma_i)=H_{\mathscr{P}}^{\phi_{k_i}}(X)$ for some $k_i$ and $f(\phi_i) \ge f(\phi_{i+1})$ for all $i$. To get a factorization with the strict latter inequality we use the same argument as in the proof of \hyperref[af]{\textbf{Proposition \ref*{af}}}.
+Let $(L_1,U_1)$ and $(L_2,U_2)$ be two slicings of $J$ and let $n\in \mathbb{Z}$ be such that $(L_1,U_1)+n\leq  (L_2,U_2)$. If $n<0$ then we have $\mathscr{F}_{L_1}[n]\subseteq \heartsuit_{\mathfrak{t}}[n]=\mathscr{D}_{J^\heartsuit}[n]=\mathscr{D}_{J^\heartsuit+n}$ and  $\mathscr{T}_{U_2}\subseteq \mathscr{D}_{J^\heartsuit}$. If we write $J^\heartsuit=L^\heartsuit_1\cap U^\heartsuit_0$, then $L^\heartsuit_1+n\subseteq L_0^\heartsuit$ for any $n<0$ and so $\mathscr{F}_{L_1}[n]\subseteq \mathscr{D}_{L^\heartsuit_1+n}\subseteq \mathscr{D}_{L^\heartsuit_0}$, while $\mathscr{T}_{U_2}\subseteq\mathscr{D}_{U^\heartsuit_0}$. This implies $\mathscr{F}_{L_1}[n]\perp\mathscr{T}_{U_2}$. We are left with the $n\geq 0$ case. In this case we have $(L_1,U_1)-n\leq (L_1,U_1)+n\leq (L_2,U_2)$. As the filtration is mixed by hypothesis, this implies $\mathscr{F}_{L_1}[n]\orth \mathscr{T}_{U_2}$.
 \end{proof}
 
-The above proof also shows that, in the same hypotheses and notation, $(f_{\textnormal{\Libra}}(\mathscr{P}))_{\phi}$ consists of objects $X \in \mathscr{D}$ so that $H_{\mathscr{P}}^{\psi}(X)=0$ for $ f(\psi) \not = \phi$. Also, \hyperref[aae]{\textbf{Proposition \ref*{aae}}} holds when $f$ is bijective.\\
+
+{\bf{\color{red} qui di seguito una versione con i minori stretti; spero pero' si riesca a lavorare con quella con i $\leq$ che mi sembra pi\`u pulita}}
+
+\begin{defn}
+Let $\mathfrak{t}$ be a bounded t-structure on $\mathscr{D}$, and let $J$ be a $\mathbb{Z}$-toset. Let $(L_1,U_1)$ and $(L_2,U_2)$ be arbitrary slicings of $J$. An abelian $J$-slicing $\mathscr{T}$ on $\heartsuit_{\mathfrak{t}}$ is called:
+\begin{itemize}
+\item \textbf{perverse filtration} if $\mathscr{F}_{L_1}[n] \orth \mathscr{T}_{U_2}$ for any $n\in \mathbb{Z}$ such that $(L_1,U_1)+n <  (L_2,U_2)$.
+\item \textbf{grading filtration} if it is a perverse filtration and ??? 
+\item \textbf{mixed filtration} if $\mathscr{F}_{L_1}[n] \orth \mathscr{T}_{U_2}$ for any $n\in \mathbb{Z}$ such that $(L_1,U_1)-n <  (L_2,U_2)$.
+\end{itemize} 
+\end{defn}
+
+Despite the notions of perverse and mixed filtration may appear complementary, actually one is stronger than the other.
+\begin{lem}
+Let $\mathscr{T}\colon \mathcal{O}(J)\to \tote(\heartsuit_{\mathfrak{t}})$ be a mixed filtration. Then $\mathscr{T}$ is a perverse filtration.
+\end{lem}
+\begin{proof}
+Let $(L_1,U_1)$ and $(L_2,U_2)$ be two slicings of $J$ and let $n\in \mathbb{Z}$ be such that $(L_1,U_1)+n\leq  (L_2,U_2)$. If $n<0$ then we have $\mathscr{F}_{L_1}[n]\subseteq \heartsuit_{\mathfrak{t}}[n]=\mathscr{D}_{J^\heartsuit}[n]=\mathscr{D}_{J^\heartsuit+n}$ and  $\mathscr{T}_{U_2}\subseteq \mathscr{D}_{J^\heartsuit}$. If we write $J^\heartsuit=L^\heartsuit_1\cap U^\heartsuit_0$, then $L^\heartsuit_1+n\subseteq L_0^\heartsuit$ for any $n<0$ and so $\mathscr{F}_{L_1}[n]\subseteq \mathscr{D}_{L^\heartsuit_1+n}\subseteq \mathscr{D}_{L^\heartsuit_0}$, while $\mathscr{T}_{U_2}\subseteq\mathscr{D}_{U^\heartsuit_0}$. This implies $\mathscr{F}_{L_1}[n]\perp\mathscr{T}_{U_2}$. If $n=0$, then $\mathscr{F}_{L_1}\subseteq \mathscr{F}_{L_2}$ by definition of abelian slicing, and so $\mathscr{F}_{L_1}\orth \mathscr{T}_{U_2}$ by definition of torsion theory. We are left with the $n>0$ case. In this case we have $(L_1,U_1)-n\leq (L_1,U_1)+n\leq (L_2,U_2)$. As the filtration is mixed by hypothesis, this implies $\mathscr{F}_{L_1}[n]\orth \mathscr{T}_{U_2}$.
+\end{proof}
+
+
+{\color{red}{\Huge -fino a qui-}}
+
+
+
 
 \begin{defn}
 Let $\mathfrak{t}$ be a bounded t-structure on $\mathscr{D}$. An abelian $\mathbb{Z}$-slicing $\mathscr{P}$ on $\heartsuit_{\mathfrak{t}}$ is called:
