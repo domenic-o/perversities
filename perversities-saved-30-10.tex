@@ -102,7 +102,7 @@ is an equivariant morphism from $\mathcal{O}(J)$ to pairs of subcategories of $\
 
 \begin{defn}
 Let $J$ and $J'$ be $\Z$-tosets, and let $f\colon J\to J'$ a map of $\Z$-sets (i.e., a $\Z$-equivariant map, not necessarily nondecreasing). A Bridgeland $J$-slicing $\tee$ of $\mathscr{D}$ is \emph{$f$-compatible}
-if $f(\phi)>f(\psi)$ with $\phi\leq \psi$ implies $\mathscr{D}_{\tee; \phi}\orth \mathscr{D}_{\tee;\psi}$ and $\mathscr{D}_{\tee; \phi}\orth \mathscr{D}_{\tee;\psi}[1]$
+if $f(\phi)>f(\psi)$ with $\phi\leq \psi$ implies $\mathscr{D}_{\tee;\geq \phi-1}\orth \mathscr{D}_{\tee;\psi}$.
 \end{defn}
 
 \begin{rem}
@@ -126,7 +126,7 @@ and similarly for the lower subcategory $\langle \mathscr{D}_{\tee;\phi}\rangle_
 \[
 \langle \mathscr{D}_{\tee;\phi}\rangle_{f(\phi)\in U}\orth \langle \mathscr{D}_{\tee;\phi}\rangle_{f(\phi)\in L}
 \]
-it suffices to show that, if $f(\psi)\in L$ and $f(\phi)\in U$ then $\mathscr{D}_{\tee;\phi}\orth \mathscr{D}_{\tee;\psi}$. As $L\cap U=\emptyset$ we cannot have $\psi=\phi$, so either $\psi<\phi$ or vice versa. In the first case, $\mathscr{D}_{\tee;\phi}\orth \mathscr{D}_{\tee;\psi}$ by definition of Bridgeland $J$-slicing. In the second case, we have $\phi<\psi$ and $f(\phi)>f(\psi)$ as $f(\phi)\in U$ and  $f(\psi)\in L$. Therefore, since $\tee$ is $f$-compatible, $\mathscr{D}_{\tee;\phi}\orth\mathscr{D}_{\tee;\psi}$. Finally, we have to show that every object $X$ in $\mathscr{D}$ fits into a fiber sequence
+it suffices to show that, if $f(\psi)\in L$ and $f(\phi)\in U$ then $\mathscr{D}_{\tee;\phi}\orth \mathscr{D}_{\tee;\psi}$. As $L\cap U=\emptyset$ we cannot have $\psi=\phi$, so either $\psi<\phi$ or vice versa. In the first case, $\mathscr{D}_{\tee;\phi}\orth \mathscr{D}_{\tee;\psi}$ by definition of Bridgeland $J$-slicing. In the second case, we have $\phi<\psi$ and $f(\phi)>f(\psi)$ as $f(\phi)\in U$ and  $f(\psi)\in L$. Therefore, since $\tee$ is $f$-compatible, $\mathscr{D}_{\tee;\geq \phi-1}\orth \mathscr{D}_{\tee;\psi}$ and so in particular $\mathscr{D}_{\tee;\phi}\orth\mathscr{D}_{\tee;\psi}$. Finally, we have to show that every object $X$ in $\mathscr{D}$ fits into a fiber sequence
 \[
 \xymatrix{
 X_U\ar[r]\ar[d] & X\ar[d]\\
@@ -153,7 +153,7 @@ and
 \[
 X_{{\bar\imath}}\xrightarrow{\alpha_{{\bar\imath}+1}}X_{{\bar\imath}+1}\xrightarrow{}\cdots \xrightarrow{\alpha_n} X_n=X.
 \]
-The first factorization shows that $X_{{\bar\imath}}\in \langle\cup_{i=0}^{{\bar\imath}}\mathscr{D}_{\phi_i}\rangle\subseteq \langle \mathscr{D}_{\tee;\phi}\rangle_{f(\phi)\in U}$ while the second factorization shows that $\mathrm{cofib}(f_{L})\in  \langle\cup_{i={\bar\imath}+1}^n\mathscr{D}_{\phi_i}\rangle\subseteq \langle \mathscr{D}_{\tee;\phi}\rangle_{f(\phi)\in L}$. So we are done in this case. Therefore, we are reduced to showing that we can always avoid a $(\dots,L,U,\dots)$ situation in our sequence of $L$'s and $U$'s. Assume we have such a situation. Then we have an index $i_0$ with $f(\phi_{i_0})\in L$ and $f(\phi_{{i_0}+1})\in U$. This in particular implies $f(\phi_{{i_0}+1})>f(\phi_{i_0})$ with $\phi_{{i_0}+1}<\phi_{i_0}$. As $\tee$ is $f$-compatible, this gives $\mathscr{D}_{\tee; \phi_{i_0+1}}\orth (\mathscr{D}_{\tee;\phi_{i_0}}[1])$. In particular, $\mathscr{D}(\mathcal{H}^{\phi_{i_0+1}}_{\tee}(X),\mathcal{H}^{\phi_{i_0}}_{\tee}(X)[1])$ is contractible. Now consider the pasting of pullout diagrams
+The first factorization shows that $X_{{\bar\imath}}\in \langle\cup_{i=0}^{{\bar\imath}}\mathscr{D}_{\phi_i}\rangle\subseteq \langle \mathscr{D}_{\tee;\phi}\rangle_{f(\phi)\in U}$ while the second factorization shows that $\mathrm{cofib}(f_{L})\in  \langle\cup_{i={\bar\imath}+1}^n\mathscr{D}_{\phi_i}\rangle\subseteq \langle \mathscr{D}_{\tee;\phi}\rangle_{f(\phi)\in L}$. So we are done in this case. Therefore, we are reduced to showing that we can always avoid a $(\dots,L,U,\dots)$ situation in our sequence of $L$'s and $U$'s. Assume we have such a situation. Then we have an index $i_0$ with $f(\phi_{i_0})\in L$ and $f(\phi_{{i_0}+1})\in U$. This in particular implies $f(\phi_{{i_0}+1})>f(\phi_{i_0})$ with $\phi_{{i_0}+1}<\phi_{i_0}$. As $\tee$ is $f$-compatible, this gives $ \mathscr{D}_{\tee;\geq (\phi_{i_0+1})-1}\orth \mathscr{D}_{\tee;\phi_{i_0}}$, i.e. $\mathscr{D}_{\tee;\geq \phi_{i_0+1}}\orth (\mathscr{D}_{\tee;\phi_{i_0}}[1])$. In particular, $\mathscr{D}(\mathcal{H}^{\phi_{i_0+1}}_{\tee}(X),\mathcal{H}^{\phi_{i_0}}_{\tee}(X)[1])$ is contractible. Now consider the pasting of pullout diagrams
 \[
 \xymatrix{X_{i_0-1}\ar[r]^{\alpha_{i_0}}\ar[d] & X_{i_0}\ar[r]^{\alpha_{i_0+1}}\ar[d] & X_{i_0+1}\ar[d]^{\gamma}\\
 0\ar[r]&\mathcal{H}^{\phi_{i_0}}_{\tee}(X)\ar[d]\ar[r]&Y\ar[d]\ar[r] &0\ar[d]\\
@@ -287,7 +287,7 @@ is $\Z$-equivariant.
 Let $J_1$ and $J_2$ be $\Z$-tosets. A Bridgeland $J_1 \lex J_2$-slicing $\tee$ of $\mathscr{D}$ is said to be \emph{gluable} if it is $e$-compatible, where $e \colon J_1 \times J_2 \to J_2 \times J_1$ is the exchange map. 
 \end{defn}
 
-\begin{exmp} Let $J_1=\{0,1\}$ with the trivial $\Z$-action and let $J_2=\Z$ with the standard translation $\Z$-action.  Then a $J_1\lex J_2$-slicing $\tee$ on $\mathscr{D}$ is the datum of a semiorthogonal decomposition $(\mathscr{D}_0,\mathscr{D}_1)$ of $\mathscr{D}$ toghether with $t$-structures $\tee_i$ on $\mathscr{D}_i$. Spelling out the definiton, one sees that the $\{0,1\}\lex \Z$-slicing $\tee$ is gluable if and only if $\mathscr{D}_{0;0}\orth \mathscr{D}_{1;0}$ and $\mathscr{D}_{0;0}\orth \mathscr{D}_{1;0}[-1]$. When this happens, the glued slicing $e_!\tee$ is a $\Z\lex\{0,1\}$ slicing on $\mathscr{D}$, i.e., is the datum of a bounded $t$-structure on $\mathscr{D}$ together with a torsion theory on its heart. More precisely, the heart of $e_!\tee$ is the extension-closed $\infty$-subcategory $\mathscr{D}^{\heartsuit_{e_!\tee}}$ of $\mathscr{D}$ generated by the hearts of $\mathscr{D}_0$ and $\mathscr{D}_1$, while the torsion theory on $\mathscr{D}^{\heartsuit_{e_!\tee}}$ is
+\begin{exmp} Let $J_1=\{0,1\}$ with the trivial $\Z$-action and let $J_2=\Z$ with the standard translation $\Z$-action.  Then a $J_1\lex J_2$-slicing $\tee$ on $\mathscr{D}$ is the datum of a semiorthogonal decomposition $(\mathscr{D}_0,\mathscr{D}_1)$ of $\mathscr{D}$ toghether with $t$-structures $\tee_i$ on $\mathscr{D}_i$. Spelling out the definiton, one sees that the $\{0,1\}\lex \Z$-slicing $\tee$ is gluable if and only if $\mathscr{D}_{0;\geq 0}\orth \mathscr{D}_{1;0}$. When this happens, the glued slicing $e_!\tee$ is a $\Z\lex\{0,1\}$ slicing on $\mathscr{D}$, i.e., is the datum of a bounded $t$-structure on $\mathscr{D}$ together with a torsion theory on its heart. More precisely, the heart of $e_!\tee$ is the extension-closed $\infty$-subcategory $\mathscr{D}^{\heartsuit_{e_!\tee}}$ of $\mathscr{D}$ generated by the hearts of $\mathscr{D}_0$ and $\mathscr{D}_1$, while the torsion theory on $\mathscr{D}^{\heartsuit_{e_!\tee}}$ is
 $(\mathscr{D}_0^{\heartsuit},\mathscr{D}_1^{\heartsuit})$, i.e., precisely the pair of hearts of the two subcategories in the semiorthogonal decomposition.
 \end{exmp}
 
