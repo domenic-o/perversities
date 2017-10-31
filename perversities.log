@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.10.27)  31 OCT 2017 07:51
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.10.27)  31 OCT 2017 19:43
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -1495,11 +1495,44 @@ m/n/10 (-20) (\OML/lmm/m/it/10 X\OT1/lmr/m/n/10 (-20) ) \OMS/lmsy/m/n/10 ^^H
  []
 
 <xymatrix 4x3 526> [3] <xymatrix 3x2 295> <xymatrix 2x2 182> <xymatrix 3x3
-416> [4] <xymatrix 2x2 154> [5] [6] [7]
+416> [4]
+
+LaTeX Warning: Reference `is-t-structure' on page 5 undefined on input line 201
+.
+
+
+LaTeX Warning: Reference `is-t-structure' on page 5 undefined on input line 221
+.
+
+
+LaTeX Warning: Reference `is-t-structure' on page 5 undefined on input line 221
+.
+
+<xymatrix 2x2 154>
+
+LaTeX Warning: Reference `is-t-structure' on page 5 undefined on input line 229
+.
+
+
+LaTeX Warning: Reference `is-t-structure' on page 5 undefined on input line 238
+.
+
+[5]
+
+LaTeX Warning: Reference `is-t-structure' on page 6 undefined on input line 244
+.
+
+
+LaTeX Warning: Reference `slices' on page 6 undefined on input line 248.
+
+
+LaTeX Warning: Reference `a-closer-look' on page 6 undefined on input line 253.
+
+
+[6] [7]
 LaTeX Font Info:    Try loading font information for OMS+lmr on input line 398.
 
-
-(/usr/local/texlive/2015/texmf-dist/tex/latex/lm/omslmr.fd
+ (/usr/local/texlive/2015/texmf-dist/tex/latex/lm/omslmr.fd
 File: omslmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `OMS/lmr/m/it' in size <10> not available
@@ -1560,6 +1593,12 @@ LaTeX Warning: Hyper reference `tilt1' on page 12 undefined on input line 542.
 
 
 LaTeX Warning: Reference `tilt1' on page 12 undefined on input line 542.
+
+
+LaTeX Warning: Hyper reference `grad' on page 12 undefined on input line 544.
+
+
+LaTeX Warning: Reference `grad' on page 12 undefined on input line 544.
 
 
 LaTeX Warning: Hyper reference `split' on page 12 undefined on input line 544.
@@ -1625,22 +1664,36 @@ l.613 \clearpage
 ]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 617.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 617.
- (./perversities.aux)
+ (./perversities.aux
+
+Package mparhack Warning: Marginpars may have changed.
+(mparhack)                Rerun to get them right.
+
+)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 617.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 617.
-Package rerunfilecheck Info: File `perversities.out' has not changed.
-(rerunfilecheck)             Checksum: 9F4ED361C9E9350CD25D3A28142E2E90;63.
 
+
+Package rerunfilecheck Warning: File `perversities.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `perversities.out':
+(rerunfilecheck)             Before: D41D8CD98F00B204E9800998ECF8427E;0
+(rerunfilecheck)             After:  9F4ED361C9E9350CD25D3A28142E2E90;63.
 
 LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 617.
  ) 
 Here is how much of TeX's memory you used:
- 26588 strings out of 493089
- 463093 string characters out of 6134841
- 626410 words of memory out of 5000000
- 29287 multiletter control sequences out of 15000+600000
+ 26585 strings out of 493089
+ 463061 string characters out of 6134841
+ 626354 words of memory out of 5000000
+ 29284 multiletter control sequences out of 15000+600000
  84024 words of font info for 144 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  56i,16n,82p,3238b,1018s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1678,10 +1731,10 @@ ist/fonts/type1/public/stmaryrd/stmary8.pfb></usr/local/texlive/2015/texmf-dist
 /fonts/type1/public/wasy2-ps/wasy10.pfb></usr/local/texlive/2015/texmf-dist/fon
 ts/type1/public/xypic/xyatip10.pfb></usr/local/texlive/2015/texmf-dist/fonts/ty
 pe1/public/xypic/xybtip10.pfb>
-Output written on perversities.pdf (14 pages, 403077 bytes).
+Output written on perversities.pdf (14 pages, 402566 bytes).
 PDF statistics:
- 262 PDF objects out of 1000 (max. 8388607)
- 210 compressed objects within 3 object streams
+ 248 PDF objects out of 1000 (max. 8388607)
+ 197 compressed objects within 2 object streams
  43 named destinations out of 1000 (max. 500000)
- 17429 words of extra memory for PDF output out of 20736 (max. 10000000)
+ 17421 words of extra memory for PDF output out of 20736 (max. 10000000)
 
