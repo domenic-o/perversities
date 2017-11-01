@@ -295,6 +295,64 @@ $(\mathscr{D}_0^{\heartsuit},\mathscr{D}_1^{\heartsuit})$, i.e., precisely the p
 
 {\Huge -fino a qui-}
 
+We now recall the celebrated process from {\color{red} BBD} of gluing two $t$-structures into a third one. This will turn out to induce a gluable slicing in our sense, thus showing that the language of the present paper is a far-reaching generalization of a classical piece of literature. This, by the other hand, explains both our terminology and motivation.
+
+\begin{defn}\label{recoll}
+  A \emph{recollement datum} is a diagram of stable $\infty$-categories and exact $\infty$-functors 
+\[
+\xymatrix{
+  \mathscr{Y}\ar[r]_{i_*} \ar@/^2pc/[r]_{i^*}  & \mathscr{D} \ar@/^2pc/[l]^{i^!} \ar[r]_{j^*} & \mathscr{X} \ar@/^2pc/[l]^{j_*} \ar@/_2pc/[l]^{j_!}\\
+}
+\]
+such that the following holds:
+\begin{enumerate}
+\item $(i^*,i_*,i^!)$ and $(j_!,j^*,j_*)$ are adjoint triples,
+\item $i_*, j_*, j_!$ are fully faithful and $j^*i_* =0$,
+\item for each object $X$ of $\mathscr{D}$ the (co)units of the above adjunctions give rise to cofiber sequences \\
+  
+\begin{tabular}{cc}
+ \begin{minipage}{2in}   
+\[
+\xymatrix{
+i_*i^!X\ar[r]\ar[d] & X\ar[d] \\
+0\ar[r]& j_*j^*X
+}
+\]
+ \end{minipage}
+&
+\begin{minipage}{2in}   
+\[
+\xymatrix{
+j_!j^*X\ar[r]\ar[d] & X\ar[d] \\
+0\ar[r]& i_*i^*X.
+}
+\]
+ \end{minipage}
+\end{tabular}
+\end{enumerate} 
+\end{defn}
+
+\begin{prop}
+  Suppose we are in the situation of \ref{recoll}. Then:
+  \begin{enumerate}
+  \item $(\mathscr{D}_0=j_*\mathscr{X}, \mathscr{D}_1=i_*\mathscr{Y})$ is a semiorthogonal decomposition on $\mathscr{D}$.
+  \item Given $t$-structures $\tee_0, \tee_1$ on $\mathscr{X}$ and $\mathscr{Y}$ respectively, the associated $\{0,1\}\lex \Z$-slicing on $\mathscr{D}$ given by
+  \[
+  \mathscr{D}_{0;\geq 0}=j_*\tee_0, \quad \mathscr{D}_{1;\geq 0}=i_*\tee_1
+  \]
+   is gluable. 
+  \end{enumerate}
+\end{prop}
+
+\begin{proof}
+  Let's prove the first claim. The fact that $j^*$ and $j_*$ are adjoints implies that, for objects $i_*X \in \mathscr{D}_1$ and $j_*Y \in \mathscr{D}_0$, $$\mathscr{D}(i_*X,j_*Y)=\mathscr{D}(j^*i_*X,Y)$$
+  and the latter vanishes since $j^*i_*=0$ by definition. This shows that $\mathscr{D}_1 \orth \mathscr{D}_0$. Considering the left cofiber sequence from Definition \ref{recoll} as a Postnikov tower of length one we see that $(\mathscr{D}_0,\mathscr{D}_1)$ is a $\{0,1\}$-slicing on $\mathscr{D}$, as desired. \\
+
+  
+\end{proof}
+
+----FINO A QUI 1.5 ----
+
 
 \begin{rem}
   In {\color{red}ref: BBD} the authors consider a process consisting in gluing $t$-structures on a pair of triangulated categories to obtain a $t$-structure on a third one. In their setting, the three categories are linked by an abstraction of the Grothendieck's six-functors formalism. However, the latter is more or less equivalent to the datum of a semiorthogonal decomposition (i.e., a $\{0,1 \}$-slicing, where $\{0,1 \}$ is the toset with two elements and trivial $\Z$-action) on the third category so that the input of the two (bounded) $t$-structures gives rise to a gluable $\{0,1\} \lex \Z$-slicing $\tee$. Then the $\Z \lex \{0,1 \}$-slicing $e_! \tee$ is just the new glued $t$-structure together with the natural torsion pair on its heart. This explains our terminology and links the language of the present paper to the classical theory of $t$-structures. 
