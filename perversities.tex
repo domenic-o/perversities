@@ -96,7 +96,7 @@ Let $\mathscr{S}_1,\mathscr{S}_2$ be two subcategories of $\mathscr{D}$ with $\m
 
 The right hand sides of the above two expressions can clearly be defined for every morphism $f$ from $J$ to $J'$ (i.e., not necessarily monotone nor $\Z$-equivariant), and as soon as $f$ is $\Z$-equivariant, the assignment
 \[
-(L,U_\mapsto (\langle \mathscr{D}_{\tee;\phi}\rangle_{f(\phi)\in L},\langle \mathscr{D}_{\tee;\phi}\rangle_{f(\phi)\in U})
+(L,U)\mapsto (\langle \mathscr{D}_{\tee;\phi}\rangle_{f(\phi)\in L},\langle \mathscr{D}_{\tee;\phi}\rangle_{f(\phi)\in U})
 \]
 is an equivariant morphism from $\mathcal{O}(J)$ to pairs of subcategories of $\mathscr{D}$. Clearly, when $f$ is not monotone there is no reason to expect that the pair $(\langle \mathscr{D}_{\tee;\phi}\rangle_{f(\phi)\in L},\langle \mathscr{D}_{\tee;\phi}\rangle_{f(\phi)\in U})$ forms a $t$-structure on $\mathscr{D}$. Yet, it interesting to notice that the condition that $f$ be monotone is only only sufficient in order to have this, and can indeed be relaxed.
 
@@ -295,13 +295,13 @@ $(\mathscr{D}_0^{\heartsuit},\mathscr{D}_1^{\heartsuit})$, i.e., precisely the p
 
 {\Huge -fino a qui-}
 
-We now recall the celebrated process from {\color{red} BBD} of gluing two $t$-structures into a third one. This will turn out to induce a gluable slicing in our sense, thus showing that the language of the present paper is a far-reaching generalization of a classical piece of literature. This, by the other hand, explains both our terminology and motivation.
+We now recall the celebrated process from {\color{red} BBD} of gluing two $t$-structures into a third one. This will turn out to induce a gluable slicing in our sense, thus showing that the language of the present paper is actually a generalization of a classical piece of literature. This, by the other hand, explains both our terminology and motivation.
 
 \begin{defn}\label{recoll}
   A \emph{recollement datum} is a diagram of stable $\infty$-categories and exact $\infty$-functors 
 \[
 \xymatrix{
-  \mathscr{Y}\ar[r]_{i_*} \ar@/^2pc/[r]_{i^*}  & \mathscr{D} \ar@/^2pc/[l]^{i^!} \ar[r]_{j^*} & \mathscr{X} \ar@/^2pc/[l]^{j_*} \ar@/_2pc/[l]^{j_!}\\
+  \mathscr{D}_{\mathrm{fer}}\ar[r]_{i_*}  & \mathscr{D} \ar@/^2pc/[l]^{i^!} \ar[r]_{j^*} \ar@/_2pc/[l]^{i^*} & \mathscr{D}_{\mathrm{ouv}} \ar@/^2pc/[l]^{j_*} \ar@/_2pc/[l]^{j_!}\\
 }
 \]
 such that the following holds:
@@ -335,17 +335,17 @@ j_!j^*X\ar[r]\ar[d] & X\ar[d] \\
 \begin{prop}
   Suppose we are in the situation of \ref{recoll}. Then:
   \begin{enumerate}
-  \item $(\mathscr{D}_0=j_*\mathscr{X}, \mathscr{D}_1=i_*\mathscr{Y})$ is a semiorthogonal decomposition on $\mathscr{D}$.
-  \item Given $t$-structures $\tee_0, \tee_1$ on $\mathscr{X}$ and $\mathscr{Y}$ respectively, the associated $\{0,1\}\lex \Z$-slicing on $\mathscr{D}$ given by
+  \item $(\mathscr{D}_0=j_*\mathscr{D}_{\mathrm{ouv}}, \mathscr{D}_1=i_*\mathscr{D}_{\mathrm{fer}})$ is a semiorthogonal decomposition on $\mathscr{D}$.
+  \item Given $t$-structures $\tee_0, \tee_1$ on $\mathscr{D}_{\mathrm{ouv}}$ and $\mathscr{D}_{\mathrm{fer}}$ respectively, the associated $\{0,1\}\lex \Z$-slicing on $\mathscr{D}$ given by
   \[
-  \mathscr{D}_{0;\geq 0}=j_*\tee_0, \quad \mathscr{D}_{1;\geq 0}=i_*\tee_1
+  \mathscr{D}_{0;\geq 0}=j_*(\mathscr{D}_{\mathrm{ouv};\geq 0}), \quad \mathscr{D}_{1;\geq 0}=i_*(\mathscr{D}_{\mathrm{fer};\geq 0})
   \]
    is gluable. 
   \end{enumerate}
 \end{prop}
 
 \begin{proof}
-  Let's prove the first claim. The fact that $j^*$ and $j_*$ are adjoints implies that, for objects $i_*X \in \mathscr{D}_1$ and $j_*Y \in \mathscr{D}_0$, $$\mathscr{D}(i_*X,j_*Y)=\mathscr{D}(j^*i_*X,Y)$$
+  Let's prove the first claim. The fact that $j^*$ and $j_*$ are adjoints implies that, for objects $i_*X \in \mathscr{D}_{\mathrm{fer}}$ and $j_*Y \in \mathscr{D}_{\mathrm{ouv}}$, $$\mathscr{D}(i_*X,j_*Y)=\mathscr{D}(j^*i_*X,Y)$$
   and the latter vanishes since $j^*i_*=0$ by definition. This shows that $\mathscr{D}_1 \orth \mathscr{D}_0$. Considering the left cofiber sequence from Definition \ref{recoll} as a Postnikov tower of length one we see that $(\mathscr{D}_0,\mathscr{D}_1)$ is a $\{0,1\}$-slicing on $\mathscr{D}$, as desired. \\
 
   
