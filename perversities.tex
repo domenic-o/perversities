@@ -294,7 +294,7 @@ $(\mathscr{D}_0^{\heartsuit},\mathscr{D}_1^{\heartsuit})$, i.e., precisely the p
 
 
 {\Huge -fino a qui-}
-
+{\color{red} Quanto segue va rivisto alla luce della chiacchierata su wire: dobbiamo introdurre la nozione di stong semiorthogonal decomposition e notare che nel caso in cui abbiamo strong e t-strutture scambiabili allora abbiamo due modi di incollare e questi coincidono.}
 We now recall the celebrated process from {\color{red} BBD} of gluing two $t$-structures into a third one. This will turn out to induce a gluable slicing in our sense, thus showing that the language of the present paper is actually a generalization of a classical piece of literature. This, by the other hand, explains both our terminology and motivation.
 
 \begin{defn}\label{recoll}
@@ -354,52 +354,156 @@ j_!j^*X\ar[r]\ar[d] & X\ar[d] \\
 ----FINO A QUI 1.5 ----
 
 
-\begin{rem}
-  In {\color{red}ref: BBD} the authors consider a process consisting in gluing $t$-structures on a pair of triangulated categories to obtain a $t$-structure on a third one. In their setting, the three categories are linked by an abstraction of the Grothendieck's six-functors formalism. However, the latter is more or less equivalent to the datum of a semiorthogonal decomposition (i.e., a $\{0,1 \}$-slicing, where $\{0,1 \}$ is the toset with two elements and trivial $\Z$-action) on the third category so that the input of the two (bounded) $t$-structures gives rise to a gluable $\{0,1\} \lex \Z$-slicing $\tee$. Then the $\Z \lex \{0,1 \}$-slicing $e_! \tee$ is just the new glued $t$-structure together with the natural torsion pair on its heart. This explains our terminology and links the language of the present paper to the classical theory of $t$-structures. 
-\end{rem}
+%\begin{rem}
+%  In {\color{red}ref: BBD} the authors consider a process consisting in gluing $t$-structures on a pair of triangulated categories to obtain a $t$-structure on a third one. In their setting, the three categories are linked by an abstraction of the Grothendieck's six-functors formalism. However, the latter is more or less equivalent to the datum of a semiorthogonal decomposition (i.e., a $\{0,1 \}$-slicing, where $\{0,1 \}$ is the toset with two elements and trivial $\Z$-action) on the third category so that the input of the two (bounded) $t$-structures gives rise to a gluable $\{0,1\} \lex \Z$-slicing $\tee$. Then the $\Z \lex \{0,1 \}$-slicing $e_! \tee$ is just the new glued $t$-structure together with the natural torsion pair on its heart. This explains our terminology and links the language of the present paper to the classical theory of $t$-structures. 
+%\end{rem}
 
+{\color{red} l'osservazione che segue dovr\`a trovare la sua collocazione
+
+\begin{rem}
 To motivate the next section, consider the following isomorphism fo $\Z$-tosets:
   \begin{align*}
      \Z \lex \Z &\to \Z \lex \Z_{\textnormal{free}} \\
    (n,m) & \mapsto (n,m-n)  
   \end{align*}
+\end{rem}
 
+... continua ...
+}
 
-  ...continua ...
+\begin{defn}
+Let $U\colon J \to \Oo(J')$ be a map of sets. We denote by $\gr_{U}$ the subset of $J\times J'$ defined by 
+ $$\gr_U=\{ (j,j') \in J \times J'; \quad j' \in U_{j} \}.$$
+ For $f\colon J\to J'$ a map of sets, we denote by $(<f,\geq f)\colon J \to \Oo(J')$ the composition of $f$ with the map
+ \begin{align*}
+ J'&\to \Oo(J')\\
+ j'&\mapsto ((-\infty,j'),[j',+\infty)).
+ \end{align*}
+ The upper graphic of $f$ is the subset $\gr_{\geq f}$ of $J\times J'$.
+\end{defn}
   
-\begin{lem}
-  Let $p \colon J \to \Oo(J')^\op$ be a monotone map. Then $$\gr(p)=\{ (n,j) \in J \times J'; \quad j \in U_{p(n)} \}.$$
-  is an upper set of $J \times J'$ with the product order.
+\begin{lem}\label{decreasing-gives-upper-set}
+  Let $U \colon J \to \Oo(J')$ be a map of sets. Then $\gr_U$
+  is an upper set of $J \times J'$ with the product order if and only if $U$ is a map of posets $U\colon J\to \Oo(J')^\op$. In particular, $\gr_{\geq f}$ is an upper set if and only if $f\colon J\to J'$ is a nondecreasing map, i.e., a map of posets $J\to J'^\op$.
 \end{lem}
 
-\begin{proof}
-Pick $(n,j) \leq (m,k)$ in $J \times J'$ and suppose $(n,j) \in \gr(p)$. Then $j \in p(n) \in \Oo(J')$ and since $j \leq k$ we have that $k \in p(n)$. But  $n \leq m$ and $p$ is monotone, and thus $p(n) \subseteq p(m)$. This gives $k \in p(m)$, as desired. \\
+\begin{proof}Assume $(L,U)$ is a map of posets from $J$ to $\Oo(J')^\op$.
+Pick $(j,j') \in \gr_U$ and suppose $(j,j') \leq (k,k')$ in $J \times J'$. As $(L,U)$ i monotone and $k\geq j$, we have $U_j\subseteq U_k$; as $(j,j')\in \gr_U$, we have $j' \in U_j$. Therefore $j\in U_k$. Since $U_k$ is an upper set and $k'\geq j'$, we get $k'\in U_k$, i.e. $(k,k')\in \gr_U$. Vice versa, assume $\gr_U$ is an upper set, and let $j\leq k$ in $J$. For any $j'\in U_j$, the element $(k,j')$ in $J\times J'$ satisfies $(k,j')\geq (j,j')$ in the product order and so $(k,j')\in \gr_U$. This means $j'\in U_k$ and so $U_j\subseteq U_k$. To prove the second part of the statement, notice that the map $j\mapsto ((-\infty,j'),[j',+\infty))$ is a map of posets from $J'\to \Oo(J')$. Therefore, if $f\colon J\to J'^\op$ is a map of posets, then also $(<f,\geq f)\colon J \to \Oo(J')^\op$ is a map of posets. Vice versa, if $(<f,\geq f)\colon J \to \Oo(J')^\op$ is a map of posets then for every $j\leq k$ in $J$ we have $[f(j),+\infty)\subseteq [f(k),+\infty)$ and so $f(k)\leq f(j)$.
 \end{proof}
 
 
-\begin{prop}
+\begin{prop}\label{graphs}
   The map 
   \begin{align*}
- \gr \colon \pos(J,\Oo(J')^\op)&\to \Oo(J \times J')\\
-   p & \mapsto (J \times J' \setminus \gr(p), \gr(p))  
+ \gr \colon \pos(J,\Oo(J')^\op)^\op&\to \Oo(J \times J')\\
+   U & \mapsto \gr_U  
   \end{align*}
-is an isomorphism of $\Z$-posets, where $J \times J'$ carries the product order. 
+is an isomorphism of posets. 
 \end{prop}
 
 \begin{proof}
-  Pick and upper set $U$ of $J \times J'$ and set, for $n \in J$ $$p_U(n)=\{ j \in J'; \quad  (n,j) \in U \}.$$
- Then the map
+Let $U_1\leq U_2$ in the partial order on $\pos(J,\Oo(J')^\op)^\op$, and let $(j,j')\in \gr_{U_2}$. Then $j'\in U_{2;k}\subseteq U_{1,j}$ and so $(j,j')\in \gr_{U_1}$. This means $\gr_{U_1}\leq \gr_{U_2}$ in $\Oo(J \times J')$. Next, for any morphism of posets $U\colon J\to \Oo(J)^\op$ we have that $(j,j')\in \Gamma_{U+1}$ if and only if $j'\in (U+1)_j$
+  Pick and upper set $\tilde{U}$ of $J \times J'$ and set, for $j \in J$ $$U_{\tilde{U}}(j)=\{ j' \in J'; \quad  (j,j') \in \tilde{U} \}.$$
+  The subset $U_{\tilde{U}}(j)\subseteq J'$ is an upper set. Indeed, if $j'\in U_{\tilde{U}}(j)$ and $k'\geq j'$ in $J'$, then $(j,k')\geq (j,j')$ in the product order on $J\times J'$ and so $(j,k')\in \tilde{U}$ as $\tilde{U}$ is an upper set. Next, if $j\leq k$ in $J$ and $j'\in U_{\tilde{U}}(j)$, then $(k,j')\in \tilde{U}$ as $\tilde{U}$ is an upper set, and so $j'\in U_{\tilde{U}}(k)$. This shows that $U_{\tilde{U}}(j)\subseteq U_{\tilde{U}}(k)$, and so $U_{\tilde{U}}$ is a map of posets from $J$ to $\Oo(J')^\op$. Moreover, if $\tilde{U}_1\leq \tilde{U}_2$ in $\Oo(J\times J')$ then $U_{\tilde{U}_1}\leq U_{\tilde{U}_2}$ in $\pos(J,\Oo(J')^\op)^\op$. Therefore we have a map
    \begin{align*}
-   \Oo(J \times J') &\to \pos(J,\Oo(J')^\op) \\
-  (L,U) & \mapsto p_U
+\gamma\colon   \Oo(J \times J') &\to \pos(J,\Oo(J')^\op)^\op \\
+  \tilde{U} & \mapsto U_{\tilde{U}}.
   \end{align*}
-  is inverse to $\gr(p)$ by a straightforward check. 
+  which is straightforward to see to be the inverse of $\gr$. 
 \end{proof}
 
+Assume $J$ and $J'$ are $\Z$-posets. Then $\Oo(J)^\op$ is a $\Z$-poset with $1$ acting as $U\mapsto U-1$. The action of $\Z$ by conjugation on $\pos(J,\Oo(J')^\op)$ is therefore given by $(U\dotplus 1)_j=U_{j-1}-1$. To see that $U\dotplus 1$ is still a morphism of posets from $J$ to $\Oo(J')$, let $j\leq k$ in $J$. Then $(U\dotplus 1)_j=U_{j-1}-1\subseteq U_{k-1}-1=(U\dotplus 1)_k$. 
+The conjugation action, however, does not define a structure of $\Z$-poset on $\pos(J,\Oo(J')^\op)$, as it is generally not true that $U\leq U\dotplus1$. This condition is indeed equivalent to $U_{j}\subseteq (U\dotplus 1)_{j}$, i.e., to $U_{j}+1\subseteq U_{j-1}$ for any $j$ in $J$, and this is not necessarily satisfied by a morphism of posets $U\colon J\to \Oo(J')^\op$. 
+%On the other hand, a morphism of posets $U\colon J\to \Oo(J')^\op$ surely satisfies $U_{j-1}\subseteq U_{j}$. This motivates the following.
 \begin{defn}
-A \emph{perversity} on $J$ is a monotone map $p \colon \Z \to \Oo(J)^\op$ such that $$p(n)-n \leq p(m) -m$$
-whenever $m \leq n$ in $\Z$. The set of all perversities on $J$ will be denoted $\per(J)$. 
+A \emph{perversity} is a map of posets $U\colon J\to \Oo(J')^\op$ such that 
+\[
+U_{j}+1\subseteq U_{j-1}%\subseteq U_{j}
+\]
+for any $j$ in $J$. The set $\mathrm{Perv}(J,J')$ of all perversities from $J$ to $\Oo(J')$ inherits a poset structure from the inclusion in $\pos(J,\Oo(J')^\op)^\op$. It is a $\Z$-poset with $1$ acting as $U\mapsto U\dotplus(-1)$.
 \end{defn}
+\begin{rem}
+Notice that the shift action on perversities is given by  $U\mapsto U\dotplus(-1)$. Namely, by construction the $\Z$-action $U\mapsto U\dotplus 1$ is monotone on the set of perversities with the order induced by the inclusion in $\pos(J,\Oo(J')^\op)$, and the order on $\mathrm{Perv}(J,J')$ is the opposite one. The reason for considering this order is, clearly, Proposition \ref{graphs}.
+\end{rem}
+
+\begin{rem}
+We have seen in Lemma \ref{decreasing-gives-upper-set} that a function $f\colon J\to J'$ defines a morphism of posets by $(\geq f)\colon J\to \Oo(J')^\op$ if and only if $f$ is a morphism of posets from $J$ to $J'^\op$. When this happens, $(\geq f)$ is a perversity if and only if $f(j-1)\leq f(j)+1$, for every $j\in J$. In the particular case $J=\Z$, 
+assuming as usual that  $J'$ is a $\Z$-poset, we can define a new function $p_f\colon \Z\to J'$ as $p_f(n)=f(n)+n$. Then the condition $f(n)\leq f(n+1)+1$ translates into 
+$p_f(n)\leq p_f(n+1)$, while the condition that $f\colon \Z\to J'^\op$ is a morphism of posets, i.e., $f(n+1)\leq f(n)$ translates to $p_f(n+1)\leq p_f(n)+1$. As $f\mapsto p_f$ is a bijection of the set of maps from $J$ to $J'$ into itself, we see that the functions $f\colon \Z\to J'$ defining perversities correspond bijectively to the set of functions $p\colon \Z \to J'$ such that
+\[
+p(n)\leq p(n+1)\leq p(n)+1,
+\] 
+for every $n\in \Z$. In case $J'=\Z$, this precisely reproduces the definition of perversity function as given in ???.
+\end{rem}
+\begin{defn}
+An upper set $U$ in $\Oo(J\times J')$ is called a \emph{kinky upperset} if $U\leq U+_\mathrm{ne}1$, where ${\mathrm{ne}}$ is the ``northestern'' action of $\Z$ on $J\times J'$ given by
+$(j,j')+_{\mathrm{ne}}1=(j-1,j'+1)$. We denote by $\mathrm{Kink}(J\times J')$ the poset of kinky uppersets of $J\times J'$, with the poset structure induced by the inclusion in $\Oo(J\times J')$. it is a $\Z$-poset with the ``northestern'' action.
+\end{defn}
+
+\begin{lem}
+ The map $\Gamma$ from Proposition \ref{graphs} induces an isomorphism of $\Z$-posets
+  \[
+ \gr \colon \mathrm{Perv}(J,J')\to \mathrm{Kink}(J\times J').
+  \]
+\end{lem}
+\begin{proof}
+Let $U\colon J\to \Oo(J')^\op$ be a perversity, and let $(j,j')\in \Gamma_U$. Then $j'\in U_{j}$ and so, by definition of perversity, $j'+1\in U_{j-1}$. Therefore $(j-1,j'+1)\in \Gamma_U$, i.e., $\Gamma_U\leq \Gamma_U+_{\mathrm{ne}} 1$. Vice versa, if $\tilde{U}$ is a kinky upperset in $J\times J'$, let $U_{\tilde{U}}$ the preimage in $\pos(J,\Oo(J')^\op)^\op$ of $\tilde{U}$ via $\Gamma$ (see the proof of Proposition \ref{graphs}). Then for any $j\in J$ and any $j'\in U_{\tilde{U};j}$ we have $j'+1\in U_{\tilde{U};j-1}$ and so $U_{\tilde{U};j}+1\subseteq U_{\tilde{U};j-1}$. So the isomorphism of posets $\pos(J,\Oo(J')^\op)^\op\to \Oo(J \times J')$ restricts to an isomorphism of posets $\mathrm{Perv}(J,J')\to \mathrm{Kink}(J\times J')$. To see that $ \gr \colon \mathrm{Perv}(J,J')\to \mathrm{Kink}(J\times J')$ is also $\Z$-equivariant, notice that, for every perversity $U$ we have $(j,j')\in \Gamma_{U\dotplus (-1)}$ if and only if $j'\in U_{j+1}+1$. i.e., if and only if $(j+1,j'-1)\in \Gamma_U$. This latter condition is equivalent to $(j,j')\in \Gamma_U+_{\mathrm{nw}}1$, so we find $\Gamma_{U\dotplus (-1)}=\Gamma_U+_{\mathrm{nw}}1$.
+\end{proof}
+
+%\begin{defn}
+%Let $J$ be a $\Z$-poset. A \emph{perversity} on $J$ is a monotone map $p \colon \Z \to \Oo(J)$ such that $$p(n)-n \leq p(m) -m$$
+%whenever $m \leq n$ in $\Z$. The set of all perversities on $J$ will be denoted $\per(J)$. 
+%\end{defn}
+%
+%In other words, a perversity is a map of posets $p \colon \Z \to \Oo(J)$ such that
+%\[
+%n\mapsto p(n)-n
+%\]
+%is a map of posets $\Z \to \Oo(J)^\op$.
+%
+%Equivalently, a perversity is a map $p\colon \Z\to \Oo(J)$ such that
+%\[
+%p(n)\leq p(n+1)\leq p(n)+1
+%\]
+%If we write $p(n)=q(n)+n$ this becomes
+%\[
+%q(n)-1\leq q(n+1)\leq q(n)
+%\]
+%or
+%\[
+%q(n+1)\leq q(n)\leq q(n+1)+1
+%\]
+%In terms of the uppersets $U_{k}=[k,+\infty)$ this is
+%\[
+%U_{q(n)}\subseteq U_{q(n+1)}\subseteq U_{q(n)}-1
+%\]
+%\begin{lem}Let $\Psi\colon \pos(\Z,\Oo(J)^\op)\to\pos(\Z,\Oo(J)^\op)$ be the map defined by
+%\[
+%\Psi(q)\colon n \mapsto q(n)+n.
+%\]
+%Then $\Psi$ induces a bijection between $\pos(\Z,\Oo(J)^\op)$ and $\per(J)$.
+%\end{lem}
+%\begin{proof}
+%To begin with, let us check that $\Psi$ is actually a map from $\pos(\Z,\Oo(J)^\op)$ to itself. If $q\colon \Z \to \Oo(J)^\op$ is a map of posets, and $n\leq m$ then
+%\[
+%(\Psi(q))(n)=q(n)+n\leq q(m)+m=(\Psi(q))(m)
+%\] 
+%\end{proof}
+
+
+
+
+
+
+
+
+
+
+
+{\Huge fino a qui }
+
+
+
 
 \begin{rem}
 We can give $\per(J)$ the structure of a $\Z$-poset via the incluion $\per(J) \subseteq \pos(\Z,\Oo(J)^\op)$. In general, it will not be totally ordered. However, by taking joins and meets pointwise $\per(J)$ becomes a distributive lattice. 
@@ -408,18 +512,6 @@ We can give $\per(J)$ the structure of a $\Z$-poset via the incluion $\per(J) \s
 \begin{rem}
 Considering the obvious isomoprhism $\Z \simeq \Oo(\Z)^\op$ a perversity over $\mathbb{Z}$ is just a \textit{monotone and comonotope perversity} in the sense of {\color{red} referenza, tipo bezrukavnikov o BBD}. 
 \end{rem}
-
-
-
-
-
-
-
-
-
-
-{\Huge fino a qui 2}
-
 %\begin{prop}\label{pipp}
 %Let $J \overset{f}{\longrightarrow} J'$ be a a $\mathbb{Z}$-equivariant map (not necessarily increasing) between $\mathbb{Z}$-posets, $\mathscr{P}$ a $J$-slicing on $\mathscr{D}$. Suppose that $\mathscr{P}_{\psi} \subseteq \mathscr{P}_{\phi}^{\perp}$ whenever one of the following conditions holds: 
 %\begin{enumerate}[label=(\alph*)]
