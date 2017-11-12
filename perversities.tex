@@ -416,28 +416,54 @@ Assume $J$ and $J'$ are $\Z$-posets. Then $\Oo(J)^\op$ is a $\Z$-poset with $1$ 
 The conjugation action, however, does not define a structure of $\Z$-poset on $\pos(J,\Oo(J')^\op)$, as it is generally not true that $U\leq U\dotplus1$. This condition is indeed equivalent to $U_{j}\subseteq (U\dotplus 1)_{j}$, i.e., to $U_{j}+1\subseteq U_{j-1}$ for any $j$ in $J$, and this is not necessarily satisfied by a morphism of posets $U\colon J\to \Oo(J')^\op$. 
 %On the other hand, a morphism of posets $U\colon J\to \Oo(J')^\op$ surely satisfies $U_{j-1}\subseteq U_{j}$. This motivates the following.
 \begin{defn}
-A \emph{perversity} is a map of posets $U\colon J\to \Oo(J')^\op$ such that 
+A \emph{$(J,J')$-perversity} is a map of posets $U\colon J\to \Oo(J')^\op$ such that 
 \[
 U_{j}+1\subseteq U_{j-1}%\subseteq U_{j}
 \]
-for any $j$ in $J$. The set $\mathrm{Perv}(J,J')$ of all perversities from $J$ to $\Oo(J')$ inherits a poset structure from the inclusion in $\pos(J,\Oo(J')^\op)^\op$. It is a $\Z$-poset with $1$ acting as $U\mapsto U\dotplus(-1)$.
+for any $j$ in $J$. The set $\mathrm{Perv}(J,J')$ of all $(J,J')$-perversities inherits a poset structure from the inclusion in $\pos(J,\Oo(J')^\op)^\op$. It is a $\Z$-poset with $1$ acting as $U\mapsto U\dotplus(-1)$.
 \end{defn}
 \begin{rem}
-Notice that the shift action on perversities is given by  $U\mapsto U\dotplus(-1)$. Namely, by construction the $\Z$-action $U\mapsto U\dotplus 1$ is monotone on the set of perversities with the order induced by the inclusion in $\pos(J,\Oo(J')^\op)$, and the order on $\mathrm{Perv}(J,J')$ is the opposite one. The reason for considering this order is, clearly, Proposition \ref{graphs}.
+Notice that the shift action on $(J,J')$-perversities is given by  $U\mapsto U\dotplus(-1)$. Namely, by construction the $\Z$-action $U\mapsto U\dotplus 1$ is monotone on the set of perversities with the order induced by the inclusion in $\pos(J,\Oo(J')^\op)$, and the order on $\mathrm{Perv}(J,J')$ is the opposite one. The reason for considering this order is, clearly, Proposition \ref{graphs}.
 \end{rem}
 
-\begin{rem}
-We have seen in Lemma \ref{decreasing-gives-upper-set} that a function $f\colon J\to J'$ defines a morphism of posets by $(\geq f)\colon J\to \Oo(J')^\op$ if and only if $f$ is a morphism of posets from $J$ to $J'^\op$. When this happens, $(\geq f)$ is a perversity if and only if $f(j-1)\leq f(j)+1$, for every $j\in J$. In the particular case $J=\Z$, 
+
+We have seen in Lemma \ref{decreasing-gives-upper-set} that a function $f\colon J\to J'$ defines a morphism of posets by $(\geq f)\colon J\to \Oo(J')^\op$ if and only if $f$ is a morphism of posets from $J$ to $J'^\op$. When this happens, $(\geq f)$ is a $(J,J')$-perversity if and only if $f(j-1)\leq f(j)+1$, for every $j\in J$. In the particular case $J=\Z$, 
 assuming as usual that  $J'$ is a $\Z$-poset, we can define a new function $p_f\colon \Z\to J'$ as $p_f(n)=f(n)+n$. Then the condition $f(n)\leq f(n+1)+1$ translates into 
-$p_f(n)\leq p_f(n+1)$, while the condition that $f\colon \Z\to J'^\op$ is a morphism of posets, i.e., $f(n+1)\leq f(n)$ translates to $p_f(n+1)\leq p_f(n)+1$. As $f\mapsto p_f$ is a bijection of the set of maps from $J$ to $J'$ into itself, we see that the functions $f\colon \Z\to J'$ defining perversities correspond bijectively to the set of functions $p\colon \Z \to J'$ such that
+$p_f(n)\leq p_f(n+1)$, while the condition that $f\colon \Z\to J'^\op$ is a morphism of posets, i.e., $f(n+1)\leq f(n)$ translates to $p_f(n+1)\leq p_f(n)+1$.  As $f\mapsto p_f$ is a bijection of the set of maps from $J$ to $J'$ into itself, we see that the functions $f\colon \Z\to J'$ defining perversities correspond bijectively to the set of functions $p\colon \Z \to J'$ such that
+$p(n)\leq p(n+1)\leq p(n)+1$, 
+for every $n\in \Z$. This motivates the following (see \cite{??}).
+
+\begin{defn}
+A $(\Z,\Z)$-perversity $U$ is said to be defined by a function if there exists $f\colon \Z\to \Z$ such that $U=(\geq f)$. The subset of $(\Z,\Z)$-perversities defined by functions is denoted by $\mathrm{Perv}^\circ(\Z,\Z)$.
+\end{defn}
+\begin{lem}\label{lemma.perv0}
+The subset $\mathrm{Perv}^\circ(\Z,\Z)$ is a $\Z$-sub-poset of $\mathrm{Perv}(\Z,\Z)$. It is isomorphic via $f\mapsto (\geq f)$ with the $\Z$-poset of nonincreasing functions $f\colon \Z\to \Z$ such that $f(n-1)\leq f(n)+1$ with the $\Z$-action given by $(f\dotplus 1)(n)=f(n+1)+1$.
+\end{lem}
+\begin{proof}
+As a function $f\colon \Z\to \Z$ is uniquely determined by the collection of upper sets $[f(n),+\infty)$ the set $\mathrm{Perv}^\circ(J,J')$ bijectivley corresponds to the set of those functions $f\colon \Z\to \Z$ such that $(\geq f)$ is a $(\Z,\Z)$-perversity. As noticed above, these are precisely nonincreasing functions from $\Z$ to itself such that  $f(n-1)\leq f(n)+1$. This bijection is an isomorphism of posets, as $(\geq f_1)\leq (\geq f_2)$ if and only if $f_1\leq f_2$ (in the standard poset structure on the set of maps from $\Z$ to the poset $\Z$). Finally, $((\geq f)\dotplus (-1))_n=(\geq f)_{n+1}+1=[f(n+1)+1,+\infty)=(\geq (f\dotplus 1))_n$, for any $n\in \Z$.
+\end{proof}
+
+\begin{defn}
+A \emph{perversity function} (on $\Z$) is a function $p\colon \Z\to \Z$ such that
 \[
 p(n)\leq p(n+1)\leq p(n)+1,
-\] 
-for every $n\in \Z$. In case $J'=\Z$, this precisely reproduces the definition of perversity function as given in ???.
+\]
+for every $n\in Z$. The set $\mathrm{perv}_\Z$ of perversity functions is a poset with the partial order induced by the inclusion $\mathrm{perv}_\Z\subseteq \pos(\Z,\Z)$. It is a $\Z$-poset with the action $(p\dotplus1)(n)=p(n+1)$. 
+\end{defn}
+\begin{rem}
+Notice that the $\Z$-action on perversity functions is a monotone action since, by definition of perversity function, we have $p(n)\leq p(n+1)$ and this precisely means $p(n)\leq (p\dotplus1)(n)$.
 \end{rem}
+\begin{lem}
+For every $p\colon \Z \to \Z$, let $f_p\colon \Z\to \Z$ be the map defined by $f_p(n)= p(n)-n$. Then $p\mapsto (\geq f_p)$ is an isomorphism of $\Z$-posets between $\mathrm{perv}_\Z$ and $\mathrm{Perv}^\circ(\Z,\Z)$
+\end{lem}
+\begin{proof}
+By Lemma \ref{lemma.perv0} we only need to show that $p\mapsto f_p$ is a monotone $\Z$-equivariant bijection between  $\mathrm{perv}_\Z$ and the set of functions $f\colon \Z\to \Z$ such that $f(n)\leq f(n-1)\leq f(n)+1$. That it is a bijection is immediate: the inverse map is $f\mapsto p_f$, where $p_f(n)=f(n)+n$. To see that it is an isomorphism of posets, notice that $f_{p_1}\leq f_{p_2}$ if and only if $p_1(n)-n\leq p_2(n)-n$ for every $n\in \Z$, and so if and only if $p_1(n)\leq p_2(n)$ for every $n\in \Z$. Finally, $f_{p\dotplus1}(n)=(p\dotplus 1)(n)-n=p(n+1)-n=f_p(n+1)+1=(f_p\dotplus 1)(n)$.
+\end{proof}
+
 \begin{defn}
 An upper set $U$ in $\Oo(J\times J')$ is called a \emph{kinky upperset} if $U\leq U+_\mathrm{ne}1$, where ${\mathrm{ne}}$ is the ``northestern'' action of $\Z$ on $J\times J'$ given by
-$(j,j')+_{\mathrm{ne}}1=(j-1,j'+1)$. We denote by $\mathrm{Kink}(J\times J')$ the poset of kinky uppersets of $J\times J'$, with the poset structure induced by the inclusion in $\Oo(J\times J')$. it is a $\Z$-poset with the ``northestern'' action.
+$(j,j')+_{\mathrm{ne}}1=(j-1,j'+1)$. We denote by $\mathrm{Kink}(J\times J')$ the poset of kinky uppersets of $J\times J'$, with the poset structure induced by the inclusion in $\Oo(J\times J')$. it is a $\Z$-poset with the ``northestern'' action. We denote by $\mathrm{Kink}^\circ(J\times J')$ the $\Z$-sub-poset of nontrivial kinky uppersets of $J\times J'$, where 
+the trivial upperstes are $\emptyset$ and $J\times J'$.
 \end{defn}
 
 \begin{lem}
@@ -449,6 +475,40 @@ $(j,j')+_{\mathrm{ne}}1=(j-1,j'+1)$. We denote by $\mathrm{Kink}(J\times J')$ th
 \begin{proof}
 Let $U\colon J\to \Oo(J')^\op$ be a perversity, and let $(j,j')\in \Gamma_U$. Then $j'\in U_{j}$ and so, by definition of perversity, $j'+1\in U_{j-1}$. Therefore $(j-1,j'+1)\in \Gamma_U$, i.e., $\Gamma_U\leq \Gamma_U+_{\mathrm{ne}} 1$. Vice versa, if $\tilde{U}$ is a kinky upperset in $J\times J'$, let $U_{\tilde{U}}$ the preimage in $\pos(J,\Oo(J')^\op)^\op$ of $\tilde{U}$ via $\Gamma$ (see the proof of Proposition \ref{graphs}). Then for any $j\in J$ and any $j'\in U_{\tilde{U};j}$ we have $j'+1\in U_{\tilde{U};j-1}$ and so $U_{\tilde{U};j}+1\subseteq U_{\tilde{U};j-1}$. So the isomorphism of posets $\pos(J,\Oo(J')^\op)^\op\to \Oo(J \times J')$ restricts to an isomorphism of posets $\mathrm{Perv}(J,J')\to \mathrm{Kink}(J\times J')$. To see that $ \gr \colon \mathrm{Perv}(J,J')\to \mathrm{Kink}(J\times J')$ is also $\Z$-equivariant, notice that, for every perversity $U$ we have $(j,j')\in \Gamma_{U\dotplus (-1)}$ if and only if $j'\in U_{j+1}+1$. i.e., if and only if $(j+1,j'-1)\in \Gamma_U$. This latter condition is equivalent to $(j,j')\in \Gamma_U+_{\mathrm{nw}}1$, so we find $\Gamma_{U\dotplus (-1)}=\Gamma_U+_{\mathrm{nw}}1$.
 \end{proof}
+
+
+
+\begin{lem}
+The map $\Gamma$ from Proposition \ref{graphs} induces an isomorphism of $\Z$-posets
+  \[
+ \gr \colon \mathrm{Perv}^\circ(\Z,\Z)\to \mathrm{Kink}^\circ(\Z\times \Z).
+  \]
+\end{lem}
+\begin{proof}
+A kinky upperset $U$ is in the image of $\Gamma$ if and only if $U$ is of the form $(\geq f)$ for a suitable function $f\colon \Z\to \Z$. This is possible if and only if $U_n\neq \emptyset,\Z$ for every $n\in \Z$. As $U$ is kinky, if $U_{n_0}=\emptyset$ for some $n_0$, then $U_{n_0+1}+1\subseteq U_{n_0}=\emptyset$, and so $U_{n_0+1}=\emptyset$. Inductively, this gives $U_n=\emptyset$ for every $n\geq n_0$.  On the other hand, since a kinky upperset is an upperset, if there exists a nonempty $U_n$ with $n<n_0$, then there exist an element $(n,m)$ in $U$ and so, since $(n,m)\leq (n_0,m)$, also $ (n_0,m)\in U$. But then $m\in U_{n_0}$, which is impossible. So also the $U_n$ with $n<n_0$ are empty and therefore $U=\emptyset$. Similarly, if $U_{n_0}=\Z$ for some $n_0$, then $U_n=\Z$ for every $n>n_0$ as $U$ is an upperset, while the kinkiness condition $U_{n}+1\subseteq U_{n-1}$ implies that also $U_{n_0-1}=\Z$ and so inductively that all $U_n$ with $n<n_0$ are the whole of $\Z$. That is, $U=\Z\times\Z$ in this case. 
+\end{proof}
+
+\begin{lem}
+The isomorphism of $\Z$-modules $\varphi\colon \Z^2\to \Z^2$ given by $\varphi\colon (n,n')\mapsto (n+n',n')$ induces an isomorphism of $\Z$-posets 
+\[
+\varphi\colon \mathrm{Kink}(\Z\times \Z)\xrightarrow{\sim} \Oo(\Z\times \Z),
+\]
+where the $\Z$-action on $\Oo(\Z\times \Z)$ is the one induced by the ``northern'' $\Z$-action on $\Z^2$, namely, $(n,n')+1=(n,n'+1)$. In particular $\varphi$ induces an isomorphism of $\Z$-posets $\mathrm{Kink}^{\circ}(\Z\times \Z)\xrightarrow{\sim} \Oo(\Z\times \Z)\setminus\{\emptyset,\Z\times\Z\}$.
+\end{lem}
+\begin{proof}
+A subset $U$ of $\Z\times \Z$ is an upper set (in the product order) if and only if $U+K\subseteq U$, where $K$ is the $\Z$-cone spanned by $\left(\begin{smallmatrix}1\\0\end{smallmatrix}\right)$ and $\left(\begin{smallmatrix}0\\1\end{smallmatrix}\right)$, while $U$ is a kinky upperset if and only if $U+K^\mathrm{kink}\subseteq U$, where $K^\mathrm{kink}$ is the $\Z$-cone spanned by $\left(\begin{smallmatrix}1\\0\end{smallmatrix}\right)$ and $\left(\begin{smallmatrix}-1\\1\end{smallmatrix}\right)$. Morever the $\Z$ action on the uppersets is generated by $U\mapsto U+\left(\begin{smallmatrix}0\\1\end{smallmatrix}\right)$ and the the $\Z$ action on the kinky uppersets is generated by $U\mapsto U+\left(\begin{smallmatrix}-1\\1\end{smallmatrix}\right)$, where in both cases the sum on the right hand side is the sum in $\Z^2$. As $\varphi \colon \Z^2\to \Z^2$ is an isomorphism of $\Z$-modules with $\varphi(K^\mathrm{kink})=K$ and $\varphi\left(\begin{smallmatrix}-1\\1\end{smallmatrix}\right)=\left(\begin{smallmatrix}0\\1\end{smallmatrix}\right)$, the statement follows ($\varphi$ is manifestly inclusion preserving).
+\end{proof}
+
+\begin{cor}
+We have an isomorphism of $\Z$-posets
+\[
+\mathrm{perv}_\Z\xrightarrow{\sim} \Oo(\Z\times \Z)\setminus\{\emptyset,\Z\times\Z\}
+\]
+mapping a perversity function $p$ to the image via the isomorphism $\varphi\colon (n,n')\mapsto (n+n',n')$ of the set $\{(n,n')\in \Z\times \Z\text{ such that } n'\geq p(n)-n\}$.
+\end{cor}
+\begin{exmp}
+The zero perversity function $p(n)\equiv 0$ corresponds to the upper set $\{(n,n')\in \Z\times \Z\text{ such that } n\geq 0\}$; the identity perversity function $p(n)\equiv n$ corresponds to the upper set $\{(n,n')\in \Z\times \Z\text{ such that } n'\geq 0\}$.
+\end{exmp}
 
 %\begin{defn}
 %Let $J$ be a $\Z$-poset. A \emph{perversity} on $J$ is a monotone map $p \colon \Z \to \Oo(J)$ such that $$p(n)-n \leq p(m) -m$$
@@ -491,6 +551,7 @@ Let $U\colon J\to \Oo(J')^\op$ be a perversity, and let $(j,j')\in \Gamma_U$. Th
 %\end{proof}
 
 
+{\Huge l'esempio che segue compare in due versioni molto simili (evidentemente ho fatto un po' di casino col merge). lasciare solo l'ultima versione (che per\`o non so quale sia)}
 
 \begin{exmp}
   In this example we relate the gluability condition with the Beilinson-Soul\'e conjecture from motivic topology. We fix a field $k$ and, just for this example, we stick to a more traditional $1$-categorical setup. Recall that the existence of motives, which is still an open question in general, was conjectured by Grothendieck in order to build a universal Weyl cohomology (also called 'motivic cohomology') theory for schemes. However, Deligne observed that it could be easier to construct a triangulated category (the 'mixed' motives) which should play the role of the derived category of motives, and later recover the latter as the heart of a bounded $t$-structure. Voedvodskij finally succeded in constructing a triangulated category of mixed rational motives over $k$ which contains, for $n \in \Z$, a 'Tate object' $\mathbb{Q}(n)$ that represents the $n$-th motivic cohomology functor. Now, let us consider the triangualted subcategory $\mathscr{D}\textnormal{TM}_k$ generated by the Tate objects. In other words, $\mathscr{D}\textnormal{TM}_k$ is the category of mixed rational Tate motives. We then get isomorphisms of groups
@@ -512,7 +573,7 @@ Let $U\colon J\to \Oo(J')^\op$ be a perversity, and let $(j,j')\in \Gamma_U$. Th
 
 
 
-{\Huge fino a qui }
+{\Huge da qui in poi c\`e una seconda versione di quanto appena scritto (evidentemente ho fatto un po' di casino col merge)}
 
 \begin{exmp}
   In this example we relate the gluability condition with the Beilinson-Soul\'e conjecture from motivic topology. We fix a field $k$ and, just for this example, we stick to a more traditional $1$-categorical setup. Recall that Voedvodskij's triangulated category of mixed rational motives over $k$ contains, for $n \in \Z$, a 'Tate object' $\mathbb{Q}(n)$ that should represent the $n$-th motivic cohomology functor, whose definition was indeed the initial goal of the development of motives. Indeed, consider the triangualted subcategory $\mathscr{D}\textnormal{TM}_k$ generated by the Tate object. In other words, $\mathscr{D}\textnormal{TM}_k$ is the category of mixed rational Tate motives. We then get isomorphisms of groups
@@ -523,7 +584,7 @@ Let $U\colon J\to \Oo(J')^\op$ be a perversity, and let $(j,j')\in \Gamma_U$. Th
    \[
    (\mathscr{D}\textnormal{TM}_k)_{=n} \simeq \mathbb{D}^b(\mathbb{Q})
    \]
-   where the member on the right is the bounded derived category of rational vector spaces (which is equivalent to the abelian category of graded vector spaces). The latter posseses a canonical bounded $t$-structure, coming from the fact of being a derived category and this finally induces a Bridgeland $\Z_{\mathrm{free}} \times_{\mathrm{lex}} \Z$ slicing on \mathscr{D}\textnormal{TM}_k. \\
+   where the member on the right is the bounded derived category of rational vector spaces (which is equivalent to the abelian category of graded vector spaces). The latter posseses a canonical bounded $t$-structure, coming from the fact of being a derived category and this finally induces a Bridgeland $\Z_{\mathrm{free}} \times_{\mathrm{lex}} \Z$ slicing on $\mathscr{D}\textnormal{TM}_k$. \\
    Now, the gluability condition for this slicing means that 
 
 
