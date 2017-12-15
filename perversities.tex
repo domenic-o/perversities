@@ -107,7 +107,7 @@ if $f(\phi)>f(\psi)$ with $\phi\leq \psi$ implies $\mathscr{D}_{\tee; \phi}\orth
 \end{defn}
 
 \begin{rem}
-Clearly, if $f$ is monotone, then every $J$-slicing $\tee$ is order restoring as the condition `$f(\phi)>f(\psi)$ with $\phi\leq \psi$' is empty.
+Clearly, if $f$ is monotone, then every $J$-slicing $\tee$ is $f$-compatible as the condition `$f(\phi)>f(\psi)$ with $\phi\leq \psi$' is empty.
 \end{rem}
 
 \begin{lem}\label{is-t-structure}
@@ -550,9 +550,39 @@ If $\phi=\psi+n$ with $n\geq 2$, then in particular $\phi>\psi$ and $n>0$, so ag
 %where $\Z$ acts diagonally both on the source and on the target. If $\tilde{\tee}$ is perverse, then $\tilde{\tee}$ is $f_p$-compatible.
 %\end{prop}
 \begin{prop}\label{grad}
-Let $\mathfrak{t}$ be a bounded t-structure on $\mathscr{D}$, let $\tilde{\tee}$ be an abelian $\mathbb{Z}$-slicing on $\heartsuit_{\mathfrak{t}}$,  let $p\colon \Z\to \Z$ be a perversity function, and let $g_p\colon \mathbb{Z} \ltimes \hat{\mathbb{Z}}\to \mathbb{Z} \ltimes \hat{\mathbb{Z}}$ be the $\Z$-equivariant map given by $$g_p(n,\phi)=(n+p(\phi),-p(\phi)),$$
-where $\Z$ acts diagonally both on the source and on the target. If $\tilde{\tee}$ is grading, then $\tilde{\tee}$ is $g_p$-compatible.
+Let $\mathfrak{t}$ be a bounded t-structure on $\mathscr{D}$, let $\tilde{\tee}$ be an abelian $\mathbb{Z}$-slicing on $\heartsuit_{\mathfrak{t}}$,  let $p\colon \Z\to \Z$ be a perversity function, and let $g_p\colon \mathbb{Z} \times_{\mathrm{lex}} \hat{\mathbb{Z}}\to \mathbb{Z} \times_{\mathrm{lex}} \hat{\mathbb{Z}}$ be the $\Z$-equivariant map given by $$g_p(n,\phi)=(n+p(\phi),-p(\phi)),$$
+where $\Z$ acts diagonally both on the source and on the target.\footnote{The function $g_p$ is clearly $\Z$-equivariant, as the action on the second factor is the trivial one.} If $\tilde{\tee}$ is grading, then $\tilde{\tee}$ is $g_p$-compatible.
 \end{prop}
+\begin{proof}
+Assume $\tilde{\tee}$ is grading.  Let $(n,\phi)$ and $(m,\psi)$ in $\Z\times_{\mathrm{lex}} \Z$ with $(n,\phi)\leq (m,\psi)$ such that $g_p(n,\phi)>g_p(m,\psi)$ in $\Z\times_{\mathrm{lex}} \Z$. By definition of $g_p$ this means that we have
+\[
+(n+p(\phi),-p(\phi))>(m+p(\psi),-p(\psi))
+\]
+in $\Z\times_{\mathrm{lex}} \Z$, i.e., that $n+p(\phi)>m+p(\psi)$ or that $n+p(\phi)=m+p(\psi)$ and $p(\psi)>p(\phi)$. Similarly, the condition $(n,\phi)\leq (m,\psi)$ means that either $n<m$ or $n=m$ and $\phi\leq \psi$. By considering all possibilities, and taking into account that a perversity function is nondecreasing, one sees that there is actually a single case to deal with:
+\begin{itemize}
+\item $p(\phi)-p(\psi)>m-n$, with $m>n$ and $\phi>\psi$;
+%\item $n=m$ and $p(\phi)>p(\psi)$ with $\phi\leq \psi$.
+%\item $n+p(\phi)=m+p(\psi)$ with $n<m$ and $p(\psi)>p(\phi)$;
+%\item $n+p(\phi)=m+p(\psi)$ and $p(\psi)>p(\phi)$ and $n=m$ and $\phi\leq \psi$.
+\end{itemize}
+As $p$ is a perversity function, if $\phi\geq \psi$ then
+\[
+0\leq p(\phi)-p(\psi)\leq \phi-\psi,
+\]
+so we have
+\[
+\phi\geq \psi+ p(\phi)-p(\psi)>\psi+m-n.
+\]
+Since $\tilde{\tee}$ is grading, this implies $\heartsuit_{\tee;\phi}\orth\heartsuit_{\tee;\psi}[m-n]$, and so $\heartsuit_{\tee;\phi}[n]\orth \heartsuit_{\tee;\psi}[m]$, i.e.,
+\[
+\mathscr{D}_{\tilde{\tee};(n,\phi)}\orth\mathscr{D}_{\tilde{\tee};(m,\psi)}.
+\]
+Since $\phi>\psi+m-n$, either $\phi>\psi+m-n+1$ or $\phi=\psi+m-n+1$. In the first case, reasoning as above we find $\mathscr{D}_{\tilde{\tee};(n,\phi)}\orth\mathscr{D}_{\tilde{\tee};(m,\psi)}[1]$. In the second case, as $m>n$ we have $m-n+1\geq 2$. As $\tilde{\tee}$ is grading, this gives $\heartsuit_{\tee;\phi}\orth\heartsuit_{\tee;\psi}[m-n+1]$, i.e., again
+\[
+\mathscr{D}_{\tilde{\tee};(n,\phi)}\orth\mathscr{D}_{\tilde{\tee};(m,\psi)}[1].
+\]
+\end{proof}
+
 %\begin{prop}\label{grad2}
 %Let $\mathfrak{t}$ be a bounded t-structure on $\mathscr{D}$, let $\tilde{\tee}$ be an abelian $\mathbb{Z}$-slicing on $\heartsuit_{\mathfrak{t}}$,  let $p\colon \Z\to \Z$ be a perversity function, and let $g_p\colon \mathbb{Z} \ltimes \hat{\mathbb{Z}}\to \mathbb{Z} \ltimes \hat{\mathbb{Z}}$ be the $\Z$-equivariant map given by $$g_p(n,\phi)=(n+p(\phi),-p(\phi)),$$
 %where $\Z$ acts diagonally both on the source and on the target. With some abuse of nototation, denote by ${g_p}_!\tee$ the bounded $t$-structure on $\mathscr{D}$ induced by the $\Z\times \hat{\Z}$-slicing ${g_p}_!\tilde{\tee}$ via the projection on the first factor $\Z\times \hat{\Z}\to \Z$.
