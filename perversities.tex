@@ -396,6 +396,10 @@ p(n)\leq p(n+1)\leq p(n)+1,
 \]
 for every $n\in Z$. The set $\mathrm{perv}_\Z$ of perversity functions is a poset with the partial order induced by the inclusion $\mathrm{perv}_\Z\subseteq \pos(\Z,\Z)$. It is a $\Z$-poset with the action $(p\dotplus1)(n)=p(n+1)$. 
 \end{defn}
+\begin{rem}\label{other-action}
+In addition to the $\Z$-action $p\mapsto p\dotplus 1$, the poset  $\mathrm{perv}_\Z$ carries also another natural $\Z$-action making it a $\Z$-poset; namely, the action $(p+1)(n)=p(n)+1$. We will come back to this towards the end of this section.
+\end{rem}
+
 \begin{rem}
 Notice that the $\Z$-action on perversity functions is a monotone action since, by definition of perversity function, we have $p(n)\leq p(n+1)$ and this precisely means $p(n)\leq (p\dotplus1)(n)$.
 \end{rem}
@@ -407,8 +411,8 @@ By Lemma \ref{lemma.perv0} we only need to show that $p\mapsto f_p$ is a monoton
 \end{proof}
 
 \begin{defn}
-An upper set $U$ in $\Oo(J\times J')$ is called a \emph{kinky upperset} if $U\leq U+_\mathrm{ne}1$, where ${\mathrm{ne}}$ is the ``northestern'' action of $\Z$ on $J\times J'$ given by
-$(j,j')+_{\mathrm{ne}}1=(j-1,j'+1)$. We denote by $\mathrm{Kink}(J\times J')$ the poset of kinky uppersets of $J\times J'$, with the poset structure induced by the inclusion in $\Oo(J\times J')$. it is a $\Z$-poset with the ``northestern'' action. We denote by $\mathrm{Kink}^\circ(J\times J')$ the $\Z$-sub-poset of nontrivial kinky uppersets of $J\times J'$, where 
+An upper set $U$ in $\Oo(J\times J')$ is called a \emph{kinky upperset} if $U\leq U+_\mathrm{ne}1$, where ${\mathrm{ne}}$ is the ``northwestern'' action of $\Z$ on $J\times J'$ given by
+$(j,j')+_{\mathrm{ne}}1=(j-1,j'+1)$. We denote by $\mathrm{Kink}(J\times J')$ the poset of kinky uppersets of $J\times J'$, with the poset structure induced by the inclusion in $\Oo(J\times J')$. it is a $\Z$-poset with the ``northwestern'' action. We denote by $\mathrm{Kink}^\circ(J\times J')$ the $\Z$-sub-poset of nontrivial kinky uppersets of $J\times J'$, where 
 the trivial upperstes are $\emptyset$ and $J\times J'$.
 \end{defn}
 
@@ -455,6 +459,39 @@ mapping a perversity function $p$ to the image via the isomorphism $\varphi\colo
 \begin{exmp}
 The zero perversity function $p(n)\equiv 0$ corresponds to the upper set $\{(n,n')\in \Z\times \Z\text{ such that } n\geq 0\}$; the identity perversity function $p(n)\equiv n$ corresponds to the upper set $\{(n,n')\in \Z\times \Z\text{ such that } n'\geq 0\}$.
 \end{exmp}
+
+\begin{rem}\label{missing}
+The two ``missing'' upper sets from $\Oo(\Z\times \Z)\setminus\{\emptyset,\Z\times\Z\}$ can be recovered by adding to the set $\mathrm{perv}_\Z$ of perversity functions the two ``constant infinite perversities'', i.e., the function $p_{+\infty}\colon \Z\to \Z\cup\{-\infty,+\infty\}$ defined by $p_{+\infty}(n)=+\infty$ for every $n\in\Z$ and the function  $p_{-\infty}\colon \Z\to \Z\cup\{-\infty,+\infty\}$ defined by $p_{-\infty}(n)=-\infty$ for every $n\in\Z$. The extended set
+\[
+\widehat{\mathrm{perv}}_\Z =\mathrm{perv}_\Z\cup\{p_{-\infty},p_{+\infty}\}
+\]
+is naturally a $\Z$-poset with $p_{+\infty}$ and $p_{-\infty}$ as maximum and minimum element, respectively (so they are in particular $\Z$-fixed points), and the inclusion of $\mathrm{perv}_\Z$ into $\widehat{\mathrm{perv}}_\Z$ isa morphism of $\Z$-posets. Moreover, the isomorphism of $\Z$-posets $\mathrm{perv}_\Z\xrightarrow{\sim} \Oo(\Z\times \Z)\setminus\{\emptyset,\Z\times\Z\}$ from Corollary \ref{corperv} extends to an isomorphism of $\Z$-posets
+\[
+\widehat{\mathrm{perv}}_\Z\xrightarrow{\sim} \Oo(\Z\times \Z).
+\]
+\end{rem}
+As well as the $\Z$-action $p\mapsto p\dotplus 1$, also the action $p\mapsto p+1$ from Remark \ref{other-action} extends to a $\Z$-action of $\widehat{\mathrm{perv}}_\Z$ (again, $p_{+\infty}$ and $p_{-\infty}$ will be fixed points). The isomorphism of posets $\widehat{\mathrm{perv}}_\Z\xrightarrow{\sim} \Oo(\Z\times \Z)$ will then transfer this $\Z$-action to $\Oo(\Z\times \Z)$ inducing on $\Oo(\Z\times \Z)$ a $\Z$-action such that $\widehat{\mathrm{perv}}_\Z\xrightarrow{\sim} \Oo(\Z\times \Z)$ is an isomorphism of posets with the $\Z$-action $p\mapsto p+1$ on the left hand side. More precisely, we have the following result.
+\begin{prop}
+\label{prop-perv}
+We have an isomorphism of posets
+\[
+\widehat{\mathrm{perv}}_\Z\xrightarrow{\sim} \Oo(\Z\times \Z)
+\]
+mapping a perversity function $p$ to the image via the isomorphism $\varphi\colon (n,n')\mapsto (n+n',n')$ of the set $S_p=\{(n,n')\in \Z\times \Z\text{ such that } n'\geq p(n)-n\}$, and mapping the ``infinite perversity functions'' $p_{-\infty}$ and $p_{+\infty}$ to $\Z\times \Z$ and to $\emptyset$, respectively. Moreover, this is an isomorphism of $\Z$-posets, where the $\Z$-action on the left is given by $(p+1)(n)=p(n)+1$ and the $\Z$-action on the right is the one induced by the ``northeastern'' $\Z$-action on $\Z^2$, namely, $(n,n')+1=(n+1,n'+1)$. 
+\end{prop}
+\begin{proof}
+After Corollary \ref{corperv} and remark \ref{missing}, the only thing left to prove is the $\Z$-equivariancy of the isomorphism, i.e., that we have
+\[
+\varphi(S_{p+1})=\varphi(S_p)+\left(\begin{smallmatrix}1\\1\end{smallmatrix}\right).
+\]
+As $\varphi$ is an isomorphism of $\Z$-modules, this is equivalent to
+\[
+S_{p+1}=S_p+\left(\begin{smallmatrix}0\\1\end{smallmatrix}\right),
+\]
+i.e., to the condition $(n,n')\in S_{p+1}$ if and only if $(n,n'-1)\in S_{p}$, which is obvious.
+
+\end{proof}
+
 
 \subsection{Slicing the heart}
 Let $\mathscr{D}$ be a stable $\infty$-category. Then, as we recalled above, a bounded t-structure on $\mathscr{D}$ is the datum of a Bridgeland $\Z$-slicing $\tee$ of $\mathscr{D}$. Let $\heartsuit_{\mathfrak{t}}$ denote the heart of $\mathfrak{t}$. Then an abelian $\Z$-slicing of $\heartsuit_{\mathfrak{t}}$ is the datum of an extension $\tilde{\tee}$ of $\tee$ to a Bridgeland $\Z\times_{\mathrm{lex}}\hat{\Z}$-slicing on $\mathscr{D}$, where $\hat{\Z}$ denotes the $\Z$-poset consisting of $\Z$ endowed wth the trivial $Z$-action, and the morphism $\Oo(\Z)\to \Oo(\Z\times_{\mathrm{lex}}\hat{\Z})$ is induced by the projection on the first factor $\Z\times_{\mathrm{lex}}\hat{\Z}\to \Z$. See \cite[Section??]{??}. We will denote by $\heartsuit_{\tee;\phi}$ the $\phi$-th slice of the heart of $\tee$. In other words,
@@ -660,23 +697,36 @@ let $\gamma_p\colon \Z\times_{\mathrm{lex}}\hat{\Z}\to \Z$ the $\Z$-equivariant 
 Then
 \begin{itemize}
 \item $\tilde{\tee}$ is $\gamma_p$-compatible;
+\item $ (\gamma_p)_!\tilde{\tee}$ is a bounded $t$-structure on $\mathscr{D}$;
 \item the map
 \begin{align*}
-\mathrm{perv}_\Z&\to \ts(\mathscr{D})\\
+\Psi\colon \mathrm{perv}_\Z^{\mathrm{op}}&\to \ts(\mathscr{D})\\
 p&\mapsto (\gamma_p)_!\tilde{\tee},
 \end{align*}
-is a morphism of $\Z$-posets.
+is a morphism of $\Z$-posets, where on the left we have the $\Z$-action $(p+1)(n)=p(n)+1$ and on the right the $\Z$-action given by the shift in $\mathscr{D}$;
+\item 
+$\Psi$ uniquely extends to a morphism of $\Z$-posets
+\[
+\Psi\colon \widehat{\mathrm{perv}}_\Z^{\mathrm{op}}\to \ts(\mathscr{D})
+\]
+preserving maxima and minima.
 \end{itemize}
 \end{prop}
 \begin{proof}
 Let $g_p\colon \mathbb{Z} \times_{\mathrm{lex}} \hat{\mathbb{Z}}\to \mathbb{Z} \times_{\mathrm{lex}} \hat{\mathbb{Z}}$ the map defined in Proposition \ref{grad}
-As $\tilde{\tee}$ is grading, by Proposition \ref{grad}, $\tilde{\tee}$ is $g_p$-compatible. The projection on the first factor, $\pi_1\colon  \mathbb{Z} \times_{\mathrm{lex}} \hat{\mathbb{Z}}\to \Z$ is a morphism of $\Z$-tosets, so by Remark \ref{everything-compatible} every $\mathbb{Z} \times_{\mathrm{lex}} \hat{\mathbb{Z}}$-slicing is $\pi_1$-compatible. In particular, $(g_p)_!\tee$ is $\pi_1$-compatible. Therefore, by Proposition \ref{functoriality}, $\tee$ is $(\pi_1\circ g_p)$-compatible. As $\pi_1\circ g_p=\gamma_p$, this precisely says that $\tee$ is $\gamma_p$-compatible. We therefore have a Bridgeland $\Z$-slicing, i.e., a bounded $t$-structure, $(\gamma_p)_!\tee$ on $\mathscr{D}$. 
-\par
-
-
-{\color{red}
-Resta da scrivere la parte ``$p\mapsto (\gamma_p)_!\tilde{\tee}$ \`e un morfismo di $\Z$-poset''. 
-}
+As $\tilde{\tee}$ is grading, by Proposition \ref{grad}, $\tilde{\tee}$ is $g_p$-compatible. The projection on the first factor, $\pi_1\colon  \mathbb{Z} \times_{\mathrm{lex}} \hat{\mathbb{Z}}\to \Z$ is a morphism of $\Z$-tosets, so by Remark \ref{everything-compatible} every $\mathbb{Z} \times_{\mathrm{lex}} \hat{\mathbb{Z}}$-slicing is $\pi_1$-compatible. In particular, $(g_p)_!\tee$ is $\pi_1$-compatible. Therefore, by Proposition \ref{functoriality}, $\tee$ is $(\pi_1\circ g_p)$-compatible. As $\pi_1\circ g_p=\gamma_p$, this precisely says that $\tee$ is $\gamma_p$-compatible. We therefore have a Bridgeland $\Z$-slicing, i.e., a bounded $t$-structure, $(\gamma_p)_!\tee$ on $\mathscr{D}$. The map $\Psi$ is monotone and $\Z$-equivariant. Indeed, the $t$-structure $\Psi_p$ is defined by the upper category
+\[
+\mathscr{D}_{(\gamma_{p})_!\tilde{\tee};\geq 0}=\langle \mathscr{D}_{\tee;(n,\phi)}\rangle_{(n,\phi)\in \gamma_p^{-1}([0,+\infty))}.
+\]
+If $p_1\leq p_2$, then $n+p_1(\phi)\geq 0$ implies $n+p_2(\phi)\geq 0$, and so $\gamma_{p_1}^{-1}([0,+\infty))\subseteq \gamma_{p_2}^{-1}([0,+\infty))$. This gives $\mathscr{D}_{(\gamma_{p_1})_!\tilde{\tee};\geq 0}\subseteq \mathscr{D}_{(\gamma_{p_2})_!\tilde{\tee};\geq 0}$, i.e.,
+\[
+\mathscr{D}_{(\gamma_{p_1})_!\tilde{\tee}}\geq \mathscr{D}_{(\gamma_{p_2})_!\tilde{\tee}}
+\]
+in the parial order on  $\ts(\mathscr{D})$. Similarly, $n+(p+1)(\phi)\geq 0$ if and only if $n+p(\phi)\geq -1$ and so
+\[
+\mathscr{D}_{(\gamma_{p+1})_!\tilde{\tee};\geq 0}=\mathscr{D}_{(\gamma_{p})_!\tilde{\tee};\geq -1}=\mathscr{D}_{(\gamma_{p})_!\tilde{\tee};\geq 0}[-1].
+\]
+Finally, $\Psi$ trivially (and uniquely) extends to $\widehat{\mathrm{perv}}_\Z^{\mathrm{op}}$ preserving maxima and minima.
 \end{proof}
 
 
