@@ -456,6 +456,7 @@ We have an isomorphism of $\Z$-posets
 \]
 mapping a perversity function $p$ to the image via the isomorphism $\varphi\colon (n,n')\mapsto (n+n',n')$ of the set $\{(n,n')\in \Z\times \Z\text{ such that } n'\geq p(n)-n\}$.
 \end{cor}
+
 \begin{exmp}
 The zero perversity function $p(n)\equiv 0$ corresponds to the upper set $\{(n,n')\in \Z\times \Z\text{ such that } n\geq 0\}$; the identity perversity function $p(n)\equiv n$ corresponds to the upper set $\{(n,n')\in \Z\times \Z\text{ such that } n'\geq 0\}$.
 \end{exmp}
@@ -489,9 +490,21 @@ As $\varphi$ is an isomorphism of $\Z$-modules, this is equivalent to
 S_{p+1}=S_p+\left(\begin{smallmatrix}0\\1\end{smallmatrix}\right),
 \]
 i.e., to the condition $(n,n')\in S_{p+1}$ if and only if $(n,n'-1)\in S_{p}$, which is obvious.
-
 \end{proof}
-
+Takin the opposite of the complement (or, equivalently, the complement of the opposite) gives an isomorphism of posets
+\begin{align*}
+\Oo(\Z\times \Z)&\xrightarrow{\sim} \Oo(\Z\times \Z)^{\mathrm{op}}\\
+U&\mapsto (\Z\times \Z)\setminus (-U),
+\end{align*}
+where $-U=\{(-n,-n')\text{ with } (n,n')\in U\}$. This isomorphisms changes the northeastern action in its opposite, i.e., the ``southwestern'' action  $(n,n')+1=(n-1,n'-1)$, so Proposition \ref{prop-perv} immediatley gives 
+\begin{cor}
+\label{cor-perv2}
+We have an isomorphism of posets
+\[
+\widehat{\mathrm{perv}}_\Z^{\mathrm{op}}\xrightarrow{\sim} \Oo(\Z\times \Z)
+\]
+mapping a perversity function $p$ to the complement of the image via the isomorphism $\psi\colon (n,n')\mapsto (-n-n',-n')$ of the set $S_p=\{(n,n')\in \Z\times \Z\text{ such that } n'\geq p(n)-n\}$, and mapping the ``infinite perversity functions'' $p_{-\infty}$ and $p_{+\infty}$ to $\emptyset$ and to $\Z\times \Z$, respectively. Moreover, this is an isomorphism of $\Z$-posets, where the $\Z$-action on the left is given by $(p+^{\mathrm{op}}1)(n)=p(n)-1$ and the $\Z$-action on the right is the one induced by the ``northeastern'' $\Z$-action on $\Z^2$, namely, $(n,n')+1=(n+1,n'+1)$. 
+\end{cor}
 
 \subsection{Slicing the heart}
 Let $\mathscr{D}$ be a stable $\infty$-category. Then, as we recalled above, a bounded t-structure on $\mathscr{D}$ is the datum of a Bridgeland $\Z$-slicing $\tee$ of $\mathscr{D}$. Let $\heartsuit_{\mathfrak{t}}$ denote the heart of $\mathfrak{t}$. Then an abelian $\Z$-slicing of $\heartsuit_{\mathfrak{t}}$ is the datum of an extension $\tilde{\tee}$ of $\tee$ to a Bridgeland $\Z\times_{\mathrm{lex}}\hat{\Z}$-slicing on $\mathscr{D}$, where $\hat{\Z}$ denotes the $\Z$-poset consisting of $\Z$ endowed wth the trivial $Z$-action, and the morphism $\Oo(\Z)\to \Oo(\Z\times_{\mathrm{lex}}\hat{\Z})$ is induced by the projection on the first factor $\Z\times_{\mathrm{lex}}\hat{\Z}\to \Z$. See \cite[Section??]{??}. We will denote by $\heartsuit_{\tee;\phi}$ the $\phi$-th slice of the heart of $\tee$. In other words,
@@ -718,16 +731,31 @@ As $\tilde{\tee}$ is grading, by Proposition \ref{grad}, $\tilde{\tee}$ is $g_p$
 \[
 \mathscr{D}_{(\gamma_{p})_!\tilde{\tee};\geq 0}=\langle \mathscr{D}_{\tee;(n,\phi)}\rangle_{(n,\phi)\in \gamma_p^{-1}([0,+\infty))}.
 \]
-If $p_1\leq p_2$, then $n+p_1(\phi)\geq 0$ implies $n+p_2(\phi)\geq 0$, and so $\gamma_{p_1}^{-1}([0,+\infty))\subseteq \gamma_{p_2}^{-1}([0,+\infty))$. This gives $\mathscr{D}_{(\gamma_{p_1})_!\tilde{\tee};\geq 0}\subseteq \mathscr{D}_{(\gamma_{p_2})_!\tilde{\tee};\geq 0}$, i.e.,
+If $p_1\geq^{\mathrm{op}} p_2$, then  $p_1\leq p_2$ and so $n+p_1(\phi)\geq 0$ implies $n+p_2(\phi)\geq 0$, and so $\gamma_{p_1}^{-1}([0,+\infty))\subseteq \gamma_{p_2}^{-1}([0,+\infty))$. This gives $\mathscr{D}_{(\gamma_{p_1})_!\tilde{\tee};\geq 0}\subseteq \mathscr{D}_{(\gamma_{p_2})_!\tilde{\tee};\geq 0}$, i.e.,
 \[
 \mathscr{D}_{(\gamma_{p_1})_!\tilde{\tee}}\geq \mathscr{D}_{(\gamma_{p_2})_!\tilde{\tee}}
 \]
-in the parial order on  $\ts(\mathscr{D})$. Similarly, $n+(p+1)(\phi)\geq 0$ if and only if $n+p(\phi)\geq -1$ and so
+in the parial order on  $\ts(\mathscr{D})$. Similarly, $n+(p+^{\mathrm{op}}1)(\phi)\geq 0$ if and only if $n+p(\phi)\geq 1$ and so
 \[
-\mathscr{D}_{(\gamma_{p+1})_!\tilde{\tee};\geq 0}=\mathscr{D}_{(\gamma_{p})_!\tilde{\tee};\geq -1}=\mathscr{D}_{(\gamma_{p})_!\tilde{\tee};\geq 0}[-1].
+\mathscr{D}_{(\gamma_{p+1})_!\tilde{\tee};\geq 0}=\mathscr{D}_{(\gamma_{p})_!\tilde{\tee};\geq 1}=\mathscr{D}_{(\gamma_{p})_!\tilde{\tee};\geq 0}[1].
 \]
 Finally, $\Psi$ trivially (and uniquely) extends to $\widehat{\mathrm{perv}}_\Z^{\mathrm{op}}$ preserving maxima and minima.
 \end{proof}
+Recalling Corollary \ref{cor-perv2} we finally get the result we were aiming to.
+\begin{thm}\label{main-thm}
+Let $\mathfrak{t}$ be a bounded t-structure on $\mathscr{D}$, and let let $\tilde{\tee}$ be a grading abelian $\mathbb{Z}$-slicing on $\heartsuit_{\mathfrak{t}}$. Then $\tilde{\tee}$ explicitly induces a natural morphism of $\Z$-posets
+\[
+\Psi\colon\Oo(\Z\times\Z)\to \ts(\mathscr{D})
+\]
+such that for every proper upper set in $\Z\times \Z$, the corresponding $t$-structure on $\mathscr{D}$ is bounded. 
+\end{thm}
+\begin{rem}
+The morphism $\Psi$ can be thought of as a $(\Z\times \Z)$-slicing of $\mathscr{D}$, but keeping in mind that the poset $\Z\times\Z$ indexing the slices (and so the cohomologies) is now not totally ordered. This is a possibly subtle point, so let us spend a few more words on it. An abelian $\mathbb{Z}$-slicing $\tilde{\tee}$ of $\heartsuit_\tee$ is by definition a $(\Z\times_{\mathrm{lex}}\hat{\Z})$-slicing, and by Lemma \ref{from-alpha-to-e}, this is equivalently a $(\Z\times_{\mathrm{lex}}{\Z})$-slicing. So going from an abelian slicing of the heart to a  $(\Z\times_{\mathrm{lex}}{\Z})$-slicing of $\mathscr{D}$ is a trivial step. What is highly nontrivial is going from an abelian slicing of the heart to a $(\Z\times{\Z})$-slicing of $\mathscr{D}$, where now the poset structure on $\Z\times \Z$ is given by the product order and ot by the lexicographic order. And indeed this can generally not be done for an 
+arbitrary abelian slicing of the heart, and here is where the property of the abelian slicing of being grading comes in. Finally, to emphasize once more how going from a   $(\Z\times_{\mathrm{lex}}{\Z})$-slicing to a $(\Z\times{\Z})$-slicing is a nontrivial step, consider how there are in $\Z\times{\Z}$ many more upper sets than in $\Z\times_{\mathrm{lex}}{\Z}$
+\end{rem}
+\begin{rem}
+Describing the bounded $t$-structure on $\mathscr{D}$ associated by Theorem \ref{main-thm} to a proper upper set $U$ of $\Z\times \Z$ is a bit involved, but it is a completely explicit procedure. To begin with, recall that a bounded $t$-structure is completely determined by its heart, so we only need to give a description of the heart $\heartsuit_U$ associated with $U$. {\color{red} Give explicit descripion of the procedure here.}
+\end{rem}
 
 
 {\Huge -fino a qui-}
