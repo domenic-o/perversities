@@ -815,8 +815,32 @@ for every $n\in \Z$, where $H_\tee^{n}(X)$ is the $n$-th cohomology object of $X
   \[
  \heartsuit_p=\{X\in \mathscr{D}\text{ such that } H_{\tee}^{n}(X)\in \langle \heartsuit_{\tee;n'}[n]\rangle_{p(n')=-n}\}.
  \]
+\end{proof}
 
- \end{proof}
+\begin{exmp}
+Let $k\in \Z$ and let $\chi_{[k,+\infty)}\colon \Z\to \{0,1\}$ the characteristic function of the interval $[k,+\infty)$. Seen as a function from $\Z$ to $\Z$, the function $\chi_{[k,+\infty)}$is a perversity function of a very special kind: it is a perversity function taking exactly two values. Moreover, it is easy to see that --up to an additive constant-- perverity functions taking exactly two values are precisely characteristic functions of upper intervals in $\Z$. We have
+\[
+\chi_{[k,+\infty)}^{-1}(-n)=\begin{cases}
+\emptyset &\text{if }n\neq -1,0\\
+\\
+[k,+\infty)&\text{if }n= -1\\
+\\
+(-\infty,k)&\text{if }n =0.
+\end{cases}
+\]
+Therefore the perverse heart $\heartsuit_{\chi_{[k,+\infty)}^{-1}}$ of $\mathscr{D}$ is the full subcategory of $\mathscr{D}$ on those objects $X$ such that 
+\[
+\begin{cases}
+H_\tee^{n}(X[1])= \mathbf{0} \qquad \text{ if }n\neq 0,1 \\
+\\
+H_\tee^{0}(X[1])= \langle \heartsuit_{\tee;n'}\rangle_{n'\in [k,+\infty)}\\
+\\
+H_\tee^{1}(X[1])= \langle \heartsuit_{\tee;n'}[1]\rangle_{n'\in (-\infty,k)}
+\end{cases}
+\]
+for every $n\in \Z$. In other words, $\heartsuit_{\chi_{[k,+\infty)}^{-1}}$ is (up to a shift by 1) the heart of the tilted $t$-structure obrained by tilting $\tee$ with the torsion theory on $\heartsuit_\tee$ given by $\mathcal{F}=\langle \heartsuit_{\tee;n'}\rangle_{n'\in (-\infty,k)}$ and $\mathcal{T}=\langle \heartsuit_{\tee;n'}\rangle_{n'\in [k,+\infty)}$.
+\end{exmp}
+ 
 {\Huge -fino a qui-}
 {\color{red} Quanto segue va rivisto alla luce della chiacchierata su wire: dobbiamo introdurre la nozione di strong semiorthogonal decomposition e notare che nel caso in cui abbiamo strong e t-strutture scambiabili allora abbiamo due modi di incollare e questi coincidono.}
 We now recall the celebrated process from {\color{red} BBD} of gluing two $t$-structures into a third one. This will turn out to induce a gluable slicing in our sense, thus showing that the language of the present paper is actually a generalization of a classical piece of literature. This, by the other hand, explains both our terminology and motivation.
@@ -962,14 +986,14 @@ The map $\alpha$ from Definition \ref{radical} corresponds simply to $\alpha_1$,
 % \]
  This can finally be regarded as a cohomology theory where dimension is an element of the poset $\Z \times \Z$, which is not totally ordered. In a certain sense, \textit{dimensions are not always comparable}. \\
  
-Now, the notion of gluability is somehow asymmetric. However, one implication always holds, as shown below.
+%Now, the notion of gluability is somehow asymmetric. However, one implication always holds, as shown below.
 
-\begin{lem}\label{incolla2}
-Let $J_1$  and $J_2$ be $\Z$-tosets, $\tee$ be a Bridgeland $J_1 \lex J_2$-slicing of $\mathscr{D}$. If $\tee$ is gluable and $\Z$ acts trivially on $J_1$, then $e_! \tee$ is a gluable $J_2 \lex J_1$ slicing of $\mathscr{D}$. 
-\end{lem}
+%\begin{lem}\label{incolla2}
+%Let $J_1$  and $J_2$ be $\Z$-tosets, $\tee$ be a Bridgeland $J_1 \lex J_2$-slicing of $\mathscr{D}$. If $\tee$ is gluable and $\Z$ acts trivially on $J_1$, then $e_! \tee$ is a gluable $J_2 \lex J_1$ slicing of $\mathscr{D}$. 
+%\end{lem}
 
 \begin{rem}\label{incollarem}
-  The notion of Bridgeland $\triv$-slicing already appears in literature: it is no more than an infinite version of a semiorthogonal decomposition in the sense of {\color{red} referenza}, or a '\textit{baric structure}' as defined in {\color{red} referenza}. Thus, we can start with a baric structure of $\mathscr{D}$ and a boudned $t$-structure on $\mathscr{D}_{n}$ for every $n \in \hat{\Z}$. If the associated $\hat{\Z} \lex \Z$-slicing $\tee$ is gluable, $e_!\tee$ is gluable by Lemma \ref{incolla2} and thus, using Lemma \ref{incolla2} we get a morphism of $\Z$-posets
+  The notion of Bridgeland $\hat{\Z}$-slicing already appears in literature: it is no more than an infinite version of a semiorthogonal decomposition in the sense of {\color{red} referenza}, or a '\textit{baric structure}' as defined in {\color{red} referenza}. Thus, we can start with a baric structure of $\mathscr{D}$ and a boudned $t$-structure on $\mathscr{D}_{n}$ for every $n \in \hat{\Z}$. If the associated $\hat{\Z} \lex \Z$-slicing $\tee$ is gluable, $e_!\tee$ is gluable by Lemma \ref{incolla2} and thus, using Lemma \ref{incolla2} we get a morphism of $\Z$-posets
   \[
   \mathrm{perv}_\Z \rightarrow \ts(\mathscr{D})
   \]
