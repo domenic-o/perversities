@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.10.27)  21 DEC 2017 23:40
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.10.27)  31 JAN 2018 14:21
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -1498,92 +1498,92 @@ m/n/10 (-20) (\OML/lmm/m/it/10 X\OT1/lmr/m/n/10 (-20) ) \OMS/lmsy/m/n/10 ^^H
  []
 
 <xymatrix 4x3 526> [3] <xymatrix 3x2 295> <xymatrix 2x2 182> <xymatrix 3x3
-416> [4] <xymatrix 2x2 154> [5] [6] [7] [8]
+416> [4] <xymatrix 2x2 154> [5] [6] <xymatrix 3x1 288> [7]
+Underfull \hbox (badness 10000) in paragraph at lines 334--335
 
-LaTeX Warning: Citation `??' on page 9 undefined on input line 402.
+ []
 
-[9] [10] [11] [12]
+<xymatrix 2x2 154> <xymatrix 2x2 154>
 
-LaTeX Warning: Citation `??' on page 13 undefined on input line 532.
+LaTeX Warning: Reference `recoll' on page 8 undefined on input line 375.
 
-[13]
-LaTeX Font Info:    Try loading font information for OMS+lmr on input line 550.
+[8] [9]
+
+LaTeX Warning: Citation `??' on page 10 undefined on input line 466.
+
+[10] [11] [12] [13]
+
+LaTeX Warning: Citation `??' on page 14 undefined on input line 596.
+
+[14]
+LaTeX Font Info:    Try loading font information for OMS+lmr on input line 614.
 
  (/usr/local/texlive/2015/texmf-dist/tex/latex/lm/omslmr.fd
 File: omslmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `OMS/lmr/m/it' in size <10> not available
-(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 550.
+(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 614.
 
 
-LaTeX Warning: Citation `ekh' on page 14 undefined on input line 563.
+LaTeX Warning: Citation `ekh' on page 15 undefined on input line 627.
 
-[14]
+[15]
 LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 662.
- <xymatrix 2x2 182> [15] [16] [17]
+(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 726.
+ <xymatrix 2x2 182> [16] [17] [18]
 
-LaTeX Warning: Citation `hearts-and-towers' on page 18 undefined on input line 
-810.
+LaTeX Warning: Citation `hearts-and-towers' on page 19 undefined on input line 
+874.
 
-[18] <xymatrix 3x1 288>
-Underfull \hbox (badness 10000) in paragraph at lines 859--860
+[19]
 
- []
-
-[19] <xymatrix 2x2 154> <xymatrix 2x2 154>
-Underfull \hbox (badness 10000) in paragraph at lines 896--898
-
- []
+LaTeX Warning: Reference `radical' on page 20 undefined on input line 973.
 
 
-LaTeX Warning: Reference `radical' on page 20 undefined on input line 965.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 987--988
+Underfull \hbox (badness 10000) in paragraph at lines 995--996
 
  []
 
 [20] [21]
 
-LaTeX Warning: Citation `kos' on page 22 undefined on input line 1074.
+LaTeX Warning: Citation `kos' on page 22 undefined on input line 1082.
 
-LaTeX Font Info:    Try loading font information for U+mvs on input line 1075.
+LaTeX Font Info:    Try loading font information for U+mvs on input line 1083.
 (/usr/local/texlive/2015/texmf-dist/tex/latex/marvosym/umvs.fd)
 (/usr/local/texlive/2015/texmf-dist/tex/latex/microtype/mt-mvs.cfg
 File: mt-mvs.cfg 2006/07/05 v1.1 microtype config. file: Marvosym Euro (RS)
 )
 
-LaTeX Warning: Hyper reference `cohh' on page 22 undefined on input line 1079.
+LaTeX Warning: Hyper reference `cohh' on page 22 undefined on input line 1087.
 
 
-LaTeX Warning: Reference `cohh' on page 22 undefined on input line 1079.
+LaTeX Warning: Reference `cohh' on page 22 undefined on input line 1087.
 
 
-LaTeX Warning: Citation `bez' on page 22 undefined on input line 1079.
+LaTeX Warning: Citation `bez' on page 22 undefined on input line 1087.
 
 
-LaTeX Warning: Hyper reference `t' on page 22 undefined on input line 1079.
+LaTeX Warning: Hyper reference `t' on page 22 undefined on input line 1087.
 
 
-LaTeX Warning: Reference `t' on page 22 undefined on input line 1079.
+LaTeX Warning: Reference `t' on page 22 undefined on input line 1087.
 
 
-LaTeX Warning: Citation `perpol' on page 22 undefined on input line 1079.
+LaTeX Warning: Citation `perpol' on page 22 undefined on input line 1087.
 
 [22]pdfTeX warning (ext4): destination with the same identifier (name{page.22})
  has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1270 \clearpage
+l.1278 \clearpage
                   [22
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1274.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1274.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1282.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1282.
  (./perversities.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1274.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1274.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1282.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1282.
 
 Package rerunfilecheck Info: File `perversities.out' has not changed.
 (rerunfilecheck)             Checksum: F1E287CFA1E51C321167EA32EA737DC4;172.
@@ -1594,16 +1594,16 @@ LaTeX Warning: There were undefined references.
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1274.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1282.
  ) 
 Here is how much of TeX's memory you used:
- 26434 strings out of 493089
- 458466 string characters out of 6134841
- 628384 words of memory out of 5000000
+ 26435 strings out of 493089
+ 458482 string characters out of 6134841
+ 628358 words of memory out of 5000000
  29063 multiletter control sequences out of 15000+600000
- 79467 words of font info for 149 fonts, out of 8000000 for 9000
+ 79594 words of font info for 150 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 56i,20n,82p,3238b,870s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 56i,20n,82p,3238b,871s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/
 texlive/2015/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/local/texlive/20
 15/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/2015/texmf-d
@@ -1637,10 +1637,10 @@ usr/local/texlive/2015/texmf-dist/fonts/type1/public/stmaryrd/stmary10.pfb></us
 r/local/texlive/2015/texmf-dist/fonts/type1/public/stmaryrd/stmary8.pfb></usr/l
 ocal/texlive/2015/texmf-dist/fonts/type1/public/xypic/xyatip10.pfb></usr/local/
 texlive/2015/texmf-dist/fonts/type1/public/xypic/xybtip10.pfb>
-Output written on perversities.pdf (23 pages, 447300 bytes).
+Output written on perversities.pdf (23 pages, 446374 bytes).
 PDF statistics:
- 386 PDF objects out of 1000 (max. 8388607)
- 325 compressed objects within 4 object streams
- 92 named destinations out of 1000 (max. 500000)
+ 383 PDF objects out of 1000 (max. 8388607)
+ 322 compressed objects within 4 object streams
+ 91 named destinations out of 1000 (max. 500000)
  15397 words of extra memory for PDF output out of 17280 (max. 10000000)
 

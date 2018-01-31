@@ -316,6 +316,70 @@ $\mathscr{D}_{0;\geq 0}\orth \mathscr{D}_{1;-1}$ and $\mathscr{D}_{0;\geq 0}\ort
 $(\mathscr{D}_0^{\heartsuit},\mathscr{D}_1^{\heartsuit})$, i.e., precisely the pair of hearts of the two subcategories in the semiorthogonal decomposition.
 \end{exmp}
 
+\begin{exmp} Recollement data from BBD induce  gluable slicings. This explains both our terminology and motivation.
+{\color{red} Quanto segue va rivisto alla luce della chiacchierata su wire: dobbiamo introdurre la nozione di strong semiorthogonal decomposition e notare che nel caso in cui abbiamo strong e t-strutture scambiabili allora abbiamo due modi di incollare e questi coincidono. }
+%We now recall the celebrated process from {\color{red} BBD} of gluing two $t$-structures into a third one. This will turn out to induce a gluable slicing in our sense, thus showing that the language of the present paper is actually a generalization of a classical piece of literature. This, by the other hand, explains both our terminology and motivation.
+%
+%\begin{defn}\label{recoll}
+ Namely, a \emph{recollement datum} is a diagram of stable $\infty$-categories and exact $\infty$-functors 
+\[
+\xymatrix{
+  \mathscr{D}_{\mathrm{fer}}\ar[r]_{i_*}  & \mathscr{D} \ar@/^2pc/[l]^{i^!} \ar[r]_{j^*} \ar@/_2pc/[l]^{i^*} & \mathscr{D}_{\mathrm{ouv}} \ar@/^2pc/[l]^{j_*} \ar@/_2pc/[l]^{j_!}\\
+}
+\]
+such that the following holds:
+\begin{enumerate}
+\item $(i^*,i_*,i^!)$ and $(j_!,j^*,j_*)$ are adjoint triples,
+\item $i_*, j_*, j_!$ are fully faithful and $j^*i_* =0$,
+\item for each object $X$ of $\mathscr{D}$ the (co)units of the above adjunctions give rise to cofiber sequences \\
+  
+\begin{tabular}{cc}
+ \begin{minipage}{2in}   
+\[
+\xymatrix{
+i_*i^!X\ar[r]\ar[d] & X\ar[d] \\
+0\ar[r]& j_*j^*X
+}
+\]
+ \end{minipage}
+&
+\begin{minipage}{2in}   
+\[
+\xymatrix{
+j_!j^*X\ar[r]\ar[d] & X\ar[d] \\
+0\ar[r]& i_*i^*X.
+}
+\]
+ \end{minipage}
+\end{tabular}
+\end{enumerate} 
+
+%\end{defn}
+%
+%\begin{prop}
+%  Suppose we are in the situation of \ref{recoll}. 
+  Then:
+  \begin{enumerate}
+  \item $(\mathscr{D}_0=j_*\mathscr{D}_{\mathrm{ouv}}, \mathscr{D}_1=i_*\mathscr{D}_{\mathrm{fer}})$ is a semiorthogonal decomposition on $\mathscr{D}$.
+  \item Given $t$-structures $\tee_0, \tee_1$ on $\mathscr{D}_{\mathrm{ouv}}$ and $\mathscr{D}_{\mathrm{fer}}$ respectively, the associated $\{0,1\}\lex \Z$-slicing on $\mathscr{D}$ given by
+  \[
+  \mathscr{D}_{0;\geq 0}=\{X\in j_*(\mathscr{D}_{\mathrm{ouv};\geq 0})\},\qquad 
+  \quad \mathscr{D}_{1;\geq 0}=\{X\in i_*(\mathscr{D}_{\mathrm{fer};\geq 0})\}
+  \]
+   is gluable. 
+  \end{enumerate}
+%\end{prop}
+
+%\begin{proof}
+  Indeed, the fact that $j^*$ and $j_*$ are adjoints implies that, for objects $i_*X \in \mathscr{D}_{\mathrm{fer}}$ and $j_*Y \in \mathscr{D}_{\mathrm{ouv}}$, $$\mathscr{D}(i_*X,j_*Y)=\mathscr{D}(j^*i_*X,Y)$$
+  and the latter vanishes since $j^*i_*=0$ by definition. This shows that $\mathscr{D}_1 \orth \mathscr{D}_0$. Considering the left cofiber sequence from Definition \ref{recoll} as a Postnikov tower of length one we see that $(\mathscr{D}_0,\mathscr{D}_1)$ is a $\{0,1\}$-slicing on $\mathscr{D}$, as desired. This proves the first claim. 
+To prove the second claim, we need to show that
+$j_*(\mathscr{D}_{\mathrm{ouv};\geq 0})\orth i_*(\mathscr{D}_{\mathrm{fer};-1})$ and $j_*(\mathscr{D}_{\mathrm{ouv};\geq 0})\orth i_*(\mathscr{D}_{\mathrm{fer};0})$
+
+  
+%\end{proof}
+\end{exmp}
+
 \begin{lem}\label{incolla2}
 Let $J_1$  and $J_2$ be $\Z$-tosets, $\tee$ be a Bridgeland $J_1 \lex J_2$-slicing of $\mathscr{D}$. If $\tee$ is gluable and $\Z$ acts trivially on $J_1$, then $e_! \tee$ is a gluable $J_2 \lex J_1$ slicing of $\mathscr{D}$. 
 \end{lem}
@@ -842,62 +906,6 @@ for every $n\in \Z$. In other words, $\heartsuit_{\chi_{[k,+\infty)}^{-1}}$ is (
 \end{exmp}
  
 {\Huge -fino a qui-}
-{\color{red} Quanto segue va rivisto alla luce della chiacchierata su wire: dobbiamo introdurre la nozione di strong semiorthogonal decomposition e notare che nel caso in cui abbiamo strong e t-strutture scambiabili allora abbiamo due modi di incollare e questi coincidono.}
-We now recall the celebrated process from {\color{red} BBD} of gluing two $t$-structures into a third one. This will turn out to induce a gluable slicing in our sense, thus showing that the language of the present paper is actually a generalization of a classical piece of literature. This, by the other hand, explains both our terminology and motivation.
-
-\begin{defn}\label{recoll}
-  A \emph{recollement datum} is a diagram of stable $\infty$-categories and exact $\infty$-functors 
-\[
-\xymatrix{
-  \mathscr{D}_{\mathrm{fer}}\ar[r]_{i_*}  & \mathscr{D} \ar@/^2pc/[l]^{i^!} \ar[r]_{j^*} \ar@/_2pc/[l]^{i^*} & \mathscr{D}_{\mathrm{ouv}} \ar@/^2pc/[l]^{j_*} \ar@/_2pc/[l]^{j_!}\\
-}
-\]
-such that the following holds:
-\begin{enumerate}
-\item $(i^*,i_*,i^!)$ and $(j_!,j^*,j_*)$ are adjoint triples,
-\item $i_*, j_*, j_!$ are fully faithful and $j^*i_* =0$,
-\item for each object $X$ of $\mathscr{D}$ the (co)units of the above adjunctions give rise to cofiber sequences \\
-  
-\begin{tabular}{cc}
- \begin{minipage}{2in}   
-\[
-\xymatrix{
-i_*i^!X\ar[r]\ar[d] & X\ar[d] \\
-0\ar[r]& j_*j^*X
-}
-\]
- \end{minipage}
-&
-\begin{minipage}{2in}   
-\[
-\xymatrix{
-j_!j^*X\ar[r]\ar[d] & X\ar[d] \\
-0\ar[r]& i_*i^*X.
-}
-\]
- \end{minipage}
-\end{tabular}
-\end{enumerate} 
-\end{defn}
-
-\begin{prop}
-  Suppose we are in the situation of \ref{recoll}. Then:
-  \begin{enumerate}
-  \item $(\mathscr{D}_0=j_*\mathscr{D}_{\mathrm{ouv}}, \mathscr{D}_1=i_*\mathscr{D}_{\mathrm{fer}})$ is a semiorthogonal decomposition on $\mathscr{D}$.
-  \item Given $t$-structures $\tee_0, \tee_1$ on $\mathscr{D}_{\mathrm{ouv}}$ and $\mathscr{D}_{\mathrm{fer}}$ respectively, the associated $\{0,1\}\lex \Z$-slicing on $\mathscr{D}$ given by
-  \[
-  \mathscr{D}_{0;\geq 0}=j_*(\mathscr{D}_{\mathrm{ouv};\geq 0}), \quad \mathscr{D}_{1;\geq 0}=i_*(\mathscr{D}_{\mathrm{fer};\geq 0})
-  \]
-   is gluable. 
-  \end{enumerate}
-\end{prop}
-
-\begin{proof}
-  Let's prove the first claim. The fact that $j^*$ and $j_*$ are adjoints implies that, for objects $i_*X \in \mathscr{D}_{\mathrm{fer}}$ and $j_*Y \in \mathscr{D}_{\mathrm{ouv}}$, $$\mathscr{D}(i_*X,j_*Y)=\mathscr{D}(j^*i_*X,Y)$$
-  and the latter vanishes since $j^*i_*=0$ by definition. This shows that $\mathscr{D}_1 \orth \mathscr{D}_0$. Considering the left cofiber sequence from Definition \ref{recoll} as a Postnikov tower of length one we see that $(\mathscr{D}_0,\mathscr{D}_1)$ is a $\{0,1\}$-slicing on $\mathscr{D}$, as desired. \\
-
-  
-\end{proof}
 
 ----FINO A QUI 1.5 ----
 
