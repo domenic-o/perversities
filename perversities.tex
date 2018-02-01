@@ -313,72 +313,73 @@ Let $J_1$ and $J_2$ be $\Z$-tosets. A Bridgeland $J_1 \lex J_2$-slicing $\tee$ o
 
 \begin{exmp} Let $J_1=\{0,1\}$ with the trivial $\Z$-action and let $J_2=\Z$ with the standard translation $\Z$-action.  Then a $J_1\lex J_2$-slicing $\tee$ on $\mathscr{D}$ is the datum of a semiorthogonal decomposition $(\mathscr{D}_0,\mathscr{D}_1)$ of $\mathscr{D}$ toghether with $t$-structures $\tee_i$ on $\mathscr{D}_i$. Spelling out the definiton, one sees that the $\{0,1\}\lex \Z$-slicing $\tee$ is gluable if and only if 
 $\mathscr{D}_{0;\geq 0}\orth \mathscr{D}_{1;-1}$ and $\mathscr{D}_{0;\geq 0}\orth \mathscr{D}_{1;0}$. When this happens, the glued slicing $e_!\tee$ is a $\Z\lex\{0,1\}$ slicing on $\mathscr{D}$, i.e., is the datum of a bounded $t$-structure on $\mathscr{D}$ together with a torsion theory on its heart. More precisely, the heart of $e_!\tee$ is the full $\infty$-subcategory $\mathscr{D}^{\heartsuit_{e_!\tee}}$ of $\mathscr{D}$ on thise objects $X$ that fall into fiber sequences of the form $X_1\to X\to X_0$ with $X_i\in \mathscr{D}_i^\heartsuit$, while the torsion theory on $\mathscr{D}^{\heartsuit_{e_!\tee}}$ is
-$(\mathscr{D}_0^{\heartsuit},\mathscr{D}_1^{\heartsuit})$, i.e., precisely the pair of hearts of the two subcategories in the semiorthogonal decomposition.
+  $(\mathscr{D}_0^{\heartsuit},\mathscr{D}_1^{\heartsuit})$, i.e., precisely the pair of hearts of the two subcategories in the semiorthogonal decomposition. \\
+  This is exactly the setup of {\color{red} Collins et al}, which by the other hand is a particular case of the classical gluing construction of $t$-structures by {\color{red} BBD}, explaining both our nomenclature and motivation.
 \end{exmp}
 
-\begin{exmp} Recollement data from BBD induce  gluable slicings. This explains both our terminology and motivation.
-{\color{red} Quanto segue va rivisto alla luce della chiacchierata su wire: dobbiamo introdurre la nozione di strong semiorthogonal decomposition e notare che nel caso in cui abbiamo strong e t-strutture scambiabili allora abbiamo due modi di incollare e questi coincidono. }
+%\begin{exmp} Recollement data from BBD induce  gluable slicings. This explains both our terminology and motivation.
+%{\color{red} Quanto segue va rivisto alla luce della chiacchierata su wire: dobbiamo introdurre la nozione di strong semiorthogonal decomposition e notare che nel caso in cui abbiamo strong e t-strutture scambiabili allora abbiamo due modi di incollare e questi coincidono. }
 %We now recall the celebrated process from {\color{red} BBD} of gluing two $t$-structures into a third one. This will turn out to induce a gluable slicing in our sense, thus showing that the language of the present paper is actually a generalization of a classical piece of literature. This, by the other hand, explains both our terminology and motivation.
 %
 %\begin{defn}\label{recoll}
- Namely, a \emph{recollement datum} is a diagram of stable $\infty$-categories and exact $\infty$-functors 
-\[
-\xymatrix{
-  \mathscr{D}_{\mathrm{fer}}\ar[r]_{i_*}  & \mathscr{D} \ar@/^2pc/[l]^{i^!} \ar[r]_{j^*} \ar@/_2pc/[l]^{i^*} & \mathscr{D}_{\mathrm{ouv}} \ar@/^2pc/[l]^{j_*} \ar@/_2pc/[l]^{j_!}\\
-}
-\]
-such that the following holds:
-\begin{enumerate}
-\item $(i^*,i_*,i^!)$ and $(j_!,j^*,j_*)$ are adjoint triples,
-\item $i_*, j_*, j_!$ are fully faithful and $j^*i_* =0$,
-\item for each object $X$ of $\mathscr{D}$ the (co)units of the above adjunctions give rise to cofiber sequences \\
-  
-\begin{tabular}{cc}
- \begin{minipage}{2in}   
-\[
-\xymatrix{
-i_*i^!X\ar[r]\ar[d] & X\ar[d] \\
-0\ar[r]& j_*j^*X
-}
-\]
- \end{minipage}
-&
-\begin{minipage}{2in}   
-\[
-\xymatrix{
-j_!j^*X\ar[r]\ar[d] & X\ar[d] \\
-0\ar[r]& i_*i^*X.
-}
-\]
- \end{minipage}
-\end{tabular}
-\end{enumerate} 
-
+% Namely, a \emph{recollement datum} is a diagram of stable $\infty$-categories and exact $\infty$-functors 
+%\[
+%\xymatrix{
+%  \mathscr{D}_{\mathrm{fer}}\ar[r]_{i_*}  & \mathscr{D} \ar@/^2pc/[l]^{i^!} \ar[r]_{j^*} \ar@/_2pc/[l]^{i^*} & \mathscr{D}_{\mathrm{ouv}} \ar@/^2pc/[l]^{j_*} \ar@/_2pc/[l]^{j_!}\\
+%}
+%\]
+%such that the following holds:
+%\begin{enumerate}
+%\item $(i^*,i_*,i^!)$ and $(j_!,j^*,j_*)$ are adjoint triples,
+%\item $i_*, j_*, j_!$ are fully faithful and $j^*i_* =0$,
+%\item for each object $X$ of $\mathscr{D}$ the (co)units of the above adjunctions give rise to cofiber sequences \\
+%  
+%\begin{tabular}{cc}
+% \begin{minipage}{2in}   
+%\[
+%\xymatrix{
+%i_*i^!X\ar[r]\ar[d] & X\ar[d] \\
+%0\ar[r]& j_*j^*X
+%}
+%\]
+% \end{minipage}
+%&
+%\begin{minipage}{2in}   
+%\[
+%\xymatrix{
+%j_!j^*X\ar[r]\ar[d] & X\ar[d] \\
+%0\ar[r]& i_*i^*X.
+%}
+%\]
+% \end{minipage}
+%\end{tabular}
+%\end{enumerate} 
+%
 %\end{defn}
 %
 %\begin{prop}
 %  Suppose we are in the situation of \ref{recoll}. 
-  Then:
-  \begin{enumerate}
-  \item $(\mathscr{D}_0=j_*\mathscr{D}_{\mathrm{ouv}}, \mathscr{D}_1=i_*\mathscr{D}_{\mathrm{fer}})$ is a semiorthogonal decomposition on $\mathscr{D}$.
-  \item Given $t$-structures $\tee_0, \tee_1$ on $\mathscr{D}_{\mathrm{ouv}}$ and $\mathscr{D}_{\mathrm{fer}}$ respectively, the associated $\{0,1\}\lex \Z$-slicing on $\mathscr{D}$ given by
-  \[
-  \mathscr{D}_{0;\geq 0}=\{X\in j_*(\mathscr{D}_{\mathrm{ouv};\geq 0})\},\qquad 
-  \quad \mathscr{D}_{1;\geq 0}=\{X\in i_*(\mathscr{D}_{\mathrm{fer};\geq 0})\}
-  \]
-   is gluable. 
-  \end{enumerate}
+%  Then:
+%  \begin{enumerate}
+%  \item $(\mathscr{D}_0=j_*\mathscr{D}_{\mathrm{ouv}}, \mathscr{D}_1=i_*\mathscr{D}_{\mathrm{fer}})$ is a semiorthogonal decomposition on $\mathscr{D}$.
+%  \item Given $t$-structures $\tee_0, \tee_1$ on $\mathscr{D}_{\mathrm{ouv}}$ and $\mathscr{D}_{\mathrm{fer}}$ respectively, the associated $\{0,1\}\lex \Z$-slicing on $\mathscr{D}$ given by
+%  \[
+%  \mathscr{D}_{0;\geq 0}=\{X\in j_*(\mathscr{D}_{\mathrm{ouv};\geq 0})\},\qquad 
+%  \quad \mathscr{D}_{1;\geq 0}=\{X\in i_*(\mathscr{D}_{\mathrm{fer};\geq 0})\}
+%  \]
+%   is gluable. 
+%  \end{enumerate}
 %\end{prop}
-
+%
 %\begin{proof}
-  Indeed, the fact that $j^*$ and $j_*$ are adjoints implies that, for objects $i_*X \in \mathscr{D}_{\mathrm{fer}}$ and $j_*Y \in \mathscr{D}_{\mathrm{ouv}}$, $$\mathscr{D}(i_*X,j_*Y)=\mathscr{D}(j^*i_*X,Y)$$
-  and the latter vanishes since $j^*i_*=0$ by definition. This shows that $\mathscr{D}_1 \orth \mathscr{D}_0$. Considering the left cofiber sequence from Definition \ref{recoll} as a Postnikov tower of length one we see that $(\mathscr{D}_0,\mathscr{D}_1)$ is a $\{0,1\}$-slicing on $\mathscr{D}$, as desired. This proves the first claim. 
-To prove the second claim, we need to show that
-$j_*(\mathscr{D}_{\mathrm{ouv};\geq 0})\orth i_*(\mathscr{D}_{\mathrm{fer};-1})$ and $j_*(\mathscr{D}_{\mathrm{ouv};\geq 0})\orth i_*(\mathscr{D}_{\mathrm{fer};0})$
-
-  
+%  Indeed, the fact that $j^*$ and $j_*$ are adjoints implies that, for objects $i_*X \in \mathscr{D}_{\mathrm{fer}}$ and $j_*Y \in \mathscr{D}_{\mathrm{ouv}}$, $$\mathscr{D}(i_*X,j_*Y)=\mathscr{D}(j^*i_*X,Y)$$
+%  and the latter vanishes since $j^*i_*=0$ by definition. This shows that $\mathscr{D}_1 \orth \mathscr{D}_0$. Considering the left cofiber sequence from Definition \ref{recoll} as a Postnikov tower of length one we see that $(\mathscr{D}_0,\mathscr{D}_1)$ is a $\{0,1\}$-slicing on $\mathscr{D}$, as desired. This proves the first claim. 
+%To prove the second claim, we need to show that
+%$j_*(\mathscr{D}_{\mathrm{ouv};\geq 0})\orth i_*(\mathscr{D}_{\mathrm{fer};-1})$ and $j_*(\mathscr{D}_{\mathrm{ouv};\geq 0})\orth i_*(\mathscr{D}_{\mathrm{fer};0})$
+%
+%  
 %\end{proof}
-\end{exmp}
+%\end{exmp}
 
 \begin{lem}\label{incolla2}
 Let $J_1$  and $J_2$ be $\Z$-tosets, $\tee$ be a Bridgeland $J_1 \lex J_2$-slicing of $\mathscr{D}$. If $\tee$ is gluable and $\Z$ acts trivially on $J_1$, then $e_! \tee$ is a gluable $J_2 \lex J_1$ slicing of $\mathscr{D}$. 
@@ -904,11 +905,6 @@ H_\tee^{1}(X[1])= \langle \heartsuit_{\tee;n'}[1]\rangle_{n'\in (-\infty,k)}
 \]
 for every $n\in \Z$. In other words, $\heartsuit_{\chi_{[k,+\infty)}^{-1}}$ is (up to a shift by 1) the heart of the tilted $t$-structure obrained by tilting $\tee$ with the torsion theory on $\heartsuit_\tee$ given by $\mathcal{F}=\langle \heartsuit_{\tee;n'}\rangle_{n'\in (-\infty,k)}$ and $\mathcal{T}=\langle \heartsuit_{\tee;n'}\rangle_{n'\in [k,+\infty)}$.
 \end{exmp}
- 
-{\Huge -fino a qui-}
-
-----FINO A QUI 1.5 ----
-
 
 %\begin{rem}
 %  In {\color{red}ref: BBD} the authors consider a process consisting in gluing $t$-structures on a pair of triangulated categories to obtain a $t$-structure on a third one. In their setting, the three categories are linked by an abstraction of the Grothendieck's six-functors formalism. However, the latter is more or less equivalent to the datum of a semiorthogonal decomposition (i.e., a $\{0,1 \}$-slicing, where $\{0,1 \}$ is the toset with two elements and trivial $\Z$-action) on the third category so that the input of the two (bounded) $t$-structures gives rise to a gluable $\{0,1\} \lex \Z$-slicing $\tee$. Then the $\Z \lex \{0,1 \}$-slicing $e_! \tee$ is just the new glued $t$-structure together with the natural torsion pair on its heart. This explains our terminology and links the language of the present paper to the classical theory of $t$-structures. 
@@ -927,9 +923,9 @@ for every $n\in \Z$. In other words, $\heartsuit_{\chi_{[k,+\infty)}^{-1}}$ is (
 %... continua ...
 %}
 
+\section{A zoo of examples}
 
-{\Huge Da qui esempi di Giovanni}
-\section{A zoo of examples} 
+
 %{\color{red} Reminder: da mettere prima di tutto il tilting a la referenza a collins}. We now link the notions of the present paper with different work from literature. To begin with, we recall the following defintion from {\color{red}referenza a ekhedal}. 
 %
 %\begin{defn}\label{radical}
@@ -969,10 +965,6 @@ for every $n\in \Z$. In other words, $\heartsuit_{\chi_{[k,+\infty)}^{-1}}$ is (
 %  Let $p$ be a perversity function (on $\Z$). We define $\alpha_p \colon \Z \lex \triv \to \Z \lex \triv$ as $\alpha_p(n,m)=(m-p(n),-p(n))$. 
 %\end{defn}
 
-\begin{rem}
-The map $\alpha$ from Definition \ref{radical} corresponds simply to $\alpha_1$, where $1$ denotes the identity of $\mathbb{Z}$. The identity itself is a special perveristy function: it is the only idempotent one {\color{red} questo dovrebbe essere il motivo combinatorio per la dualita' di Koszul}. 
-\end{rem}
-
 %\begin{lem}\label{incolla1}
 %  Let $\tee$ be a  Bridgeland $\Z \lex \triv$-slicing of $\mathscr{D}$. The following hold: 
 %  \begin{enumerate}
@@ -992,7 +984,7 @@ The map $\alpha$ from Definition \ref{radical} corresponds simply to $\alpha_1$,
 %\[
 % \Oo(\Z \times \Z) \rightarrow \ts(\mathscr{D}) 
 % \]
- This can finally be regarded as a cohomology theory where dimension is an element of the poset $\Z \times \Z$, which is not totally ordered. In a certain sense, \textit{dimensions are not always comparable}. \\
+% This can finally be regarded as a cohomology theory where dimension is an element of the poset $\Z \times \Z$, which is not totally ordered. In a certain sense, \textit{dimensions are not always comparable}. \\
  
 %Now, the notion of gluability is somehow asymmetric. However, one implication always holds, as shown below.
 
@@ -1007,7 +999,17 @@ The map $\alpha$ from Definition \ref{radical} corresponds simply to $\alpha_1$,
   \]
   We can build like that whole new classes of 'perverse' $t$-structures on $\mathscr{D}$. We'll see an instance of this construction in the example below. 
 \end{rem}
-  
+
+
+\begin{exmp}
+  An instance of a nonstandard construction of a $t$-structure lies within the theory of Koszul duality. The latter does not preserve indeed the standard $t$-structures, but but exchanges them with a 'diagonal' one, whose existence we now relate to the results of the present work. \\
+  Let $$B=\bigoplus_{i\in \mathbb{N}}B_i$$ be an $\mathbb{N}$-graded ring with $B_0$ semisimple. Denote $\mathscr{A}$ the category of $\Z$-graded $B$-modules with only finitely many nonzero graded pieces. For $\phi \in \Z$, denote $\mathscr{A}_{\phi}$ the full subcategory of $\mathscr{A}$ of modules concentrated in degree $\phi$. Clearly, this defines an abelian $\Z$-slicing $\tilde{\tee}$ on $\mathscr{A}$. Following \cite{kos} we have
+  \[
+  \textnormal{Ext}_{\mathscr{A}}^n(\mathscr{A}_{\phi},\mathscr{A}_{\psi})=0
+  \]
+for $n>\psi - \phi$. This means that $\tilde{\tee}$ is a glauble slicing and the bounded $t$-structure $(\gamma_1)_!\tilde{\tee}$ (where $1$ is the identity of $\Z$) on $\mathscr{D}^b(\mathscr{A})$ is exactly the $t$-structure involved in Koszul duality. 
+\end{exmp}
+
 \begin{exmp}
   In this example we relate the gluability condition with the Beilinson-Soul\'e conjecture from motivic topology. We fix a field $k$ and, just for this example, we stick to a more traditional $1$-categorical setup. Recall that the existence of motives, which is still an open question in general, was conjectured by Grothendieck in order to build a universal Weyl cohomology (also called 'motivic cohomology') theory for schemes. However, Deligne observed that it could be easier to construct a triangulated category (the 'mixed' motives) which should play the role of the derived category of motives, and later recover the latter as the heart of a bounded $t$-structure. Voedvodskij finally succeded in constructing a triangulated category of mixed rational motives over $k$ which contains, for $n \in \Z$, a 'Tate object' $\mathbb{Q}(n)$ that represents the $n$-th motivic cohomology functor. Now, let us consider the triangualted subcategory $\mathscr{D}\textnormal{TM}_k$ generated by the Tate objects. In other words, $\mathscr{D}\textnormal{TM}_k$ is the category of mixed rational Tate motives. We then get isomorphisms of groups
   \[
@@ -1020,259 +1022,11 @@ The map $\alpha$ from Definition \ref{radical} corresponds simply to $\alpha_1$,
    where the member on the right is the bounded derived category of finite-dimensional rational vector spaces (which is equivalent to the abelian category graded vector spaces which finite-dimensional homogeneous pieces). The latter, being a derived category, posseses a canonical bounded $t$-structure and this finally induces a Bridgeland $\triv \lex \Z$ slicing on $\mathscr{D}\textnormal{TM}_k$. \\
    Now, the latter slicing is gluable if and only if  $K_{2(j-i)-n}(k)^{(j-i)} = \mathbf{0}$  whenever both $i < j$ and $n \leq 0$ hold. This is exactly the Beilinson-Soul\'e standard vanishing conjecture, which is now known to hold, for example, when $k$ is a number field due to a celebrated computation by Borel. In this case, by applying $e_!$ we get a Bridgeland $\Z \lex \triv$-slicing on $\mathscr{D}\textnormal{TM}_k$ and thus a bounded $t$-structure whose heart contains the desired unmixed Tate motives over $k$. In other words, we recover a well known fact (see {\color{red} referenza Levine}) using a rather abstract and general language: assuming the Beilinson-Soul\'e conjecture, (Tate) motives exist. \\
    Moreover, following the route of Remark \ref{incollarem}, we get a $t$-structure for each perversity function. Those are the '\textit{perverse motives}' appearing in {\color{red} referenza}. 
-\end{exmp} 
-
-
-{\Huge Fino a qui. Tutto cio' che segue e' parte della tesi, e quindi da cancellare alla fine.} 
-
-
-
-
-%Thus, in the presence of a grading (or perverse) filtration on the heart of a bounded t-structure, associating to a perversity $p$ the bounded t-structure coming from $(g_p)_{\textnormal{\Libra}}(\mathscr{Q})$ defines a morphism of $\mathbb{Z}$-posets $$\Xi^{\textnormal{op}} \longrightarrow \mathfrak{bts}(\mathscr{D})$$
-%we can restate this as: 
-%
-%\begin{center}
-%\twonotes \ \textit{A grading or perverse filtration on the heart of a bounded t-structure on $\mathscr{D}$ induces a presheaf of t-structures on $\mathbb{Z} \times \mathbb{Z}$ with the product order, and thus some kind of a 'non totally ordered $\mathbb{Z} \times \mathbb{Z}$-slicing' on $\mathscr{D}$.}
-%\end{center}
-%
-%\begin{center}
-%\begin{tikzpicture}
-%
-%\node at (-5,0) {$\cdots$};
-%\draw (-4,0) node[circle,fill=gray,inner sep=2pt,label={[xshift=-4.5pt, yshift=-1pt]above: $-1$}] {};
-%\draw (-3.5,0) node[circle,fill,inner sep=2pt,label={[font=\small]above: $0$}] {};
-%\draw (-3,0) node[circle,fill=gray,inner sep=2pt,label=above: {$1$}] {} edge[->, bend left=60,looseness=1.5,shorten <=1pt,shorten >=3pt] (-3.5,0);
-%\draw (-2.5,0) node[circle,fill=lightgray,inner sep=2pt,label=above: {$2$}] {} edge[->, bend right=40,shorten <=1pt,shorten >=3pt] (-0.5,0);
-%
-%\node at (-1.5,0) {$\cdots$};
-%\draw (-0.5,0) node[circle,fill=gray,inner sep=2pt,label={[xshift=-4.5pt, yshift=-1pt]above: $-1$}] {};
-%\draw (0,0) node[circle,fill,inner sep=2pt,label=above: {$0$}] {}  edge[->, bend left=60,shorten <=1pt,shorten >=3pt] (-3,0);
-%\draw (0.5,0) node[circle,fill=gray,inner sep=2pt,label=above: {$1$}] {} edge[->, bend left=60,looseness=1.5,shorten <=1pt,shorten >=3pt] (0,0);
-%\draw (1,0) node[circle,fill=lightgray,inner sep=2pt,label=above: {$2$}] {}  edge[->, bend right=40,shorten <=1pt,shorten >=3pt] (2.9,0);
-%\node at (2,0) {$\cdots$};
-%
-%\draw (3,0) node[circle,fill=gray,inner sep=2pt,label={[xshift=-4.5pt, yshift=-1pt]above: $-1$}] {} edge[->, bend left=45,shorten <=1pt,shorten >=5pt] (-2.6,0);
-%\draw (3.5,0) node[circle,fill,inner sep=2pt,label=above: {$0$}] {} edge[->, bend left=60,shorten <=1pt,shorten >=3pt] (0.5,0);
-%\draw (4,0) node[circle,fill=gray,inner sep=2pt,label=above: {$1$}] {} edge[->, bend left=60,looseness=1.5,shorten <=1pt,shorten >=3pt] (3.5,0);
-%\draw (4.5,0) node[circle,fill=lightgray,inner sep=2pt,label=above: {$2$}] {};
-%\node at (5.5,0) {$\cdots$};
-%
-%\node at (-5.5,0.35) {$\phi=$};
-%\node at (0.3,-1.5) {$g_{*-1}$};
-%
-%\end{tikzpicture}
-%\end{center}
-%
-%Now, by sending an upper set of $I \in O(\mathbb{Z})$ to its characteristic function $\chi_I$ we get an embedding $$O(\mathbb{Z})^{\textnormal{op}} \hookrightarrow \Xi$$ and the t-structure coming from $(g_{\chi_I})_{\textnormal{\Libra}}(\mathscr{Q})$ is just the tilting of $\mathfrak{t}$ with respect to the torsion pair coming from $I$. \\
-%The following proposition gives a characterization of the new heart obtained by the above construction. In the case of a mixed filtration, we get a splitting property which is often referred as 'decomposition theorem for perverse sheaves' in literature. \\
-%
-%\begin{prop}
-%Let $\mathfrak{t}$ be a bounded t-structure on $\mathscr{D}$, $\mathscr{P}$ a grading filtration on $\heartsuit_{\mathfrak{t}}$, $\mathscr{Q}$ the associated $\mathbb{Z} \ltimes \hat{\mathbb{Z}}$-slicing on $\mathscr{D}$, $p$ a perversity. Denote $\mathfrak{q}$ the bounded t-structure associated to $(g_p)_{\textnormal{\Libra}}(\mathscr{Q})$. Then $\heartsuit_{\mathfrak{q}}$ consists of objects $X \in \mathscr{D}$ so that $$H_{\mathfrak{t}}^{k}(X) \in \mathscr{P}_{p^{-1}(-k)}[k]$$ 
-%for each $k \in \mathbb{Z}$. Moreover, if $\mathscr{P}$ is a mixed filtration then for each $X \in \heartsuit_{\mathfrak{q}}$ $$X=\bigoplus_{n \in \mathbb{Z}}H_{\mathfrak{t}}^{n}(X)$$ 
-%\end{prop}
-%
-%\begin{proof}
-%This is very similar to \hyperref[tilt1]{\textbf{Proposition \ref*{tilt1}}}: we have that $X \in \heartsuit_{\mathfrak{q}}$ if and only if $$H_{\mathscr{P}}^{\phi}(H_{\mathfrak{t}}^k(X)[-k])[k]=H_{\mathscr{Q}}^{(k,\phi)}(X)=0$$ 
-%for $p(\phi) \not = -k$. \\
-%For the second part of the claim, the abelian $\mathbb{Z}$-slicing induced on $\heartsuit_{\mathfrak{q}}$ is split by \hyperref[grad]{\textbf{Proposition \ref*{grad}}} and thus by \hyperref[split]{\textbf{Proposition \ref*{split}}} $$X=\bigoplus_{(k,\phi)}H_{\mathscr{Q}}^{(k,\phi)}(X)=\bigoplus_{n \in \mathbb{Z}}H_{\mathfrak{t}}^{n}(X)$$
-%where the last equality comes from the first part. 
-%\end{proof}
-
-\begin{exmp}
-Let $$B=\bigoplus_{i\in \mathbb{N}}B_i$$ be an $\mathbb{N}$-graded ring with $B_0$ semisimple. Denote $\mathscr{A}$ the category of $\mathbb{Z}$-graded $B$-modules with only finitely many nonzero graded pieces. For $\phi \in \mathbb{Z}$, denote $\mathscr{P}_{\phi}$ the full subcategory of $\mathscr{A}$ of modules concentrated in degree $\phi$. Clearly, $\mathscr{P}$ defines an abelian $\mathbb{Z}$-slicing on $\mathscr{A}$. Following \cite{kos} we have $$\textnormal{Ext}_{\mathscr{A}}^n(\mathscr{P}_{\phi},\mathscr{P}_{\psi})=0$$
-for $n>\psi - \phi$. This means that $\mathscr{P}$ is a mixed filtration and the bounded t-structure on $\mathscr{D}^b(\mathscr{A})$ associated to $(g_1)_{\textnormal{\Libra}}(\mathscr{Q})$ (where $1$ is the identity of $\mathbb{Z}$) is the 'diagonal' (or 'geometric') t-structure which appears in Koszul duality and other areas. 
 \end{exmp}
 
-\begin{exmp}
-Let $M$ be an $n$-dimensional smooth complex projective variety and consider the $n$-torsion pair $\mathscr{P}$ on $\textnormal{Coh}(M)$ from \hyperref[cohh]{\textbf{Example \ref*{cohh}}}. Using Serre duality and the Grothendieck vanishing theorem, one sees that $\mathscr{P}$, seen as an abelian $\mathbb{Z}$-slicing via the inclusion $[n] \subseteq \mathbb{Z}$, is a perverse filtration. The bounded t-structure associated to $(f_p)_{\textnormal{\Libra}}(\mathscr{Q})$ is the one of perverse coherent sheaves as constructed in \cite{bez}. Following again the proof of \hyperref[t]{\textbf{Proposition \ref*{t}}}, we can use the Harder-Narasimhan filtrations from Gieseker stability to obtain an abelian $J_n$-slicing on the heart of perverse coherent sheaves as done in \cite{perpol}. 
-\end{exmp}
+{\color{red} Riflessione finale: a che serve la definizione di 'grading'? Non la usiamo mai negli esempi. I suoi vantaggi sono: si ricollega alla letteratura (le filtrazioni radicali), e' equivalente a essere gluable tramite l'isomorfismo $\beta$ con $\Z \times_{lex} \Z$ e la Proposition 0.40 e' un se e solo se (e' implicito nel Remark 0.41). Si potrebbe anche togliere tale definizione e usare solo l'incollabilita', renderebbe anche il tutto piu' uniforme.}
 
-
-{\Huge Da qui in poi ci sono cose gi\`a riportate nella parte sistemata. Le lascio commentate nel file.} 
-
-%\begin{rem} 
-%We can give $\per(J)$ the structure of a $\Z$-poset via the incluion $\per(J) \subseteq \pos(\Z,\Oo(J)^\op)$. In general, it will not be totally ordered. However, by taking joins and meets pointwise $\per(J)$ becomes a distributive lattice. 
-%\end{rem}
-%
-%\begin{rem}
-%Considering the obvious isomoprhism $\Z \simeq \Oo(\Z)^\op$ a perversity over $\mathbb{Z}$ is just a \textit{monotone and comonotope perversity} in the sense of {\color{red} referenza, tipo bezrukavnikov o BBD}. 
-%\end{rem}
-%%\begin{prop}\label{pipp}
-%%Let $J \overset{f}{\longrightarrow} J'$ be a a $\mathbb{Z}$-equivariant map (not necessarily increasing) between $\mathbb{Z}$-posets, $\mathscr{P}$ a $J$-slicing on $\mathscr{D}$. Suppose that $\mathscr{P}_{\psi} \subseteq \mathscr{P}_{\phi}^{\perp}$ whenever one of the following conditions holds: 
-%%\begin{enumerate}[label=(\alph*)]
-%%\item $f(\phi) > f(\psi)$
-%%\item $f(\phi) + 1 > f(\psi)$ and $\phi +1 < \psi$
-%%\end{enumerate}
-%%Then $$(f_{\textnormal{\Libra}}(\mathscr{P}))_{\phi}=\mathscr{P}_{f^{-1}(\phi)}$$
-%%defines a $J'$-slicing on $\mathscr{D}$.
-%%\end{prop}
-%%
-%%\begin{proof}
-%%Part \textit{(1)} of definition of slicing follows from $\mathbb{Z}$-equivariance of $f$, while part \textit{(2)} follows from condition \textit{(a)} above. Pick $0 \not = X \in \mathscr{D}$ and consider its Postnikov tower with respect to $\mathscr{P}$: $$0=Y_0 \overset{\beta_1}{\longrightarrow} \cdots \overset{\beta_n}{\longrightarrow} Y_n=X$$
-%%with $\textnormal{cone}(\beta_i)=H_{\mathscr{P}}^{\phi_i}(X)$. Going from left to right, if we encounter an $i$ so that $f(\phi_{i+1}) > f(\phi_i)$ then by condition \textit{(b)} $$\textnormal{Hom}_{\mathscr{D}}(H_{\mathscr{P}}^{\phi_{i+1}}(X),H_{\mathscr{P}}^{\phi_i}(X)[1])=0$$
-%%
-%%Using \hyperref[g]{\textbf{Proposition \ref*{g}}} and the \hyperref[s]{\textbf{$3 \times 3$ Lemma}}, we can complete the identity of $Y_i$ to get a diagram: 
-%%\begin{center}
-%%\begin{tikzcd}[ampersand replacement=\&]
-%%H_{\mathscr{P}}^{\phi_{i+1}}(X)[-1] \arrow{r} \arrow{d} \& Y_i \arrow{r} \arrow{d}{1} \& Y_{i+1} \arrow{r} \arrow{d} \& H_{\mathscr{P}}^{\phi_{i+1}}(X)[1]\arrow{d} \\
-%%Y_{i-1} \arrow{d} \arrow{r} \& Y_i \arrow{r} \arrow{d} \& H_{\mathscr{P}}^{\phi_i}(X) \arrow{r} \arrow{d} \& Y_{i-1}[1] \arrow{d} \\
-%%A \arrow{r} \arrow{d} \& 0 \arrow{r} \arrow{d} \& A[1] \arrow{r} \arrow{d} \& A[1] \arrow{d}  \\
-%%H_{\mathscr{P}}^{\phi_{i+1}}(X) \arrow{r}  \&  Y_i[1] \arrow{r} \& Y_{i+1}[1] \arrow{r} \&  H_{\mathscr{P}}^{\phi_{i+1}}(X)[1]
-%%\end{tikzcd}
-%%\end{center}
-%%
-%%We then replace $\beta_i$ with $Y_{i-1} \longrightarrow A$ and $\beta_{i+1}$ with $A \longrightarrow Y_{i+1}$. Iterating this process\footnote{This is somehow reminiscent of the 'bubble sort' algorithm.}, we get a factorization $$0=Z_0 \overset{\gamma_1}{\longrightarrow} \cdots \overset{\gamma_n}{\longrightarrow} Z_n=X$$
-%%with $\textnormal{cone}(\gamma_i)=H_{\mathscr{P}}^{\phi_{k_i}}(X)$ for some $k_i$ and $f(\phi_i) \ge f(\phi_{i+1})$ for all $i$. To get a factorization with the strict latter inequality we use the same argument as in the proof of \hyperref[af]{\textbf{Proposition \ref*{af}}}.
-%%\end{proof}
-%%
-%%The above proof also shows that, in the same hypotheses and notation, $(f_{\textnormal{\Libra}}(\mathscr{P}))_{\phi}$ consists of objects $X \in \mathscr{D}$ so that $H_{\mathscr{P}}^{\psi}(X)=0$ for $ f(\psi) \not = \phi$. Also, \hyperref[aae]{\textbf{Proposition \ref*{aae}}} holds when $f$ is bijective.\\
-%
-%%\begin{defn}
-%%A map $\mathbb{Z} \overset{p}{\longrightarrow} \mathbb{Z}$ is called \textbf{perversity} if it is a monotone contraction, i.e. if $$0 \le p(\phi) - p(\psi) \le \phi - \psi$$ 
-%%whenever $\phi \ge \psi$  in $\mathbb{Z}$. \\
-%%We denote $\Xi$ the set of perversities. 
-%%\end{defn}
-%%
-%%Clearly, $\Xi$ definies a $\mathbb{Z}$-poset which is not totally ordered. However, it is a distributive lattice: we have meets and joins given by: $$(p\land q)(\phi)=\min\{p(\phi), q(\phi) \}$$ $$(p\lor q)(\phi)=\max\{p(\phi), q(\phi) \}$$
-%%Indeed, if we place on $\mathbb{Z}\times \mathbb{Z}$ the product order, we have an isomorphism of $\mathbb{Z}$-posets $$\Xi^{\textnormal{op}}=O(\mathbb{Z}\times \mathbb{Z})\setminus \{ \emptyset, \mathbb{Z} \times \mathbb{Z} \} $$
-%%given by sending the zero perversity to $A=\{ (\phi,\psi) \}_{\phi \ge 0} $ and the identity to $B=\{ (\phi,\psi) \}_{\psi \ge 0}$ ($B+i$ and $A+i$ with $i \in \mathbb{Z}$ generate the latter as a complete lattice). Considering the canonical embedding $\mathbb{Z} \hookrightarrow \mathbb{Z}  \subseteq O(\mathbb{Z} \times \mathbb{Z})$ we get a sublattice of $\Xi$ depicted as 
-%%
-%% \begin{center}
-%%      \begin{tikzpicture}
-%%        \draw (-2,-2) -- (-1,-1) -- (0,0) -- (1,-1) -- (2,-2);
-%%        \draw (-1,-1) -- (0,-2) -- (1,-1);
-%%        \draw (-3,-3) -- (-2,-2) -- (-1,-3) -- (0,-2) -- (1,-3) -- (2,-2) -- (3,-3);
-%%       \node at (0,1) {$\vdots$};
-%%       \node[circle, draw, fill=black, inner sep=0pt, minimum width=4pt] at (0,0) {};
-%%       \node[circle, draw, fill=black!50, inner sep=0pt, minimum width=4pt] at (-1,-1) {};
-%%       \node[circle, draw, fill=black!50, inner sep=0pt, minimum width=4pt] at (1,-1) {};
-%%       \node[circle, draw, fill=black!50, inner sep=0pt, minimum width=4pt] at (0,-2) {};
-%%       \node[circle, draw, fill=black!50, inner sep=0pt, minimum width=4pt] at (-2,-2) {};
-%%       \node[circle, draw, fill=black!50, inner sep=0pt, minimum width=4pt] at (2,-2) {};
-%%       \node[circle, draw, fill=black!50, inner sep=0pt, minimum width=4pt] at (-3,-3) {};
-%%       \node[circle, draw, fill=black!50, inner sep=0pt, minimum width=4pt] at (-1,-3) {};
-%%       \node[circle, draw, fill=black!50, inner sep=0pt, minimum width=4pt] at (1,-3) {};
-%%       \node[circle, draw, fill=black!50, inner sep=0pt, minimum width=4pt] at (3,-3) {};
-%%       \node at (0,-4) {$\vdots$};
-%%      \end{tikzpicture}
-%%    \end{center}
-%%This induces the 't-tree' described in \cite{matti}, as discussed below in a far-reaching generality. By the other hand, each square above contains moreover a copy of the Young lattice
-%% \begin{center}
-%%      \begin{tikzpicture}[nodes={circle, draw, fill=black!50, inner sep=0pt, minimum width=4pt}]
-%%              \draw (2,-4) -- (1.5,-3) -- (1,-2) -- (0.5,-1) -- (0,0) -- (-0.5,-1) -- (-1,-2) -- (-1.5,-3) -- (-2,-4);
-%%        \draw (1.5,-3) -- (1.5,-4) -- (0.75,-3) -- (0,-2) -- (-0.75,-3) -- (-1.5,-4) -- (-1.5,-3);
-%%        \draw  (1,-4) -- (0.75,-3) -- (0.5,-4) -- (0,-3) -- (-0.5,-4) -- (-0.75,-3) -- (-1,-4);
-%%        \draw (0,-3) -- (0,-2);
-%%        \draw (0.5,-1) -- (0,-2) -- (-0.5,-1);
-%%        \draw (-0.75,-3) -- (-1,-2);
-%%        \draw (0.75,-3) -- (1,-2);
-%%        \draw (0,1) -- (0,0);
-%%        \node[fill=black] at (0,1) {};
-%%        \node at (0,0) {};
-%%        \node at (-0.5,-1) {};
-%%        \node at (0.5,-1) {};
-%%        \node at (0,-2) {};
-%%        \node at (1,-2) {};
-%%        \node at (-1,-2) {};
-%%        \node at (0,-3) {};
-%%        \node at (0.75,-3) {};
-%%        \node at (-0.75,-3) {};
-%%        \node at (1.5,-3) {};
-%%        \node at (-1.5,-3) {};
-%%        \node at (-2,-4) {};
-%%        \node at (-1.5,-4) {};
-%%        \node at (-1,-4) {};
-%%        \node at (-0.5,-4) {};
-%%        \node at (0.5,-4) {};
-%%        \node at (1,-4) {};
-%%        \node at (1.5,-4) {};
-%%        \node at (2,-4) {};
-%%        \node[draw=none, fill=white] at (0,-5) {$\vdots$};
-%%      \end{tikzpicture}
-%%    \end{center}
-%%
-%%with the root corresponding to the upper vertex of the square. 
-%
-%\begin{prop}\label{grad}
-%Let $\mathfrak{t}$ be a bounded t-structure on $\mathscr{D}$, $\mathscr{P}$ an abelian $\mathbb{Z}$-slicing on $\heartsuit_{\mathfrak{t}}$, $\mathscr{Q}$ the associated $\mathbb{Z} \ltimes \hat{\mathbb{Z}}$-slicing on $\mathscr{D}$, $p$ a perversity. We have: 
-%\begin{enumerate}
-%\item if $\mathscr{P}$ is a perverse filtration, then $\mathscr{Q}$ satisfies the assumptions of \hyperref[pipp]{\textbf{Proposition \ref*{pipp}}} with respect to the map $\mathbb{Z} \ltimes \hat{\mathbb{Z}} \overset{f_p}{\longrightarrow} \mathbb{Z} \ltimes \hat{\mathbb{Z}}$ given by $$f_p(n,\phi)=(n+p(\lfloor \phi / 2 \rfloor),-p(\lfloor \phi / 2 \rfloor))$$ 
-%\item if $\mathscr{P}$ is a grading filtration, then $\mathscr{Q}$ satisfies the assumptions of \hyperref[pipp]{\textbf{Proposition \ref*{pipp}}} with respect to the map $\mathbb{Z} \ltimes \hat{\mathbb{Z}} \overset{g_p}{\longrightarrow} \mathbb{Z} \ltimes \hat{\mathbb{Z}}$ given by $$g_p(n,\phi)=(n+p(\phi),-p(\phi))$$ 
-%\item if $\mathscr{P}$ is a mixed filtration, then the abelian $\mathbb{Z}$-slicing induced on the heart of the bounded t-structure associated to $(g_p)_{\textnormal{\Libra}}(\mathscr{Q})$ is split 
-%\end{enumerate}
-%\end{prop}
-%
-%\begin{proof}
-%Let's prove \textit{(2)}. Suppose $g_p(n,\phi) > g_p(m,\psi)$. Then either $m-n< p(\phi) - p(\psi)$ or both $m-n = p(\phi) - p(\psi)$ and $p(\psi) < p(\psi)$. Since by definition of t-structure we can assume $m \ge n$, the second case is absurd while in the first case, since $p$ is monotone, we have $\phi \ge \psi$ and thus by definition of perversity $$m-n<p(\phi)-p(\psi) \le \phi - \psi$$ 
-%and we get the desired Hom-vanishing by definition of grading filtration. \\
-%
-%Suppose now $f_p(n,\phi) + 1 > f_p(m,\psi)$ and $(n+1,\phi) < (m,\psi)$. The only non absurd case is $ 1<m-n \le  p(\phi) - p(\psi)$. But then again we have $$2 \le m-n \le p(\phi)-p(\psi) \le \phi - \psi$$
-%and we can conclude as above. \\
-%
-%To prove \textit{(1)} consider the monotone map $$\mathbb{Z} \overset{\lfloor * / 2 \rfloor}{\longrightarrow} \mathbb{Z}$$
-%Applying the slice functor to the latter and starting with a perverse filtration, we get a grading filtration by the properties of the floor function and the thesis follows from part \textit{(2)}. \\ 
-%
-%Let's prove \textit{(3)}. We have to show that $$\mathscr{P}_{\psi}[1-p(\psi)] \subseteq \mathscr{P}_{\phi }[p(\phi)]^{\perp}$$ 
-%for $-p(\psi)>-p(\phi)$. We denote $n=p(\phi)-p(\psi)-1$. Assuming again $n \ge 0$, we have $n \ge 0 > p(\psi) - p(\phi) \ge \psi - \phi$ and we can then conclude by definition of mixed filtration. 
-%\end{proof}
-%
-%
-
-%
-%Now we somehow review the gluing construction for t-structures in \cite{del}, but generalize it to any slicing. Our language is quite different though, and we formulate the problem very similarly to \cite{glu}. We start with two $\mathbb{Z}$-posets $J,J'$. 
-%
-%\begin{defn}
-%Let $\mathscr{P}$ be a $J \ltimes J'$-slicing on $\mathscr{D}$. We call $\mathscr{P}$ \textbf{gluable} if it satisties the assumptions of \hyperref[pipp]{\textbf{Proposition \ref*{pipp}}} with respect to the map $J \ltimes J' \overset{e}{\longrightarrow} J' \ltimes J$ that exchanges coordinates. In this case we denote $$\overline{\mathscr{P}}=e_{\textnormal{\Libra}}(\mathscr{P})$$
-%\end{defn}
-%
-%By a simple computation, the gluability condition reads: $\mathscr{P}_{(\phi,\psi)} \subseteq \mathscr{P}_{(\phi',\psi')}^{\perp}$ if $\psi' > \psi$ or both $\psi'+1>\psi$ and $\phi'+1 < \phi$. For example, the first condition is automatic when $\mathbb{Z}$ acts trivially on $J$ (in this case, it follows from the second one). In particular, if $\mathbb{Z}$ acts trivially on $J$, $\mathscr{P}$ is a $J$-slicing on $\mathscr{D}$ and $\mathfrak{t}_{\phi}$ is a bounded t-structure on $\mathscr{P}_{\phi}$ for each $\phi \in J$, then using \hyperref[aab]{\textbf{Proposition \ref*{aab}}} we get a $J \ltimes \mathbb{Z}$-slicing $\mathscr{Q}$ which is gluable if and only if $$\heartsuit_{\mathfrak{t}_{\psi}}[n] \subseteq \heartsuit_{\mathfrak{t}_{\phi}}^{\perp}$$
-%whenever both $n \le 0$ and $\phi < \psi$. 
-%
-%\begin{rem}
-%We have a commutative diagram of $\mathbb{Z}$-posets 
-%\begin{center}
-%\begin{tikzcd}[ampersand replacement=\&]
-%\mathbb{Z} \ltimes \mathbb{Z} \arrow{r}{\sim} \arrow{d}{e} \& \mathbb{Z} \ltimes \hat{\mathbb{Z}} \arrow{d}{g} \\
-%\mathbb{Z} \ltimes \mathbb{Z} \arrow{r}{\sim}  \& \mathbb{Z} \ltimes \hat{\mathbb{Z}} 
-%\end{tikzcd}
-%\end{center}
-%where the horizontal isomorphism is the one from \hyperref[zet]{\textbf{Remark \ref*{zet}}}. Indeed, a $\mathbb{Z} \ltimes \mathbb{Z}$-slicing on $\mathscr{D}$ is gluable if and only if it induces a grading filtration on the heart of the associated t-structure when seen as a $\mathbb{Z} \ltimes \hat{\mathbb{Z}}$-slicing. 
-%\end{rem} 
-%
-%An easy combinatorial calculation finally yelds the following two remarks: 
-%\begin{itemize}
-%\item  if $\mathscr{P}$ is a gluable $\hat{\mathbb{Z}} \ltimes \mathbb{Z}$-slicing on $\mathscr{D}$, then $\overline{\mathscr{P}}$ induces a grading filtration on the associated heart, allowing us again to construct new bounded t-structures depending on a perversity. 
-%\item if $\mathscr{P}$ is a mixed filtration on the heart of a bounded t-structure and $\mathscr{Q}$ is the associated $\mathbb{Z} \ltimes \hat{\mathbb{Z}}$-slicing on $\mathscr{D}$, then $\mathscr{Q}$ is gluable. In this case, looking at $\overline{\mathscr{Q}}$, we get a baric structure on $\mathscr{D}$ which is usually called \textbf{weight decomposition} in literature. 
-%\end{itemize}
-%In other words, the chain of implications for a $\mathbb{Z} \ltimes \hat{\mathbb{Z}}$-slicing refines to 
-%$$\textnormal{mixed} \implies \textnormal{gluable} \implies \textnormal{grading} \implies \textnormal{perverse} $$
-%
-%%\begin{prop}
-%%A $J \ltimes J'$-slicing $\mathscr{P}$ on $\mathscr{D}$ is gluable if and only if it satifies the assumptions of \hyperref[pipp]{\textbf{Proposition \ref*{pipp}}} with respect to the identity (as sets) $J \ltimes J' \longrightarrow J \times J'$, where we place the product order on the right member. 
-%%\end{prop}
-%%
-%%\begin{proof}
-% % Consider the following commutative diagram of sets
-% % \begin{center}
-%%\begin{tikzcd}[ampersand replacement=\&]
-%%J \ltimes J' \arrow{r}{e} \arrow{d}{1} \& J \ltimes J' \\
-%%J \times J' \arrow{r}{e}  \& J \times J' \arrow{u}{1}
-%%\end{tikzcd}
-%%  \end{center}
-%%  The right arrow is a morphism of $\mathbb{Z}$-posets while the down one is an isomorphism of $\mathbb{Z}$-posets, and the thesis follows. 
-%%\end{proof}
-%%\begin{prop}
-%%Let $\mathscr{P}$ be a gluable $J \times J'$-slicing on $\mathscr{D}$. For $i = 1,2$, denote $\mathscr{P}^i=\pi_{\textnormal{\Libra}}^i(\mathscr{P})$, where $J \overset{\pi^1}{\longleftarrow} J \times J' \overset{\pi^2}{\longrightarrow} J'$ are the projections. Then for each $\psi \in J'$, $\mathscr{P}_{\psi}^2$ consists of objects $X \in \mathscr{D}$ so that $$H_{\mathscr{P}^1}^{\phi}(X) \in \mathscr{Q}_{(\phi,\psi)}$$
-%%for each $\phi \in J$.
-%%\end{prop}
-%%
-%%\begin{proof}
-%%We have already seen that $X \in \mathscr{P}_{\psi}^2$ if and only if $$H_{\mathscr{P}}^{\lambda}(X)=H_{\mathscr{P}}^{\lambda}(H_{\mathscr{P}^1}^{\pi^1(\lambda)}(X))=0$$
-%%for $\pi^2(\lambda) \not =\psi$. By fixing $\pi^1(\lambda)=\phi$ and varying $\pi^2(\lambda)$, we get the desired result. 
-%%\end{proof}
 \newpage
-
-
 
 \afterpage{\blankpage}
 \clearpage 
