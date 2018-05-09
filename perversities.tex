@@ -578,7 +578,7 @@ S_{p+1}=S_p+\left(\begin{smallmatrix}0\\1\end{smallmatrix}\right),
 \]
 i.e., to the condition $(n,n')\in S_{p+1}$ if and only if $(n,n'-1)\in S_{p}$, which is obvious.
 \end{proof}
-Takin the opposite of the complement (or, equivalently, the complement of the opposite) gives an isomorphism of posets
+Taking the opposite of the complement (or, equivalently, the complement of the opposite) gives an isomorphism of posets
 \begin{align*}
 \Oo(\Z\times \Z)&\xrightarrow{\sim} \Oo(\Z\times \Z)^{\mathrm{op}}\\
 U&\mapsto (\Z\times \Z)\setminus (-U),
@@ -593,8 +593,8 @@ We have an isomorphism of posets
 mapping a perversity function $p$ to the complement of the image via the isomorphism $\psi\colon (n,n')\mapsto (-n-n',-n')$ of the set $S_p=\{(n,n')\in \Z\times \Z\text{ such that } n'\geq p(n)-n\}$, and mapping the ``infinite perversity functions'' $p_{-\infty}$ and $p_{+\infty}$ to $\emptyset$ and to $\Z\times \Z$, respectively. Moreover, this is an isomorphism of $\Z$-posets, where the $\Z$-action on the left is given by $(p+^{\mathrm{op}}1)(n)=p(n)-1$ and the $\Z$-action on the right is the one induced by the ``northeastern'' $\Z$-action on $\Z^2$, namely, $(n,n')+1=(n+1,n'+1)$. 
 \end{cor}
 
-\subsection{Slicing the heart}
-Let $\mathscr{D}$ be a stable $\infty$-category. Then, as we recalled above, a bounded t-structure on $\mathscr{D}$ is the datum of a Bridgeland $\Z$-slicing $\tee$ of $\mathscr{D}$. Let $\heartsuit_{\mathfrak{t}}$ denote the heart of $\mathfrak{t}$. Then an abelian $\Z$-slicing of $\heartsuit_{\mathfrak{t}}$ is the datum of an extension $\tilde{\tee}$ of $\tee$ to a Bridgeland $\Z\times_{\mathrm{lex}}\hat{\Z}$-slicing on $\mathscr{D}$, where $\hat{\Z}$ denotes the $\Z$-poset consisting of $\Z$ endowed wth the trivial $Z$-action, and the morphism $\Oo(\Z)\to \Oo(\Z\times_{\mathrm{lex}}\hat{\Z})$ is induced by the projection on the first factor $\Z\times_{\mathrm{lex}}\hat{\Z}\to \Z$. See \cite[Section??]{??}. We will denote by $\heartsuit_{\tee;\phi}$ the $\phi$-th slice of the heart of $\tee$. In other words,
+\subsection{Slicing the heart}\label{sec:heart}
+Let $\mathscr{D}$ be a stable $\infty$-category. Then, as we recalled above, a bounded t-structure on $\mathscr{D}$ is the datum of a Bridgeland $\Z$-slicing $\tee$ of $\mathscr{D}$. Let $\heartsuit_{\mathfrak{t}}$ denote the heart of $\mathfrak{t}$. Then an abelian $\Z$-slicing of $\heartsuit_{\mathfrak{t}}$ is the datum of an extension $\tilde{\tee}$ of $\tee$ to a Bridgeland $\Z\times_{\mathrm{lex}}\hat{\Z}$-slicing on $\mathscr{D}$, where $\hat{\Z}$ denotes the $\Z$-poset consisting of $\Z$ endowed with the trivial $\Z$-action, and the morphism $\Oo(\Z)\to \Oo(\Z\times_{\mathrm{lex}}\hat{\Z})$ is induced by the projection on the first factor $\Z\times_{\mathrm{lex}}\hat{\Z}\to \Z$. See \cite[Section??]{??}. We will denote by $\heartsuit_{\tee;\phi}$ the $\phi$-th slice of the heart of $\tee$. In other words,
 \[
 \heartsuit_{\tee;\phi}=\mathscr{D}_{\tilde{\tee};(0,\phi)}.
 \]
@@ -856,7 +856,7 @@ If $U=\{(n,n')\text{ such that } n'\geq 1\}$, then $\psi(U)=\{(n,n')\text{ such}
 \end{exmp}
 A more explict description of the \emph{perverse hearts} of $\mathscr{D}$ is as follows.
 \begin{thm}\label{perverse-heart}
-Let $\mathfrak{t}$ be a bounded t-structure on $\mathscr{D}$, and let let $\tilde{\tee}$ be a glueing abelian $\mathbb{Z}$-slicing on $\heartsuit_{\mathfrak{t}}$. Let $U$ be an upper set of $\Z\times Z$ and let $p$ be the corresponding perversity. Then the preverse heart $\heartsuit_p=\heartsuit_U$ of $\mathscr{D}$ is the full subcategory of $\mathscr{D}$ on those objects $X$ such that 
+Let $\mathfrak{t}$ be a bounded t-structure on $\mathscr{D}$, and let let $\tilde{\tee}$ be a glueing abelian $\mathbb{Z}$-slicing on $\heartsuit_{\mathfrak{t}}$. Let $U$ be an upper set of $\Z\times \Z$ and let $p$ be the corresponding perversity. Then the preverse heart $\heartsuit_p=\heartsuit_U$ of $\mathscr{D}$ is the full subcategory of $\mathscr{D}$ on those objects $X$ such that 
 \[
 H_\tee^{n}(X)[-n]= \langle \heartsuit_{\tee;n'}\rangle_{n'\in p^{-1}(-n)}
 \]
@@ -992,23 +992,39 @@ for every $n\in \Z$. In other words, $\heartsuit_{\chi_{[k,+\infty)}^{-1}}$ is (
 %Let $J_1$  and $J_2$ be $\Z$-tosets, $\tee$ be a Bridgeland $J_1 \lex J_2$-slicing of $\mathscr{D}$. If $\tee$ is gluable and $\Z$ acts trivially on $J_1$, then $e_! \tee$ is a gluable $J_2 \lex J_1$ slicing of $\mathscr{D}$. 
 %\end{lem}
 
-\begin{rem}\label{incollarem}
-  The notion of Bridgeland $\hat{\Z}$-slicing already appears in literature: it is no more than an infinite version of a semiorthogonal decomposition in the sense of {\color{red} referenza}, or a '\textit{baric structure}' as defined in {\color{red} referenza}. Thus, we can start with a baric structure of $\mathscr{D}$ and a boudned $t$-structure on $\mathscr{D}_{n}$ for every $n \in \hat{\Z}$. If the associated $\hat{\Z} \lex \Z$-slicing $\tee$ is gluable, $e_!\tee$ is gluable by Lemma \ref{incolla2} and thus, using Lemma \ref{incolla2} we get a morphism of $\Z$-posets
+The  upshot of Theorem \ref{main-thm} is that out of a glueing abelian $\Z$-slicing on the heart of a bounded $t$-structure on a stable $\infty$-category $\mathscr{D}$
+we explicitly get a natural morphism of $\Z$-posets
+\[
+\Psi\colon\Oo(\Z\times\Z)\to \ts(\mathscr{D}),
+\]
+which, on the subset of perversities, acts as
+\begin{align*}
+\Psi\colon \mathrm{perv}_\Z^{\mathrm{op}}&\to \ts(\mathscr{D})\\
+p&\mapsto (\gamma_p)_!\tilde{\tee},
+\end{align*}
+see Proposition \ref{grad}. We can build this way whole new classes of `perverse' $t$-structures on $\mathscr{D}$. In this section we present a few examples, reinterpreting and rediscovering a few classical results from the literature on perverse $t$-structures within the unifying framework provided by the construction presented in the main section of the article.
+
+\subsubsection{The nonstandard $t$-structure from Koszul duality}
+
+ An instance of a nonstandard construction of a $t$-structure lies within the theory of Koszul duality. Namely, under suitable finiteness and semisimplicity assumptions, if $B$ and $\check{B}$ are Koszul dual algebras, then there is an equivalence of stable $\infty$-categories $\mathscr{D}^b(\mathrm{gmod}(\check{B}))\xrightarrow{\sim}\mathscr{D}^b(\mathrm{gmod}({B}))$, where $\mathrm{gmod}(\check{B})$ and $\mathrm{gmod}({B})$ are the categories of finitely generated graded modules over $\check{B}$ and $B$, respectively; see \cite{beilinson-ginzburg-soergel}. This equivalence, however, does not preserve the standard $t$-structures, and the standard $t$-structure on $\mathscr{D}^b(\mathrm{gmod}(\check{B})$ is mapped to a nonstandard `diagonal' $t$-structure $\mathscr{D}^b(\mathrm{gmod}({B}))$. This diagonal $t$-structure is actually an example of perverse $t$-structure deriving from a gluable abelian slicing on the standard heart of $\mathscr{D}^b(\mathrm{gmod}(\check{B})$. Namely, the standard heart $\heartsuit_\tee$ of $\mathscr{D}^b(\mathrm{gmod}({B}))$ is the abelian category of finitely generated $\Z$-graded $B$-modules. For $\phi \in \Z$, denote by $\heartsuit_{\tee;\phi}$ the full subcategory of $\heartsuit_{\tee}$ of modules concentrated in degree $\phi$. Clearly, this defines an abelian $\Z$-slicing $\tilde{\tee}$ on $\heartsuit_{\tee}$. Following \cite{kos} we have
   \[
-  \mathrm{perv}_\Z \rightarrow \ts(\mathscr{D})
+  \textnormal{Ext}_{B}^n(M_{\phi},M_{\psi})=0
   \]
-  We can build like that whole new classes of 'perverse' $t$-structures on $\mathscr{D}$. We'll see an instance of this construction in the example below. 
-\end{rem}
+for $n>\psi - \phi$, for any modules $M_\phi\in\heartsuit_{\tee;\phi}$ and $M_\psi\in\heartsuit_{\tee;\psi}$ . In particular, if $\phi>\psi$ and $n>0$ we have  $\heartsuit_{\tee;\phi}\orth \heartsuit_{\tee;\psi}[n]$, and so
+$\tilde{\tee}$ is a gluable slicing. Therefore, for every perversity $p$  we have a bounded perverse $t$-structure $(\gamma_p)_!\tilde{\tee}$ on $\mathscr{D}^b(\mathrm{gmod}({B}))$. By choosing $p$ to be the identity perversity $\mathrm{id}\colon \Z\to \Z$ we get a distinguished perverse $t$-structure $(\gamma_{\mathrm{id}})_!\tilde{\tee}$ on $\mathscr{D}^b(\mathrm{gmod}({B}))$. This is precisely the `diagonal' $t$-structure arising in Koszul duality, see \cite{??}. 
 
 
-\begin{exmp}
-  An instance of a nonstandard construction of a $t$-structure lies within the theory of Koszul duality. The latter does not preserve indeed the standard $t$-structures, but but exchanges them with a 'diagonal' one, whose existence we now relate to the results of the present work. \\
-  Let $$B=\bigoplus_{i\in \mathbb{N}}B_i$$ be an $\mathbb{N}$-graded ring with $B_0$ semisimple. Denote $\mathscr{A}$ the category of $\Z$-graded $B$-modules with only finitely many nonzero graded pieces. For $\phi \in \Z$, denote $\mathscr{A}_{\phi}$ the full subcategory of $\mathscr{A}$ of modules concentrated in degree $\phi$. Clearly, this defines an abelian $\Z$-slicing $\tilde{\tee}$ on $\mathscr{A}$. Following \cite{kos} we have
+
+
+\subsubsection{Gluable slicings from baric structures}
+
+  The notion of a bounded Bridgeland $\hat{\Z}$-slicing is not new: it already appears in literature under other names. Namely, it is no more than an infinite version of a semiorthogonal decomposition in the sense of {\color{red} referenza}, or a `\textit{baric structure}' as defined in {\color{red} referenza}. These are a rich source of gluable alelian $\Z$-slicings. Namely, given a baric structure $\{\mathscr{D}_{n}\}_{n\in \mathbb{Z}}$ on a stable $\infty$-category $\mathscr{D}$ together with the datum of a bounded $t$-structure on each of the stable subcategories $\mathscr{D}_{n}$, we can look at this as the datum of a $\hat{\Z} \lex \Z$-slicing $\hat{\tee}$ on $\mathscr{D}$. If $\hat{\tee}$ is gluable, then $e_!\hat{\tee}$ is a gluable ${\Z} \lex \hat{\Z}$-slicing of $\mathscr{D}$, by Lemma \ref{incolla2}. By the results in Section \ref{sec:heart}, $e_!\hat{\tee}$ is equivalently an abelian slicing on the heart $\heartsuit_{{\tee}}$ of the bounded $t$-structure ${\tee}$ on $\mathscr{D}$ defined by the composition
   \[
-  \textnormal{Ext}_{\mathscr{A}}^n(\mathscr{A}_{\phi},\mathscr{A}_{\psi})=0
+ \Oo(\Z)\to \Oo(\Z\times_{\mathrm{lex}}\hat{\Z})\xrightarrow{e_!\hat{\tee}} \ts(\mathscr{D}).
   \]
-for $n>\psi - \phi$. This means that $\tilde{\tee}$ is a glauble slicing and the bounded $t$-structure $(\gamma_1)_!\tilde{\tee}$ (where $1$ is the identity of $\Z$) on $\mathscr{D}^b(\mathscr{A})$ is exactly the $t$-structure involved in Koszul duality. 
-\end{exmp}
+ and so it is a gluable abelian slicing.
+
+\subsubsection{Gluability and the Beilinson-Soul\'e conjecture}
 
 \begin{exmp}
   In this example we relate the gluability condition with the Beilinson-Soul\'e conjecture from motivic topology. We fix a field $k$ and, just for this example, we stick to a more traditional $1$-categorical setup. Recall that the existence of motives, which is still an open question in general, was conjectured by Grothendieck in order to build a universal Weyl cohomology (also called 'motivic cohomology') theory for schemes. However, Deligne observed that it could be easier to construct a triangulated category (the 'mixed' motives) which should play the role of the derived category of motives, and later recover the latter as the heart of a bounded $t$-structure. Voedvodskij finally succeded in constructing a triangulated category of mixed rational motives over $k$ which contains, for $n \in \Z$, a 'Tate object' $\mathbb{Q}(n)$ that represents the $n$-th motivic cohomology functor. Now, let us consider the triangualted subcategory $\mathscr{D}\textnormal{TM}_k$ generated by the Tate objects. In other words, $\mathscr{D}\textnormal{TM}_k$ is the category of mixed rational Tate motives. We then get isomorphisms of groups
