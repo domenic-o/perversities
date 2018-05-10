@@ -68,7 +68,7 @@ tikz-cd,tikz}
 \end{titlepage}
 
 
-
+\abstract{We introduce a notion of glueability for Bridgeland slicings and show how a glueing abelian slicing on the heart of a bounded $t$-structure naturally induces a family of perverse $t$-structures. As a corollary we recover several constructions from the theory of $t$-structures on triangulated categories. In particular we rediscover Levine's theorem: the Beilinson-Soul\'e vanishing conjecture implies the existence of Tate motives. }
 
 \subsection{The (he)art of gluing} The slice functor hides greater potential. Indeed, even if we don't have a morphism of $\mathbb{Z}$-posets (but just a $\mathbb{Z}$-equivariant map), then the slice functor can still be applied, obtaining a partially defined map. \\
 
@@ -1016,7 +1016,7 @@ $\tilde{\tee}$ is a gluable slicing. Therefore, for every perversity $p$  we hav
 
 
 
-\subsubsection{Gluable slicings from baric structures}\label{baric}
+\subsection{Gluable slicings from baric structures}\label{baric}
 
   The notion of a bounded Bridgeland $\hat{\Z}$-slicing is not new: it already appears in literature under other names. Namely, it is no more than an infinite version of a semiorthogonal decomposition in the sense of {\color{red} referenza}, or a `\textit{baric structure}' as defined in {\color{red} referenza}. These are a rich source of gluable abelian $\Z$-slicings. Namely, given a baric structure $\{\mathscr{D}_{n}\}_{n\in \mathbb{Z}}$ on a stable $\infty$-category $\mathscr{D}$ together with the datum of a bounded $t$-structure on each of the stable subcategories $\mathscr{D}_{n}$, we can look at this as the datum of a $\hat{\Z} \lex \Z$-slicing $\hat{\tee}$ on $\mathscr{D}$. If $\hat{\tee}$ is gluable, then $e_!\hat{\tee}$ is a gluable ${\Z} \lex \hat{\Z}$-slicing of $\mathscr{D}$, by Lemma \ref{incolla2}. By the results in Section \ref{sec:heart}, $e_!\hat{\tee}$ is equivalently an abelian slicing on the heart $\heartsuit_{{\tee}}$ of the bounded $t$-structure ${\tee}$ on $\mathscr{D}$ defined by the composition
   \[
@@ -1050,13 +1050,19 @@ K_{2(j-i)-n}(k)^{(j-i)} = \mathbf{0}
 \]  whenever  $i < j$ and $n \leq 0$. This is exactly the Beilinson-Soul\'e standard vanishing conjecture, which is now known to hold, for instance, when $k$ is a number field due to a celebrated computation by Borel \cite{??}. In this case, by applying $e_!$ we get a Bridgeland $\Z \lex \hat{\Z}$-slicing on $\mathscr{D}\textnormal{TM}_k$ and thus in particular a bounded $t$-structure whose heart contains the desired unmixed Tate motives over $k$. In other words, we recover a well known but highly nontrivial fact (see {\color{red} referenza Levine}) using an abstract and very general reasoning: assuming the Beilinson-Soul\'e conjecture is true, (Tate) motives exist. \\
    Moreover, following the reasoning recalled at the beginning of this Section, we also get a $t$-structure on $\mathscr{D}\textnormal{TM}_k$ for each perversity function on $\mathbb{Z}$. These are the `\textit{perverse motives}' appearing in {\color{red} referenza}. 
 
-\subsubsection{other examles}
+\subsubsection{Beilinson's filtered structures}
 
 There are a number of other constructions in literature which are a particular case of the one we presented here. Just to mention a few, in {\color{red} ref a 'On the Derived Category of Perverse Sheaves'} Beilinson defines a notion of \textit{'filtered structure'} on a triangualted category ($f$-structure for short). This is no more than a baric structure $\{ \mathscr{D}_{\phi} \}_{\phi \in \hat{\Z}}$ with some additional data and properties. Starting with a $t$-structure on $\mathscr{D}_0$, the author rearranges it into a $t$-structure on $\mathscr{D}$. One can check that the axioms of an $f$-structure guarantee that the relevant gluability condition from \ref{incollarem} is satistied and the output coincides with Beilinson's new $t$-structure on $\mathscr{D}$. \\ 
 
+\subsubsection{Ext exceptional collections}
+
 In {\color{red} ref a 'Stability Conditions on Curves'} starts with an exceptional collection on some triangualted cateogory $\mathscr{D}$, which in our setting is just a baric structure with finitely many nonzero slices, all equivalent to the derived cateogry of finite-dimensional vector spaces on some fixed field. Under the assumption that the collection is 'Ext', one gets a $t$-structure on $\mathscr{D}$. Indeed, this can be obtained starting with the standard $t$-structure on the slices and applying \ref{incollarem}. The author's definition of Ext exceptional collection is exactly our gluability condition. \\
 
+\subsubsection{The Lagrangian cobordism}
+
 Another instance is {\color{red} ref a 'Stability Conditions and Langragian Cobordism'}. Again, given a $t$-structure (actually, an $\mathbb{R}$-slicing) on the Fukaya category $\mathscr{D}_0$ of a symplectic manifold $M$ the author builds a $t$-structure on the Fukaya category $\mathscr{D}$ of $\mathbb{C} \times M$. This is done by embedding $\mathscr{D}_0$ into $\mathscr{D}$ as the zeroth slice of a baric structure, and Lemma $7.1$ in \textit{loc. cit.} can be again reformulated as the gluability condition of \ref{incollarem}, so that the obtained $t$-structure on the cobordism category is the desired one. \\
+
+\subsubsection{The Chinese Connection}
 {\color{red} qua metterei anche quella del cinese Yu Qiu non ancora pubblicata, ma devo prima parlare con lui e chiedere il permesso}. 
 
 \newpage
