@@ -1,5 +1,7 @@
 \documentclass{article}
 
+\usepackage{authblk}
+
 \usepackage{hyperref}
 \usepackage{amssymb,amsfonts,amsmath,amsthm,pigpen,
 ,enumitem
@@ -64,14 +66,42 @@ tikz-cd,tikz}
 \DeclareMathOperator{\cofib}{cofib}
 
 \begin{document}
-\begin{titlepage}
-\end{titlepage}
+
+\title{Some title}
+
+\author[1]{Domenico Fiorenza\thanks{fiorenza@mat.uniroma1.it}}
+\author[2]{Giovanni Luca Marchetti\thanks{???@???}}
+
+\affil[1]{\small{
+	Dipartimento di Matematica, 
+	Sapienza Universit\`a di Roma}}
+\affil[2]{\small{
+	???, 
+	????,	
+	??? }
+	}
+
+\maketitle
 
 
-\abstract{We introduce a notion of glueability for Bridgeland slicings and show how a glueing abelian slicing on the heart of a bounded $t$-structure naturally induces a family of perverse $t$-structures. As a corollary we recover several constructions from the theory of $t$-structures on triangulated categories. In particular we rediscover Levine's theorem: the Beilinson-Soul\'e vanishing conjecture implies the existence of Tate motives. }
+\abstract{We introduce a notion of gluability for Bridgeland slicings and show how a gluing abelian slicing on the heart of a bounded $t$-structure naturally induces a family of perverse $t$-structures. As a corollary we recover several constructions from the theory of $t$-structures on triangulated categories. In particular we rediscover Levine's theorem: the Beilinson-Soul\'e vanishing conjecture implies the existence of Tate motives. }
 
-\subsection{The (he)art of gluing} The slice functor hides greater potential. Indeed, even if we don't have a morphism of $\mathbb{Z}$-posets (but just a $\mathbb{Z}$-equivariant map), then the slice functor can still be applied, obtaining a partially defined map. \\
+\tableofcontents
 
+\section{Prologue}
+A common feature shared by several constructions involving $t$-structures on triangulated categories is the following. One starts with a (possibly infinite) semiorthogonal decomposition $\{\mathscr{D}_n\}_{n\in I\subseteq \Z}$ whose triangulated subcategories $\mathscr{D}_n$ are endowed with distinguished $t$-structures and, thanks to the vanishing of certain Ext groups ends up with a new $t$-structure on $\mathscr{D}$ together with an Harder-Narashiman-type filtration on its heart. In terms of Bridgeland slicings (in the slightly generalized version presented in \cite{i-russi,articolo-con-fosco}), this corresponds to trading a $\hat{\Z}\times_{\mathrm{lex}}\Z$-slicing for a ${\Z}\times_{\mathrm{lex}}\hat{\Z}$-slicing, where $\hat{Z}$ denotes the ordered set of integers (with its usual order) endowed with the trivial $\Z$-action, and the subscript `lex' means that the product is given the lexicographic order. The aim of this note is to characterize the condition allowing this `exchange of factors', which we call `gluability' as it is reminiscent of the `recollement situations' considered in \cite{bbd}. Once the gluability condition has been explicited, it is pretty immediate to identify several examples from the literature where this condition is more or less implicitly occurring. In particular, we are able to rediscover Levine's theorem: the Beilinson-Soul\'e vanishing conjecture implies the existence of Tate motives \cite{levine,??,??}. 
+Other examples include Beilinson's construction of a distinguished $t$-stucture from a filtered structure on a triangulated category \cite{beilinson}, the $t$-structure obtained by ?? and ?? from exceptional collections with Ext vanishings in \cite{???}, and the construction of a distinguished $t$-structure on the Fukaya category of the trivial $\mathbb{C}$-bundle over a symplectic manifold $M$ exhibited by ?? in \cite{??}. Moreover, we show how the distinguished $t$-structure built out of a gluable slicing always come with a whole family of `perverse'' variants. For instance, the `perverse  motives' considered in \cite{???} and the `perverse coherent sheves' considered in \cite{??} arise this way. A closely related example is the construction of the exotic $t$-structure on the derived category of $A$-modules, for $A$ a Koszul algebra, obtained by Koszul duality \cite{??}.
+\vskip .5 cm
+In this note we assime he reader is familiar with the language of Bridgeland slicings \cite{bridgeland}, in its generalization for an arbitrary poset $J$ endowed with a $\Z$-action considered in \cite{i-russi} and surveyed in \cite{articolo-con-fosco}. We refer to \cite{articolo-con-fosco} for the notation and the definition used here. In particular we use the language of stable $\infty$-categories; the reader who prefers not to use higher categories will find no difficulty in verbatim translating each of the statements and proofs presented here in  the more classical language of triangulated categories.
+
+
+\section{The (he)art of gluing} 
+
+Let $\mathscr{D}$ a stable $\infty$-category or, if one prefers a more classical setting, a triangulated category.
+If one considers Bridgeland slicings indexed by arbitrary partially orderes sets (endowed with a compatible $\Z$-action) as in \cite{i-russi}, then one can think of associating with any $\Z$-poset $J$ the set of $J$-slicings on $\mathscr{D}$. This defines a `slice functor' on the category of $\Z$-posets,
+see \cite[Remark 3.12]{articolo-con-fosco}. The slice functor actually hides a greater potential. Indeed, even if we don't have a morphism of $\mathbb{Z}$-posets (but just a $\mathbb{Z}$-equivariant map), then under suitably conditions the slice functor can still be applied. \\
+
+We begin by recalling the construction of the slice functor.
 Let $J$ be a $\Z$-toset, i.e., a totally ordered set together with a monotone action of $\Z$, that we will denote by $(n,x)\mapsto x+n$. Recall that a $J$-slicing on a stable $\infty$-category $\mathscr{D}$ is a morphism of $\Z$-posests $\tee\colon \Oo(J)\to \ts(\mathscr{D})$, where $\Oo(J)$ is the $\Z$-poset of the slicings of $J$ (i.e., the decompositions of $J$ into a disjoint union of a lower set $L$ and of an upper set $U$), and $\ts(\mathscr{D})$ is the $\Z$-poset of $t$-structures on $\mathscr{D}$.
 
 Clearly, if $f\colon J\to J'$ is a morphism of $\Z$-tosets, then $f^{-1}\colon \{\text{subsets of $J'$}\}\to \{\text{subsets of $J$}\}$ induces a $\Z$-equivariant morphism of $\Z$-posets $f^{-1}\colon \Oo(J')\to \Oo(J)$, and so composition with $f^{-1}$ gives a morphism
@@ -92,20 +122,24 @@ $\mathscr{D}_{f_*\tee;L}$ and $\mathscr{D}_{f_*\tee;U}$ can be equivalently defi
 \mathscr{D}_{f_*\tee;U}&=\langle \mathscr{D}_{\tee;\phi}\rangle_{f(\phi)\in U}
 \end{align*}
 where $\langle \mathscr{S}\rangle$ denotes the extension-closed subcategory of $\mathscr{D}$ generated by the subcategory $\mathscr{S}$. In particular the slices of are given by 
-$\mathscr{D}_{f_*\tee;j}=\langle \mathscr{D}_{\tee;\phi}\rangle_{f(\phi)=j}$.
-\footnote{
-At some point it will be useful to recall Lemma 4.21 from ??:
-Let $\mathscr{S}_1,\mathscr{S}_2$ be two subcategories of $\mathscr{D}$ with $\mathscr{S}_1\orth \mathscr{S}_2$, i.e., such that $\mathscr{D}(X_1,X_2)$ is contractible for any $X_1\in \mathscr{S}_1$ and any $X_2\in\mathscr{S}_2$. Then $\mathscr{S}_1\orth \langle\mathscr{S}_2\rangle$ and $\langle\mathscr{S}_1\rangle\orth \mathscr{S}_2$, and so $\langle\mathscr{S}_1\rangle\orth \langle\mathscr{S}_2\rangle$.}
+$\mathscr{D}_{f_*\tee;j}=\langle \mathscr{D}_{\tee;\phi}\rangle_{f(\phi)=j}$.\\
 
+\begin{rem}
 The right hand sides of the above two expressions can clearly be defined for every morphism $f$ from $J$ to $J'$ (i.e., not necessarily monotone nor $\Z$-equivariant), and as soon as $f$ is $\Z$-equivariant, the assignment
 \[
 (L,U)\mapsto (\langle \mathscr{D}_{\tee;\phi}\rangle_{f(\phi)\in L},\langle \mathscr{D}_{\tee;\phi}\rangle_{f(\phi)\in U})
 \]
-is an equivariant morphism from $\mathcal{O}(J)$ to pairs of subcategories of $\mathscr{D}$. Clearly, when $f$ is not monotone there is no reason to expect that the pair $(\langle \mathscr{D}_{\tee;\phi}\rangle_{f(\phi)\in L},\langle \mathscr{D}_{\tee;\phi}\rangle_{f(\phi)\in U})$ forms a $t$-structure on $\mathscr{D}$. Yet, it interesting to notice that the condition that $f$ be monotone is only only sufficient in order to have this, and can indeed be relaxed.
+is an equivariant morphism from $\mathcal{O}(J)$ to pairs of subcategories of $\mathscr{D}$. Clearly, when $f$ is not monotone there is no reason to expect that the pair $(\langle \mathscr{D}_{\tee;\phi}\rangle_{f(\phi)\in L},\langle \mathscr{D}_{\tee;\phi}\rangle_{f(\phi)\in U})$ forms a $t$-structure on $\mathscr{D}$.
+\end{rem}
+Yet, it interesting to notice that the condition that $f$ be monotone is only only sufficient in order to have this, and can indeed be relaxed.\\
+
+
+
 
 \begin{defn}\label{compatible}
 Let $J$ and $J'$ be $\Z$-tosets, and let $f\colon J\to J'$ a map of $\Z$-sets (i.e., a $\Z$-equivariant map, not necessarily nondecreasing). A Bridgeland $J$-slicing $\tee$ of $\mathscr{D}$ is \emph{$f$-compatible}
-if $f(\phi)>f(\psi)$ with $\phi\leq \psi$ implies $\mathscr{D}_{\tee; \phi}\orth \mathscr{D}_{\tee;\psi}$ and $\mathscr{D}_{\tee; \phi}\orth \mathscr{D}_{\tee;\psi}[1]$
+if $f(\phi)>f(\psi)$ with $\phi\leq \psi$ implies $\mathscr{D}_{\tee; \phi}\orth \mathscr{D}_{\tee;\psi}$ and $\mathscr{D}_{\tee; \phi}\orth \mathscr{D}_{\tee;\psi}[1]$.
+\footnote{Given two subcategories $\mathscr{S}_1$ and $\mathscr{S}_2$ of $\mathscr{D}$ we write $\mathscr{S}_1\orth \mathscr{S}_2$ to mean that $\mathscr{D}(X_1,X_2)$ is contractible for any $X_1\in \mathscr{S}_1$ and any $X_2\in\mathscr{S}_2$. It is easy to see that $\mathscr{S}_1\orth \mathscr{S}_2$ implies $\langle\mathscr{S}_1\rangle\orth \langle\mathscr{S}_2\rangle$, see \cite[Lemma 4.21]{articolo-con-fosco}}
 \end{defn}
 
 \begin{rem}\label{everything-compatible}
@@ -830,7 +864,7 @@ Finally, $\Psi$ trivially (and uniquely) extends to $\widehat{\mathrm{perv}}_\Z^
 \end{proof}
 Recalling Corollary \ref{cor-perv2} and Proposition \ref{glue-to-grad} we finally get the result we were aiming to.
 \begin{thm}\label{main-thm}
-Let $\mathfrak{t}$ be a bounded t-structure on $\mathscr{D}$, and let let $\tilde{\tee}$ be a glueing abelian $\mathbb{Z}$-slicing on $\heartsuit_{\mathfrak{t}}$. Then $\tilde{\tee}$ explicitly induces a natural morphism of $\Z$-posets
+Let $\mathfrak{t}$ be a bounded t-structure on $\mathscr{D}$, and let let $\tilde{\tee}$ be a gluing abelian $\mathbb{Z}$-slicing on $\heartsuit_{\mathfrak{t}}$. Then $\tilde{\tee}$ explicitly induces a natural morphism of $\Z$-posets
 \[
 \Psi\colon\Oo(\Z\times\Z)\to \ts(\mathscr{D})
 \]
@@ -856,7 +890,7 @@ If $U=\{(n,n')\text{ such that } n'\geq 1\}$, then $\psi(U)=\{(n,n')\text{ such}
 \end{exmp}
 A more explict description of the \emph{perverse hearts} of $\mathscr{D}$ is as follows.
 \begin{thm}\label{perverse-heart}
-Let $\mathfrak{t}$ be a bounded t-structure on $\mathscr{D}$, and let let $\tilde{\tee}$ be a glueing abelian $\mathbb{Z}$-slicing on $\heartsuit_{\mathfrak{t}}$. Let $U$ be an upper set of $\Z\times \Z$ and let $p$ be the corresponding perversity. Then the preverse heart $\heartsuit_p=\heartsuit_U$ of $\mathscr{D}$ is the full subcategory of $\mathscr{D}$ on those objects $X$ such that 
+Let $\mathfrak{t}$ be a bounded t-structure on $\mathscr{D}$, and let let $\tilde{\tee}$ be a gluing abelian $\mathbb{Z}$-slicing on $\heartsuit_{\mathfrak{t}}$. Let $U$ be an upper set of $\Z\times \Z$ and let $p$ be the corresponding perversity. Then the preverse heart $\heartsuit_p=\heartsuit_U$ of $\mathscr{D}$ is the full subcategory of $\mathscr{D}$ on those objects $X$ such that 
 \[
 H_\tee^{n}(X)[-n]= \langle \heartsuit_{\tee;n'}\rangle_{n'\in p^{-1}(-n)}
 \]
@@ -992,7 +1026,7 @@ for every $n\in \Z$. In other words, $\heartsuit_{\chi_{[k,+\infty)}^{-1}}$ is (
 %Let $J_1$  and $J_2$ be $\Z$-tosets, $\tee$ be a Bridgeland $J_1 \lex J_2$-slicing of $\mathscr{D}$. If $\tee$ is gluable and $\Z$ acts trivially on $J_1$, then $e_! \tee$ is a gluable $J_2 \lex J_1$ slicing of $\mathscr{D}$. 
 %\end{lem}
 
-The  upshot of Theorem \ref{main-thm} is that out of a glueing abelian $\Z$-slicing on the heart of a bounded $t$-structure on a stable $\infty$-category $\mathscr{D}$
+The  upshot of Theorem \ref{main-thm} is that out of a gluing abelian $\Z$-slicing on the heart of a bounded $t$-structure on a stable $\infty$-category $\mathscr{D}$
 we explicitly get a natural morphism of $\Z$-posets
 \[
 \Psi\colon\Oo(\Z\times\Z)\to \ts(\mathscr{D}),
@@ -1025,11 +1059,11 @@ $\tilde{\tee}$ is a gluable slicing. Therefore, for every perversity $p$  we hav
  and so it is a gluable abelian slicing. {\color{red}Moreover, and remarkably, the gluability of $\hat{\tee}$ can be easily explicited. Namely, spelling out Definition \ref{gluable}, we see that $\hat{\tee}$ is gluable if and only if  $\mathscr{D}_{i;\geq 0}\orth \mathscr{D}_{j;0}$ for any $i<j$. {\color{red}As  $\mathscr{D}_{i;\geq 0}$ is generated by the subcategories $\mathscr{D}_{i}^\heartsuit[k]$ for $k\geq 0$, this is equivalent to $\mathscr{D}_{i}^\heartsuit\orth\mathscr{D}_{j}^\heartsuit[n]$ whenever $i<j$ and $n\leq 0$. This generalizes the gluability condition from Example \ref{example:bbd}.} 
  }
 
-\subsubsection{Gluability and the Beilinson-Soul\'e conjecture}
+\subsubsection{Gluability and the Beilinson-Soul\'e conjecture}\label{motives}
 
 
 %  In this example we relate the gluability condition with the Beilinson-Soul\'e conjecture from motivic topology. We fix a field $k$ and, just for this example, we stick to a more traditional $1$-categorical setup. 
-The existence of motives, which is still an open question in general, was conjectured by Grothendieck in order to build a universal Weil cohomology theory for schemes: the `motivic cohomology'. Following this input, Deligne observed that it could be easier to construct first a triangulated category (the `mixed' motives) which should play the role of the derived category of motives, and later recover the abelian category of motives as the heart of a bounded $t$-structure on mixed motives. Finally, Voedvodskij succeded in constructing a triangulated category of mixed rational motives over a characteristic zero field $k$,\footnote{Or, more generally, over a perfect field $k$ which admits resolution of singularities, see \cite{friedlander-voedvosky-bivariant}}. This triangulated category contains, for any $n \in \Z$, a `Tate object' $\mathbb{Q}(n)$ that represents the $n$-th motivic cohomology functor. Let $\mathscr{D}\textnormal{TM}_k$ be the category of mixed rational Tate motives, i.e., by definition, the triangulated\footnote{As, up to our knowledge, a description of the stable $\infty$-category of mixed motives is not available in the literature, in this subsection we stick to the more traditional $1$-categorical setup of triangulated categories.} subcategory $\mathscr{D}\textnormal{TM}_k$ of Voedvodskij category of mixed motives over $k$ the generated by the Tate objects.  Denote by $(\mathscr{D}\textnormal{TM}_k)_{m}$ the triangulated subcategory of $\mathscr{D}\textnormal{TM}_k$ generated by $\mathbb{Q}(m)$. One has an isomorphisms of groups
+The existence of motives, which is still an open question in general, was conjectured by Grothendieck in order to build a universal Weil cohomology theory for schemes: the `motivic cohomology'. Following this input, Deligne observed that it could be easier to construct first a triangulated category (the `mixed' motives) which should play the role of the derived category of motives, and later recover the abelian category of motives as the heart of a bounded $t$-structure on mixed motives. Finally, Voedvodskij succeded in constructing a triangulated category of mixed rational motives over a characteristic zero field $k$,\footnote{Or, more generally, over a perfect field $k$ which admits resolution of singularities, see \cite{friedlander-voedvosky-bivariant}}. This triangulated category contains, for any $n \in \Z$, a `Tate object' $\mathbb{Q}(n)$ that represents the $n$-th motivic cohomology functor. Let $\mathscr{D}\textnormal{TM}_k$ be the category of mixed rational Tate motives, i.e., by definition, the triangulated\footnote{As, up to our knowledge, a description of the stable $\infty$-category of mixed motives is not available in the literature, in this subsection we stick to the more traditional $1$-categorical setup of triangulated categories. The same consideration applies to the exaples considere din the subsequent subsections.} subcategory $\mathscr{D}\textnormal{TM}_k$ of Voedvodskij category of mixed motives over $k$ the generated by the Tate objects.  Denote by $(\mathscr{D}\textnormal{TM}_k)_{m}$ the triangulated subcategory of $\mathscr{D}\textnormal{TM}_k$ generated by $\mathbb{Q}(m)$. One has an isomorphisms of groups
   \[
    \mathscr{D}\textnormal{TM}_k(\mathbb{Q}(i),\mathbb{Q}(j)[n])=K_{2(j-i)-n}(k)^{(j-i)}
    \]
@@ -1050,20 +1084,16 @@ K_{2(j-i)-n}(k)^{(j-i)} = \mathbf{0}
 \]  whenever  $i < j$ and $n \leq 0$. This is exactly the Beilinson-Soul\'e standard vanishing conjecture, which is now known to hold, for instance, when $k$ is a number field due to a celebrated computation by Borel \cite{??}. In this case, by applying $e_!$ we get a Bridgeland $\Z \lex \hat{\Z}$-slicing on $\mathscr{D}\textnormal{TM}_k$ and thus in particular a bounded $t$-structure whose heart contains the desired unmixed Tate motives over $k$. In other words, we recover a well known but highly nontrivial fact (see {\color{red} referenza Levine}) using an abstract and very general reasoning: assuming the Beilinson-Soul\'e conjecture is true, (Tate) motives exist. \\
    Moreover, following the reasoning recalled at the beginning of this Section, we also get a $t$-structure on $\mathscr{D}\textnormal{TM}_k$ for each perversity function on $\mathbb{Z}$. These are the `\textit{perverse motives}' appearing in {\color{red} referenza}. 
 
-\subsubsection{Beilinson's filtered structures}
+\subsubsection{Three more examples}
 
-There are a number of other constructions in literature which are a particular case of the one we presented here. Just to mention a few, in {\color{red} ref a 'On the Derived Category of Perverse Sheaves'} Beilinson defines a notion of \textit{'filtered structure'} on a triangualted category ($f$-structure for short). This is no more than a baric structure $\{ \mathscr{D}_{\phi} \}_{\phi \in \hat{\Z}}$ with some additional data and properties. Starting with a $t$-structure on $\mathscr{D}_0$, the author rearranges it into a $t$-structure on $\mathscr{D}$. One can check that the axioms of an $f$-structure guarantee that the relevant gluability condition from \ref{incollarem} is satistied and the output coincides with Beilinson's new $t$-structure on $\mathscr{D}$. \\ 
+There are a number of other constructions in literature which are a particular case of the one we presented here. Just to mention a few, in {\color{red} ref a 'On the Derived Category of Perverse Sheaves'} Beilinson defines a notion of \textit{'filtered structure'} on a triangualted category. This is no more than a baric structure $\{ \mathscr{D}_{\phi} \}_{\phi \in \hat{\Z}}$ with some additional data and properties. Starting with a $t$-structure on $\mathscr{D}_0$, Beilinson rearranges it into a $t$-structure on $\mathscr{D}$. One can easily check that the axioms of a filtered structure guarantee that it defines a gluable $\hat{\Z} \lex \Z$-slicing and the that distinguished $t$-structure obtained by gluing coincides with Beilinson's new $t$-structure on $\mathscr{D}$. \\ 
+\par
+In {\color{red} ref a 'Stability Conditions on Curves'}, ?? and ??  start with a finite `Ext exceptional' collection on a certain triangualted cateogory $\mathscr{D}$ and get a distinguished $t$-structure on $\mathscr{D}$. This construction actually goes along the exact lines sketched in Subsection \ref{motives}. Namely, when translated into the language of this note, a finite exceptional collection is just a baric structure with finitely many nonzero slices, all equivalent to the derived categogry of finite-dimensional vector spaces over some fixed field, and the condition of being `Ext exceptional' is identified with the gluability condition. \\
+\par
+Finally, a possibly more exotic instance is in {\color{red} ref a 'Stability Conditions and Langragian Cobordism'}. Here, starting with a suitable $\mathbb{R}$-slicing on the Fukaya category $\mathscr{D}_0$ of a symplectic manifold $M$ ??? {\color{red}(the author)} builds a $t$-structure on the Fukaya category $\mathscr{D}$ of $\mathbb{C} \times M$. This is done by embedding $\mathscr{D}_0$ into $\mathscr{D}$ as the zeroth slice of a baric structure. Lemma 7.1 from \ref{lagrangian-cobordism} can then be reformulated as our gluability condition, and the distinguished $t$-structure obtained by gluing is seen to be the $t$-structure on the Lagrangian cobordism category exhibited by ???. \\
 
-\subsubsection{Ext exceptional collections}
-
-In {\color{red} ref a 'Stability Conditions on Curves'} starts with an exceptional collection on some triangualted cateogory $\mathscr{D}$, which in our setting is just a baric structure with finitely many nonzero slices, all equivalent to the derived cateogry of finite-dimensional vector spaces on some fixed field. Under the assumption that the collection is 'Ext', one gets a $t$-structure on $\mathscr{D}$. Indeed, this can be obtained starting with the standard $t$-structure on the slices and applying \ref{incollarem}. The author's definition of Ext exceptional collection is exactly our gluability condition. \\
-
-\subsubsection{The Lagrangian cobordism}
-
-Another instance is {\color{red} ref a 'Stability Conditions and Langragian Cobordism'}. Again, given a $t$-structure (actually, an $\mathbb{R}$-slicing) on the Fukaya category $\mathscr{D}_0$ of a symplectic manifold $M$ the author builds a $t$-structure on the Fukaya category $\mathscr{D}$ of $\mathbb{C} \times M$. This is done by embedding $\mathscr{D}_0$ into $\mathscr{D}$ as the zeroth slice of a baric structure, and Lemma $7.1$ in \textit{loc. cit.} can be again reformulated as the gluability condition of \ref{incollarem}, so that the obtained $t$-structure on the cobordism category is the desired one. \\
-
-\subsubsection{The Chinese Connection}
-{\color{red} qua metterei anche quella del cinese Yu Qiu non ancora pubblicata, ma devo prima parlare con lui e chiedere il permesso}. 
+%\subsubsection{The Chinese Connection}
+%{\color{red} qua metterei anche quella del cinese Yu Qiu non ancora pubblicata, ma devo prima parlare con lui e chiedere il permesso}.  
 
 \newpage
 
