@@ -1,5 +1,5 @@
 \contentsline {section}{\numberline {1}Prologue}{1}{section.1}
-\contentsline {section}{\numberline {2}The (he)art of gluing}{2}{section.2}
+\contentsline {section}{\numberline {2}The gluing procedure}{2}{section.2}
 \contentsline {subsection}{\numberline {2.1}Slicing the heart}{15}{subsection.2.1}
 \contentsline {section}{\numberline {3}A zoo of examples}{20}{section.3}
 \contentsline {subsubsection}{\numberline {3.0.1}The nonstandard $t$-structure from Koszul duality}{20}{subsubsection.3.0.1}
