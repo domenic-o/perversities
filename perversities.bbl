@@ -1,0 +1,85 @@
+\begin{thebibliography}{{Hen}17}
+
+\bibitem[AB10]{bezr}
+Dmitry Arinkin and Roman Bezrukavnikov.
+\newblock Perverse coherent sheaves.
+\newblock {\em Mosc. Math. J.}, 10(1):3--29, 271, 2010.
+
+\bibitem[AT11]{baric}
+Pramod~N. Achar and David Treumann.
+\newblock Baric structures on triangulated categories and coherent sheaves.
+\newblock {\em Int. Math. Res. Not. IMRN}, (16):3688--3743, 2011.
+
+\bibitem[BBD82]{bbd}
+A.~A. Be{\u\i}linson, J.~Bernstein, and P.~Deligne.
+\newblock Faisceaux pervers.
+\newblock In {\em Analysis and topology on singular spaces, {I} ({L}uminy,
+  1981)}, volume 100 of {\em Ast\'erisque}, pages 5--171. Soc. Math. France,
+  Paris, 1982.
+
+\bibitem[Bei]{beil}
+A.~A. Beilinson.
+\newblock On the derived category of perverse sheaves.
+
+\bibitem[BGS96]{kosz}
+Alexander Beilinson, Victor Ginzburg, and Wolfgang Soergel.
+\newblock Koszul duality patterns in representation theory.
+\newblock {\em J. Amer. Math. Soc.}, 9(2):473--527, 1996.
+
+\bibitem[Bri07]{bridgeland}
+Tom Bridgeland.
+\newblock Stability conditions on triangulated categories.
+\newblock {\em Ann. of Math. (2)}, 166(2):317--345, 2007.
+
+\bibitem[CP10]{collins}
+John Collins and Alexander Polishchuk.
+\newblock Gluing stability conditions.
+\newblock {\em Adv. Theor. Math. Phys.}, 14(2):563--607, 2010.
+
+\bibitem[Eke86]{ekh}
+Torsten Ekedahl.
+\newblock {\em Diagonal complexes and {$F$}-gauge structures}.
+\newblock Travaux en Cours. [Works in Progress]. Hermann, Paris, 1986.
+\newblock With a French summary.
+
+\bibitem[FLM15]{fosco}
+D.~{Fiorenza}, F.~{Loregian}, and G.~{Marchetti}.
+\newblock {Hearts and towers in stable infinity-categories}.
+\newblock {\em ArXiv e-prints}, January 2015.
+
+\bibitem[GKR04]{gkr}
+A.~L. Gorodentsev, S.~A. Kuleshov, and A.~N. Rudakov.
+\newblock {$t$}-stabilities and {$t$}-structures on triangulated categories.
+\newblock {\em Izv. Ross. Akad. Nauk Ser. Mat.}, 68(4):117--150, 2004.
+
+\bibitem[{Hen}17]{lagra}
+F.~{Hensel}.
+\newblock Stability conditions and lagrangian cobordisms.
+\newblock {\em ArXiv e-prints}, December 2017.
+
+\bibitem[Kuz14]{semiort}
+Alexander Kuznetsov.
+\newblock Semiorthogonal decompositions in algebraic geometry.
+\newblock In {\em Proceedings of the {I}nternational {C}ongress of
+  {M}athematicians---{S}eoul 2014. {V}ol. {II}}, pages 635--660. Kyung Moon Sa,
+  Seoul, 2014.
+
+\bibitem[Lev93]{levine}
+Marc Levine.
+\newblock Tate motives and the vanishing conjectures for algebraic
+  {$K$}-theory.
+\newblock In {\em Algebraic {$K$}-theory and algebraic topology ({L}ake
+  {L}ouise, {AB}, 1991)}, volume 407 of {\em NATO Adv. Sci. Inst. Ser. C Math.
+  Phys. Sci.}, pages 167--188. Kluwer Acad. Publ., Dordrecht, 1993.
+
+\bibitem[Mac07]{macri}
+Emanuele Macr\`\i.
+\newblock Stability conditions on curves.
+\newblock {\em Math. Res. Lett.}, 14(4):657--672, 2007.
+
+\bibitem[SW18]{permot}
+Wolfgang Soergel and Matthias Wendt.
+\newblock Perverse motives and graded derived category {${\mathcal{O}}$}.
+\newblock {\em J. Inst. Math. Jussieu}, 17(2):347--395, 2018.
+
+\end{thebibliography}

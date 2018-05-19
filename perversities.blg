@@ -1,0 +1,48 @@
+This is BibTeX, Version 0.99d (TeX Live 2015)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: perversities.aux
+The style file: alpha.bst
+Database file #1: biblio.bib
+Warning--there's a number but no volume in baric
+You've used 15 entries,
+            2543 wiz_defined-function locations,
+            658 strings with 6494 characters,
+and the built_in function-call counts, 6055 in all, are:
+= -- 630
+> -- 232
+< -- 12
++ -- 74
+- -- 74
+* -- 439
+:= -- 971
+add.period$ -- 49
+call.type$ -- 15
+change.case$ -- 86
+chr.to.int$ -- 15
+cite$ -- 16
+duplicate$ -- 248
+empty$ -- 465
+format.name$ -- 96
+if$ -- 1251
+int.to.chr$ -- 1
+int.to.str$ -- 0
+missing$ -- 15
+newline$ -- 78
+num.names$ -- 45
+pop$ -- 77
+preamble$ -- 1
+purify$ -- 102
+quote$ -- 0
+skip$ -- 202
+stack$ -- 0
+substring$ -- 403
+swap$ -- 43
+text.length$ -- 12
+text.prefix$ -- 7
+top$ -- 0
+type$ -- 116
+warning$ -- 1
+while$ -- 63
+width$ -- 18
+write$ -- 198
+(There was 1 warning)
