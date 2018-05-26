@@ -101,17 +101,20 @@ Let $\mathscr{D}$ a stable $\infty$-category or, if one prefers a more classical
 If one considers Bridgeland slicings indexed by arbitrary partially orderes sets (endowed with a compatible $\Z$-action) as in \cite{gkr}, then one can think of associating with any $\Z$-poset $J$ the set of $J$-slicings on $\mathscr{D}$. This defines a `slice functor' on the category of $\Z$-posets,
 see \cite[Remark 3.12]{fosco}. The slice functor actually hides a greater potential. Indeed, even if we don't have a morphism of $\mathbb{Z}$-posets (but just a $\mathbb{Z}$-equivariant map), then under suitably conditions the slice functor can still be applied. \\
 
-We begin by recalling the construction of the slice functor.
-Let $J$ be a $\Z$-toset, i.e., a totally ordered set together with a monotone action of $\Z$, that we will denote by $(n,x)\mapsto x+n$. Recall that a $J$-slicing on a stable $\infty$-category $\mathscr{D}$ is a morphism of $\Z$-posests $\tee\colon \Oo(J)\to \ts(\mathscr{D})$, where $\Oo(J)$ is the $\Z$-poset of the slicings of $J$ (i.e., the decompositions of $J$ into a disjoint union of a lower set $L$ and of an upper set $U$), and $\ts(\mathscr{D})$ is the $\Z$-poset of $t$-structures on $\mathscr{D}$.
+We begin by recalling the construction of the slice functor; see \cite{fosco} for details.
+Let $J$ be a $\Z$-toset, i.e., a totally ordered set together with a monotone action of $\Z$, that we will denote by $(n,x)\mapsto x+n$. A $J$-slicing on a stable $\infty$-category $\mathscr{D}$ is a morphism of $\Z$-posests $\tee\colon \Oo(J)\to \ts(\mathscr{D})$, where $\Oo(J)$ is the $\Z$-poset of the slicings of $J$ (i.e., the decompositions of $J$ into a disjoint union of a lower set $L$ and of an upper set $U$), and $\ts(\mathscr{D})$ is the $\Z$-poset of $t$-structures on $\mathscr{D}$.
 
-Clearly, if $f\colon J\to J'$ is a morphism of $\Z$-tosets, then $f^{-1}\colon \{\text{subsets of $J'$}\}\to \{\text{subsets of $J$}\}$ induces a $\Z$-equivariant morphism of $\Z$-posets $f^{-1}\colon \Oo(J')\to \Oo(J)$, and so composition with $f^{-1}$ gives a morphism
+Clearly, if $f\colon J\to J'$ is a morphism of $\Z$-tosets, then \[
+f^{-1}\colon \{\text{subsets of $J'$}\}\to \{\text{subsets of $J$}\}
+\]
+ induces a $\Z$-equivariant morphism of $\Z$-posets $f^{-1}\colon \Oo(J')\to \Oo(J)$, and so composition with $f^{-1}$ gives a morphism
 \begin{align*}
 f_*\colon J\text{-slicings on $\mathscr{D}$}&\to J'\text{-slicings on $\mathscr{D}$}\\
 \tee&\mapsto \tee\circ f^{-1}.
 \end{align*}
-The slices of $f_*\tee$ are clearly given by $\mathscr{D}_{f_*\tee;j}=\mathscr{D}_{\tee;f^{-1}(\{j\})}$, for any $j\in J'$. Notice that, as $f$ is monotone, the subset $f^{-1}(\{j\})$ is an interval in $J$. It is immediate to see that $f_*$ restricts to a map
+The slices of $f_*\tee$ are given by $\mathscr{D}_{f_*\tee;j}=\mathscr{D}_{\tee;f^{-1}(\{j\})}$, for any $j\in J'$. Notice that, as $f$ is monotone, the subset $f^{-1}(\{j\})$ is an interval in $J$. It is immediate to see that $f_*$ restricts to a map
 \begin{align*}
-f_*\colon \text{Bridgeland $J$-slicings on $\mathscr{D}$}&\to \text{Bridgeland $J'$-slicings on $\mathscr{D}$}
+f_*\colon \text{Bridgeland $J$-slicings on $\mathscr{D}$}&\to \text{Bridgeland $J'$-slicings on $\mathscr{D}$}.
 \end{align*}
 Namely, if $\mathcal{H}^j_{f_*\tee}(X)=0$ for every $j\in J'$ then $\mathcal{H}^{f^{-1}(\{j\})}_{\tee}(X)=0$ for every $j$ in $J'$. As we are assuming the $J$-slicing $\tee$ is a Bridgeland slicing, this implies that $\mathcal{H}^{\phi}_{\tee}(X)=0$ for every $\phi$ in $f^{-1}(\{j\})$, for every $j$. Therefore $\mathcal{H}^{\phi}_{\tee}(X)=0$ for every $\phi$ in $J$ and so, again by definition of Bridgeland slicing, $X=0$. Also, if $\mathcal{H}^j_{f_*\tee}(X)\neq 0$ then $\mathcal{H}^{f^{-1}(\{j\})}_{\tee}(X)\neq 0$ and so (again by the Bridgeland slicing condition) there exists at least an element $\phi$ in $f^{-1}(\{j\})$ such that $\mathcal{H}^{\phi}_{\tee}(X)\neq 0$. As the $J$-slicing $\tee$ is Bridgeland, the total of these $\phi$'s must be finite, so only for finitely many $j$ we can have such a $\phi$. In other words, the number of indices $j$ in $J'$ such that $\mathcal{H}^j_{f_*\tee}(X)\neq 0$ is finite.
 
@@ -137,8 +140,8 @@ Yet, it interesting to notice that the condition that $f$ be monotone is only on
 
 
 \begin{defn}\label{compatible}
-Let $J$ and $J'$ be $\Z$-tosets, and let $f\colon J\to J'$ a map of $\Z$-sets (i.e., a $\Z$-equivariant map, not necessarily nondecreasing). A Bridgeland $J$-slicing $\tee$ of $\mathscr{D}$ is \emph{$f$-compatible}
-if $f(\phi)>f(\psi)$ with $\phi\leq \psi$ implies $\mathscr{D}_{\tee; \phi}\orth \mathscr{D}_{\tee;\psi}$ and $\mathscr{D}_{\tee; \phi}\orth \mathscr{D}_{\tee;\psi}[1]$.
+Let $J$ and $J'$ be $\Z$-tosets, and let $f\colon J\to J'$ a map of $\Z$-sets (i.e., a $\Z$-equivariant map, not necessarily nondecreasing). A Bridgeland $J$-slicing $\tee$ of $\mathscr{D}$ is said to be \emph{$f$-compatible}
+if the condition `$f(\phi)>f(\psi)$ with $\phi\leq \psi$' implies $\mathscr{D}_{\tee; \phi}\orth \mathscr{D}_{\tee;\psi}$ and $\mathscr{D}_{\tee; \phi}\orth \mathscr{D}_{\tee;\psi}[1]$.
 \footnote{Given two subcategories $\mathscr{S}_1$ and $\mathscr{S}_2$ of $\mathscr{D}$ we write $\mathscr{S}_1\orth \mathscr{S}_2$ to mean that $\mathscr{D}(X_1,X_2)$ is contractible for any $X_1\in \mathscr{S}_1$ and any $X_2\in\mathscr{S}_2$. It is easy to see that $\mathscr{S}_1\orth \mathscr{S}_2$ implies $\langle\mathscr{S}_1\rangle\orth \langle\mathscr{S}_2\rangle$, see \cite[Lemma 4.21]{fosco}}
 \end{defn}
 
@@ -201,7 +204,7 @@ The first factorization shows that $X_{{\bar\imath}}\in \langle\cup_{i=0}^{{\bar
 &0\ar[r]&\mathcal{H}^{\phi_{i_0+1}}_{\tee}(X)\ar[r]&\mathcal{H}^{\phi_{i_0}}_{\tee}(X)[1].
 }
 \]
-As the arrow $\mathcal{H}^{\phi_{i_0+1}}_{\tee}(X)\to \mathcal{H}^{\phi_{i_0}}_{\tee}(X)[1]$ factors through $0$, we have $Y=\mathcal{H}^{\phi_{i_0+1}}_{\tee}(X)\oplus \mathcal{H}^{\phi_{i_0}}_{\tee}(X)$ and the above diagram becomes
+As the arrow $\mathcal{H}^{\phi_{i_0+1}}_{\tee}(X)\to \mathcal{H}^{\phi_{i_0}}_{\tee}(X)[1]$ factors through $0$, we have $Y\cong\mathcal{H}^{\phi_{i_0+1}}_{\tee}(X)\oplus \mathcal{H}^{\phi_{i_0}}_{\tee}(X)$ and the above diagram becomes
 \[
 \xymatrix{X_{i_0-1}\ar[r]^{\alpha_{i_0}}\ar[d] & X_{i_0}\ar[r]^{\alpha_{i_0+1}}\ar[d] & X_{i_0+1}\ar[d]^{\gamma}\\
 0\ar[r]&\mathcal{H}^{\phi_{i_0}}_{\tee}(X)\ar[d]\ar[r]^-{\iota_2}&\mathcal{H}^{\phi_{i_0+1}}_{\tee}(X)\oplus \mathcal{H}^{\phi_{i_0}}_{\tee}(X)\ar[d]^{\pi_1}\ar[r] &0\ar[d]\\
