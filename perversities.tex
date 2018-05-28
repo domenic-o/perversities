@@ -101,6 +101,7 @@ Let $\mathscr{D}$ a stable $\infty$-category or, if one prefers a more classical
 If one considers Bridgeland slicings indexed by arbitrary partially orderes sets (endowed with a compatible $\Z$-action) as in \cite{gkr}, then one can think of associating with any $\Z$-poset $J$ the set of $J$-slicings on $\mathscr{D}$. This defines a `slice functor' on the category of $\Z$-posets,
 see \cite[Remark 3.12]{fosco}. The slice functor actually hides a greater potential. Indeed, even if we don't have a morphism of $\mathbb{Z}$-posets (but just a $\mathbb{Z}$-equivariant map), then under suitably conditions the slice functor can still be applied. \\
 
+\subsection{$f$-compatible slicings}
 We begin by recalling the construction of the slice functor; see \cite{fosco} for details.
 Let $J$ be a $\Z$-toset, i.e., a totally ordered set together with a monotone action of $\Z$, that we will denote by $(n,x)\mapsto x+n$. A $J$-slicing on a stable $\infty$-category $\mathscr{D}$ is a morphism of $\Z$-posests $\tee\colon \Oo(J)\to \ts(\mathscr{D})$, where $\Oo(J)$ is the $\Z$-poset of the slicings of $J$ (i.e., the decompositions of $J$ into a disjoint union of a lower set $L$ and of an upper set $U$), and $\ts(\mathscr{D})$ is the $\Z$-poset of $t$-structures on $\mathscr{D}$.
 
@@ -262,7 +263,7 @@ and so there exists a factorization of the initial morphism $\mathbf{0} \to X$ o
 \[
 \mathbf{0}=X_0 \xrightarrow{\alpha_1} X_1\xrightarrow{\alpha_2}\cdots \xrightarrow{\alpha_{n-1}}X_{n-1}\xrightarrow{\alpha_n} X_n=X
 \]
-with $\mathbf{0} \neq \cofib(\alpha_i) \in \mathscr{D}_{\phi_i}$ with $f(\phi_i)\geq i$ for all $i = 1, \cdots, n$. As $((-\infty,j],(j,+\infty)$ is a slicing of $J'$, reasoning as in the proof of Lemma \ref{is-t-structure} we can arrange this factorization is such a way that $f(\phi_i)>j$ for $i\leq \bar{\imath}$ and $f(\phi_i)= j$ for $i>\bar{\imath}$. Therefore, again by reasoning as in the proof of Lemma \ref{is-t-structure} we get a fiber sequence of the form
+with $\mathbf{0} \neq \cofib(\alpha_i) \in \mathscr{D}_{\phi_i}$ with $f(\phi_i)\geq j$ for all $i = 1, \cdots, n$. As $((-\infty,j],(j,+\infty)$ is a slicing of $J'$, reasoning as in the proof of Lemma \ref{is-t-structure} we can arrange this factorization is such a way that $f(\phi_i)>j$ for $i\leq \bar{\imath}$ and $f(\phi_i)= j$ for $i>\bar{\imath}$. Therefore, again by reasoning as in the proof of Lemma \ref{is-t-structure} we get a fiber sequence of the form
 \[
 \xymatrix{
 X_{>j}\ar[r]\ar[d] & X\ar[d]\\
@@ -289,7 +290,7 @@ The map $f_!\tee$ is manifestly monotone and $\Z$-equivariant (see the first par
 %\mathscr{D}_{f_!\tee;\geq j}\cap \mathscr{D}_{f_!\tee;\leq j},
 %\]
 %and so by the subcategories $
-\langle \mathscr{D}_{\tee;\phi}\rangle_{f(\phi)=j}$ by Lemma \ref{slices}. We are therefore left with showing that it is finite and discrete. Given an object $X$ in $\mathscr{D}$, let now $\{\phi_1,\dots,\phi_n\}$ be the indices in $J$ such that $\mathcal{H}^{\phi_i}_\tee(X)\neq 0$ and let $\{j_1,\dots,j_k\}$ the image of the set $\{\phi_1,\dots,\phi_n\}$ via $f$. Up to renaming, we can assume $j_1>j_{2}>\cdots>j_k$. Consider now the factorization
+\langle \mathscr{D}_{\tee;\phi}\rangle_{f(\phi)=j}$ by Lemma \ref{slices}. We are therefore left with showing that it is finite and discrete. Given an object $X$ in $\mathscr{D}$, let  $\{\phi_1,\dots,\phi_n\}$ be the indices in $J$ such that $\mathcal{H}^{\phi_i}_\tee(X)\neq 0$ and let $\{j_1,\dots,j_k\}$ the image of the set $\{\phi_1,\dots,\phi_n\}$ via $f$. Up to renaming, we can assume $j_1>j_{2}>\cdots>j_k$. Consider now the factorization
 \[
 \mathbf{0}=X_0 \xrightarrow{\alpha_1} X_1\xrightarrow{\alpha_2}\cdots \xrightarrow{\alpha_{k-1}}X_{k-1}\xrightarrow{\alpha_k} X_k=X
 \]
@@ -334,6 +335,8 @@ implies $\mathscr{D}_{\tee; \phi}\orth \mathscr{D}_{\tee;\psi}$ and $\mathscr{D}
 \]
 \end{proof}
 
+\subsection{The exchange map}
+
 Let now $J_1$ and $J_2$ be two $\mathbb{Z}$-tosets, and let $J_1 \lex J_2$ and $J_2 \lex J_1$ the two $\Z$-tosets obtained by considering the lexicogaphic order on the products $J_1\times J_2$ and $J_2\times J_1$, respectively, and the diagonal $\Z$ action. The following lemma is immediate.
 \begin{lem}\label{exchange}
 The exchange map
@@ -349,9 +352,9 @@ Let $J_1$ and $J_2$ be $\Z$-tosets. A Bridgeland $J_1 \lex J_2$-slicing $\tee$ o
 \end{defn}
 
 \begin{exmp}\label{example:bbd} Let $J_1=\{0,1\}$ with the trivial $\Z$-action and let $J_2=\Z$ with the standard translation $\Z$-action.  Then a $J_1\lex J_2$-slicing $\tee$ on $\mathscr{D}$ is the datum of a semiorthogonal decomposition $(\mathscr{D}_0,\mathscr{D}_1)$ of $\mathscr{D}$ toghether with $t$-structures $\tee_i$ on $\mathscr{D}_i$. Spelling out the definition, one sees that the $\{0,1\}\lex \Z$-slicing $\tee$ is gluable if and only if 
-$\mathscr{D}_{0;\geq 0}\orth \mathscr{D}_{1;-1}$ and $\mathscr{D}_{0;\geq 0}\orth \mathscr{D}_{1;0}$, and so if and only if $\mathscr{D}_{0;\geq 0}\orth \mathscr{D}_{1;0}$. {\color{red}As  $\mathscr{D}_{0;\geq 0}$ is generated by the subcategories $\mathscr{D}_{0}^\heartsuit[k]$ for $k\geq 0$, this is equivalent to $\mathscr{D}_{0}^\heartsuit\orth\mathscr{D}_{1}^\heartsuit[n]$ for all $n\leq 0$.} When this happens, the glued slicing $e_!\tee$ is a $\Z\lex\{0,1\}$ slicing on $\mathscr{D}$, i.e., is the datum of a bounded $t$-structure on $\mathscr{D}$ together with a torsion theory on its heart. More precisely, the heart of $e_!\tee$ is the full $\infty$-subcategory $\mathscr{D}^{\heartsuit_{e_!\tee}}$ of $\mathscr{D}$ on thise objects $X$ that fall into fiber sequences of the form $X_1\to X\to X_0$ with $X_i\in \mathscr{D}_i^\heartsuit$, while the torsion theory on $\mathscr{D}^{\heartsuit_{e_!\tee}}$ is
+$\mathscr{D}_{0;\geq 0}\orth \mathscr{D}_{1;-1}$ and $\mathscr{D}_{0;\geq 0}\orth \mathscr{D}_{1;0}$, and so if and only if $\mathscr{D}_{0;\geq 0}\orth \mathscr{D}_{1;0}$. {\color{red}As  $\mathscr{D}_{0;\geq 0}$ is generated by the subcategories $\mathscr{D}_{0}^\heartsuit[k]$ for $k\geq 0$, this is equivalent to $\mathscr{D}_{0}^\heartsuit\orth\mathscr{D}_{1}^\heartsuit[n]$ for all $n\leq 0$.} When this happens, the glued slicing $e_!\tee$ is a $\Z\lex\{0,1\}$ slicing on $\mathscr{D}$, i.e., is the datum of a bounded $t$-structure on $\mathscr{D}$ together with a torsion theory on its heart. More precisely, the heart of $e_!\tee$ is the full $\infty$-subcategory $\mathscr{D}^{\heartsuit_{e_!\tee}}$ of $\mathscr{D}$ on those objects $X$ that fall into fiber sequences of the form $X_1\to X\to X_0$ with $X_i\in \mathscr{D}_i^\heartsuit$, while the torsion theory on $\mathscr{D}^{\heartsuit_{e_!\tee}}$ is
   $(\mathscr{D}_0^{\heartsuit},\mathscr{D}_1^{\heartsuit})$, i.e., precisely the pair of hearts of the two subcategories in the semiorthogonal decomposition. \\
-  This is exactly the setup of \cite{collins}, which by the other hand is a particular case of the classical gluing construction of $t$-structures by \cite{bbd}, explaining both our nomenclature and motivation.
+  This is exactly the setup of \cite{collins}, which on the other hand is a particular case of the classical gluing construction of $t$-structures by \cite{bbd}, explaining both our nomenclature and motivation.
 \end{exmp}
 
 %\begin{exmp} Recollement data from BBD induce  gluable slicings. This explains both our terminology and motivation.
@@ -419,7 +422,7 @@ $\mathscr{D}_{0;\geq 0}\orth \mathscr{D}_{1;-1}$ and $\mathscr{D}_{0;\geq 0}\ort
 %\end{exmp}
 
 \begin{lem}\label{incolla2}
-Let $J_1$  and $J_2$ be $\Z$-tosets, $\tee$ be a Bridgeland $J_1 \lex J_2$-slicing of $\mathscr{D}$. If $\tee$ is gluable and $\Z$ acts trivially on $J_1$, then $e_! \tee$ is a gluable $J_2 \lex J_1$ slicing of $\mathscr{D}$. 
+Let $J_1$  and $J_2$ be $\Z$-tosets, and let $\tee$ be a Bridgeland $J_1 \lex J_2$-slicing of $\mathscr{D}$. If $\tee$ is gluable and $\Z$ acts trivially on $J_1$, then $e_! \tee$ is a gluable $J_2 \lex J_1$ slicing of $\mathscr{D}$. 
 \end{lem}
 \begin{proof}
 Let $(j_2,j_1)\leq (j_2',j_1')$ in $J_2 \lex J_1$ be such that $(j_1,j_2)>(j_1',j_2')$ in $J_1 \lex J_2$. 
@@ -441,6 +444,8 @@ since slices are extension closed. As $(j_1,j_2)>(j_1',j_2')$, we have $\mathscr
 since the $\Z$-action on $J_1$ is trivial. The condition $(j_2,j_1)\leq (j_2',j_1')$ with $(j_1,j_2)>(j_1',j_2')$ is actually equivalent to $j_2<j_2'$ and $j_1>j_1'$, so in particular we have $(j_1,j_2)>(j_1',j_2'+1)$.This implies $\mathscr{D}_{\tee;(j_1,j_2)}\orth \mathscr{D}_{\tee;(j_1',j_2'+1)}$ and so $\mathscr{D}_{e_!\tee;(j_2,j_1)}\orth\mathscr{D}_{e_!\tee;(j_2',j_1')}[1]$.
 \end{proof}
 
+\subsection{Upper graphs and monotone maps}
+
 \begin{defn}
 Let $U\colon J \to \Oo(J')$ be a map of sets. We denote by $\gr_{U}$ the subset of $J\times J'$ defined by 
  $$\gr_U=\{ (j,j') \in J \times J'; \quad j' \in U_{j} \}.$$
@@ -449,16 +454,16 @@ Let $U\colon J \to \Oo(J')$ be a map of sets. We denote by $\gr_{U}$ the subset 
  J'&\to \Oo(J')\\
  j'&\mapsto ((-\infty,j'),[j',+\infty)).
  \end{align*}
- The upper graphic of $f$ is the subset $\gr_{\geq f}$ of $J\times J'$.
+ The upper graph of $f$ is the subset $\gr_{\geq f}$ of $J\times J'$.
 \end{defn}
   
 \begin{lem}\label{decreasing-gives-upper-set}
   Let $U \colon J \to \Oo(J')$ be a map of sets. Then $\gr_U$
-  is an upper set of $J \times J'$ with the product order if and only if $U$ is a map of posets $U\colon J\to \Oo(J')^\op$. In particular, $\gr_{\geq f}$ is an upper set if and only if $f\colon J\to J'$ is a nondecreasing map, i.e., a map of posets $J\to J'^\op$.
+  is an upper set of $J \times J'$ with the \emph{product order} if and only if $U$ is a map of posets $U\colon J\to \Oo(J')^\op$. In particular, $\gr_{\geq f}$ is an upper set if and only if $f\colon J\to J'$ is a nondecreasing map, i.e., a map of posets $J\to J'^\op$.
 \end{lem}
 
 \begin{proof}Assume $(L,U)$ is a map of posets from $J$ to $\Oo(J')^\op$.
-Pick $(j,j') \in \gr_U$ and suppose $(j,j') \leq (k,k')$ in $J \times J'$. As $(L,U)$ i monotone and $k\geq j$, we have $U_j\subseteq U_k$; as $(j,j')\in \gr_U$, we have $j' \in U_j$. Therefore $j\in U_k$. Since $U_k$ is an upper set and $k'\geq j'$, we get $k'\in U_k$, i.e. $(k,k')\in \gr_U$. Vice versa, assume $\gr_U$ is an upper set, and let $j\leq k$ in $J$. For any $j'\in U_j$, the element $(k,j')$ in $J\times J'$ satisfies $(k,j')\geq (j,j')$ in the product order and so $(k,j')\in \gr_U$. This means $j'\in U_k$ and so $U_j\subseteq U_k$. To prove the second part of the statement, notice that the map $j\mapsto ((-\infty,j'),[j',+\infty))$ is a map of posets from $J'\to \Oo(J')$. Therefore, if $f\colon J\to J'^\op$ is a map of posets, then also $(<f,\geq f)\colon J \to \Oo(J')^\op$ is a map of posets. Vice versa, if $(<f,\geq f)\colon J \to \Oo(J')^\op$ is a map of posets then for every $j\leq k$ in $J$ we have $[f(j),+\infty)\subseteq [f(k),+\infty)$ and so $f(k)\leq f(j)$.
+Pick $(j,j') \in \gr_U$ and suppose $(j,j') \leq (k,k')$ in $J \times J'$. As $(L,U)$ is monotone and $k\geq j$, we have $U_j\subseteq U_k$; as $(j,j')\in \gr_U$, we have $j' \in U_j$. Therefore $j\in U_k$. Since $U_k$ is an upper set and $k'\geq j'$, we get $k'\in U_k$, i.e. $(k,k')\in \gr_U$. Vice versa, assume $\gr_U$ is an upper set, and let $j\leq k$ in $J$. For any $j'\in U_j$, the element $(k,j')$ in $J\times J'$ satisfies $(k,j')\geq (j,j')$ in the product order and so $(k,j')\in \gr_U$. This means $j'\in U_k$ and so $U_j\subseteq U_k$. To prove the second part of the statement, notice that the map $j\mapsto ((-\infty,j'),[j',+\infty))$ is a map of posets from $J'\to \Oo(J')$. Therefore, if $f\colon J\to J'^\op$ is a map of posets, then also $(<f,\geq f)\colon J \to \Oo(J')^\op$ is a map of posets. Vice versa, if $(<f,\geq f)\colon J \to \Oo(J')^\op$ is a map of posets then for every $j\leq k$ in $J$ we have $[f(j),+\infty)\subseteq [f(k),+\infty)$ and so $f(k)\leq f(j)$.
 \end{proof}
 
 
@@ -481,6 +486,8 @@ Let $U_1\leq U_2$ in the partial order on $\pos(J,\Oo(J')^\op)^\op$, and let $(j
   \end{align*}
   which is straightforward to see to be the inverse of $\gr$. 
 \end{proof}
+
+\subsection{Perversities}
 
 Assume $J$ and $J'$ are $\Z$-posets. Then $\Oo(J)^\op$ is a $\Z$-poset with $1$ acting as $U\mapsto U-1$. The action of $\Z$ by conjugation on $\pos(J,\Oo(J')^\op)$ is therefore given by $(U\dotplus 1)_j=U_{j-1}-1$. To see that $U\dotplus 1$ is still a morphism of posets from $J$ to $\Oo(J')$, let $j\leq k$ in $J$. Then $(U\dotplus 1)_j=U_{j-1}-1\subseteq U_{k-1}-1=(U\dotplus 1)_k$. 
 The conjugation action, however, does not define a structure of $\Z$-poset on $\pos(J,\Oo(J')^\op)$, as it is generally not true that $U\leq U\dotplus1$. This condition is indeed equivalent to $U_{j}\subseteq (U\dotplus 1)_{j}$, i.e., to $U_{j}+1\subseteq U_{j-1}$ for any $j$ in $J$, and this is not necessarily satisfied by a morphism of posets $U\colon J\to \Oo(J')^\op$. 
