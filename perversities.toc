@@ -4,6 +4,7 @@
 \contentsline {subsection}{\numberline {2.2}The exchange map}{9}{subsection.2.2}
 \contentsline {subsection}{\numberline {2.3}Upper graphs and monotone maps}{10}{subsection.2.3}
 \contentsline {subsection}{\numberline {2.4}Perversities}{11}{subsection.2.4}
+\contentsline {subsubsection}{\numberline {2.4.1}Perversities as slicings of the lattice $\mathbb {Z}\times \mathbb {Z}$}{13}{subsubsection.2.4.1}
 \contentsline {subsection}{\numberline {2.5}Slicing the heart}{15}{subsection.2.5}
 \contentsline {section}{\numberline {3}A zoo of examples}{21}{section.3}
 \contentsline {subsection}{\numberline {3.1}An example from algebra and one from geometry}{21}{subsection.3.1}

@@ -489,7 +489,7 @@ Let $U_1\leq U_2$ in the partial order on $\pos(J,\Oo(J')^\op)^\op$, and let $(j
 
 \subsection{Perversities}
 
-Assume $J$ and $J'$ are $\Z$-posets. Then $\Oo(J)^\op$ is a $\Z$-poset with $1$ acting as $U\mapsto U-1$. The action of $\Z$ by conjugation on $\pos(J,\Oo(J')^\op)$ is therefore given by $(U\dotplus 1)_j=U_{j-1}-1$. To see that $U\dotplus 1$ is still a morphism of posets from $J$ to $\Oo(J')$, let $j\leq k$ in $J$. Then $(U\dotplus 1)_j=U_{j-1}-1\subseteq U_{k-1}-1=(U\dotplus 1)_k$. 
+Assume $J$ and $J'$ are $\Z$-posets. Then $\Oo(J)^\op$ is a $\Z$-poset with the generator $1$ acting as $U\mapsto U-1$. The action of $\Z$ by conjugation on $\pos(J,\Oo(J')^\op)$ is therefore given by $(U\dotplus 1)_j=U_{j-1}-1$. To see that $U\dotplus 1$ is still a morphism of posets from $J$ to $\Oo(J')$, let $j\leq k$ in $J$. Then $(U\dotplus 1)_j=U_{j-1}-1\subseteq U_{k-1}-1=(U\dotplus 1)_k$. 
 The conjugation action, however, does not define a structure of $\Z$-poset on $\pos(J,\Oo(J')^\op)$, as it is generally not true that $U\leq U\dotplus1$. This condition is indeed equivalent to $U_{j}\subseteq (U\dotplus 1)_{j}$, i.e., to $U_{j}+1\subseteq U_{j-1}$ for any $j$ in $J$, and this is not necessarily satisfied by a morphism of posets $U\colon J\to \Oo(J')^\op$. 
 %On the other hand, a morphism of posets $U\colon J\to \Oo(J')^\op$ surely satisfies $U_{j-1}\subseteq U_{j}$. This motivates the following.
 \begin{defn}
@@ -504,7 +504,7 @@ Notice that the shift action on $(J,J')$-perversities is given by  $U\mapsto U\d
 \end{rem}
 
 
-We have seen in Lemma \ref{decreasing-gives-upper-set} that a function $f\colon J\to J'$ defines a morphism of posets by $(\geq f)\colon J\to \Oo(J')^\op$ if and only if $f$ is a morphism of posets from $J$ to $J'^\op$. When this happens, $(\geq f)$ is a $(J,J')$-perversity if and only if $f(j-1)\leq f(j)+1$, for every $j\in J$. In the particular case $J=\Z$, 
+We have seen in Lemma \ref{decreasing-gives-upper-set} that a function $f\colon J\to J'$ defines a morphism of posets $(\geq f)\colon J\to \Oo(J')^\op$ if and only if $f$ is a morphism of posets from $J$ to $J'^\op$. When this happens, $(\geq f)$ is a $(J,J')$-perversity if and only if $f(j-1)\leq f(j)+1$, for every $j\in J$. In the particular case $J=\Z$, 
 assuming as usual that  $J'$ is a $\Z$-poset, we can define a new function $p_f\colon \Z\to J'$ as $p_f(n)=f(n)+n$. Then the condition $f(n)\leq f(n+1)+1$ translates into 
 $p_f(n)\leq p_f(n+1)$, while the condition that $f\colon \Z\to J'^\op$ is a morphism of posets, i.e., $f(n+1)\leq f(n)$ translates to $p_f(n+1)\leq p_f(n)+1$.  As $f\mapsto p_f$ is a bijection of the set of maps from $J$ to $J'$ into itself, we see that the functions $f\colon \Z\to J'$ defining perversities correspond bijectively to the set of functions $p\colon \Z \to J'$ such that
 $p(n)\leq p(n+1)\leq p(n)+1$, 
@@ -543,6 +543,8 @@ For every $p\colon \Z \to \Z$, let $f_p\colon \Z\to \Z$ be the map defined by $f
 By Lemma \ref{lemma.perv0} we only need to show that $p\mapsto f_p$ is a monotone $\Z$-equivariant bijection between  $\mathrm{perv}_\Z$ and the set of functions $f\colon \Z\to \Z$ such that $f(n)\leq f(n-1)\leq f(n)+1$. That it is a bijection is immediate: the inverse map is $f\mapsto p_f$, where $p_f(n)=f(n)+n$. To see that it is an isomorphism of posets, notice that $f_{p_1}\leq f_{p_2}$ if and only if $p_1(n)-n\leq p_2(n)-n$ for every $n\in \Z$, and so if and only if $p_1(n)\leq p_2(n)$ for every $n\in \Z$. Finally, $f_{p\dotplus1}(n)=(p\dotplus 1)(n)-n=p(n+1)-n=f_p(n+1)+1=(f_p\dotplus 1)(n)$.
 \end{proof}
 
+\subsubsection{Perversities as slicings of the lattice $\Z\times \Z$}
+
 \begin{defn}
 An upper set $U$ in $\Oo(J\times J')$ is called a \emph{kinky upperset} if $U\leq U+_\mathrm{ne}1$, where ${\mathrm{ne}}$ is the ``northwestern'' action of $\Z$ on $J\times J'$ given by
 $(j,j')+_{\mathrm{ne}}1=(j-1,j'+1)$. We denote by $\mathrm{Kink}(J\times J')$ the poset of kinky uppersets of $J\times J'$, with the poset structure induced by the inclusion in $\Oo(J\times J')$. it is a $\Z$-poset with the ``northwestern'' action. We denote by $\mathrm{Kink}^\circ(J\times J')$ the $\Z$-sub-poset of nontrivial kinky uppersets of $J\times J'$, where 
@@ -568,7 +570,8 @@ The map $\Gamma$ from Proposition \ref{graphs} induces an isomorphism of $\Z$-po
   \]
 \end{lem}
 \begin{proof}
-A kinky upperset $U$ is in the image of $\Gamma$ if and only if $U$ is of the form $(\geq f)$ for a suitable function $f\colon \Z\to \Z$. This is possible if and only if $U_n\neq \emptyset,\Z$ for every $n\in \Z$. As $U$ is kinky, if $U_{n_0}=\emptyset$ for some $n_0$, then $U_{n_0+1}+1\subseteq U_{n_0}=\emptyset$, and so $U_{n_0+1}=\emptyset$. Inductively, this gives $U_n=\emptyset$ for every $n\geq n_0$.  On the other hand, since a kinky upperset is an upperset, if there exists a nonempty $U_n$ with $n<n_0$, then there exist an element $(n,m)$ in $U$ and so, since $(n,m)\leq (n_0,m)$, also $ (n_0,m)\in U$. But then $m\in U_{n_0}$, which is impossible. So also the $U_n$ with $n<n_0$ are empty and therefore $U=\emptyset$. Similarly, if $U_{n_0}=\Z$ for some $n_0$, then $U_n=\Z$ for every $n>n_0$ as $U$ is an upperset, while the kinkiness condition $U_{n}+1\subseteq U_{n-1}$ implies that also $U_{n_0-1}=\Z$ and so inductively that all $U_n$ with $n<n_0$ are the whole of $\Z$. That is, $U=\Z\times\Z$ in this case. 
+{\color{red}Let $U$ be a kinky upper set that is not in the image of $\Gamma$. We want to show that $U=\emptyset$ or $U=\Z\times \Z$. To do this, we notice that}
+a kinky upperset $U$ is in the image of $\Gamma$ if and only if $U$ is of the form $(\geq f)$ for a suitable function $f\colon \Z\to \Z$, {\color{red}and that} this is possible if and only if $U_n\neq \emptyset,\Z$ for every $n\in \Z$.  As $U$ is kinky, if $U_{n_0}=\emptyset$ for some $n_0$, then $U_{n_0+1}+1\subseteq U_{n_0}=\emptyset$, and so $U_{n_0+1}=\emptyset$. Inductively, this gives $U_n=\emptyset$ for every $n\geq n_0$.  On the other hand, since a kinky upperset is an upperset, if there exists a nonempty $U_n$ with $n<n_0$, then there exist an element $(n,m)$ in $U$ and so, since $(n,m)\leq (n_0,m)$, also $ (n_0,m)\in U$. But then $m\in U_{n_0}$, which is impossible. So also the $U_n$ with $n<n_0$ are empty and therefore $U=\emptyset$. Similarly, if $U_{n_0}=\Z$ for some $n_0$, then $U_n=\Z$ for every $n>n_0$ as $U$ is an upperset, while the kinkiness condition $U_{n}+1\subseteq U_{n-1}$ implies that also $U_{n_0-1}=\Z$ and so, inductively, that all $U_n$ with $n<n_0$ are the whole of $\Z$. That is, $U=\Z\times\Z$ in this case. 
 \end{proof}
 
 \begin{lem}\label{equiv}
@@ -590,9 +593,9 @@ We have an isomorphism of $\Z$-posets
 mapping a perversity function $p$ to the image via the isomorphism $\varphi\colon (n,n')\mapsto (n+n',n')$ of the set $\{(n,n')\in \Z\times \Z\text{ such that } n'\geq p(n)-n\}$.
 \end{cor}
 
-\begin{exmp}
+\begin{rem}
 The zero perversity function $p(n)\equiv 0$ corresponds to the upper set $\{(n,n')\in \Z\times \Z\text{ such that } n\geq 0\}$; the identity perversity function $p(n)\equiv n$ corresponds to the upper set $\{(n,n')\in \Z\times \Z\text{ such that } n'\geq 0\}$.
-\end{exmp}
+\end{rem}
 
 \begin{rem}\label{missing}
 The two ``missing'' upper sets from $\Oo(\Z\times \Z)\setminus\{\emptyset,\Z\times\Z\}$ can be recovered by adding to the set $\mathrm{perv}_\Z$ of perversity functions the two ``constant infinite perversities'', i.e., the function $p_{+\infty}\colon \Z\to \Z\cup\{-\infty,+\infty\}$ defined by $p_{+\infty}(n)=+\infty$ for every $n\in\Z$ and the function  $p_{-\infty}\colon \Z\to \Z\cup\{-\infty,+\infty\}$ defined by $p_{-\infty}(n)=-\infty$ for every $n\in\Z$. The extended set
@@ -614,7 +617,7 @@ We have an isomorphism of posets
 mapping a perversity function $p$ to the image via the isomorphism $\varphi\colon (n,n')\mapsto (n+n',n')$ of the set $S_p=\{(n,n')\in \Z\times \Z\text{ such that } n'\geq p(n)-n\}$, and mapping the ``infinite perversity functions'' $p_{-\infty}$ and $p_{+\infty}$ to $\Z\times \Z$ and to $\emptyset$, respectively. Moreover, this is an isomorphism of $\Z$-posets, where the $\Z$-action on the left is given by $(p+1)(n)=p(n)+1$ and the $\Z$-action on the right is the one induced by the ``northeastern'' $\Z$-action on $\Z^2$, namely, $(n,n')+1=(n+1,n'+1)$. 
 \end{prop}
 \begin{proof}
-After Corollary \ref{corperv} and remark \ref{missing}, the only thing left to prove is the $\Z$-equivariancy of the isomorphism, i.e., that we have
+After Corollary \ref{corperv} and Remark \ref{missing}, the only thing left to prove is the $\Z$-equivariancy of the isomorphism, i.e., that we have
 \[
 \varphi(S_{p+1})=\varphi(S_p)+\left(\begin{smallmatrix}1\\1\end{smallmatrix}\right).
 \]
@@ -640,7 +643,7 @@ mapping a perversity function $p$ to the complement of the image via the isomorp
 \end{cor}
 
 \subsection{Slicing the heart}\label{sec:heart}
-Let $\mathscr{D}$ be a stable $\infty$-category. Then, as we recalled above, a bounded t-structure on $\mathscr{D}$ is the datum of a Bridgeland $\Z$-slicing $\tee$ of $\mathscr{D}$. Let $\heartsuit_{\mathfrak{t}}$ denote the heart of $\mathfrak{t}$. Then an abelian $\Z$-slicing of $\heartsuit_{\mathfrak{t}}$ is the datum of an extension $\tilde{\tee}$ of $\tee$ to a Bridgeland $\Z\times_{\mathrm{lex}}\hat{\Z}$-slicing on $\mathscr{D}$, where $\hat{\Z}$ denotes the $\Z$-poset consisting of $\Z$ endowed with the trivial $\Z$-action, and the morphism $\Oo(\Z)\to \Oo(\Z\times_{\mathrm{lex}}\hat{\Z})$ is induced by the projection on the first factor $\Z\times_{\mathrm{lex}}\hat{\Z}\to \Z$. See \cite[Section 5]{fosco}. We will denote by $\heartsuit_{\tee;\phi}$ the $\phi$-th slice of the heart of $\tee$. In other words,
+Let $\mathscr{D}$ be a stable $\infty$-category {\color{red} and let $\tee$ be a bounded t-structure on $\mathscr{D}$, i.e., equivalently, the datum of} a Bridgeland $\Z$-slicing of $\mathscr{D}$. Let $\heartsuit_{\mathfrak{t}}$ denote the heart of $\mathfrak{t}$. Then an abelian $\Z$-slicing of $\heartsuit_{\mathfrak{t}}$ is the datum of an extension $\tilde{\tee}$ of $\tee$ to a Bridgeland $\Z\times_{\mathrm{lex}}\hat{\Z}$-slicing on $\mathscr{D}$, where $\hat{\Z}$ denotes the $\Z$-poset consisting of $\Z$ endowed with the trivial $\Z$-action, and the morphism $\Oo(\Z)\to \Oo(\Z\times_{\mathrm{lex}}\hat{\Z})$ is induced by the projection on the first factor $\Z\times_{\mathrm{lex}}\hat{\Z}\to \Z$. See \cite[Section 5]{fosco}. We will denote by $\heartsuit_{\tee;\phi}$ the $\phi$-th slice of the heart of $\tee$. In other words,
 \[
 \heartsuit_{\tee;\phi}=\mathscr{D}_{\tilde{\tee};(0,\phi)}.
 \]
