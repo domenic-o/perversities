@@ -526,9 +526,22 @@ A \emph{perversity function} (on $\Z$) is a function $p\colon \Z\to \Z$ such tha
 \[
 p(n)\leq p(n+1)\leq p(n)+1,
 \]
-for every $n\in Z$. It is called a strict perversity if the inequalities are strict, i.e., if $p(n)< p(n+1)< p(n)+1$,
-for every $n\in Z$.The set $\mathrm{perv}_\Z$ of perversity functions is a poset with the partial order induced by the inclusion $\mathrm{perv}_\Z\subseteq \pos(\Z,\Z)$. It is a $\Z$-poset with the action $(p\dotplus1)(n)=p(n+1)$. 
+for every $n\in \Z$. It is called a strict perversity function if 
+\[
+p(n+2)-1\leq p(n)\leq p(n+1)\leq p(n)+1,
+\]
+for every $n\in \Z$. The set $\mathrm{perv}_\Z$ of perversity functions is a poset with the partial order induced by the inclusion $\mathrm{perv}_\Z\subseteq \pos(\Z,\Z)$. It is a $\Z$-poset with the action $(p\dotplus1)(n)=p(n+1)$. 
 \end{defn}
+\begin{rem}
+A perversity function (on $\Z$) can be equivalently defined as a function $p\colon \Z\to \Z$ such that
+\[
+0\leq p(n)-p(m)\leq n-m
+\]
+for any $n-m\geq 0$ and the strictness condition translates to the additional condition $p(n)-p(m)< n-m$ for $n-m\geq 2$.
+
+Basic examples of perversity functions are the zero perversity $p(n)\equiv 0$ and the identity perversity $p(n)\equiv n$. Another classical example is the \emph{middle perversity} $p(n)\equiv \lfloor n/2 \rfloor$. In particular, both the zero perversity and the middle perveristy are examples of strict perversities.
+\end{rem}
+
 \begin{rem}\label{other-action}
 In addition to the $\Z$-action $p\mapsto p\dotplus 1$, the poset  $\mathrm{perv}_\Z$ carries also another natural $\Z$-action making it a $\Z$-poset; namely, the action $(p+1)(n)=p(n)+1$. We will come back to this towards the end of this section.
 \end{rem}
@@ -643,7 +656,7 @@ mapping a perversity function $p$ to the complement of the image via the isomorp
 \end{cor}
 
 \subsection{Slicing the heart}\label{sec:heart}
-Let $\mathscr{D}$ be a stable $\infty$-category {\color{red} and let $\tee$ be a bounded t-structure on $\mathscr{D}$, i.e., equivalently, the datum of} a Bridgeland $\Z$-slicing of $\mathscr{D}$. Let $\heartsuit_{\mathfrak{t}}$ denote the heart of $\mathfrak{t}$. Then an abelian $\Z$-slicing of $\heartsuit_{\mathfrak{t}}$ is the datum of an extension $\tilde{\tee}$ of $\tee$ to a Bridgeland $\Z\times_{\mathrm{lex}}\hat{\Z}$-slicing on $\mathscr{D}$, where $\hat{\Z}$ denotes the $\Z$-poset consisting of $\Z$ endowed with the trivial $\Z$-action, and the morphism $\Oo(\Z)\to \Oo(\Z\times_{\mathrm{lex}}\hat{\Z})$ is induced by the projection on the first factor $\Z\times_{\mathrm{lex}}\hat{\Z}\to \Z$. See \cite[Section 5]{fosco}. We will denote by $\heartsuit_{\tee;\phi}$ the $\phi$-th slice of the heart of $\tee$. In other words,
+Let $\mathscr{D}$ be a stable $\infty$-category {\color{red} and let $\tee$ be a bounded t-structure on $\mathscr{D}$, i.e., equivalently, the datum of} a Bridgeland $\Z$-slicing of $\mathscr{D}$. Let $\heartsuit_{\mathfrak{t}}$ denote the heart of $\mathfrak{t}$. Then an abelian $\Z$-slicing of $\heartsuit_{\mathfrak{t}}$ is the datum of an extension $\tilde{\tee}$ of $\tee$ to a Bridgeland $\Z\times_{\mathrm{lex}}\hat{\Z}$-slicing on $\mathscr{D}$, where $\hat{\Z}$ denotes the $\Z$-poset consisting of $\Z$ endowed with the trivial $\Z$-action, and the morphism $\Oo(\Z)\to \Oo(\Z\times_{\mathrm{lex}}\hat{\Z})$ is induced by the projection on the first factor $\Z\times_{\mathrm{lex}}\hat{\Z}\to \Z$; see \cite[Section 5]{fosco}. We will denote by $\heartsuit_{\tee;\phi}$ the $\phi$-th slice of the heart of $\tee$. In other words,
 \[
 \heartsuit_{\tee;\phi}=\mathscr{D}_{\tilde{\tee};(0,\phi)}.
 \]
@@ -759,12 +772,12 @@ If $\phi=\psi+n$ with $n\geq 2$, then in particular $\phi>\psi$ and $n>0$, so ag
 %where $\Z$ acts diagonally both on the source and on the target. If $\tilde{\tee}$ is perverse, then $\tilde{\tee}$ is $f_p$-compatible.
 %\end{prop}
 \begin{prop}\label{grad}
-Let $\mathfrak{t}$ be a bounded t-structure on $\mathscr{D}$, and let let $\tilde{\tee}$ be a perverse abelian $\mathbb{Z}$-slicing on $\heartsuit_{\mathfrak{t}}$. Then, $\tilde{\tee}$ is $g_p$-compatible, where 
+Let $\mathfrak{t}$ be a bounded t-structure on $\mathscr{D}$, and let $\tilde{\tee}$ be a perverse abelian $\mathbb{Z}$-slicing on $\heartsuit_{\mathfrak{t}}$. Then, $\tilde{\tee}$ is $g_p$-compatible, where 
 \begin{align*}
 g_p\colon \mathbb{Z} \times_{\mathrm{lex}} \hat{\mathbb{Z}}&\to \mathbb{Z} \times_{\mathrm{lex}} \hat{\mathbb{Z}}\\
 (n,\phi)&\mapsto(n+p(\phi),-p(\phi)),
 \end{align*}
-for every  strict perversity function $p\colon \Z\to \Z$. If $\tilde{\tee}$ is grading, then $\tilde{\tee}$ is $g_p$-compatible for every every  perversity function $p$.
+for every  strict perversity function $p\colon \Z\to \Z$. If $\tilde{\tee}$ is grading, then $\tilde{\tee}$ is $g_p$-compatible for every  perversity function $p$.
 \end{prop}
 \begin{proof}
 The map $g_p$ is $\Z$-equivariant, as the action on the second factor is the trivial one.  Let $(n,\phi)$ and $(m,\psi)$ in $\Z\times_{\mathrm{lex}} \hat{\Z}$ with $(n,\phi)\leq (m,\psi)$ such that $g_p(n,\phi)>g_p(m,\psi)$ in $\Z\times_{\mathrm{lex}} \hat{\Z}$. By definition of $g_p$ this means that we have
@@ -779,31 +792,33 @@ $p(\phi)-p(\psi)>m-n$, with $m>n$ and $\phi>\psi$.
 %\item $n+p(\phi)=m+p(\psi)$ with $n<m$ and $p(\psi)>p(\phi)$;
 %\item $n+p(\phi)=m+p(\psi)$ and $p(\psi)>p(\phi)$ and $n=m$ and $\phi\leq \psi$.
 %\end{itemize}
-If $p$ is a strict perversity function, if $\phi> \psi$ then
+If $p$ is a perversity function, if $\phi> \psi$ then
 \[
-0< p(\phi)-p(\psi)< \phi-\psi,
+0\leq p(\phi)-p(\psi)\leq \phi-\psi,
 \]
 so we have
 \[
-\phi> \psi+ p(\phi)-p(\psi)>\psi+m-n.
+\phi\geq  \psi+ p(\phi)-p(\psi)>\psi+m-n.
 \]
 Since $\tilde{\tee}$ is perverse, this implies $\heartsuit_{\tee;\phi}\orth\heartsuit_{\tee;\psi}[m-n]$, and so $\heartsuit_{\tee;\phi}[n]\orth \heartsuit_{\tee;\psi}[m]$, i.e.,
 \[
 \mathscr{D}_{\tilde{\tee};(n,\phi)}\orth\mathscr{D}_{\tilde{\tee};(m,\psi)}.
 \]
-Since $\phi>\psi+ p(\phi)-p(\psi)>\psi+m-n$, we have $\phi>\psi+m-n+1$. Reasoning as above we find $\mathscr{D}_{\tilde{\tee};(n,\phi)}\orth\mathscr{D}_{\tilde{\tee};(m,\psi)}[1]$. 
-\par
-Assume now $\tilde{\tee}$ is grading, and let $p$ be an arbitrary perversity function. Now if $\phi\geq \psi$ we only have
-\[
-\phi\geq \psi+ p(\phi)-p(\psi)>\psi+m-n.
-\]
-Since $\tilde{\tee}$ is grading, this implies $\mathscr{D}_{\tilde{\tee};(n,\phi)}\orth\mathscr{D}_{\tilde{\tee};(m,\psi)}$ as above. Concerning the orthogonality of $\mathscr{D}_{\tilde{\tee};(n,\phi)}$ and $\mathscr{D}_{\tilde{\tee};(m,\psi)}[1]$, there are now two cases to be considered. Namely, from
-from $\phi\geq \psi+ p(\phi)-p(\psi)>\psi+m-n$ it follows that either $\phi>\psi+m-n+1$ or $\phi=\psi+m-n+1$. In the first case, we reason as above. In the second case, as $m>n$ we have $m-n+1\geq 2$. As $\tilde{\tee}$ is grading, this gives $\heartsuit_{\tee;\phi}\orth\heartsuit_{\tee;\psi}[m-n+1]$, i.e., again
+Concerning the orthogonality of $\mathscr{D}_{\tilde{\tee};(n,\phi)}$ and $\mathscr{D}_{\tilde{\tee};(m,\psi)}[1]$, notice that
+from $\phi\geq \psi+ p(\phi)-p(\psi)>\psi+m-n$ it follows that either $\phi>\psi+m-n+1$ or $\phi=\psi+m-n+1\geq \psi+2$.  If $\phi>\psi+m-n+1$, then reasoning as above we find $\mathscr{D}_{\tilde{\tee};(n,\phi)}\orth\mathscr{D}_{\tilde{\tee};(m,\psi)}[1]$. If $\phi=\psi+m-n+1\geq \psi+2$,
+there are two cases to be considered. In the first case, $\tilde{\tee}$ is perverse and the perversity function $p$ is strict. In the second case, we allow $p$ to be any perversity, but we put a restriction on $\tilde{\tee}$, which we require to be grading.
+
+In the first case, as $p$ is strict and $\phi\geq \psi+2$, we have $p(\phi)-p(\psi)< \phi-\psi$, and so again $\phi>\psi+m-n+1$.
+In the second case, as $m-n+1\geq 2$ and $\tilde{\tee}$ is grading, we have $\heartsuit_{\tee;\phi}\orth\heartsuit_{\tee;\psi}[m-n+1]$, i.e., again
 \[
 \mathscr{D}_{\tilde{\tee};(n,\phi)}\orth\mathscr{D}_{\tilde{\tee};(m,\psi)}[1].
 \]
-
 \end{proof}
+
+\begin{rem}
+The proof of Proposition \ref{grad} makes it clear the meaning of the otherwise obscure condition in the definition of grading abelian $\Z$-slicing: the condition on a shift by at least 2 in the definition of strict perversity is traded for a orthogonality condition in the slicing. 
+\end{rem}
+
 
 %\begin{prop}\label{grad2}
 %Let $\mathfrak{t}$ be a bounded t-structure on $\mathscr{D}$, let $\tilde{\tee}$ be an abelian $\mathbb{Z}$-slicing on $\heartsuit_{\mathfrak{t}}$,  let $p\colon \Z\to \Z$ be a perversity function, and let $g_p\colon \mathbb{Z} \ltimes \hat{\mathbb{Z}}\to \mathbb{Z} \ltimes \hat{\mathbb{Z}}$ be the $\Z$-equivariant map given by $$g_p(n,\phi)=(n+p(\phi),-p(\phi)),$$
@@ -1084,7 +1099,7 @@ $\tilde{\tee}$ is a gluable slicing. Therefore, for every perversity $p$  we hav
  \mathrm{Ext}^n(\mathscr{E},\mathscr{F})=0\qquad \text{for } n<\dim \mathrm{supp}(\mathscr{F})-\dim\mathrm{supp}(\mathscr{E}).
  \]
   Equivalently, this can be rewritten as $\mathscr{D}(\mathscr{E},\mathscr{F}[n])=0$ for $n<i-j$, for any $\mathscr{E}$ in $\heartsuit_i$ and $\mathscr{F}$in $\heartsuit_j$, i.e., 
- $\heartsuit_{i}\orth\heartsuit_{j}[n]$ for $i>j+n$. In other words, $\{\heartsuit_i\}_{0\leq i\leq \dim Xn}$ is a perverse abelian $\Z$-slicing on $\textrm{Coh}(X)$. Therefore, by Theorem \ref{main-thm} and Remark \ref{main-rem}, with any strict perversity function $p$ is associate a perverse $t$-structure on  $\mathscr{D}$, i.e., one gets a lattice of $t$-structures on  $\mathscr{D}$ parametrized by strict perversities. The heart of these perverse $t$-structures are the perverse coherent sheaves constructed in  \cite{bezr}, while the lattice of $t$-structures on $\mathscr{D}$ associated with the abelian $\Z$-slicing $\{\heartsuit_i\}_{0\leq i\leq \dim X}$ is the `distributive lattice of $t$-structures' from \cite{bondper}.
+ $\heartsuit_{i}\orth\heartsuit_{j}[n]$ for $i>j+n$. In other words, $\{\heartsuit_i\}_{0\leq i\leq \dim Xn}$ is a perverse abelian $\Z$-slicing on $\textrm{Coh}(X)$. Therefore, by Theorem \ref{main-thm} and Remark \ref{main-rem}, with any strict perversity function $p$ is associated a perverse $t$-structure on  $\mathscr{D}$, i.e., one gets a lattice of $t$-structures on  $\mathscr{D}$ parametrized by strict perversities. The heart of these perverse $t$-structures are the perverse coherent sheaves constructed in  \cite{bezr}, while the lattice of $t$-structures on $\mathscr{D}$ associated with the abelian $\Z$-slicing $\{\heartsuit_i\}_{0\leq i\leq \dim X}$ is the `distributive lattice of $t$-structures' from \cite{bondper}.
  
 
 \subsection{Gluable slicings from baric structures}\label{baric}
