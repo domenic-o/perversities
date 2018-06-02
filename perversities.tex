@@ -816,7 +816,7 @@ In the second case, as $m-n+1\geq 2$ and $\tilde{\tee}$ is grading, we have $\he
 \end{proof}
 
 \begin{rem}
-The proof of Proposition \ref{grad} makes it clear the meaning of the otherwise obscure condition in the definition of grading abelian $\Z$-slicing: the condition on a shift by at least 2 in the definition of strict perversity is traded for a orthogonality condition in the slicing. 
+The proof of Proposition \ref{grad} makes it clear the meaning of the otherwise obscure condition in the definition of grading abelian $\Z$-slicing: the condition on a shift by at least 2 in the definition of strict perversity is traded for an  orthogonality condition in the slicing. 
 \end{rem}
 
 
@@ -827,7 +827,7 @@ The proof of Proposition \ref{grad} makes it clear the meaning of the otherwise 
 %\end{prop}
 
 \begin{rem}\label{alpha}
-By taking as perversity function the identity, $\mathrm{id}\colon \Z\to \Z$, we see that if $\tilde{\tee}$ is grading then $\tilde{\tee}$ is $\alpha$-compatible, where $\alpha\colon \mathbb{Z} \times_{\mathrm{lex}} \hat{\mathbb{Z}}\to \mathbb{Z} \times_{\mathrm{lex}} \hat{\mathbb{Z}}$ is the $\Z$-equivariant map given by
+By taking $p$ to be the identity perversity, $\mathrm{id}\colon \Z\to \Z$, we see that if $\tilde{\tee}$ is grading then $\tilde{\tee}$ is $\alpha$-compatible, where $\alpha\colon \mathbb{Z} \times_{\mathrm{lex}} \hat{\mathbb{Z}}\to \mathbb{Z} \times_{\mathrm{lex}} \hat{\mathbb{Z}}$ is the $\Z$-equivariant map given by
 \[
 \alpha(n,m)=(n+m,-m).
 \]
@@ -914,8 +914,8 @@ Theorem \ref{main-thm} is actually true under the weaker assumption that $\tilde
 \end{rem}
 
 \begin{rem}\label{main-rem}
-The morphism $\Psi$ can be thought of as a $(\Z\times \Z)$-slicing of $\mathscr{D}$, but keeping in mind that the poset $\Z\times\Z$ indexing the slices (and so the cohomologies) is now not totally ordered. This is a possibly subtle point, so let us spend a few more words on it. An abelian $\mathbb{Z}$-slicing $\tilde{\tee}$ of $\heartsuit_\tee$ is by definition a $(\Z\times_{\mathrm{lex}}\hat{\Z})$-slicing, and by Lemma \ref{from-alpha-to-e}, this is equivalently a $(\Z\times_{\mathrm{lex}}{\Z})$-slicing. So going from an abelian slicing of the heart to a  $(\Z\times_{\mathrm{lex}}{\Z})$-slicing of $\mathscr{D}$ is a trivial step. What is highly nontrivial is going from an abelian slicing of the heart to a $(\Z\times{\Z})$-slicing of $\mathscr{D}$, where now the poset structure on $\Z\times \Z$ is given by the product order and ot by the lexicographic order. And indeed this can generally not be done for an 
-arbitrary abelian slicing of the heart, and here is where the property of the abelian slicing of being grading comes in. Finally, to emphasize once more how going from a   $(\Z\times_{\mathrm{lex}}{\Z})$-slicing to a $(\Z\times{\Z})$-slicing is a nontrivial step, consider how there are in $\Z\times{\Z}$ many more upper sets than in $\Z\times_{\mathrm{lex}}{\Z}$
+The morphism $\Psi$ can be thought of as a $(\Z\times \Z)$-slicing of $\mathscr{D}$, but one has to keep in mind that the poset $\Z\times\Z$ indexing the slices (and so the cohomologies) is now not totally ordered. This is a possibly subtle point, so let us spend a few more words on it. An abelian $\mathbb{Z}$-slicing $\tilde{\tee}$ of $\heartsuit_\tee$ is by definition a $(\Z\times_{\mathrm{lex}}\hat{\Z})$-slicing, and by Lemma \ref{from-alpha-to-e}, this is equivalently a $(\Z\times_{\mathrm{lex}}{\Z})$-slicing. So going from an abelian slicing of the heart to a  $(\Z\times_{\mathrm{lex}}{\Z})$-slicing of $\mathscr{D}$ is a trivial step. What is nontrivial is going from an abelian slicing of the heart to a $(\Z\times{\Z})$-slicing of $\mathscr{D}$, where now the poset structure on $\Z\times \Z$ is given by the product order and not by the lexicographic order. And indeed this can generally not be done for an 
+arbitrary abelian slicing of the heart, and here is where the property of the abelian slicing to be grading comes in. Finally, to emphasize once more how going from a   $(\Z\times_{\mathrm{lex}}{\Z})$-slicing to a $(\Z\times{\Z})$-slicing is a nontrivial step, consider how there are many more upper sets  in $\Z\times{\Z}$ than in $\Z\times_{\mathrm{lex}}{\Z}$.
 \end{rem}
 \begin{rem}
 Describing the bounded $t$-structure on $\mathscr{D}$ associated by Theorem \ref{main-thm} to a proper upper set $U$ of $\Z\times \Z$ is a bit involved, but it is a completely explicit procedure. To begin with, recall that a bounded $t$-structure is completely determined by its heart, so we only need to give a description of the heart $\heartsuit_U$ associated with $U$. To do this, notice that the perveristy function associated to $U$ is
@@ -931,7 +931,7 @@ A more explict description of the \emph{perverse hearts} of $\mathscr{D}$ is as 
 \begin{thm}\label{perverse-heart}
 Let $\mathfrak{t}$ be a bounded t-structure on $\mathscr{D}$, and let let $\tilde{\tee}$ be a gluing abelian $\mathbb{Z}$-slicing on $\heartsuit_{\mathfrak{t}}$. Let $U$ be an upper set of $\Z\times \Z$ and let $p$ be the corresponding perversity. Then the preverse heart $\heartsuit_p=\heartsuit_U$ of $\mathscr{D}$ is the full subcategory of $\mathscr{D}$ on those objects $X$ such that 
 \[
-H_\tee^{n}(X)[-n]= \langle \heartsuit_{\tee;n'}\rangle_{n'\in p^{-1}(-n)}
+H_\tee^{n}(X)[-n]\in \langle \heartsuit_{\tee;n'}\rangle_{n'\in p^{-1}(-n)}
 \]
 for every $n\in \Z$, where $H_\tee^{n}(X)$ is the $n$-th cohomology object of $X$ in the $t$-structure $\tee$ and $\{\heartsuit_{\tee;n'}\}_{n'\in \Z}$ are the slices of the heart $\heartsuit_\tee$ of $\tee$ for the abelian $\Z$-slicing $\tilde{\tee}$.
  \end{thm}
@@ -956,7 +956,7 @@ for every $n\in \Z$, where $H_\tee^{n}(X)$ is the $n$-th cohomology object of $X
 \end{proof}
 
 \begin{exmp}
-Let $k\in \Z$ and let $\chi_{[k,+\infty)}\colon \Z\to \{0,1\}$ the characteristic function of the interval $[k,+\infty)$. Seen as a function from $\Z$ to $\Z$, the function $\chi_{[k,+\infty)}$is a perversity function of a very special kind: it is a perversity function taking exactly two values. Moreover, it is easy to see that --up to an additive constant-- perverity functions taking exactly two values are precisely characteristic functions of upper intervals in $\Z$. We have
+Let $k\in \Z$ and let $\chi_{[k,+\infty)}\colon \Z\to \{0,1\}$ the characteristic function of the interval $[k,+\infty)$. Seen as a function from $\Z$ to $\Z$, the function $\chi_{[k,+\infty)}$is a perversity function of a very special kind: it is a perversity function taking exactly two values. Moreover, it is easy to see that --up to an additive constant-- perversity functions taking exactly two values are precisely characteristic functions of upper intervals in $\Z$. We have
 \[
 \chi_{[k,+\infty)}^{-1}(-n)=\begin{cases}
 \emptyset &\text{if }n\neq -1,0\\
