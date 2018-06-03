@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.10.27)  3 JUN 2018 09:06
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.10.27)  3 JUN 2018 09:21
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -236,6 +236,13 @@ Package: amsthm 2015/03/04 v2.20.2
 Package: pigpen 2008/12/07 v0.1 PigPen
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/pigpen/pigpen.tex))
+(/usr/local/texlive/2015/texmf-dist/tex/latex/bbm-macros/bbm.sty
+Package: bbm 1999/03/15 V 1.2 provides fonts for set symbols - TH
+LaTeX Font Info:    Overwriting math alphabet `\mathbbm' in version `bold'
+(Font)                  U/bbm/m/n --> U/bbm/bx/n on input line 33.
+LaTeX Font Info:    Overwriting math alphabet `\mathbbmss' in version `bold'
+(Font)                  U/bbmss/m/n --> U/bbmss/bx/n on input line 35.
+)
 (/usr/local/texlive/2015/texmf-dist/tex/latex/enumitem/enumitem.sty
 Package: enumitem 2011/09/28 v3.5.2 Customized lists
 \labelindent=\skip52
@@ -1591,7 +1598,12 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 1082.
 
-[21] [22] [23]
+[21] [22]
+LaTeX Font Info:    Try loading font information for U+bbm on input line 1120.
+ (/usr/local/texlive/2015/texmf-dist/tex/latex/bbm-macros/ubbm.fd
+File: ubbm.fd 1999/03/15 V 1.2 Font definition for bbm font - TH
+)
+[23]
 
 LaTeX Warning: Citation `borel' on page 24 undefined on input line 1141.
 
@@ -1633,53 +1645,55 @@ LaTeX Warning: There were undefined references.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1166.
  ) 
 Here is how much of TeX's memory you used:
- 26583 strings out of 493089
- 459984 string characters out of 6134841
- 628150 words of memory out of 5000000
- 29162 multiletter control sequences out of 15000+600000
- 88380 words of font info for 169 fonts, out of 8000000 for 9000
+ 26628 strings out of 493089
+ 461012 string characters out of 6134841
+ 628284 words of memory out of 5000000
+ 29195 multiletter control sequences out of 15000+600000
+ 88908 words of font info for 173 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  56i,18n,82p,3238b,483s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/lo
-cal/texlive/2015/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/local/texliv
-e/2015/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texlive/2015/tex
-mf-dist/fonts/enc/dvips/lm/lm-rm.enc}</usr/local/texlive/2015/texmf-dist/fonts/
-type1/public/amsfonts/euler/eufm10.pfb></usr/local/texlive/2015/texmf-dist/font
-s/type1/public/amsfonts/euler/eufm5.pfb></usr/local/texlive/2015/texmf-dist/fon
-ts/type1/public/amsfonts/euler/eufm7.pfb></usr/local/texlive/2015/texmf-dist/fo
-nts/type1/public/lm/lmbx10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/
-public/lm/lmbx12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/lm/
-lmbx9.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/lm/lmex10.pfb>
-</usr/local/texlive/2015/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/loca
-l/texlive/2015/texmf-dist/fonts/type1/public/lm/lmmi12.pfb></usr/local/texlive/
-2015/texmf-dist/fonts/type1/public/lm/lmmi5.pfb></usr/local/texlive/2015/texmf-
-dist/fonts/type1/public/lm/lmmi6.pfb></usr/local/texlive/2015/texmf-dist/fonts/
-type1/public/lm/lmmi8.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/publi
-c/lm/lmmi9.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/lm/lmr10.
-pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/l
-ocal/texlive/2015/texmf-dist/fonts/type1/public/lm/lmr17.pfb></usr/local/texliv
-e/2015/texmf-dist/fonts/type1/public/lm/lmr5.pfb></usr/local/texlive/2015/texmf
--dist/fonts/type1/public/lm/lmr6.pfb></usr/local/texlive/2015/texmf-dist/fonts/
-type1/public/lm/lmr8.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public
-/lm/lmr9.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/lm/lmri9.pf
-b></usr/local/texlive/2015/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/lo
-cal/texlive/2015/texmf-dist/fonts/type1/public/lm/lmsy5.pfb></usr/local/texlive
-/2015/texmf-dist/fonts/type1/public/lm/lmsy6.pfb></usr/local/texlive/2015/texmf
--dist/fonts/type1/public/lm/lmsy8.pfb></usr/local/texlive/2015/texmf-dist/fonts
-/type1/public/lm/lmsy9.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/publ
-ic/amsfonts/symbols/msam10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/
-public/amsfonts/symbols/msam7.pfb></usr/local/texlive/2015/texmf-dist/fonts/typ
-e1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2015/texmf-dist/fonts
-/type1/public/amsfonts/symbols/msbm7.pfb></usr/local/texlive/2015/texmf-dist/fo
-nts/type1/public/rsfs/rsfs10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type
-1/public/stmaryrd/stmary8.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/p
-ublic/stmaryrd/stmary9.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/publ
-ic/xypic/xyatip10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/xy
-pic/xybtip10.pfb>
-Output written on perversities.pdf (27 pages, 525628 bytes).
+ </Users/domenico/Library/texlive/2015/texmf-var/fonts/pk/ljfour/public/bbm/b
+bm6.600pk> </Users/domenico/Library/texlive/2015/texmf-var/fonts/pk/ljfour/publ
+ic/bbm/bbm9.600pk>{/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/lm/lm-mat
+hit.enc}{/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}{/
+usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/
+texlive/2015/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}</usr/local/texlive/2015/t
+exmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/local/texlive/2015
+/texmf-dist/fonts/type1/public/amsfonts/euler/eufm5.pfb></usr/local/texlive/201
+5/texmf-dist/fonts/type1/public/amsfonts/euler/eufm7.pfb></usr/local/texlive/20
+15/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/local/texlive/2015/texmf-d
+ist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2015/texmf-dist/fonts/
+type1/public/lm/lmbx9.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/publi
+c/lm/lmex10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/lm/lmmi1
+0.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/lm/lmmi12.pfb></us
+r/local/texlive/2015/texmf-dist/fonts/type1/public/lm/lmmi5.pfb></usr/local/tex
+live/2015/texmf-dist/fonts/type1/public/lm/lmmi6.pfb></usr/local/texlive/2015/t
+exmf-dist/fonts/type1/public/lm/lmmi8.pfb></usr/local/texlive/2015/texmf-dist/f
+onts/type1/public/lm/lmmi9.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/
+public/lm/lmr10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/lm/l
+mr12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/lm/lmr17.pfb></
+usr/local/texlive/2015/texmf-dist/fonts/type1/public/lm/lmr5.pfb></usr/local/te
+xlive/2015/texmf-dist/fonts/type1/public/lm/lmr6.pfb></usr/local/texlive/2015/t
+exmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/local/texlive/2015/texmf-dist/fo
+nts/type1/public/lm/lmr9.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/pu
+blic/lm/lmri9.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/lm/lms
+y10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/lm/lmsy5.pfb></u
+sr/local/texlive/2015/texmf-dist/fonts/type1/public/lm/lmsy6.pfb></usr/local/te
+xlive/2015/texmf-dist/fonts/type1/public/lm/lmsy8.pfb></usr/local/texlive/2015/
+texmf-dist/fonts/type1/public/lm/lmsy9.pfb></usr/local/texlive/2015/texmf-dist/
+fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2015/texmf-d
+ist/fonts/type1/public/amsfonts/symbols/msam7.pfb></usr/local/texlive/2015/texm
+f-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2015/
+texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb></usr/local/texlive/20
+15/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb></usr/local/texlive/2015/texmf
+-dist/fonts/type1/public/stmaryrd/stmary8.pfb></usr/local/texlive/2015/texmf-di
+st/fonts/type1/public/stmaryrd/stmary9.pfb></usr/local/texlive/2015/texmf-dist/
+fonts/type1/public/xypic/xyatip10.pfb></usr/local/texlive/2015/texmf-dist/fonts
+/type1/public/xypic/xybtip10.pfb>
+Output written on perversities.pdf (27 pages, 525864 bytes).
 PDF statistics:
- 546 PDF objects out of 1000 (max. 8388607)
- 477 compressed objects within 5 object streams
+ 556 PDF objects out of 1000 (max. 8388607)
+ 485 compressed objects within 5 object streams
  119 named destinations out of 1000 (max. 500000)
  18053 words of extra memory for PDF output out of 20736 (max. 10000000)
 
